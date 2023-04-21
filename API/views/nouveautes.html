@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cigusto-Teal site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SIDEBAR -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+<header class="custom-margin">
+    <!--ecran telephone-->
+    <div class="d-flex">
+        <div class="flex-fill d-block d-sm-block d-md-none d-lg-none d-xl-none">
+            <!--sidebar menu-->
+            <div class="wrapper">
+                <nav class="sidebar">
+                    <!--close sidebar menu-->
+                    <div class="dismiss">
+                        <i class="bi bi-arrow-left-short fs-2"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="" class="magasinCigustoTeal-3">
+                            <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" width="165" height="40">
+                        </a>
+                    </div>
+                    <ul class="menu-elements"></ul>
+                    <ul class="list-unstyled menu-elements" style="overflow-y: auto;" id="sidebar-scroll">
+                        <li>
+                            <a href="http://localhost:3000/" style="color: inherit;"><i class="bi bi-shop-window"></i>Sélection magasin</a>
+                        </li>
+                        <li class="active">
+                            <a href="" class="magasinCigustoTeal-1" style="color: inherit;"><i class="bi bi-house"></i>Accueil</a>
+                        </li>
+                        <li>
+                            <a href="" class="nouveautesMagasinCigustoTeal-1" style="color: inherit;"><img src="/images/icon_new.png" alt="Icon Nouveautés" style="width: auto; height: 20px;"/> Nouveautés</a>
+                        </li>
+                        <li>
+                            <a href="" class="coupsDeCoeurMagasinCigustoTeal-1"><i class="bi bi-heart"></i>Coups de cœur</a>
+                        </li>
+                        <li>
+                            <a href="#eliquidesSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_eliquides.png" alt="Icon E-Liquides" style="width: auto; height: 25px;"/>E-Liquides</a>
+                            <ul class="collapse list-unstyled" id="eliquidesSection">
+                                <li>
+                                    <a href="" class="eliquidesMagasinCigustoTeal-1" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                    <a href="#saveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                    <ul class="collapse list-unstyled" id="saveursSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Classic</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Mentholé</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité Frais</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Gourmand</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Friandise / Boisson</a></li>
+                                    </ul>
+
+                                    <a href="#contenanceSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                    <ul class="collapse list-unstyled" id="contenanceSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">10 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">50 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">100 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">200 mL</a></li>
+                                    </ul>
+
+                                    <a href="#marqueSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                    <ul class="collapse list-unstyled" id="marqueSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">A&L</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Alfaliquid</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Bakery Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Candy Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cesar</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cirkus</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Curieux</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Eliquid France</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Enfer</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">E.Tasty</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruiteo</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Cool</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Fuel</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruizee</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Furiosa</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Juicy Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Kung Fruits</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">French Liquide</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Les Devils</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Liquideo</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Monster</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Ojuice</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Petit Nuage</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Swoke</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">The Medusa Juice</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vampire Vape</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vape Distillery</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">VDLV</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#concentresSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_concentres.png" alt="Icon Concentrés" style="width: auto; height: 25px;"/>Concentrés</a>
+                            <ul class="collapse list-unstyled" id="concentresSection">
+                                <li>
+                                    <a href="" class="concentresMagasinCigustoTeal-1" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                    <a href="#saveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                    <ul class="collapse list-unstyled" id="saveursSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Classic</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Mentholé</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité Frais</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Gourmand</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Friandise / Boisson</a></li>
+                                    </ul>
+
+                                    <a href="#contenanceSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                    <ul class="collapse list-unstyled" id="contenanceSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">10 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">50 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">100 mL</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">200 mL</a></li>
+                                    </ul>
+
+                                    <a href="#marqueSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                    <ul class="collapse list-unstyled" id="marqueSection">
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">A&L</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Alfaliquid</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Bakery Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Candy Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cesar</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cirkus</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Curieux</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Eliquid France</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Enfer</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">E.Tasty</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruiteo</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Cool</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Fuel</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruizee</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Furiosa</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Juicy Shake</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Kung Fruits</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">French Liquide</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Les Devils</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Liquideo</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Monster</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Ojuice</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Petit Nuage</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Swoke</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">The Medusa Juice</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vampire Vape</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vape Distillery</a></li>
+                                        <li><a class="scroll-link" href="" style="padding-left: 45px">VDLV</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="to-top">
+                        <a class="btn btn-primary btn-customized-3" href="#" role="button">
+                            <i class="fas fa-arrow-up"></i> Top
+                        </a>
+                    </div>
+                </nav>
+                <div class="overlay"></div>
+            </div>
+            <!--navbar-->
+            <div style="display: flex; align-items: center;">
+                <a class="btn open-menu" href="#" role="button" style="color: white; display: inline-block;">
+                    <i class="bi bi-list fs-2"></i>
+                </a>
+                <a href="" class="magasinCigustoTeal-4">
+                    <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;"/>
+                </a>
+                <div class="ms-auto">
+                    <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
+                        <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
+                        <span style="display: block; font-size: 0.8rem;">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div style="display: block;">
+                <div class="form-group">
+                    <div class="input-group mb-2">
+                        <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--ecran tablette/pc-->
+    <div class="d-flex">
+        <div class="flex-fill d-none d-sm-none d-md-block d-lg-block d-xl-block">
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="" class="magasinCigustoTeal-5">
+                    <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;"/>
+                </a>
+                <div class="form-group" style="width: 100%; margin-left: 34px; margin-right: 34px;">
+                    <label for="SearchInput"></label>
+                    <div class="input-group mb-4">
+                        <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
+                        <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="d-inline-block float-end">
+                    <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
+                        <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
+                        <span style="display: block; font-size: 0.8rem;">Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <a></a><a></a>
+                <a href="" class="nouveautesMagasinCigustoTeal-2" style="color: inherit;"><strong>Nouveautés</strong></a>
+                <a>|</a>
+                <a href="" class="coupsDeCoeurMagasinCigustoTeal-2" style="color: inherit;"><strong>Coups de cœur</strong></a>
+                <a>|</a>
+                <a href="" class="eliquidesMagasinCigustoTeal-2" style="color: inherit;"><strong>E-Liquides</strong></a>
+                <a>|</a>
+                <a href="" class="concentresMagasinCigustoTeal-2" style="color: inherit;"><strong>Concentrés</strong></a>
+                <a></a><a></a>
+            </div>
+            <br>
+        </div>
+    </div>
+</header>
+<div class="historique-deplacement">
+    <a href="http://localhost:3000/" style="color: inherit;">Magasin</a> > <a class="magasinCigustoTeal-2" href="" style="color: inherit;">Accueil</a> > <a class="eliquidesMagasinCigustoTeal-1" href="" style="color: inherit;">Nouveautés</a>
+</div>
+
+
+
+
+<div class="container">
+    <br><br>
+    <!--ecran téléphone-->
+    <div class="d-flex">
+        <div class="flex-fill d-block d-sm-block d-md-none d-lg-none d-xl-none">
+            ECRAN TELEPHONE
+        </div>
+    </div>
+
+    <!--ecran tablette-->
+    <div class="d-flex">
+        <div class="flex-fill d-none d-sm-none d-md-block d-lg-none d-xl-none">
+            ECRAN  TABLETTE
+        </div>
+    </div>
+
+    <!--ecran pc-->
+    <div class="d-flex">
+        <div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
+            ECRAN PC
+        </div>
+    </div>
+    <br><br><br>
+</div>
+
+
+
+<footer class="footer text-light" id="footer">
+    <br>
+    <div class="container">
+        <!--ecran telephone-->
+        <div class="d-flex">
+            <div class="flex-fill d-block d-sm-none d-md-none d-lg-none d-xl-none">
+                <div class="row">
+                    <div class="col-3">
+                        <h5 style="margin-bottom: 15px;">Newsletter</h5>
+                        <form class="row g-3">
+                            <div class="col-auto">
+                                <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-3">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-2 text-center">
+                        <h5></h5><br>
+                        <a class="facebook-icon-1" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
+                        <a class="instagram-icon-1" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
+                    </div>
+                    <div class="col-7">
+                        <h5 class="d-inline-block">Contact</h5>
+                        <div id="adresse-magasin-1"></div>
+                        <br>
+                    </div>
+                    <hr>
+                    <p class="text-muted">&copy; 2023 Teal - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+        <!--ecran tablette/pc-->
+        <div class="d-flex">
+            <div class="flex-fill d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                <div class="row">
+                    <div class="col-4">
+                        <h5 style="margin-bottom: 19px;">Newsletter</h5>
+                        <form class="row g-3">
+                            <div class="col-auto">
+                                <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-3">S'inscrire</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-4 text-center">
+                        <h5>Réseaux</h5>
+                        <a class="facebook-icon-2" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
+                        <a class="instagram-icon-2" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="d-inline-block">Contact</h5>
+                        <div id="adresse-magasin-2"></div>
+                        <br>
+                    </div>
+                    <hr>
+                    <p class="text-muted">&copy; 2023 Teal - Tous droits réservés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+
+<script>
+    jQuery(document).ready(function() {
+
+        $('.dismiss, .overlay').on('click', function() {
+            $('.sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+        $('.open-menu').on('click', function(e) {
+            e.preventDefault();
+            $('.sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            // close opened sub-menus
+            $('.collapse.show').toggleClass('show');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+
+    const magasinId = window.location.pathname.split('/')[1];
+
+    const magasins = [
+        {
+            id: "magasin-andelnans",
+            nom: "Cigusto - Teal",
+            adresse: "15 route de Montbéliard",
+            codePostal: "90400",
+            ville: "Andelnans",
+            horaires: "Du lundi au samedi de 9h à 19h",
+            mail: "cigusto.andelnans@cigusto.com",
+            telephone: "03 84 27 51 74"
+        },
+        {
+            id: "magasin-bessoncourt",
+            nom: "Cigusto - Teal",
+            adresse: "Route du stratégique",
+            codePostal: "90160",
+            ville: "Bessoncourt",
+            horaires: "Du lundi au samedi de 9h à 19h30",
+            mail: "cigusto.bessoncourt@cigusto.com",
+            telephone: "09 83 76 78 30"
+        },
+        {
+            id: "magasin-besancon",
+            nom: "Cigusto - Teal",
+            adresse: "6 rue de Châtillon",
+            codePostal: "25480",
+            ville: "Ecole-Valentin",
+            horaires: "Du lundi au samedi de 9h30 à 19h30",
+            mail: "cigusto.besancon@cigusto.com",
+            telephone: "03 81 63 69 84"
+        },
+        {
+            id: "magasin-colmar",
+            nom: "Cigusto - Teal",
+            adresse: "Rue du Buhlfeld",
+            codePostal: "68125",
+            ville: "Houssen",
+            horaires: "Du lundi au samedi de 9h à 20h",
+            mail: "cigusto.colmar@cigusto.com",
+            telephone: "03 89 41 44 85"
+        }
+    ];
+    // adresse magasin
+    const magasin = magasins.find(m => m.id === magasinId);
+    document.getElementById('adresse-magasin-1').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline;" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
+    document.getElementById('adresse-magasin-2').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
+
+    // redirection page magasin
+    let magasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        magasinCigustoTeal = 'http://localhost:3000/magasin-andelnans';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        magasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt';
+    } else if (magasinId === 'magasin-besancon') {
+        magasinCigustoTeal = 'http://localhost:3000/magasin-besancon';
+    } else if (magasinId === 'magasin-colmar') {
+        magasinCigustoTeal = 'http://localhost:3000/magasin-colmar';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.magasinCigustoTeal-1').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-2').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-3').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-4').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-5').href = magasinCigustoTeal;
+
+    // redirection page nouveautes
+    let nouveautesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        nouveautesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/nouveautes';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        nouveautesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/nouveautes';
+    } else if (magasinId === 'magasin-besancon') {
+        nouveautesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/nouveautes';
+    } else if (magasinId === 'magasin-colmar') {
+        nouveautesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/nouveautes';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.nouveautesMagasinCigustoTeal-1').href = nouveautesMagasinCigustoTeal;
+    document.querySelector('.nouveautesMagasinCigustoTeal-2').href = nouveautesMagasinCigustoTeal;
+
+    // redirection page coups de coeur
+    let coupsDeCoeurMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        coupsDeCoeurMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/coups-de-coeur';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        coupsDeCoeurMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/coups-de-coeur';
+    } else if (magasinId === 'magasin-besancon') {
+        coupsDeCoeurMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/coups-de-coeur';
+    } else if (magasinId === 'magasin-colmar') {
+        coupsDeCoeurMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/coups-de-coeur';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-1').href = coupsDeCoeurMagasinCigustoTeal;
+    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-2').href = coupsDeCoeurMagasinCigustoTeal;
+
+
+    // redirection page e-liquides
+    let eliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        eliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        eliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides';
+    } else if (magasinId === 'magasin-besancon') {
+        eliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides';
+    } else if (magasinId === 'magasin-colmar') {
+        eliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.eliquidesMagasinCigustoTeal-1').href = eliquidesMagasinCigustoTeal;
+    document.querySelector('.eliquidesMagasinCigustoTeal-2').href = eliquidesMagasinCigustoTeal;
+
+    // redirection page concentres
+    let concentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        concentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        concentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres';
+    } else if (magasinId === 'magasin-besancon') {
+        concentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres';
+    } else if (magasinId === 'magasin-colmar') {
+        concentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.concentresMagasinCigustoTeal-1').href = concentresMagasinCigustoTeal;
+    document.querySelector('.concentresMagasinCigustoTeal-2').href = concentresMagasinCigustoTeal;
+
+    // redirection facebook
+    let facebookUrl;
+    if (magasinId === 'magasin-andelnans') {
+        facebookUrl = 'https://www.facebook.com/people/Cigusto-Belfort-Andelnans/100091068966091/';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        facebookUrl = 'https://www.facebook.com/bessoncourt';
+    } else if (magasinId === 'magasin-besancon') {
+        facebookUrl = 'https://www.facebook.com/besancon';
+    } else if (magasinId === 'magasin-colmar') {
+        facebookUrl = 'https://www.facebook.com/colmar';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    const facebookIcon1 = document.querySelector('.facebook-icon-1');
+    facebookIcon1.href = facebookUrl;
+    const facebookIcon2 = document.querySelector('.facebook-icon-2');
+    facebookIcon2.href = facebookUrl;
+
+    // redirection instagram
+    let instagramUrl;
+    if (magasinId === 'magasin-andelnans') {
+        instagramUrl = 'https://www.instagram.com/cigusto.belfort.andelnans/';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        instagramUrl = 'https://www.instagram.com/bessoncourt';
+    } else if (magasinId === 'magasin-besancon') {
+        instagramUrl = 'https://www.instagram.com/besancon';
+    } else if (magasinId === 'magasin-colmar') {
+        instagramUrl = 'https://www.instagram.com/colmar';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide !`);
+    }
+    const instagramIcon1 = document.querySelector('.instagram-icon-1');
+    instagramIcon1.href = instagramUrl;
+    const instagramIcon2 = document.querySelector('.instagram-icon-2');
+    instagramIcon2.href = instagramUrl;
+</script>
+
+<style>
+    .custom-margin {
+        padding: 7px 14px 7px 14px;
+    }
+    header {
+        background-color: #1D2633;
+        color:white;
+    }
+    .nouveautesMagasinCigustoTeal-2 {
+        position: relative;
+    }
+    .nouveautesMagasinCigustoTeal-2:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background-color: #F9533E;
+        animation: slide 0.3s ease-in-out forwards;
+    }
+
+    .coupsDeCoeurMagasinCigustoTeal-2 {
+        position: relative;
+    }
+    .coupsDeCoeurMagasinCigustoTeal-2:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background-color: #F9533E;
+        animation: slide 0.3s ease-in-out forwards;
+    }
+
+    .eliquidesMagasinCigustoTeal-2 {
+        position: relative;
+    }
+    .eliquidesMagasinCigustoTeal-2:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background-color: #F9533E;
+        animation: slide 0.3s ease-in-out forwards;
+    }
+
+    .concentresMagasinCigustoTeal-2 {
+        position: relative;
+    }
+    .concentresMagasinCigustoTeal-2:hover::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background-color: #F9533E;
+        animation: slide 0.3s ease-in-out forwards;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+    body {
+        background-color: #F2F2F2;
+    }
+    .historique-deplacement {
+        background-color: white;
+        color: black;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 14px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+        background-color: #F9533E;
+    }
+    .card {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    a {
+        text-decoration: none;
+    }
+    .facebook-icon-1:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .instagram-icon-1:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .facebook-icon-2:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .instagram-icon-2:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+
+    /*sidebar*/
+    .wrapper {
+        display: block;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -255px;
+        z-index: 999;
+        background: #1D2633;
+        color: #fff;
+        transition: all .3s;
+        box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
+        text-align: left;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(51, 51, 51, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Style for all buttons with the class btn-customized */
+    .dismiss {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: all .3s;
+        background: #253142;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+    }
+
+    .dismiss:hover,
+    .dismiss:focus {
+        background: #2F3F54;
+        color: #fff;
+    }
+    .sidebar .logo {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #253142;
+        transition: all .3s;
+    }
+    .sidebar .logo {
+        display: inline-block;
+        border: 0;
+    }
+    .sidebar ul.menu-elements {
+        padding: 10px 0;
+        border-bottom: 1px solid #253142;
+        transition: all .3s;
+    }
+
+    .sidebar ul li a {
+        display: block;
+        padding: 10px 20px;
+        border: 0;
+        color: #fff;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a:focus,
+    .sidebar ul li.active > a:hover,
+    .sidebar ul li.active > a:focus {
+        outline: 0;
+        background: #2F3F54;
+        color: #fff;
+    }
+
+    .sidebar ul li a i {
+        margin-right: 5px;
+    }
+
+    .sidebar ul li.active > a,
+    a[aria-expanded="true"] {
+        background: #253142;
+        color: #fff;
+    }
+
+    .sidebar ul ul a {
+        background: #253142;
+        padding-left: 30px;
+        font-size: 14px;
+    }
+
+    .sidebar ul ul li.active > a {
+        background: #2F3F54;
+    }
+
+    .sidebar a[data-toggle="collapse"] {
+        position: relative;
+    }
+
+    .sidebar .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    .sidebar .to-top {
+        padding: 20px;
+        text-align: center;
+    }
+
+    a.btn-customized-3 {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: .75rem 1.5rem;
+        background: #253142;
+        border: 0;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        box-shadow: none;
+    }
+
+    a.btn-customized-3:hover,
+    a.btn-customized-3:active,
+    a.btn-customized-3:focus,
+    a.btn-customized-3:active:focus,
+    a.btn-customized-3.active:focus,
+    a.btn-customized-3.btn.btn-primary:not(:disabled):not(.disabled):active,
+    a.btn-customized-3.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+        outline: 0;
+        background: #2F3F54;
+        border: 0;
+        color: #fff;
+        box-shadow: none;
+    }
+
+    a.btn-customized-3 i {
+        margin-right: 5px;
+    }
+
+    #sidebar-scroll {
+        max-height: 450px;
+        overflow-y: auto;
+    }
+
+
+
+
+    /*ul.menu-elements {*/
+    /*    padding: 10px 0;*/
+    /*    border-bottom: 1px solid #253142;*/
+    /*    transition: all .3s;*/
+    /*}*/
+
+    ul li a {
+        display: block;
+        padding: 10px 20px;
+        border: 0;
+        color: black;
+    }
+
+    ul li a:hover,
+    ul li a:focus,
+    ul li.active > a:hover,
+    ul li.active > a:focus {
+        outline: 0;
+        /*background: #2F3F54;*/
+        color: black;
+    }
+
+    ul li a i {
+        margin-right: 5px;
+    }
+
+    .filtre ul li.active > a,
+    .filtre a[aria-expanded="true"] {
+        background: #F2F2F2;
+        color: black;
+    }
+
+    /*dans onglets des filtres*/
+    /*ul ul a {*/
+    /*    background: red;*/
+    /*    padding-left: 30px;*/
+    /*    font-size: 14px;*/
+    /*}*/
+
+    a[data-toggle="collapse"] {
+        position: relative;
+    }
+
+    .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+
+    .btw-onglet {
+        margin-right: 25px;
+    }
+    .filtre .btw-onglet a {
+        padding-left: 0px; /* ajustez cette valeur selon vos besoins */
+    }
+
+    .card {
+        width: 10rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    .card-img-top {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .zoom-effect {
+        transition: transform .2s;
+    }
+
+    .zoom-effect:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+</style>
