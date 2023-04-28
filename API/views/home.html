@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Cigusto-Teal site</title>
+    <title>Cigusto - Teal Accueil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,192 +19,395 @@
 </head>
 <body>
 <header class="custom-margin">
-    <!--ecran telephone-->
+    <!--ecran telephone / tablette-->
     <div class="d-flex">
-        <div class="flex-fill d-block d-sm-block d-md-none d-lg-none d-xl-none">
-            <!--sidebar menu-->
-            <div class="wrapper">
-                <nav class="sidebar">
-                    <!--close sidebar menu-->
-                    <div class="dismiss">
-                        <i class="bi bi-arrow-left-short fs-2"></i>
-                    </div>
-                    <div class="logo">
-                        <a href="" class="magasinCigustoTeal-3">
-                            <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" width="165" height="40">
-                        </a>
-                    </div>
-                    <ul class="menu-elements"></ul>
-                    <ul class="list-unstyled menu-elements" style="overflow-y: auto;" id="sidebar-scroll">
-                        <li>
-                            <a href="http://localhost:3000/" style="color: inherit;"><i class="bi bi-shop-window"></i>Sélection magasin</a>
-                        </li>
-                        <li class="active">
-                            <a href="" class="magasinCigustoTeal-1" style="color: inherit;"><i class="bi bi-house"></i>Accueil</a>
-                        </li>
-                        <li>
-                            <a href="" class="nouveautesMagasinCigustoTeal-1" style="color: inherit;"><img src="/images/icon_new.png" alt="Icon Nouveautés" style="width: auto; height: 20px;"/> Nouveautés</a>
-                        </li>
-                        <li>
-                            <a href="" class="coupsDeCoeurMagasinCigustoTeal-1"><i class="bi bi-heart"></i>Coups de cœur</a>
-                        </li>
-                        <li>
-                            <a href="#eliquidesSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_eliquides.png" alt="Icon E-Liquides" style="width: auto; height: 25px;"/>E-Liquides</a>
-                            <ul class="collapse list-unstyled" id="eliquidesSection">
-                                <li>
-                                    <a href="" class="eliquidesMagasinCigustoTeal-1" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
-                                    <a href="#saveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
-                                    <ul class="collapse list-unstyled" id="saveursSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Classic</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Mentholé</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité Frais</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Gourmand</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Friandise / Boisson</a></li>
-                                    </ul>
+        <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
+            <!--telephone portrait-->
+            <div id="verti" class="custom-margin-tel">
+                <!--sidebar menu-->
+                <div class="wrapper">
+                    <nav class="sidebar-tel">
+                        <!--close sidebar menu-->
+                        <div class="dismiss-tel">
+                            <i class="bi bi-arrow-left-short" style="font-size: 4rem; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
+                        </div>
+                        <div class="logo">
+                            <a href="" class="magasinCigustoTeal-tel-sidebar-logo">
+                                <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 95px;">
+                            </a>
+                        </div>
+                        <ul class="menu-elements"></ul>
+                        <ul class="list-unstyled menu-elements" style="overflow-y: auto;" id="sidebar-tel-scroll">
+                            <li>
+                                <a href="http://localhost:3000/" style="color: inherit;"><i class="bi bi-shop-window"></i>Sélection magasin</a>
+                            </li>
+                            <li class="active">
+                                <a href="" class="magasinCigustoTeal-tel-sidebar" style="color: inherit;"><i class="bi bi-house"></i>Accueil</a>
+                            </li>
+                            <li>
+                                <a href="" class="nouveautesMagasinCigustoTeal-tel-sidebar" style="color: inherit;"><img src="/images/icon_new.png" alt="Icon Nouveautés" style="width: auto; height: 49px; margin-bottom: 10px; margin-left: -0.5px; margin-right: -2.5px;"/> Nouveautés</a>
+                            </li>
+                            <li>
+                                <a href="" class="coupsDeCoeurMagasinCigustoTeal-tel-sidebar"><i class="bi bi-heart"></i>Coups de cœur</a>
+                            </li>
+                            <li>
+                                <a href="#eliquidesSection-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_eliquides.png" alt="Icon E-Liquides" style="width: auto; height: 55px; margin-bottom: 12px; margin-left: -3.5px; margin-right: 6px;"/>E-Liquides</a>
+                                <ul class="collapse list-unstyled" id="eliquidesSection-tel">
+                                    <li>
+                                        <a href="" class="eliquidesMagasinCigustoTeal-tel-sidebar" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                        <a href="#saveursSection-eliquides-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                        <ul class="collapse list-unstyled" id="saveursSection-eliquides-tel">
+                                            <li><a class="scroll-link saveurClassicEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Classic</a></li>
+                                            <li><a class="scroll-link saveurMentholeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Mentholé</a></li>
+                                            <li><a class="scroll-link saveurFruiteEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruité</a></li>
+                                            <li><a class="scroll-link saveurFruiteFraisEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruité Frais</a></li>
+                                            <li><a class="scroll-link saveurGourmandEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Gourmand</a></li>
+                                            <li><a class="scroll-link saveurFriandiseBoissonEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Friandise / Boisson</a></li>
+                                        </ul>
 
-                                    <a href="#contenanceSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
-                                    <ul class="collapse list-unstyled" id="contenanceSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">10 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">50 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">100 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">200 mL</a></li>
-                                    </ul>
+                                        <a href="#contenanceSection-eliquides-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                        <ul class="collapse list-unstyled" id="contenanceSection-eliquides-tel">
+                                            <li><a class="scroll-link contenance10mlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">10 mL</a></li>
+                                            <li><a class="scroll-link contenance50mlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">50 mL</a></li>
+                                            <li><a class="scroll-link contenance80mlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">80 mL</a></li>
+                                            <li><a class="scroll-link contenance100mlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">100 mL</a></li>
+                                            <li><a class="scroll-link contenance200mlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">200 mL</a></li>
+                                        </ul>
 
-                                    <a href="#marqueSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
-                                    <ul class="collapse list-unstyled" id="marqueSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">A&L</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Alfaliquid</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Bakery Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Candy Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cesar</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cirkus</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Curieux</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Eliquid France</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Enfer</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">E.Tasty</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruiteo</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Cool</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Fuel</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruizee</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Furiosa</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Juicy Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Kung Fruits</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">French Liquide</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Les Devils</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Liquideo</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">The Medusa Juice</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Monster</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Ojuice</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Petit Nuage</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Swoke</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vampire Vape</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vape Distillery</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">VDLV</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#concentresSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_concentres.png" alt="Icon Concentrés" style="width: auto; height: 25px;"/>Concentrés</a>
-                            <ul class="collapse list-unstyled" id="concentresSection">
-                                <li>
-                                    <a href="" class="concentresMagasinCigustoTeal-1" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
-                                    <a href="#saveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
-                                    <ul class="collapse list-unstyled" id="saveursSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Classic</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Mentholé</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruité Frais</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Gourmand</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Friandise / Boisson</a></li>
-                                    </ul>
+                                        <a href="#marqueSection-eliquides-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                        <ul class="collapse list-unstyled" id="marqueSection-eliquides-tel">
+                                            <li><a class="scroll-link marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">A&L</a></li>
+                                            <li><a class="scroll-link marqueAlfaliquidEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Alfaliquid</a></li>
+                                            <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Bakery Shake</a></li>
+                                            <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Candy Shake</a></li>
+                                            <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">CirKus</a></li>
+                                            <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Curieux</a></li>
+                                            <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Don Cristo</a></li>
+                                            <li><a class="scroll-link marqueEliquidFranceEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Eliquid France</a></li>
+                                            <li><a class="scroll-link marqueEnferEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Enfer</a></li>
+                                            <li><a class="scroll-link marqueETastyEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">E.Tasty</a></li>
+                                            <li><a class="scroll-link marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Le French Liquide</a></li>
+                                            <li><a class="scroll-link marqueFreshVapeCoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fresh Vape Co</a></li>
+                                            <li><a class="scroll-link marqueFruiteoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruiteo</a></li>
+                                            <li><a class="scroll-link marqueFruityCoolEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruity Cool</a></li>
+                                            <li><a class="scroll-link marqueFruityFuelEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruity Fuel</a></li>
+                                            <li><a class="scroll-link marqueFruizeeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Fruizee</a></li>
+                                            <li><a class="scroll-link marqueFullMoonEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Full Moon</a></li>
+                                            <li><a class="scroll-link marqueFuriosaEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Furiosa</a></li>
+                                            <li><a class="scroll-link marqueGreeneoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Greeneo</a></li>
+                                            <li><a class="scroll-link marqueJuicyShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Juicy Shake</a></li>
+                                            <li><a class="scroll-link marqueKungFruitsEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Kung Fruits</a></li>
+                                            <li><a class="scroll-link marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Le Coq Qui Vape</a></li>
+                                            <li><a class="scroll-link marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Le Vapoteur Breton</a></li>
+                                            <li><a class="scroll-link marqueLesDevilsEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Les Devils</a></li>
+                                            <li><a class="scroll-link marqueLiquideoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Liquideo</a></li>
+                                            <li><a class="scroll-link marqueMonoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Mono</a></li> <!--???????-->
+                                            <li><a class="scroll-link marqueMonsterEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Monster</a></li> <!--???????-->
+                                            <li><a class="scroll-link marqueOJuiceEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Ojuice</a></li> <!--???????-->
+                                            <li><a class="scroll-link marquePetitNuageEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Petit Nuage</a></li>
+                                            <li><a class="scroll-link marqueSnapDragonEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Snap Dragon</a></li>
+                                            <li><a class="scroll-link marqueSwokeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Swoke</a></li>
+                                            <li><a class="scroll-link marqueTheMedusaJuiceEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">The Medusa Juice</a></li>
+                                            <li><a class="scroll-link marqueTJuiceEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">T-Juice</a></li>
+                                            <li><a class="scroll-link marqueVampireVapeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Vampire Vape</a></li>
+                                            <li><a class="scroll-link marqueVapeDistilleryEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Vape Distillery</a></li>
+                                            <li><a class="scroll-link marqueVDLVEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">VDLV</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#concentresSection-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_concentres.png" alt="Icon Concentrés" style="width: auto; height: 55px; margin-bottom: 12px; margin-left: -3.5px; margin-right: 6px;"/>Concentrés</a>
+                                <ul class="collapse list-unstyled" id="concentresSection-tel">
+                                    <li>
+                                        <a href="" class="concentresMagasinCigustoTeal-tel-sidebar" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                        <a href="#saveursSection-concentres-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                        <ul class="collapse list-unstyled" id="saveursSection-concentres-tel">
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Classic</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Mentholé</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruité</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruité Frais</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Gourmand</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Friandise / Boisson</a></li>
+                                        </ul>
 
-                                    <a href="#contenanceSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
-                                    <ul class="collapse list-unstyled" id="contenanceSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">10 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">50 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">100 mL</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">200 mL</a></li>
-                                    </ul>
+                                        <a href="#contenanceSection-concentres-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                        <ul class="collapse list-unstyled" id="contenanceSection-concentres-tel">
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">10 mL</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">30 mL</a></li>
+                                        </ul>
 
-                                    <a href="#marqueSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
-                                    <ul class="collapse list-unstyled" id="marqueSection">
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">A&L</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Alfaliquid</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Bakery Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Candy Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cesar</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Cirkus</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Curieux</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Eliquid France</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Enfer</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">E.Tasty</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruiteo</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Cool</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruity Fuel</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Fruizee</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Furiosa</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Juicy Shake</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Kung Fruits</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">French Liquide</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Les Devils</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Liquideo</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">The Medusa Juice</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Monster</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Ojuice</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Petit Nuage</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Swoke</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vampire Vape</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">Vape Distillery</a></li>
-                                        <li><a class="scroll-link" href="" style="padding-left: 45px">VDLV</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="to-top">
-                        <a class="btn btn-primary btn-customized-3" href="#" role="button">
-                            <i class="fas fa-arrow-up"></i> Top
-                        </a>
-                    </div>
-                </nav>
-                <div class="overlay"></div>
-            </div>
-            <!--navbar-->
-            <div style="display: flex; align-items: center;">
-                <a class="btn open-menu" href="#" role="button" style="color: white; display: inline-block;">
-                    <i class="bi bi-list fs-2"></i>
-                </a>
-                <a href="" class="magasinCigustoTeal-4">
-                    <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;"/>
-                </a>
-                <div class="ms-auto">
-                    <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
-                        <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
-                        <span style="display: block; font-size: 0.8rem;">Contact</span>
+                                        <a href="#marqueSection-concentres-tel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                        <ul class="collapse list-unstyled" id="marqueSection-concentres-tel">
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">A&L</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Alfaliquid</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Bakery Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Candy Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Cesar</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Cirkus</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Curieux</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Eliquid France</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Enfer</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">E.Tasty</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">French Liquide</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruiteo</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruity Cool</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruity Fuel</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Fruizee</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Furiosa</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Juicy Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Kung Fruits</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Les Devils</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Liquideo</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Monster</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Ojuice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Petit Nuage</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Swoke</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">The Medusa Juice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Vampire Vape</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">Vape Distillery</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 90px; font-size: 2rem;">VDLV</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="to-top">
+                            <a class="btn btn-primary btn-customized-3-tel" href="#" role="button">
+                                <i class="fas fa-arrow-up"></i> Haut de page
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="overlay"></div>
+                </div>
+                <!--navbar-->
+                <div style="display: flex; align-items: center;">
+                    <a class="btn open-menu" href="#" role="button" style="color: white; display: inline-block; margin-right: 7px;">
+                        <i class="bi bi-list" style="font-size: 4rem;"></i>
                     </a>
+                    <a href="" class="magasinCigustoTeal-tel-navbar-logo">
+                        <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 95px;"/>
+                    </a>
+                    <div class="ms-auto">
+                        <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 10px;">
+                            <i class="bi bi-person-fill" style="display: inline-block; vertical-align: middle; font-size: 3rem;"></i>
+                            <span style="display: block; font-size: 1.6rem; margin-top: -14px; margin-bottom: 7px;">Compte</span>
+                        </a>
+                        <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
+                            <i class="bi bi-telephone-fill" style="display: inline-block; vertical-align: middle; font-size: 3rem;"></i>
+                            <span style="display: block; font-size: 1.6rem; margin-top: -14px; margin-bottom: 7px;">Contact</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="display: block;">
+                    <div class="form-group">
+                        <div class="input-group mt-2 mb-2">
+                            <span class="input-group-text" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; font-size: 3em;" id="basic-addon1"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; font-size: 2rem;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div style="display: block;">
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+
+            <!--ecran tablette / tablette-telephone landscape-->
+            <div id="hori">
+                <!--sidebar menu-->
+                <div class="wrapper">
+                    <nav class="sidebar">
+                        <!--close sidebar menu-->
+                        <div class="dismiss">
+                            <i class="bi bi-arrow-left-short fs-2"></i>
+                        </div>
+                        <div class="logo">
+                            <a href="" class="magasinCigustoTeal-tablette-sidebar-logo">
+                                <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;">
+                            </a>
+                        </div>
+                        <ul class="menu-elements"></ul>
+                        <ul class="list-unstyled menu-elements" style="overflow-y: auto;" id="sidebar-scroll">
+                            <li>
+                                <a href="http://localhost:3000/" style="color: inherit;"><i class="bi bi-shop-window"></i>Sélection magasin</a>
+                            </li>
+                            <li class="active">
+                                <a href="" class="magasinCigustoTeal-sidebar" style="color: inherit;"><i class="bi bi-house"></i>Accueil</a>
+                            </li>
+                            <li>
+                                <a href="" class="nouveautesMagasinCigustoTeal-tablette-sidebar" style="color: inherit;"><img src="/images/icon_new.png" alt="Icon Nouveautés" style="width: auto; height: 21px; margin-bottom: 4px; margin-right: -1px;"/> Nouveautés</a>
+                            </li>
+                            <li>
+                                <a href="" class="coupsDeCoeurMagasinCigustoTeal-tablette-sidebar"><i class="bi bi-heart"></i>Coups de cœur</a>
+                            </li>
+                            <li>
+                                <a href="#eliquidesSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_eliquides.png" alt="Icon E-Liquides" style="width: auto; height: 25px; margin-bottom: 5px; margin-left: -2px; margin-right: 2px;"/>E-Liquides</a>
+                                <ul class="collapse list-unstyled" id="eliquidesSection">
+                                    <li>
+                                        <a href="" class="eliquidesMagasinCigustoTeal-tablette-sidebar" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                        <a href="#saveursSection-eliquides" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                        <ul class="collapse list-unstyled" id="saveursSection-eliquides">
+                                            <li><a class="scroll-link saveurClassicEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Classic</a></li>
+                                            <li><a class="scroll-link saveurMentholeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Mentholé</a></li>
+                                            <li><a class="scroll-link saveurFruiteEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruité</a></li>
+                                            <li><a class="scroll-link saveurFruiteFraisEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruité Frais</a></li>
+                                            <li><a class="scroll-link saveurGourmandEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Gourmand</a></li>
+                                            <li><a class="scroll-link saveurFriandiseBoissonEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Friandise / Boisson</a></li>
+                                        </ul>
+
+                                        <a href="#contenanceSection-eliquides" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                        <ul class="collapse list-unstyled" id="contenanceSection-eliquides">
+                                            <li><a class="scroll-link contenance10mlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">10 mL</a></li>
+                                            <li><a class="scroll-link contenance50mlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">50 mL</a></li>
+                                            <li><a class="scroll-link contenance80mlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">80 mL</a></li>
+                                            <li><a class="scroll-link contenance100mlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">100 mL</a></li>
+                                            <li><a class="scroll-link contenance200mlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">200 mL</a></li>
+                                        </ul>
+
+                                        <a href="#marqueSection-eliquides" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                        <ul class="collapse list-unstyled" id="marqueSection-eliquides">
+                                            <li><a class="scroll-link marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">A&L</a></li>
+                                            <li><a class="scroll-link marqueAlfaliquidEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Alfaliquid</a></li>
+                                            <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tablette-sidebar " href="" style="padding-left: 45px; font-size: 1.1rem;">Bakery Shake</a></li>
+                                            <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Candy Shake</a></li>
+                                            <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">CirKus</a></li>
+                                            <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Curieux</a></li>
+                                            <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Don Cristo</a></li>
+                                            <li><a class="scroll-link marqueEliquidFranceEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Eliquid France</a></li>
+                                            <li><a class="scroll-link marqueEnferEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Enfer</a></li>
+                                            <li><a class="scroll-link marqueETastyEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">E.Tasty</a></li>
+                                            <li><a class="scroll-link marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Le French Liquide</a></li>
+                                            <li><a class="scroll-link marqueFreshVapeCoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fresh Vape Co</a></li>
+                                            <li><a class="scroll-link marqueFruiteoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruiteo</a></li>
+                                            <li><a class="scroll-link marqueFruityCoolEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruity Cool</a></li>
+                                            <li><a class="scroll-link marqueFruityFuelEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruity Fuel</a></li>
+                                            <li><a class="scroll-link marqueFruizeeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruizee</a></li>
+                                            <li><a class="scroll-link marqueFullMoonEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Full Moon</a></li>
+                                            <li><a class="scroll-link marqueFuriosaEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Furiosa</a></li>
+                                            <li><a class="scroll-link marqueGreeneoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Greeneo</a></li>
+                                            <li><a class="scroll-link marqueJuicyShakeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Juicy Shake</a></li>
+                                            <li><a class="scroll-link marqueKungFruitsEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Kung Fruits</a></li>
+                                            <li><a class="scroll-link marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Le Coq Qui Vape</a></li>
+                                            <li><a class="scroll-link marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Le Vapoteur Breton</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Les Devils</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Liquideo</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Mono</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Monster</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Ojuice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Petit Nuage</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Snap Dragon</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Swoke</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">The Medusa Juice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Tjuice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Vampire Vape</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Vape Distillery</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">VDLV</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#concentresSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"><img src="/images/icon_concentres.png" alt="Icon Concentrés" style="width: auto; height: 25px; margin-bottom: 5px; margin-left: -2px; margin-right: 2px;"/>Concentrés</a>
+                                <ul class="collapse list-unstyled" id="concentresSection">
+                                    <li>
+                                        <a href="" class="concentresMagasinCigustoTeal-tablette-sidebar" aria-expanded="false" role="button" aria-controls="otherSections">Tous</a>
+                                        <a href="#saveursSection-concentres" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Saveurs</a>
+                                        <ul class="collapse list-unstyled" id="saveursSection-concentres">
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Classic</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Mentholé</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruité</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruité Frais</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Gourmand</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Friandise / Boisson</a></li>
+                                        </ul>
+
+                                        <a href="#contenanceSection-concentres" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Contenance</a>
+                                        <ul class="collapse list-unstyled" id="contenanceSection-concentres">
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">10 mL</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">30 mL</a></li>
+                                        </ul>
+
+                                        <a href="#marqueSection-concentres" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">Marques</a>
+                                        <ul class="collapse list-unstyled" id="marqueSection-concentres">
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">A&L</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Alfaliquid</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Bakery Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Candy Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Cesar</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Cirkus</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Curieux</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Eliquid France</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Enfer</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">E.Tasty</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">French Liquide</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruiteo</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruity Cool</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruity Fuel</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Fruizee</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Furiosa</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Juicy Shake</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Kung Fruits</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Les Devils</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Liquideo</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Monster</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Ojuice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Petit Nuage</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Swoke</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">The Medusa Juice</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Vampire Vape</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">Vape Distillery</a></li>
+                                            <li><a class="scroll-link" href="" style="padding-left: 45px; font-size: 1.1rem;">VDLV</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="to-top">
+                            <a class="btn btn-primary btn-customized-3" href="#" role="button">
+                                <i class="fas fa-arrow-up"></i> Haut de page
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="overlay"></div>
+                </div>
+                <!--navbar-->
+                <div style="display: flex; align-items: center;">
+                    <a class="btn open-menu" href="#" role="button" style="color: white; display: inline-block;">
+                        <i class="bi bi-list fs-2"></i>
+                    </a>
+                    <a href="" class="magasinCigustoTeal-tablette-navbar-logo">
+                        <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;"/>
+                    </a>
+                    <div class="ms-auto">
+                        <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 10px;">
+                            <i class="bi bi-person-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
+                            <span style="display: block; font-size: 0.8rem;">Compte</span>
+                        </a>
+                        <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
+                            <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
+                            <span style="display: block; font-size: 0.8rem;">Contact</span>
+                        </a>
+                    </div>
+                </div>
+                <div style="display: block;">
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!--ecran tablette/pc-->
+    <!--ecran pc-->
     <div class="d-flex">
-        <div class="flex-fill d-none d-sm-none d-md-block d-lg-block d-xl-block">
+        <div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
             <div class="d-flex align-items-center justify-content-between">
-                <a href="" class="magasinCigustoTeal-5">
+                <a href="" class="magasinCigustoTeal-navbar-logo">
                     <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 35px;"/>
                 </a>
-                <div class="form-group" style="width: 100%; margin-left: 34px; margin-right: 34px;">
+                <div class="form-group" style="width: 55%; margin-left: 34px; margin-right: 34px;">
                     <label for="SearchInput"></label>
                     <div class="input-group mb-4">
                         <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
@@ -212,6 +415,10 @@
                     </div>
                 </div>
                 <div class="d-inline-block float-end">
+                    <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 10px;">
+                        <i class="bi bi-person-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
+                        <span style="display: block; font-size: 0.8rem;">Compte</span>
+                    </a>
                     <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
                         <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
                         <span style="display: block; font-size: 0.8rem;">Contact</span>
@@ -220,21 +427,148 @@
             </div>
             <div style="display: flex; justify-content: space-between;">
                 <a></a><a></a>
-                <a href="" class="nouveautesMagasinCigustoTeal-2" style="color: inherit;"><strong>Nouveautés</strong></a>
+                <a href="" class="nouveautesMagasinCigustoTeal-navbar" style="color: inherit;"><strong>Nouveautés</strong></a>
                 <a>|</a>
-                <a href="" class="coupsDeCoeurMagasinCigustoTeal-2" style="color: inherit;"><strong>Coups de cœur</strong></a>
+                <a href="" class="coupsDeCoeurMagasinCigustoTeal-navbar" style="color: inherit;"><strong>Coups de cœur</strong></a>
                 <a>|</a>
-                <a href="" class="eliquidesMagasinCigustoTeal-2" style="color: inherit;"><strong>E-Liquides</strong></a>
+                <div class="overlay-navbar">
+                    <a href="#" class="eliquidesMagasinCigustoTeal-navbar" style="color: inherit;">
+                        <strong>E-Liquides</strong>
+                    </a>
+                    <div class="card-overlay" style="display: none;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4>Saveurs</h4>
+                                        <a href="" class="bg-orange-link saveurClassicEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Classic</a><br>
+                                        <a href="" class="bg-orange-link saveurMentholeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Mentholé</a><br>
+                                        <a href="" class="bg-orange-link saveurFruiteEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruité</a><br>
+                                        <a href="" class="bg-orange-link saveurFruiteFraisEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruité Frais</a><br>
+                                        <a href="" class="bg-orange-link saveurGourmandEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Gourmand</a><br>
+                                        <a href="" class="bg-orange-link saveurFriandiseBoissonEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Friandise / Boisson</a><br>
+                                        <br><div class="border-top"></div><br>
+                                        <h4>Contenance</h4>
+                                        <a href="" class="bg-orange-link contenance10mlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">10 mL</a><br>
+                                        <a href="" class="bg-orange-link contenance50mlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">50 mL</a><br>
+                                        <a href="" class="bg-orange-link contenance80mlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">80 mL</a><br>
+                                        <a href="" class="bg-orange-link contenance100mlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">100 mL</a><br>
+                                        <a href="" class="bg-orange-link contenance200mlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">200 mL</a><br>
+                                    </div>
+                                    <div class="col-6">
+                                        <h4>Marques</h4>
+                                        <div style="max-height: 332px; overflow-y: auto;">
+                                            <a href="" class="bg-orange-link marqueAandlEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">A&L</a><br>
+                                            <a href="" class="bg-orange-link marqueAlfaliquidEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Alfaliquid</a><br>
+                                            <a href="" class="bg-orange-link marqueBakeryShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Bakery Shake</a><br>
+                                            <a href="" class="bg-orange-link marqueCandyShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Candy Shake</a><br>
+                                            <a href="" class="bg-orange-link marqueCesarEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Cesar</a><br>
+                                            <a href="" class="bg-orange-link marqueCirkusEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">CirKus</a><br>
+                                            <a href="" class="bg-orange-link marqueCurieuxEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Curieux</a><br>
+                                            <a href="" class="bg-orange-link marqueDonCristoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Don Cristo</a><br>
+                                            <a href="" class="bg-orange-link marqueEliquidFranceEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Eliquid France</a><br>
+                                            <a href="" class="bg-orange-link marqueEnferEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Enfer</a><br>
+                                            <a href="" class="bg-orange-link marqueETastyEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">E.Tasty</a><br>
+                                            <a href="" class="bg-orange-link marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Le French Liquide</a><br>
+                                            <a href="" class="bg-orange-link marqueFreshVapeCoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fresh Vape Co</a><br>
+                                            <a href="" class="bg-orange-link marqueFruiteoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruiteo</a><br>
+                                            <a href="" class="bg-orange-link marqueFruityCoolEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruity Cool</a><br>
+                                            <a href="" class="bg-orange-link marqueFruityFuelEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruity Fuel</a><br>
+                                            <a href="" class="bg-orange-link marqueFruizeeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Fruizee</a><br>
+                                            <a href="" class="bg-orange-link marqueFullMoonEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Full Moon</a><br>
+                                            <a href="" class="bg-orange-link marqueFuriosaEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Furiosa</a><br>
+                                            <a href="" class="bg-orange-link marqueGreeneoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Greeneo</a><br>
+                                            <a href="" class="bg-orange-link marqueJuicyShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Juicy Shake</a><br>
+                                            <a href="" class="bg-orange-link marqueKungFruitsEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Kung Fruits</a><br>
+                                            <a href="" class="bg-orange-link marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Le Coq Qui Vape</a><br>
+                                            <a href="" class="bg-orange-link marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Le Vapoteur Breton</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Les Devils</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Liquideo</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Ojuice</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Petit Nuage</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Swoke</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">The Medusa Juice</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Vampire Vape</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Vape Distillery</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;"></a>VDLV<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a>|</a>
-                <a href="" class="concentresMagasinCigustoTeal-2" style="color: inherit;"><strong>Concentrés</strong></a>
+                <div class="overlay-navbar">
+                    <a href="#" class="concentresMagasinCigustoTeal-navbar" style="color: inherit;"><strong>Concentrés</strong></a>
+                    <div class="card-overlay-2" style="display: none;">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4>Saveurs</h4>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Classic</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Mentholé</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Fruité</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Fruité Frais</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Gourmand</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Friandise / Boisson</a><br>
+                                        <br><div class="border-top"></div><br>
+                                        <h4>Contenance</h4>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">10 mL</a><br>
+                                        <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">30 mL</a><br>
+                                    </div>
+                                    <div class="col-6">
+                                        <h4>Marques</h4>
+                                        <div style="max-height: 332px; overflow-y: auto;">
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">A&L</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Amazone</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Aromazon</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Cesar</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Curieux</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Doctor Diy</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Fighter Fuel</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Fruiteo</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Fruizee</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Full Moon</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Kung Fruits</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Kyandi Shop</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Shootiz</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Supervape</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">The Medusa Juice</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Tjuice</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;">Vampire Vape</a><br>
+                                            <a href="" class="bg-orange-link" style="color: inherit; background-color: transparent;"></a>Vape47<br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <a></a><a></a>
             </div>
             <br>
         </div>
     </div>
 </header>
-<div class="historique-deplacement">
-    <a href="http://localhost:3000/" style="color: inherit;">Magasin</a> > <a class="magasinCigustoTeal-2" href="" style="color: inherit;">Accueil</a>
+
+<div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
+    <div id="verti">
+        <div class="historique-deplacement-tel">
+            <a href="http://localhost:3000/" style="color: inherit;">Magasin</a> > <a class="magasinCigustoTeal-tel-historique" href="" style="color: inherit;">Accueil</a>
+        </div>
+    </div>
+    <div id="hori">
+        <div class="historique-deplacement">
+            <a href="http://localhost:3000/" style="color: inherit;">Magasin</a> > <a class="magasinCigustoTeal-tablette-historique" href="" style="color: inherit;">Accueil</a>
+        </div>
+    </div>
+</div>
+<div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
+    <div class="historique-deplacement">
+        <a href="http://localhost:3000/" style="color: inherit;">Magasin</a> > <a class="magasinCigustoTeal-historique" href="" style="color: inherit;">Accueil</a>
+    </div>
 </div>
 
 <!--ecran telephone/tablette-->
@@ -242,16 +576,33 @@
     <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
         <br>
         <div style="text-align: center;">
-            <div id="bvnHome-1"></div>
-            <a href="http://localhost:3000/" style="color: inherit;">
-                <button class="btn-choisir-magasin">
-                    <i class="bi bi-chevron-double-left"></i> Choisir un magasin
-                </button>
-            </a>
+            <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                <div id="verti">
+                    <br>
+                    <div id="bvnHomeTel"></div>
+                    <br>
+                    <a href="http://localhost:3000/" style="color: inherit;">
+                        <button class="btn-choisir-magasin-tel">
+                            <i class="bi bi-chevron-double-left"></i> Choisir un magasin
+                        </button>
+                    </a>
+                    <br><br><br><br><br>
+                    <div style="height: 1px; background-color: #D9D9D9;"></div>
+                    <div id="googlemapTel" style="margin-top: -24px; margin-bottom: -41px;"></div>
+                </div>
+                <div id="hori">
+                    <div id="bvnHome-1"></div>
+                    <a href="http://localhost:3000/" style="color: inherit;">
+                        <button class="btn-choisir-magasin">
+                            <i class="bi bi-chevron-double-left"></i> Choisir un magasin
+                        </button>
+                    </a>
+                    <br><br><br>
+                    <div style="height: 1px; background-color: #D9D9D9;"></div>
+                    <div id="googlemap-1" style="margin-top: -24px; margin-bottom: -41px;"></div>
+                </div>
+            </div>
         </div>
-        <br><br>
-        <div style="height: 1px; background-color: #D9D9D9;"></div>
-        <div id="googlemap-1" style="margin-top: -24px; margin-bottom: -41px;"></div>
     </div>
 </div>
 
@@ -276,39 +627,71 @@
 <footer class="footer text-light" id="footer">
     <br>
     <div class="container">
-        <!--ecran telephone-->
         <div class="d-flex">
-            <div class="flex-fill d-block d-sm-none d-md-none d-lg-none d-xl-none">
-                <div class="row">
-                    <div class="col-3">
-                        <h5 style="margin-bottom: 15px;">Newsletter</h5>
-                        <form class="row g-3">
-                            <div class="col-auto">
-                                <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
-                            </div>
-                            <div class="col-auto">
-                                <button type="submit" class="btn btn-primary mb-3">S'inscrire</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-2 text-center">
-                        <h5></h5><br>
-                        <a class="facebook-icon-1" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
-                        <a class="instagram-icon-1" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
-                    </div>
-                    <div class="col-7">
-                        <h5 class="d-inline-block">Contact</h5>
-                        <div id="adresse-magasin-1"></div>
+            <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                    <div id="verti">
                         <br>
+                        <div class="row" style="font-size: 1.5rem;">
+                            <div class="col-3">
+                                <h5 style="margin-bottom: 22px; font-size: 2rem;">Newsletter</h5>
+                                <form class="row g-3">
+                                    <div class="col-auto">
+                                        <input type="email" class="form-control" id="inputPassword2" placeholder="Email" style="font-size: 2rem;">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary mb-3" style="font-size: 2rem;">S'inscrire</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h5 style="font-size: 2rem;">Réseaux</h5>
+                                <a class="facebook-icon-tel" style="text-decoration: none; color: inherit; font-size: 4rem;"><i class="bi bi-facebook"></i></a>
+                                <a class="instagram-icon-tel" style="text-decoration: none; color: inherit; font-size: 4rem;"><i class="bi bi-instagram"></i></a>
+                            </div>
+                            <div class="col-5">
+                                <h5 class="d-inline-block" style="font-size: 2rem;">Contact</h5>
+                                <div id="adresse-magasin-tel"></div>
+                                <br>
+                            </div>
+                            <hr>
+                            <p class="text-muted">&copy; 2023 Teal - Tous droits réservés</p>
+                        </div>
                     </div>
-                    <hr>
-                    <p class="text-muted">&copy; 2023 Teal - Tous droits réservés</p>
+                    <div id="hori">
+                        <div class="row">
+                            <div class="col-4">
+                                <h5 style="margin-bottom: 19px;">Newsletter</h5>
+                                <form class="row g-3">
+                                    <div class="col-auto">
+                                        <input type="email" class="form-control" id="inputPassword2" placeholder="Email">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="submit" class="btn btn-primary mb-3">S'inscrire</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-4 text-center">
+                                <h5>Réseaux</h5>
+                                <a class="facebook-icon-tablette" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
+                                <a class="instagram-icon-tablette" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
+                            </div>
+                            <div class="col-4">
+                                <h5 class="d-inline-block">Contact</h5>
+                                <div id="adresse-magasin-tablette"></div>
+                                <br>
+                            </div>
+                            <hr>
+                            <p class="text-muted">&copy; 2023 Teal - Tous droits réservés</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
         <!--ecran tablette/pc-->
         <div class="d-flex">
-            <div class="flex-fill d-none d-sm-block d-md-block d-lg-block d-xl-block">
+            <div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
                 <div class="row">
                     <div class="col-4">
                         <h5 style="margin-bottom: 19px;">Newsletter</h5>
@@ -323,12 +706,12 @@
                     </div>
                     <div class="col-4 text-center">
                         <h5>Réseaux</h5>
-                        <a class="facebook-icon-2" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
-                        <a class="instagram-icon-2" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
+                        <a class="facebook-icon" style="text-decoration: none; color: inherit;"><i class="bi bi-facebook fs-1"></i></a>
+                        <a class="instagram-icon" style="text-decoration: none; color: inherit;"><i class="bi bi-instagram fs-1"></i></a>
                     </div>
                     <div class="col-4">
                         <h5 class="d-inline-block">Contact</h5>
-                        <div id="adresse-magasin-2"></div>
+                        <div id="adresse-magasin"></div>
                         <br>
                     </div>
                     <hr>
@@ -351,6 +734,19 @@
         $('.open-menu').on('click', function(e) {
             e.preventDefault();
             $('.sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            // close opened sub-menus
+            $('.collapse.show').toggleClass('show');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+
+        $('.dismiss-tel, .overlay').on('click', function() {
+            $('.sidebar-tel').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+        $('.open-menu').on('click', function(e) {
+            e.preventDefault();
+            $('.sidebar-tel').addClass('active');
             $('.overlay').addClass('active');
             // close opened sub-menus
             $('.collapse.show').toggleClass('show');
@@ -382,6 +778,27 @@
     document.getElementById('googlemap-1').innerHTML =`<br><h1><strong>${map.showmap}</strong></h1><br>`;
     document.getElementById('googlemap-2').innerHTML =`<br><h1><strong>${map.showmap}</strong></h1><br>`;
 
+    const googlemapTel = [
+        {
+            id: "magasin-andelnans",
+            showmap: "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2690.3595268708664!2d6.862380084674429!3d47.59969843121988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923da7b85539ad%3A0x3686176dcdefec4a!2sCigusto%20Belfort%20Andelnans!5e0!3m2!1sfr!2sfr!4v1681985931672!5m2!1sfr!2sfr\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        },
+        {
+            id: "magasin-bessoncourt",
+            showmap: "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.5813082610393!2d6.913736577221616!3d47.64040060416602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47922316bc15e993%3A0x7a448f1a22ce4955!2sCigusto%20Belfort%20Bessoncourt!5e0!3m2!1sfr!2sfr!4v1681987324811!5m2!1sfr!2sfr\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        },
+        {
+            id: "magasin-besancon",
+            showmap: "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.6739589677445!2d5.991718545276861!3d47.28162769821929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478d636ab977e4bb%3A0xef1af98fffae232a!2sCigusto%20Besan%C3%A7on!5e0!3m2!1sfr!2sfr!4v1681987385677!5m2!1sfr!2sfr\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        },
+        {
+            id: "magasin-colmar",
+            showmap: "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.1354549423168!2d7.366912729970098!3d48.126911112937606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47916762750e396b%3A0x4c3f36388634225d!2sCigusto%20Colmar!5e0!3m2!1sfr!2sfr!4v1681987429277!5m2!1sfr!2sfr\" width=\"100%\" height=\"700\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+        }
+    ];
+    const mapTel = googlemapTel.find(m => m.id === magasinId);
+    document.getElementById('googlemapTel').innerHTML =`<br><h1><strong>${mapTel.showmap}</strong></h1><br>`;
+
     const bvnHome = [
         {
             id: "magasin-andelnans",
@@ -403,6 +820,27 @@
     const bienvenue = bvnHome.find(m => m.id === magasinId);
     document.getElementById('bvnHome-1').innerHTML =`<br><h1><strong>${bienvenue.bvn}</strong></h1><br>`;
     document.getElementById('bvnHome-2').innerHTML =`<br><h1><strong>${bienvenue.bvn}</strong></h1><br>`;
+
+    const bvnHomeTel = [
+        {
+            id: "magasin-andelnans",
+            bvn: "Bienvenue dans votre magasin<br>Cigusto Andelnans"
+        },
+        {
+            id: "magasin-bessoncourt",
+            bvn: "Bienvenue dans votre magasin<br>Cigusto Bessoncourt"
+        },
+        {
+            id: "magasin-besancon",
+            bvn: "Bienvenue dans votre magasin<br>Cigusto Besançon"
+        },
+        {
+            id: "magasin-colmar",
+            bvn: "Bienvenue dans votre magasin<br>Cigusto Colmar"
+        }
+    ];
+    const bienvenueTel = bvnHomeTel.find(m => m.id === magasinId);
+    document.getElementById('bvnHomeTel').innerHTML =`<br><h1><strong style="font-size: 3rem;">${bienvenueTel.bvn}</strong></h1><br>`;
 
     const magasins = [
         {
@@ -448,8 +886,9 @@
     ];
     // adresse magasin
     const magasin = magasins.find(m => m.id === magasinId);
-    document.getElementById('adresse-magasin-1').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline;" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
-    document.getElementById('adresse-magasin-2').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
+    document.getElementById('adresse-magasin-tel').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline;" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
+    document.getElementById('adresse-magasin-tablette').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline;" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
+    document.getElementById('adresse-magasin').innerHTML = `<strong>${magasin.nom}</strong><br>${magasin.adresse}<br>${magasin.codePostal} ${magasin.ville}<br>${magasin.horaires}<br><a style="color: inherit; text-decoration: underline" href="mailto:${magasin.mail}">${magasin.mail}</a><br><abbr title="Phone">Tel:</abbr> ${magasin.telephone}`;
 
     // redirection page magasin
     let magasinCigustoTeal;
@@ -464,11 +903,17 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.magasinCigustoTeal-1').href = magasinCigustoTeal;
-    document.querySelector('.magasinCigustoTeal-2').href = magasinCigustoTeal;
-    document.querySelector('.magasinCigustoTeal-3').href = magasinCigustoTeal;
-    document.querySelector('.magasinCigustoTeal-4').href = magasinCigustoTeal;
-    document.querySelector('.magasinCigustoTeal-5').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-sidebar-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-sidebar').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-navbar-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tablette-sidebar-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-sidebar').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tablette-navbar-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-navbar-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-historique').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tablette-historique').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-historique').href = magasinCigustoTeal;
+
 
     // redirection page nouveautes
     let nouveautesMagasinCigustoTeal;
@@ -483,8 +928,9 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.nouveautesMagasinCigustoTeal-1').href = nouveautesMagasinCigustoTeal;
-    document.querySelector('.nouveautesMagasinCigustoTeal-2').href = nouveautesMagasinCigustoTeal;
+    document.querySelector('.nouveautesMagasinCigustoTeal-tel-sidebar').href = nouveautesMagasinCigustoTeal;
+    document.querySelector('.nouveautesMagasinCigustoTeal-tablette-sidebar').href = nouveautesMagasinCigustoTeal;
+    document.querySelector('.nouveautesMagasinCigustoTeal-navbar').href = nouveautesMagasinCigustoTeal;
 
     // redirection page coups de coeur
     let coupsDeCoeurMagasinCigustoTeal;
@@ -499,9 +945,9 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-1').href = coupsDeCoeurMagasinCigustoTeal;
-    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-2').href = coupsDeCoeurMagasinCigustoTeal;
-
+    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-tel-sidebar').href = coupsDeCoeurMagasinCigustoTeal;
+    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-tablette-sidebar').href = coupsDeCoeurMagasinCigustoTeal;
+    document.querySelector('.coupsDeCoeurMagasinCigustoTeal-navbar').href = coupsDeCoeurMagasinCigustoTeal;
 
     // redirection page e-liquides
     let eliquidesMagasinCigustoTeal;
@@ -516,8 +962,9 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.eliquidesMagasinCigustoTeal-1').href = eliquidesMagasinCigustoTeal;
-    document.querySelector('.eliquidesMagasinCigustoTeal-2').href = eliquidesMagasinCigustoTeal;
+    document.querySelector('.eliquidesMagasinCigustoTeal-tel-sidebar').href = eliquidesMagasinCigustoTeal;
+    document.querySelector('.eliquidesMagasinCigustoTeal-tablette-sidebar').href = eliquidesMagasinCigustoTeal;
+    document.querySelector('.eliquidesMagasinCigustoTeal-navbar').href = eliquidesMagasinCigustoTeal;
 
     // redirection page concentres
     let concentresMagasinCigustoTeal;
@@ -532,8 +979,62 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.concentresMagasinCigustoTeal-1').href = concentresMagasinCigustoTeal;
-    document.querySelector('.concentresMagasinCigustoTeal-2').href = concentresMagasinCigustoTeal;
+    document.querySelector('.concentresMagasinCigustoTeal-tel-sidebar').href = concentresMagasinCigustoTeal;
+    document.querySelector('.concentresMagasinCigustoTeal-tablette-sidebar').href = concentresMagasinCigustoTeal;
+    document.querySelector('.concentresMagasinCigustoTeal-navbar').href = concentresMagasinCigustoTeal;
+
+    //dropdown E-Liquides et Concentrés écran tablette/pc
+    const link = document.querySelector('.eliquidesMagasinCigustoTeal-navbar');
+    const cardOverlay = document.querySelector('.card-overlay');
+    link.addEventListener('mouseenter', () => {
+        cardOverlay.style.display = 'block';
+    });
+    link.addEventListener('mouseleave', () => {
+        if (!isMouseOver(cardOverlay)) {
+            cardOverlay.style.display = 'none';
+        }
+    });
+    cardOverlay.addEventListener('mouseenter', () => {
+        cardOverlay.style.display = 'block';
+    });
+    cardOverlay.addEventListener('mouseleave', () => {
+        if (!isMouseOver(link)) {
+            cardOverlay.style.display = 'none';
+        }
+    });
+    const link2 = document.querySelector('.concentresMagasinCigustoTeal-navbar');
+    const cardOverlay2 = document.querySelector('.card-overlay-2');
+    link2.addEventListener('mouseenter', () => {
+        cardOverlay2.style.display = 'block';
+    });
+    link2.addEventListener('mouseleave', () => {
+        if (!isMouseOver(cardOverlay2)) {
+            cardOverlay2.style.display = 'none';
+        }
+    });
+    cardOverlay2.addEventListener('mouseenter', () => {
+        cardOverlay2.style.display = 'block';
+    });
+    cardOverlay2.addEventListener('mouseleave', () => {
+        if (!isMouseOver(link2)) {
+            cardOverlay2.style.display = 'none';
+        }
+    });
+    function isMouseOver(element) {
+        const rect = element.getBoundingClientRect();
+        const x = event.clientX;
+        const y = event.clientY;
+        return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
+    }
+    const links = document.querySelectorAll('.bg-orange-link');
+    links.forEach(link => {
+        link.addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#F9533E';
+        });
+        link.addEventListener('mouseout', function() {
+            this.style.backgroundColor = 'transparent';
+        });
+    });
 
     // redirection facebook
     let facebookUrl;
@@ -548,9 +1049,11 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    const facebookIcon1 = document.querySelector('.facebook-icon-1');
+    const facebookIconTel = document.querySelector('.facebook-icon-tel');
+    facebookIconTel.href = facebookUrl;
+    const facebookIcon1 = document.querySelector('.facebook-icon-tablette');
     facebookIcon1.href = facebookUrl;
-    const facebookIcon2 = document.querySelector('.facebook-icon-2');
+    const facebookIcon2 = document.querySelector('.facebook-icon');
     facebookIcon2.href = facebookUrl;
 
     // redirection instagram
@@ -566,24 +1069,849 @@
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide !`);
     }
-    const instagramIcon1 = document.querySelector('.instagram-icon-1');
+    const instagramIconTel = document.querySelector('.instagram-icon-tel');
+    instagramIconTel.href = instagramUrl;
+    const instagramIcon1 = document.querySelector('.instagram-icon-tablette');
     instagramIcon1.href = instagramUrl;
-    const instagramIcon2 = document.querySelector('.instagram-icon-2');
+    const instagramIcon2 = document.querySelector('.instagram-icon');
     instagramIcon2.href = instagramUrl;
+
+    // ****************************** redirection selection saveur ******************************
+    // redirection page e-liquides coche saveur classic
+    let saveurClassicEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurClassicEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=classic';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurClassicEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=classic';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurClassicEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=classic';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurClassicEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=classic';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurClassicEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurClassicEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurClassicEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurClassicEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurClassicEliquidesMagasinCigustoTeal-navbar').href = saveurClassicEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche saveur mentholé
+    let saveurMentholeEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurMentholeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=menthole';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurMentholeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=menthole';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurMentholeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=menthole';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurMentholeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=menthole';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurMentholeEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurMentholeEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurMentholeEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurMentholeEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurMentholeEliquidesMagasinCigustoTeal-navbar').href = saveurMentholeEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche saveur fruité
+    let saveurFruiteEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFruiteEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=fruite';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFruiteEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=fruite';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFruiteEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=fruite';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFruiteEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=fruite';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFruiteEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurFruiteEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteEliquidesMagasinCigustoTeal-navbar').href = saveurFruiteEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche saveur fruité frais
+    let saveurFruiteFraisEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFruiteFraisEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFruiteFraisEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFruiteFraisEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFruiteFraisEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=fruitefrais';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFruiteFraisEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurFruiteFraisEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteFraisEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteFraisEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteFraisEliquidesMagasinCigustoTeal-navbar').href = saveurFruiteFraisEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche saveur gourmand
+    let saveurGourmandEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurGourmandEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=gourmand';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurGourmandEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=gourmand';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurGourmandEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=gourmand';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurGourmandEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=gourmand';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurGourmandEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurGourmandEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurGourmandEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurGourmandEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurGourmandEliquidesMagasinCigustoTeal-navbar').href = saveurGourmandEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche saveur friandise / boisson
+    let saveurFriandiseBoissonEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFriandiseBoissonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFriandiseBoissonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFriandiseBoissonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFriandiseBoissonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?saveur=friandiseboisson';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFriandiseBoissonEliquidesMagasinCigustoTeal-tel-sidebar').href = saveurFriandiseBoissonEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFriandiseBoissonEliquidesMagasinCigustoTeal-tablette-sidebar').href = saveurFriandiseBoissonEliquidesMagasinCigustoTeal;
+    document.querySelector('.saveurFriandiseBoissonEliquidesMagasinCigustoTeal-navbar').href = saveurFriandiseBoissonEliquidesMagasinCigustoTeal;
+
+    // ****************************** redirection selection contenance ******************************
+    // redirection page e-liquides coche contenance 10 mL
+    let contenance10mlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance10mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?contenance=10mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance10mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?contenance=10mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance10mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?contenance=10mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance10mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?contenance=10mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance10mlEliquidesMagasinCigustoTeal-tel-sidebar').href = contenance10mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance10mlEliquidesMagasinCigustoTeal-tablette-sidebar').href = contenance10mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance10mlEliquidesMagasinCigustoTeal-navbar').href = contenance10mlEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche contenance 50 mL
+    let contenance50mlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance50mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?contenance=50mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance50mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?contenance=50mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance50mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?contenance=50mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance50mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?contenance=50mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance50mlEliquidesMagasinCigustoTeal-tel-sidebar').href = contenance50mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance50mlEliquidesMagasinCigustoTeal-tablette-sidebar').href = contenance50mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance50mlEliquidesMagasinCigustoTeal-navbar').href = contenance50mlEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche contenance 80 mL
+    let contenance80mlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance80mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?contenance=80mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance80mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?contenance=80mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance80mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?contenance=80mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance80mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?contenance=80mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance80mlEliquidesMagasinCigustoTeal-tel-sidebar').href = contenance80mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance80mlEliquidesMagasinCigustoTeal-tablette-sidebar').href = contenance80mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance80mlEliquidesMagasinCigustoTeal-navbar').href = contenance80mlEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche contenance 100 mL
+    let contenance100mlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance100mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?contenance=100mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance100mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?contenance=100mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance100mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?contenance=100mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance100mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?contenance=100mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance100mlEliquidesMagasinCigustoTeal-tel-sidebar').href = contenance100mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance100mlEliquidesMagasinCigustoTeal-tablette-sidebar').href = contenance100mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance100mlEliquidesMagasinCigustoTeal-navbar').href = contenance100mlEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche contenance 200 mL
+    let contenance200mlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance200mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?contenance=200mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance200mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?contenance=200mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance200mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?contenance=200mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance200mlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?contenance=200mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance200mlEliquidesMagasinCigustoTeal-tel-sidebar').href = contenance200mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance200mlEliquidesMagasinCigustoTeal-tablette-sidebar').href = contenance200mlEliquidesMagasinCigustoTeal;
+    document.querySelector('.contenance200mlEliquidesMagasinCigustoTeal-navbar').href = contenance200mlEliquidesMagasinCigustoTeal;
+
+    // ****************************** redirection selection marque ******************************
+    // redirection page e-liquides coche marque A&L
+    let marqueAandlEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Alfaliquid
+    let marqueAlfaliquidEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueAlfaliquidEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Alfaliquid';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueAlfaliquidEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Alfaliquid';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueAlfaliquidEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Alfaliquid';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueAlfaliquidEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Alfaliquid';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueAlfaliquidEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAlfaliquidEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueAlfaliquidEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAlfaliquidEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueAlfaliquidEliquidesMagasinCigustoTeal-navbar').href = marqueAlfaliquidEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Bakery Shake
+    let marqueBakeryShakelEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueBakeryShakelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=BakeryShake';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueBakeryShakelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=BakeryShake';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueBakeryShakelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=BakeryShake';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueBakeryShakelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=BakeryShake';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueBakeryShakeEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueBakeryShakelEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueBakeryShakeEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueBakeryShakelEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueBakeryShakeEliquidesMagasinCigustoTeal-navbar').href = marqueBakeryShakelEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Candy Shake
+    let marqueCandyShakeEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCandyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=CandyShake';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCandyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=CandyShake';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCandyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=CandyShake';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCandyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=CandyShake';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCandyShakeEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCandyShakeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCandyShakeEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCandyShakeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCandyShakeEliquidesMagasinCigustoTeal-navbar').href = marqueCandyShakeEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Cesar
+    let marqueCesarEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCesarEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Cesar';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCesarEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Cesar';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCesarEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Cesar';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCesarEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Cesar';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-navbar').href = marqueCesarEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque CirKus
+    let marqueCirkusEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCirkusEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=CirKus';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCirkusEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=CirKus';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCirkusEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=CirKus';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCirkusEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=CirKus';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCirkusEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCirkusEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCirkusEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCirkusEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCirkusEliquidesMagasinCigustoTeal-navbar').href = marqueCirkusEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Curieux
+    let marqueCurieuxEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCurieuxEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Curieux';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCurieuxEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Curieux';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCurieuxEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Curieux';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCurieuxEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Curieux';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCurieuxEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCurieuxEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCurieuxEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCurieuxEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCurieuxEliquidesMagasinCigustoTeal-navbar').href = marqueCurieuxEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Don Cristo
+    let marqueDonCristoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueDonCristoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=DonCristo';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueDonCristoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=DonCristo';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueDonCristoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=DonCristo';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueDonCristoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=DonCristo';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueDonCristoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueDonCristoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueDonCristoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueDonCristoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueDonCristoEliquidesMagasinCigustoTeal-navbar').href = marqueDonCristoEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Eliquid France
+    let marqueEliquidFranceEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueEliquidFranceEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=EliquidFrance';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueEliquidFranceEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=EliquidFrance';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueEliquidFranceEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=EliquidFrance';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueEliquidFranceEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=EliquidFrance';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueEliquidFranceEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueEliquidFranceEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueEliquidFranceEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueEliquidFranceEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueEliquidFranceEliquidesMagasinCigustoTeal-navbar').href = marqueEliquidFranceEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Enfer
+    let marqueEnferEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueEnferEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Enfer';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueEnferEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Enfer';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueEnferEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Enfer';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueEnferEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Enfer';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueEnferEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueEnferEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueEnferEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueEnferEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueEnferEliquidesMagasinCigustoTeal-navbar').href = marqueEnferEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque E.Tasty
+    let marqueETastyEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueETastyEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=ETasty';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueETastyEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=ETasty';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueETastyEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=ETasty';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueETastyEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=ETasty';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueETastyEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueETastyEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueETastyEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueETastyEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueETastyEliquidesMagasinCigustoTeal-navbar').href = marqueETastyEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Le French Liquide
+    let marqueLeFrenchLiquideEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueLeFrenchLiquideEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueLeFrenchLiquideEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueLeFrenchLiquideEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueLeFrenchLiquideEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=LeFrenchLiquide';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueLeFrenchLiquideEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueLeFrenchLiquideEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideEliquidesMagasinCigustoTeal-navbar').href = marqueLeFrenchLiquideEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Fresh Vape Co
+    let marqueFreshVapeCoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFreshVapeCoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=FreshVapeCo';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFreshVapeCoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=FreshVapeCo';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFreshVapeCoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=FreshVapeCo';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFreshVapeCoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=FreshVapeCo';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFreshVapeCoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFreshVapeCoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFreshVapeCoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFreshVapeCoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFreshVapeCoEliquidesMagasinCigustoTeal-navbar').href = marqueFreshVapeCoEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Fruiteo
+    let marqueFruiteoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruiteoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Fruiteo';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruiteoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Fruiteo';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruiteoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Fruiteo';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruiteoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Fruiteo';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruiteoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFruiteoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruiteoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFruiteoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruiteoEliquidesMagasinCigustoTeal-navbar').href = marqueFruiteoEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Fruity Cool
+    let marqueFruityCoolEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruityCoolEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=FruityCool';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruityCoolEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=FruityCool';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruityCoolEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=FruityCool';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruityCoolEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=FruityCool';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruityCoolEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFruityCoolEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruityCoolEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFruityCoolEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruityCoolEliquidesMagasinCigustoTeal-navbar').href = marqueFruityCoolEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Fruity Fuel
+    let marqueFruityFuelEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruityFuelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=FruityFuel';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruityFuelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=FruityFuel';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruityFuelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=FruityFuel';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruityFuelEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=FruityFuel';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruityFuelEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFruityFuelEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruityFuelEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFruityFuelEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruityFuelEliquidesMagasinCigustoTeal-navbar').href = marqueFruityFuelEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Fruizee
+    let marqueFruizeeEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruizeeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Fruizee';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruizeeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Fruizee';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruizeeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Fruizee';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruizeeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Fruizee';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruizeeEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFruizeeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruizeeEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFruizeeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFruizeeEliquidesMagasinCigustoTeal-navbar').href = marqueFruizeeEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Full Moon
+    let marqueFullMoonEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFullMoonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=FullMoon';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFullMoonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=FullMoon';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFullMoonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=FullMoon';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFullMoonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=FullMoon';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFullMoonEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFullMoonEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFullMoonEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFullMoonEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFullMoonEliquidesMagasinCigustoTeal-navbar').href = marqueFullMoonEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Furiosa
+    let marqueFuriosaEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFuriosaEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Furiosa';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFuriosaEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Furiosa';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFuriosaEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Furiosa';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFuriosaEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Furiosa';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFuriosaEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueFuriosaEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFuriosaEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueFuriosaEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueFuriosaEliquidesMagasinCigustoTeal-navbar').href = marqueFuriosaEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Greeneo
+    let marqueGreeneoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueGreeneoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Greeneo';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueGreeneoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Greeneo';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueGreeneoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Greeneo';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueGreeneoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Greeneo';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueGreeneoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueGreeneoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueGreeneoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueGreeneoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueGreeneoEliquidesMagasinCigustoTeal-navbar').href = marqueGreeneoEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Juicy Shake
+    let marqueJuicyShakeEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueJuicyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=JuicyShake';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueJuicyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=JuicyShake';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueJuicyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=JuicyShake';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueJuicyShakeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=JuicyShake';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueJuicyShakeEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueJuicyShakeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueJuicyShakeEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueJuicyShakeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueJuicyShakeEliquidesMagasinCigustoTeal-navbar').href = marqueJuicyShakeEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Kung Fruits
+    let marqueKungFruitsEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueKungFruitsEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=KungFruits';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueKungFruitsEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=KungFruits';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueKungFruitsEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=KungFruits';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueKungFruitsEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=KungFruits';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueKungFruitsEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueKungFruitsEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueKungFruitsEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueKungFruitsEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueKungFruitsEliquidesMagasinCigustoTeal-navbar').href = marqueKungFruitsEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Le Coq Qui Vape
+    let marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=LeCoqQuiVape';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=LeCoqQuiVape';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=LeCoqQuiVape';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=LeCoqQuiVape';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal-navbar').href = marqueLeCoqQuiVapeEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Le Vapoteur Breton
+    let marqueLeVapoteurBretonEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueLeVapoteurBretonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=LeVapoteurBreton';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueLeVapoteurBretonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=LeVapoteurBreton';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueLeVapoteurBretonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=LeVapoteurBreton';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueLeVapoteurBretonEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=LeVapoteurBreton';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueLeVapoteurBretonEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueLeVapoteurBretonEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueLeVapoteurBretonEliquidesMagasinCigustoTeal-navbar').href = marqueLeVapoteurBretonEliquidesMagasinCigustoTeal;
+
+    // // redirection page e-liquides coche marque Les Devils
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Liquideo
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Mono
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Monster
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Ojuice
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Petit Nuage
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Snap Dragon
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Swoke
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque The Medusa Juice
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Tjuice
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Vampire Vape
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque Vape Distillery
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    //
+    // // redirection page e-liquides coche marque VDLV
+    // let marqueAandlEliquidesMagasinCigustoTeal;
+    // if (magasinId === 'magasin-andelnans') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-bessoncourt') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-besancon') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=AandL';
+    // } else if (magasinId === 'magasin-colmar') {
+    //     marqueAandlEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=AandL';
+    // } else {
+    //     console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    // }
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueAandlEliquidesMagasinCigustoTeal;
+    // document.querySelector('.marqueAandlEliquidesMagasinCigustoTeal-navbar').href = marqueAandlEliquidesMagasinCigustoTeal;
+
 </script>
 
 <style>
     .custom-margin {
         padding: 7px 14px 7px 14px;
     }
+    .custom-margin-tel {
+        padding: 21px 42px 21px 42px;
+    }
     header {
         background-color: #1D2633;
         color:white;
     }
-    .nouveautesMagasinCigustoTeal-2 {
+    .nouveautesMagasinCigustoTeal-navbar {
         position: relative;
     }
-    .nouveautesMagasinCigustoTeal-2:hover::before {
+    .nouveautesMagasinCigustoTeal-navbar:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -594,10 +1922,10 @@
         animation: slide 0.3s ease-in-out forwards;
     }
 
-    .coupsDeCoeurMagasinCigustoTeal-2 {
+    .coupsDeCoeurMagasinCigustoTeal-navbar {
         position: relative;
     }
-    .coupsDeCoeurMagasinCigustoTeal-2:hover::before {
+    .coupsDeCoeurMagasinCigustoTeal-navbar:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -608,10 +1936,10 @@
         animation: slide 0.3s ease-in-out forwards;
     }
 
-    .eliquidesMagasinCigustoTeal-2 {
+    .eliquidesMagasinCigustoTeal-navbar {
         position: relative;
     }
-    .eliquidesMagasinCigustoTeal-2:hover::before {
+    .eliquidesMagasinCigustoTeal-navbar:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -622,10 +1950,10 @@
         animation: slide 0.3s ease-in-out forwards;
     }
 
-    .concentresMagasinCigustoTeal-2 {
+    .concentresMagasinCigustoTeal-navbar {
         position: relative;
     }
-    .concentresMagasinCigustoTeal-2:hover::before {
+    .concentresMagasinCigustoTeal-navbar:hover::before {
         content: "";
         position: absolute;
         left: 0;
@@ -655,6 +1983,15 @@
         padding-left: 14px;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
+    .historique-deplacement-tel {
+        font-size: 2rem;
+        background-color: white;
+        color: black;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 56px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
     .btn-choisir-magasin {
         background-color: #F9533E;;
         color: black;
@@ -665,10 +2002,22 @@
         font-weight: bold;
         transition: background-color 0.5s;
     }
-
     .btn-choisir-magasin:hover {
-        /*background-color: #F9533E;*/
-        /*color: black;*/
+        background-color: black;
+        color: white;
+    }
+    .btn-choisir-magasin-tel {
+        background-color: #F9533E;;
+        color: black;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+        font-size: 2.8rem;
+        font-weight: bold;
+        transition: background-color 0.5s;
+    }
+
+    .btn-choisir-magasin-tel:hover {
         background-color: black;
         color: white;
     }
@@ -684,7 +2033,6 @@
     .wrapper {
         display: block;
     }
-
     .sidebar {
         width: 250px;
         height: 100vh;
@@ -697,39 +2045,53 @@
         transition: all .3s;
         box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
         text-align: left;
+        overflow-y: auto;
     }
-
     .sidebar.active {
         left: 0;
     }
-
+    .sidebar-tel {
+        width: 650px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -655px;
+        z-index: 999;
+        background: #1D2633;
+        color: #fff;
+        transition: all .3s;
+        box-shadow: 3px 3px 3px rgba(51, 51, 51, 0.5);
+        text-align: left;
+        overflow-y: auto;
+    }
+    .sidebar-tel.active {
+        left: 0;
+    }
     .overlay {
         display: none;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 200%;
+        height: 200%;
         background: rgba(51, 51, 51, 0.7);
         z-index: 998;
         opacity: 0;
         transition: all .5s ease-in-out;
     }
-
     .overlay.active {
         display: block;
         opacity: 1;
     }
-
     /* Style for all buttons with the class btn-customized */
     .dismiss {
-        width: 35px;
+        width: 50px;
         height: 35px;
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 19px;
+        right: 19px;
         transition: all .3s;
         background: #253142;
         border-radius: 4px;
@@ -737,20 +2099,37 @@
         line-height: 35px;
         cursor: pointer;
     }
-
     .dismiss:hover,
     .dismiss:focus {
         background: #2F3F54;
         color: #fff;
     }
+    .dismiss-tel {
+        width: 115px;
+        height: 85px;
+        position: absolute;
+        top: 36px;
+        right: 36px;
+        transition: all .3s;
+        background: #253142;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 35px;
+        cursor: pointer;
+    }
+    .dismiss-tel:hover,
+    .dismiss-tel:focus {
+        background: #2F3F54;
+        color: #fff;
+    }
+
     .sidebar .logo {
-        padding-left: 20px;
-        padding-top: 40px;
-        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-top: 19px;
+        padding-bottom: 5px;
         border-bottom: 1px solid #253142;
         transition: all .3s;
     }
-
     .sidebar .logo {
         display: inline-block;
         border: 0;
@@ -760,33 +2139,30 @@
         border-bottom: 1px solid #253142;
         transition: all .3s;
     }
-    a {
-        text-decoration: none;
+    .sidebar-tel .logo {
+        padding-left: 56px;
+        padding-top: 36px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #253142;
+        transition: all .3s;
     }
-    .facebook-icon-1:hover i {
-        color: black;
-        transition: color 0.5s;
+    .sidebar-tel .logo {
+        display: inline-block;
+        border: 0;
     }
-    .instagram-icon-1:hover i {
-        color: black;
-        transition: color 0.5s;
-    }
-    .facebook-icon-2:hover i {
-        color: black;
-        transition: color 0.5s;
-    }
-    .instagram-icon-2:hover i {
-        color: black;
-        transition: color 0.5s;
+    .sidebar-tel ul.menu-elements {
+        padding: 10px 0;
+        border-bottom: 1px solid #253142;
+        transition: all .3s;
     }
 
     .sidebar ul li a {
+        font-size: 1.3rem;
         display: block;
         padding: 10px 20px;
         border: 0;
         color: #fff;
     }
-
     .sidebar ul li a:hover,
     .sidebar ul li a:focus,
     .sidebar ul li.active > a:hover,
@@ -795,31 +2171,25 @@
         background: #2F3F54;
         color: #fff;
     }
-
     .sidebar ul li a i {
         margin-right: 5px;
     }
-
     .sidebar ul li.active > a,
     a[aria-expanded="true"] {
         background: #253142;
         color: #fff;
     }
-
     .sidebar ul ul a {
         background: #253142;
         padding-left: 30px;
-        font-size: 14px;
+        font-size: 1.2rem;
     }
-
     .sidebar ul ul li.active > a {
         background: #2F3F54;
     }
-
     .sidebar a[data-toggle="collapse"] {
         position: relative;
     }
-
     .sidebar .dropdown-toggle::after {
         display: block;
         position: absolute;
@@ -829,6 +2199,51 @@
     }
     .sidebar .to-top {
         padding: 20px;
+        text-align: center;
+    }
+    .sidebar-tel ul li a {
+        font-size: 3rem;
+        display: block;
+        padding: 20px 40px;
+        border: 0;
+        color: #fff;
+    }
+    .sidebar-tel ul li a:hover,
+    .sidebar-tel ul li a:focus,
+    .sidebar-tel ul li.active > a:hover,
+    .sidebar-tel ul li.active > a:focus {
+        outline: 0;
+        background: #2F3F54;
+        color: #fff;
+    }
+    .sidebar-tel ul li a i {
+        margin-right: 10px;
+    }
+    .sidebar-tel ul li.active > a,
+    a[aria-expanded="true"] {
+        background: #253142;
+        color: #fff;
+    }
+    .sidebar-tel ul ul a {
+        background: #253142;
+        padding-left: 60px;
+        font-size: 2.5rem;
+    }
+    .sidebar-tel ul ul li.active > a {
+        background: #2F3F54;
+    }
+    .sidebar-tel a[data-toggle="collapse"] {
+        position: relative;
+    }
+    .sidebar-tel .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        transform: translateY(-50%);
+    }
+    .sidebar-tel .to-top {
+        padding: 40px;
         text-align: center;
     }
 
@@ -845,7 +2260,6 @@
         color: #fff;
         box-shadow: none;
     }
-
     a.btn-customized-3:hover,
     a.btn-customized-3:active,
     a.btn-customized-3:focus,
@@ -859,20 +2273,131 @@
         color: #fff;
         box-shadow: none;
     }
-
     a.btn-customized-3 i {
         margin-right: 5px;
     }
-
+    a.btn-customized-3-tel {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 1.5rem 3rem;
+        background: #253142;
+        border: 0;
+        border-radius: 4px;
+        font-size: 32px;
+        font-weight: 300;
+        color: #fff;
+        box-shadow: none;
+    }
+    a.btn-customized-3-tel:hover,
+    a.btn-customized-3-tel:active,
+    a.btn-customized-3-tel:focus,
+    a.btn-customized-3-tel:active:focus,
+    a.btn-customized-3-tel.active:focus,
+    a.btn-customized-3-tel.btn.btn-primary:not(:disabled):not(.disabled):active,
+    a.btn-customized-3-tel.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
+        outline: 0;
+        background: #2F3F54;
+        border: 0;
+        color: #fff;
+        box-shadow: none;
+    }
+    a.btn-customized-3-tel i {
+        margin-right: 10px;
+    }
     #sidebar-scroll {
-        max-height: 500px;
+        max-height: 700px;
         overflow-y: auto;
     }
+    #sidebar-tel-scroll {
+        max-height: 1235px;
+        overflow-y: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    .facebook-icon-tel:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .facebook-icon-tablette:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .facebook-icon:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .instagram-icon-tel:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .instagram-icon-tablette:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+    .instagram-icon:hover i {
+        color: black;
+        transition: color 0.5s;
+    }
+
+    .overlay-navbar .card-overlay {
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 200px;
+        /*background-color: red;*/
+    }
+
+    .overlay-navbar .card-overlay-2 {
+        position: absolute;
+        top: 210px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 200px;
+        /*background-color: red;*/
+    }
+
+    .overlay-navbar .card {
+        top: 38px;
+        height: 500px;
+        padding: 35px;
+        background-color: #253142;
+        border-radius: 0 0 15px 15px;
+    }
+
+
+    @media (orientation: portrait) and (min-height: 150vw) {
+        #verti {
+            display: block;
+        }
+        #hori {
+            display: none;
+        }
+    }
+
+    @media (orientation: portrait) and (max-height: 150vw) and (min-width: 50vh) {
+        #verti {
+            display: none;
+        }
+        #hori {
+            display: block;
+        }
+    }
+
+    @media (orientation: landscape) {
+        #verti {
+            display: none;
+        }
+        #hori {
+            display: block;
+        }
+    }
 </style>
-
-
-
-
 
 <!--        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">-->
 <!--            <div class="carousel-inner">-->
