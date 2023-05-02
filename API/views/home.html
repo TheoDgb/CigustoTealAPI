@@ -895,7 +895,6 @@
     document.querySelector('.magasinCigustoTeal-tablette-historique').href = magasinCigustoTeal;
     document.querySelector('.magasinCigustoTeal-historique').href = magasinCigustoTeal;
 
-
     // redirection page nouveautes
     let nouveautesMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
@@ -2288,7 +2287,7 @@
     document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-navbar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
 
     // redirection page concentrés coche marque Vape47
-    let marqueVDLVConcentresMagasinCigustoTeal;
+    let marqueVape47ConcentresMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
         marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Vape47';
     } else if (magasinId === 'magasin-bessoncourt') {
@@ -2372,14 +2371,6 @@
         animation: slide 0.3s ease-in-out forwards;
     }
 
-    @keyframes slide {
-        0% {
-            transform: scaleX(0);
-        }
-        100% {
-            transform: scaleX(1);
-        }
-    }
     body {
         background-color: #F2F2F2;
     }
@@ -2757,9 +2748,9 @@
         transform: translate(-50%, -50%);
         width: 80%;
         height: 200px;
+        z-index: 2;
         /*background-color: red;*/
     }
-
     .overlay-navbar .card-overlay-2 {
         position: absolute;
         top: 210px;
@@ -2767,17 +2758,17 @@
         transform: translate(-50%, -50%);
         width: 80%;
         height: 200px;
+        z-index: 2;
         /*background-color: red;*/
     }
-
     .overlay-navbar .card {
         top: 38px;
         height: 500px;
         padding: 35px;
         background-color: #253142;
         border-radius: 0 0 15px 15px;
+        z-index: 2;
     }
-
 
     @media (orientation: portrait) and (min-height: 150vw) {
         #verti {
@@ -2787,7 +2778,6 @@
             display: none;
         }
     }
-
     @media (orientation: portrait) and (max-height: 150vw) and (min-width: 50vh) {
         #verti {
             display: none;
@@ -2796,7 +2786,6 @@
             display: block;
         }
     }
-
     @media (orientation: landscape) {
         #verti {
             display: none;
@@ -2825,3 +2814,12 @@
 <!--                <span class="visually-hidden">Next</span>-->
 <!--            </button>-->
 <!--        </div>-->
+
+<!--@keyframes slide {-->
+<!--    0% {-->
+<!--        transform: scaleX(0);-->
+<!--    }-->
+<!--    100% {-->
+<!--        transform: scaleX(1);-->
+<!--    }-->
+<!--}-->
