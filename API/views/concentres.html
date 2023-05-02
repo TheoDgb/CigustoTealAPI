@@ -26,9 +26,9 @@
             <div id="verti" class="custom-margin-tel">
                 <!--sidebar menu-->
                 <div class="wrapper">
-                    <nav class="sidebar-tel">
+                    <nav class="sidebar sidebar-tel">
                         <!--close sidebar menu-->
-                        <div class="dismiss-tel">
+                        <div class="dismiss dismiss-tel">
                             <i class="bi bi-arrow-left-short" style="font-size: 4rem; display: flex; justify-content: center; align-items: center; height: 100%;"></i>
                         </div>
                         <div class="logo">
@@ -203,9 +203,9 @@
             <div id="hori">
                 <!--sidebar menu-->
                 <div class="wrapper">
-                    <nav class="sidebar">
+                    <nav class="sidebar sidebar-tablette">
                         <!--close sidebar menu-->
-                        <div class="dismiss">
+                        <div class="dismiss dismiss-tablette">
                             <i class="bi bi-arrow-left-short fs-2"></i>
                         </div>
                         <div class="logo">
@@ -1002,19 +1002,6 @@
             $('.collapse.show').toggleClass('show');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
-
-        $('.dismiss-tel, .overlay').on('click', function() {
-            $('.sidebar-tel').removeClass('active');
-            $('.overlay').removeClass('active');
-        });
-        $('.open-menu').on('click', function(e) {
-            e.preventDefault();
-            $('.sidebar-tel').addClass('active');
-            $('.overlay').addClass('active');
-            // close opened sub-menus
-            $('.collapse.show').toggleClass('show');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-        });
     });
 
     const magasinId = window.location.pathname.split('/')[1];
@@ -1254,20 +1241,6 @@
     instagramIcon1.href = instagramUrl;
     const instagramIcon2 = document.querySelector('.instagram-icon');
     instagramIcon2.href = instagramUrl;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // ****************************** redirection E-Liquides selection saveur ******************************
     // redirection page e-liquides coche saveur classic
@@ -2781,7 +2754,7 @@
     .wrapper {
         display: block;
     }
-    .sidebar {
+    .sidebar-tablette {
         width: 250px;
         height: 100vh;
         position: fixed;
@@ -2795,7 +2768,7 @@
         text-align: left;
         overflow-y: auto;
     }
-    .sidebar.active {
+    .sidebar-tablette.active {
         left: 0;
     }
     .sidebar-tel {
@@ -2834,7 +2807,7 @@
         opacity: 1;
     }
     /* Style for all buttons with the class btn-customized */
-    .dismiss {
+    .dismiss-tablette {
         width: 50px;
         height: 35px;
         position: absolute;
@@ -2847,8 +2820,8 @@
         line-height: 35px;
         cursor: pointer;
     }
-    .dismiss:hover,
-    .dismiss:focus {
+    .dismiss-tablette:hover,
+    .dismiss-tablette:focus {
         background: #2F3F54;
         color: #fff;
     }
@@ -2871,18 +2844,18 @@
         color: #fff;
     }
 
-    .sidebar .logo {
+    .sidebar-tablette .logo {
         padding-left: 15px;
         padding-top: 19px;
         padding-bottom: 5px;
         border-bottom: 1px solid #253142;
         transition: all .3s;
     }
-    .sidebar .logo {
+    .sidebar-tablette .logo {
         display: inline-block;
         border: 0;
     }
-    .sidebar ul.menu-elements {
+    .sidebar-tablette ul.menu-elements {
         padding: 10px 0;
         border-bottom: 1px solid #253142;
         transition: all .3s;
@@ -2904,48 +2877,48 @@
         transition: all .3s;
     }
 
-    .sidebar ul li a {
+    .sidebar-tablette ul li a {
         font-size: 1.3rem;
         display: block;
         padding: 10px 20px;
         border: 0;
         color: #fff;
     }
-    .sidebar ul li a:hover,
-    .sidebar ul li a:focus,
-    .sidebar ul li.active > a:hover,
-    .sidebar ul li.active > a:focus {
+    .sidebar-tablette ul li a:hover,
+    .sidebar-tablette ul li a:focus,
+    .sidebar-tablette ul li.active > a:hover,
+    .sidebar-tablette ul li.active > a:focus {
         outline: 0;
         background: #2F3F54;
         color: #fff;
     }
-    .sidebar ul li a i {
+    .sidebar-tablette ul li a i {
         margin-right: 5px;
     }
-    .sidebar ul li.active > a,
+    .sidebar-tablette ul li.active > a,
     a[aria-expanded="true"] {
         background: #253142;
         color: #fff;
     }
-    .sidebar ul ul a {
+    .sidebar-tablette ul ul a {
         background: #253142;
         padding-left: 30px;
         font-size: 1.2rem;
     }
-    .sidebar ul ul li.active > a {
+    .sidebar-tablette ul ul li.active > a {
         background: #2F3F54;
     }
-    .sidebar a[data-toggle="collapse"] {
+    .sidebar-tablette a[data-toggle="collapse"] {
         position: relative;
     }
-    .sidebar .dropdown-toggle::after {
+    .sidebar-tablette .dropdown-toggle::after {
         display: block;
         position: absolute;
         top: 50%;
         right: 20px;
         transform: translateY(-50%);
     }
-    .sidebar .to-top {
+    .sidebar-tablette .to-top {
         padding: 20px;
         text-align: center;
     }
