@@ -732,56 +732,74 @@
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-lesdevils">
-                                        <label class="form-check-label" for="marque-lesdevils">
+                                        <input class="form-check-input" type="checkbox" id="marque_lesdevils">
+                                        <label class="form-check-label" for="marque_lesdevils">
                                             Les Devils
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-liquideo">
-                                        <label class="form-check-label" for="marque-liquideo">
+                                        <input class="form-check-input" type="checkbox" id="marque_liquideo">
+                                        <label class="form-check-label" for="marque_liquideo">
                                             Liquideo
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-ojuice">
-                                        <label class="form-check-label" for="marque-ojuice">
-                                            Ojuice
+                                        <input class="form-check-input" type="checkbox" id="marque_mono">
+                                        <label class="form-check-label" for="marque_mono">
+                                            Mono
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-petitnuage">
-                                        <label class="form-check-label" for="marque-petitnuage">
+                                        <input class="form-check-input" type="checkbox" id="marque_monster">
+                                        <label class="form-check-label" for="marque_monster">
+                                            Monster
+                                        </label>
+                                    </li>
+                                    <li class="form-check" style="padding-left: 50px">
+                                        <input class="form-check-input" type="checkbox" id="marque_petitnuage">
+                                        <label class="form-check-label" for="marque_petitnuage">
                                             Petit Nuage
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-swoke">
-                                        <label class="form-check-label" for="marque-swoke">
+                                        <input class="form-check-input" type="checkbox" id="marque_snapdragon">
+                                        <label class="form-check-label" for="marque_snapdragon">
+                                            Snap Dragon
+                                        </label>
+                                    </li>
+                                    <li class="form-check" style="padding-left: 50px">
+                                        <input class="form-check-input" type="checkbox" id="marque_swoke">
+                                        <label class="form-check-label" for="marque_swoke">
                                             Swoke
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-themedusajuice">
-                                        <label class="form-check-label" for="marque-themedusajuice">
+                                        <input class="form-check-input" type="checkbox" id="marque_themedusajuice">
+                                        <label class="form-check-label" for="marque_themedusajuice">
                                             The Medusa Juice
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-vampirevape">
-                                        <label class="form-check-label" for="marque-vampirevape">
+                                        <input class="form-check-input" type="checkbox" id="marque_tjuice">
+                                        <label class="form-check-label" for="marque_tjuice">
+                                            T-Juice
+                                        </label>
+                                    </li>
+                                    <li class="form-check" style="padding-left: 50px">
+                                        <input class="form-check-input" type="checkbox" id="marque_vampirevape">
+                                        <label class="form-check-label" for="marque_vampirevape">
                                             Vampire Vape
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-vapedistillery">
-                                        <label class="form-check-label" for="marque-vapedistillery">
+                                        <input class="form-check-input" type="checkbox" id="marque_vapedistillery">
+                                        <label class="form-check-label" for="marque_vapedistillery">
                                             Vape Distillery
                                         </label>
                                     </li>
                                     <li class="form-check" style="padding-left: 50px">
-                                        <input class="form-check-input" type="checkbox" id="marque-vdlv">
-                                        <label class="form-check-label" for="marque-vdlv">
+                                        <input class="form-check-input" type="checkbox" id="marque_vdlv">
+                                        <label class="form-check-label" for="marque_vdlv">
                                             VDLV
                                         </label>
                                     </li>
@@ -1207,7 +1225,7 @@
 
 
 
-    // ****************************** redirection selection saveur ******************************
+    // ****************************** redirection E-Liquides selection saveur ******************************
     // redirection page e-liquides coche saveur classic
     let saveurClassicEliquidesMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
@@ -1599,6 +1617,78 @@
     // Le Vapoteur Breton
     if (urlParams.has('marque') && urlParams.get('marque') === 'LeVapoteurBreton') {
         document.querySelector('#marque_levapoteurbreton').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Les Devils
+    if (urlParams.has('marque') && urlParams.get('marque') === 'LesDevils') {
+        document.querySelector('#marque_lesdevils').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Liquideo
+    if (urlParams.has('marque') && urlParams.get('marque') === 'Liquideo') {
+        document.querySelector('#marque_liquideo').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Mono
+    if (urlParams.has('marque') && urlParams.get('marque') === 'Mono') {
+        document.querySelector('#marque_mono').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Monster
+    if (urlParams.has('marque') && urlParams.get('marque') === 'Monster') {
+        document.querySelector('#marque_monster').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Petit Nuage
+    if (urlParams.has('marque') && urlParams.get('marque') === 'PetitNuage') {
+        document.querySelector('#marque_petitnuage').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Snap Dragon
+    if (urlParams.has('marque') && urlParams.get('marque') === 'SnapDragon') {
+        document.querySelector('#marque_snapdragon').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Swoke
+    if (urlParams.has('marque') && urlParams.get('marque') === 'Swoke') {
+        document.querySelector('#marque_swoke').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // The Medusa Juice
+    if (urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice') {
+        document.querySelector('#marque_themedusajuice').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // T-Juice
+    if (urlParams.has('marque') && urlParams.get('marque') === 'TJuice') {
+        document.querySelector('#marque_tjuice').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Vampire Vape
+    if (urlParams.has('marque') && urlParams.get('marque') === 'VampireVape') {
+        document.querySelector('#marque_vampirevape').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Vape Distillery
+    if (urlParams.has('marque') && urlParams.get('marque') === 'VapeDistillery') {
+        document.querySelector('#marque_vapedistillery').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // VDLV
+    if (urlParams.has('marque') && urlParams.get('marque') === 'VDLV') {
+        document.querySelector('#marque_vdlv').checked = true;
         const dropdown = document.querySelector('#filtreMarquesSection');
         dropdown.classList.add('show');
     }
