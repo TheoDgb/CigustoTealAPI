@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/images/favicon_cigusto.png">
     <title>Cigusto - Teal E-Liquides</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -81,6 +82,7 @@
                                             <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Bakery Shake</a></li>
                                             <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Candy Shake</a></li>
                                             <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCigustoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Cigusto</a></li>
                                             <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">CirKus</a></li>
                                             <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Curieux</a></li>
                                             <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Don Cristo</a></li>
@@ -258,6 +260,7 @@
                                             <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tablette-sidebar " href="" style="padding-left: 45px; font-size: 1.1rem;">Bakery Shake</a></li>
                                             <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Candy Shake</a></li>
                                             <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCigustoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Cigusto</a></li>
                                             <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">CirKus</a></li>
                                             <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Curieux</a></li>
                                             <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Don Cristo</a></li>
@@ -441,6 +444,7 @@
                                             <a href="" class="bg-orange-link marqueBakeryShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Bakery Shake</a><br>
                                             <a href="" class="bg-orange-link marqueCandyShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Candy Shake</a><br>
                                             <a href="" class="bg-orange-link marqueCesarEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Cesar</a><br>
+                                            <a href="" class="bg-orange-link marqueCigustoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Cigusto</a><br>
                                             <a href="" class="bg-orange-link marqueCirkusEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">CirKus</a><br>
                                             <a href="" class="bg-orange-link marqueCurieuxEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Curieux</a><br>
                                             <a href="" class="bg-orange-link marqueDonCristoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Don Cristo</a><br>
@@ -559,12 +563,424 @@
         <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
             <!--telephone portrait-->
             <div id="verti">
-                ECRAN TELEPHONE
-                <br> btn1FILTRES btn2Filtre2
-                <br> E-Liquides EXGOURMAND
+                <!--ECRAN TELEPHONE-->
+                <button id="filtreBtnTel" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 50px;"><i class="bi bi-ui-checks-grid fs-1 me-2"></i>Filtre</button>
+                <div id="filtreDivTel" class="filtre-divTel">
+                    <div class="container">
+                        <a href="" class="magasinCigustoTeal-tel-filtre-logo d-flex justify-content-center" style="margin-top: 50px;">
+                            <img src="/images/logo_cigusto_dark.png" alt="Logo Cigusto Teal" style="width: auto; height: 95px;"/>
+                        </a>
+                        <div class="dismiss-filtre-tel d-flex justify-content-center align-items-center">
+                            <i class="bi bi-x" style="position: absolute; font-size: 6rem; top: 30px; right: 45px;"></i>
+                        </div>
+                        <br><br><br>
+                        <div style="font-size: 50px;">Filtrer par</div>
+<!--                        <ul class="filtre list-unstyled menu-elements">-->
+<!--                            <li>-->
+<!--                                <div class="btw-onglet-tel">-->
+<!--                                    <a href="#filtreSaveursSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">-->
+<!--                                        <strong>Saveurs</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreSaveursSectionTel">-->
+<!--                                        <li>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_classic">-->
+<!--                                                <label class="form-check-label" for="saveur_classic">-->
+<!--                                                    Classic-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_menthole">-->
+<!--                                                <label class="form-check-label" for="saveur_menthole">-->
+<!--                                                    Mentholé-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_fruite">-->
+<!--                                                <label class="form-check-label" for="saveur_fruite">-->
+<!--                                                    Fruité-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais">-->
+<!--                                                <label class="form-check-label" for="saveur_fruite_frais">-->
+<!--                                                    Fruité Frais-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand">-->
+<!--                                                <label class="form-check-label" for="saveur_gourmand">-->
+<!--                                                    Gourmand-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson">-->
+<!--                                                <label class="form-check-label" for="saveur_friandise_boisson">-->
+<!--                                                    Friandise / Boisson-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+
+<!--                                <div class="btw-onglet-tel">-->
+<!--                                    <a href="#filtreContenanceSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">-->
+<!--                                        <strong>Contenance</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreContenanceSectionTel">-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_10_tel">-->
+<!--                                            <label class="form-check-label" for="contenance_10_tel">-->
+<!--                                                10 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        &lt;!&ndash;sous onglet 10mL taux/sel de nicotine&ndash;&gt;-->
+<!--                                        <div id="filtre10mLTel" class="btw-sous-onglet-tel" style="display:none;">-->
+<!--                                            <a href="#filtre10mLTauxTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 50px;"> Taux de nicotine-->
+<!--                                            </a>-->
+<!--                                            <ul class="collapse list-unstyled" id="filtre10mLTauxTel">-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous_tel" checked>-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_tous_tel">-->
+<!--                                                        Tous-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tel">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_0mg_tel">-->
+<!--                                                        0 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_3mg_tel">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_3mg_tel">-->
+<!--                                                        3 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_6mg_tel">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_6mg_tel">-->
+<!--                                                        6 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_12mg_tel">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_12mg_tel">-->
+<!--                                                        12 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_18mg_tel">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_18mg_tel">-->
+<!--                                                        18 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+
+<!--                                            <a href="#filtre10mLSelTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 50px;"> Sel de nicotine</a>-->
+<!--                                            <ul class="collapse list-unstyled" id="filtre10mLSelTel">-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_tous_tel" checked>-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_tous_tel">-->
+<!--                                                        Tous-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_sans_tel">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_sans_tel">-->
+<!--                                                        Sans-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_9mg_tel">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_9mg_tel">-->
+<!--                                                        9 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_10mg_tel">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_10mg_tel">-->
+<!--                                                        10 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_18mg_tel">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_18mg_tel">-->
+<!--                                                        18 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_20mg_tel">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_20mg_tel">-->
+<!--                                                        20 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_50">-->
+<!--                                            <label class="form-check-label" for="contenance_50">-->
+<!--                                                50 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_80">-->
+<!--                                            <label class="form-check-label" for="contenance_80">-->
+<!--                                                80 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_100">-->
+<!--                                            <label class="form-check-label" for="contenance_100">-->
+<!--                                                100 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_200">-->
+<!--                                            <label class="form-check-label" for="contenance_200">-->
+<!--                                                200 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+
+<!--                                <div class="btw-onglet-tel">-->
+<!--                                    <a href="#filtreMarquesSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">-->
+<!--                                        <strong>Marques</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreMarquesSectionTel">-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_aandl">-->
+<!--                                            <label class="form-check-label" for="marque_aandl">-->
+<!--                                                A&L-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_alfaliquid">-->
+<!--                                            <label class="form-check-label" for="marque_alfaliquid">-->
+<!--                                                Alfaliquid-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_bakeryshake">-->
+<!--                                            <label class="form-check-label" for="marque_bakeryshake">-->
+<!--                                                Bakery Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_candyshake">-->
+<!--                                            <label class="form-check-label" for="marque_candyshake">-->
+<!--                                                Candy Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cesar">-->
+<!--                                            <label class="form-check-label" for="marque_cesar">-->
+<!--                                                Cesar-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cigusto">-->
+<!--                                            <label class="form-check-label" for="marque_cigusto">-->
+<!--                                                Cigusto-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cirkus">-->
+<!--                                            <label class="form-check-label" for="marque_cirkus">-->
+<!--                                                CirKus-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_curieux">-->
+<!--                                            <label class="form-check-label" for="marque_curieux">-->
+<!--                                                Curieux-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_doncristo">-->
+<!--                                            <label class="form-check-label" for="marque_doncristo">-->
+<!--                                                Don Cristo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_eliquidfrance">-->
+<!--                                            <label class="form-check-label" for="marque_eliquidfrance">-->
+<!--                                                Eliquid France-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_enfer">-->
+<!--                                            <label class="form-check-label" for="marque_enfer">-->
+<!--                                                Enfer-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_etasty">-->
+<!--                                            <label class="form-check-label" for="marque_etasty">-->
+<!--                                                E.Tasty-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide">-->
+<!--                                            <label class="form-check-label" for="marque_lefrenchliquide">-->
+<!--                                                Le French Liquide-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_freshvapeco">-->
+<!--                                            <label class="form-check-label" for="marque_freshvapeco">-->
+<!--                                                Fresh Vape Co-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo">-->
+<!--                                            <label class="form-check-label" for="marque_fruiteo">-->
+<!--                                                Fruiteo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruitycool">-->
+<!--                                            <label class="form-check-label" for="marque_fruitycool">-->
+<!--                                                Fruity Cool-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruityfuel">-->
+<!--                                            <label class="form-check-label" for="marque_fruityfuel">-->
+<!--                                                Fruity Fuel-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruizee">-->
+<!--                                            <label class="form-check-label" for="marque_fruizee">-->
+<!--                                                Fruizee-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon">-->
+<!--                                            <label class="form-check-label" for="marque_fullmoon">-->
+<!--                                                Full Moon-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_furiosa">-->
+<!--                                            <label class="form-check-label" for="marque_furiosa">-->
+<!--                                                Furiosa-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_greeneo">-->
+<!--                                            <label class="form-check-label" for="marque_greeneo">-->
+<!--                                                Greeneo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_juicyshake">-->
+<!--                                            <label class="form-check-label" for="marque_juicyshake">-->
+<!--                                                Juicy Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits">-->
+<!--                                            <label class="form-check-label" for="marque_kungfruits">-->
+<!--                                                Kung Fruits-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lecoqquivape">-->
+<!--                                            <label class="form-check-label" for="marque_lecoqquivape">-->
+<!--                                                Le Coq Qui Vape-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_levapoteurbreton">-->
+<!--                                            <label class="form-check-label" for="marque_levapoteurbreton">-->
+<!--                                                Le Vapoteur Breton-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lesdevils">-->
+<!--                                            <label class="form-check-label" for="marque_lesdevils">-->
+<!--                                                Les Devils-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_liquideo">-->
+<!--                                            <label class="form-check-label" for="marque_liquideo">-->
+<!--                                                Liquideo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_mono">-->
+<!--                                            <label class="form-check-label" for="marque_mono">-->
+<!--                                                Mono-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_monster">-->
+<!--                                            <label class="form-check-label" for="marque_monster">-->
+<!--                                                Monster-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_petitnuage">-->
+<!--                                            <label class="form-check-label" for="marque_petitnuage">-->
+<!--                                                Petit Nuage-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_snapdragon">-->
+<!--                                            <label class="form-check-label" for="marque_snapdragon">-->
+<!--                                                Snap Dragon-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_swoke">-->
+<!--                                            <label class="form-check-label" for="marque_swoke">-->
+<!--                                                Swoke-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice">-->
+<!--                                            <label class="form-check-label" for="marque_themedusajuice">-->
+<!--                                                The Medusa Juice-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_tjuice">-->
+<!--                                            <label class="form-check-label" for="marque_tjuice">-->
+<!--                                                T-Juice-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape">-->
+<!--                                            <label class="form-check-label" for="marque_vampirevape">-->
+<!--                                                Vampire Vape-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vapedistillery">-->
+<!--                                            <label class="form-check-label" for="marque_vapedistillery">-->
+<!--                                                Vape Distillery-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vdlv">-->
+<!--                                            <label class="form-check-label" for="marque_vdlv">-->
+<!--                                                VDLV-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+                    </div>
+                </div>
+
+                <br>
                 <div class="row">
                     <div class="col-6">
-                        CARD1
                         <div class="card zoom-effect">
                             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                             <div class="card-body">
@@ -575,7 +991,6 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        CARD2
                         <div class="card zoom-effect">
                             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                             <div class="card-body">
@@ -588,12 +1003,423 @@
                 </div>
             </div>
             <div id="hori">
-                ECRAN  TABLETTE
-                <br> btn1FILTRES btn2Filtre2
-                <br> E-Liquides EXGOURMAND
+                <!--ECRAN  TABLETTE-->
+                <button id="filtreBtnTablette" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 32px;"><i class="bi bi-ui-checks-grid fs-4 me-2"></i>Filtre</button>
+                <div id="filtreDivTablette" class="filtre-divTablette">
+                    <div class="container">
+                        <a href="" class="magasinCigustoTeal-tablette-filtre-logo d-flex justify-content-center" style="margin-top: 25px;">
+                            <img src="/images/logo_cigusto_dark.png" alt="Logo Cigusto Teal" style="width: auto; height: 50px;"/>
+                        </a>
+                        <div class="dismiss-filtre-tablette d-flex justify-content-center align-items-center">
+                            <i class="bi bi-x" style="position: absolute; font-size: 4rem; top: 5px; right: 20px;"></i>
+                        </div>
+                        <br>
+                        <div style="font-size: 25px;">Filtrer par</div>
+<!--                        <ul class="filtre list-unstyled menu-elements">-->
+<!--                            <li>-->
+<!--                                <div class="btw-onglet-tablette">-->
+<!--                                    <a href="#filtreSaveursSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">-->
+<!--                                        <strong>Saveurs</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreSaveursSectionTablette">-->
+<!--                                        <li>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_classic">-->
+<!--                                                <label class="form-check-label" for="saveur_classic">-->
+<!--                                                    Classic-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_menthole">-->
+<!--                                                <label class="form-check-label" for="saveur_menthole">-->
+<!--                                                    Mentholé-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_fruite">-->
+<!--                                                <label class="form-check-label" for="saveur_fruite">-->
+<!--                                                    Fruité-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais">-->
+<!--                                                <label class="form-check-label" for="saveur_fruite_frais">-->
+<!--                                                    Fruité Frais-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand">-->
+<!--                                                <label class="form-check-label" for="saveur_gourmand">-->
+<!--                                                    Gourmand-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson">-->
+<!--                                                <label class="form-check-label" for="saveur_friandise_boisson">-->
+<!--                                                    Friandise / Boisson-->
+<!--                                                </label>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+
+<!--                                <div class="btw-onglet-tablette">-->
+<!--                                    <a href="#filtreContenanceSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">-->
+<!--                                        <strong>Contenance</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreContenanceSectionTablette">-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_10_tablette">-->
+<!--                                            <label class="form-check-label" for="contenance_10_tablette">-->
+<!--                                                10 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        &lt;!&ndash;sous onglet 10mL taux/sel de nicotine&ndash;&gt;-->
+<!--                                        <div id="filtre10mLTablette" class="btw-sous-onglet-tablette" style="display:none;">-->
+<!--                                            <a href="#filtre10mLTauxTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 25px;"> Taux de nicotine</a>-->
+<!--                                            <ul class="collapse list-unstyled" id="filtre10mLTauxTablette">-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous_tablette" checked>-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_tous_tablette">-->
+<!--                                                        Tous-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_0mg_tablette">-->
+<!--                                                        0 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_3mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_3mg_tablette">-->
+<!--                                                        3 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_6mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_6mg_tablette">-->
+<!--                                                        6 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_12mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_12mg_tablette">-->
+<!--                                                        12 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_18mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="taux_nicotine_18mg_tablette">-->
+<!--                                                        18 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+
+<!--                                            <a href="#filtre10mLSelTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 25px;"> Sel de nicotine</a>-->
+<!--                                            <ul class="collapse list-unstyled" id="filtre10mLSelTablette">-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_tous_tablette" checked>-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_tous_tablette">-->
+<!--                                                        Tous-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_sans_tablette">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_sans_tablette">-->
+<!--                                                        Sans-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_9mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_9mg_tablette">-->
+<!--                                                        9 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_10mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_10mg_tablette">-->
+<!--                                                        10 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_18mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_18mg_tablette">-->
+<!--                                                        18 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">-->
+<!--                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_20mg_tablette">-->
+<!--                                                    <label class="form-check-label" for="sel_nicotine_20mg_tablette">-->
+<!--                                                        20 mg-->
+<!--                                                    </label>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_50">-->
+<!--                                            <label class="form-check-label" for="contenance_50">-->
+<!--                                                50 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_80">-->
+<!--                                            <label class="form-check-label" for="contenance_80">-->
+<!--                                                80 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_100">-->
+<!--                                            <label class="form-check-label" for="contenance_100">-->
+<!--                                                100 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="contenance_200">-->
+<!--                                            <label class="form-check-label" for="contenance_200">-->
+<!--                                                200 mL-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+
+<!--                                <div class="btw-onglet-tablette">-->
+<!--                                    <a href="#filtreMarquesSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">-->
+<!--                                        <strong>Marques</strong>-->
+<!--                                    </a>-->
+<!--                                    <ul class="collapse list-unstyled" id="filtreMarquesSectionTablette">-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_aandl">-->
+<!--                                            <label class="form-check-label" for="marque_aandl">-->
+<!--                                                A&L-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_alfaliquid">-->
+<!--                                            <label class="form-check-label" for="marque_alfaliquid">-->
+<!--                                                Alfaliquid-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_bakeryshake">-->
+<!--                                            <label class="form-check-label" for="marque_bakeryshake">-->
+<!--                                                Bakery Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_candyshake">-->
+<!--                                            <label class="form-check-label" for="marque_candyshake">-->
+<!--                                                Candy Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cesar">-->
+<!--                                            <label class="form-check-label" for="marque_cesar">-->
+<!--                                                Cesar-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cigusto">-->
+<!--                                            <label class="form-check-label" for="marque_cigusto">-->
+<!--                                                Cigusto-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_cirkus">-->
+<!--                                            <label class="form-check-label" for="marque_cirkus">-->
+<!--                                                CirKus-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_curieux">-->
+<!--                                            <label class="form-check-label" for="marque_curieux">-->
+<!--                                                Curieux-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_doncristo">-->
+<!--                                            <label class="form-check-label" for="marque_doncristo">-->
+<!--                                                Don Cristo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_eliquidfrance">-->
+<!--                                            <label class="form-check-label" for="marque_eliquidfrance">-->
+<!--                                                Eliquid France-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_enfer">-->
+<!--                                            <label class="form-check-label" for="marque_enfer">-->
+<!--                                                Enfer-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_etasty">-->
+<!--                                            <label class="form-check-label" for="marque_etasty">-->
+<!--                                                E.Tasty-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide">-->
+<!--                                            <label class="form-check-label" for="marque_lefrenchliquide">-->
+<!--                                                Le French Liquide-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_freshvapeco">-->
+<!--                                            <label class="form-check-label" for="marque_freshvapeco">-->
+<!--                                                Fresh Vape Co-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo">-->
+<!--                                            <label class="form-check-label" for="marque_fruiteo">-->
+<!--                                                Fruiteo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruitycool">-->
+<!--                                            <label class="form-check-label" for="marque_fruitycool">-->
+<!--                                                Fruity Cool-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruityfuel">-->
+<!--                                            <label class="form-check-label" for="marque_fruityfuel">-->
+<!--                                                Fruity Fuel-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fruizee">-->
+<!--                                            <label class="form-check-label" for="marque_fruizee">-->
+<!--                                                Fruizee-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon">-->
+<!--                                            <label class="form-check-label" for="marque_fullmoon">-->
+<!--                                                Full Moon-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_furiosa">-->
+<!--                                            <label class="form-check-label" for="marque_furiosa">-->
+<!--                                                Furiosa-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_greeneo">-->
+<!--                                            <label class="form-check-label" for="marque_greeneo">-->
+<!--                                                Greeneo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_juicyshake">-->
+<!--                                            <label class="form-check-label" for="marque_juicyshake">-->
+<!--                                                Juicy Shake-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits">-->
+<!--                                            <label class="form-check-label" for="marque_kungfruits">-->
+<!--                                                Kung Fruits-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lecoqquivape">-->
+<!--                                            <label class="form-check-label" for="marque_lecoqquivape">-->
+<!--                                                Le Coq Qui Vape-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_levapoteurbreton">-->
+<!--                                            <label class="form-check-label" for="marque_levapoteurbreton">-->
+<!--                                                Le Vapoteur Breton-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_lesdevils">-->
+<!--                                            <label class="form-check-label" for="marque_lesdevils">-->
+<!--                                                Les Devils-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_liquideo">-->
+<!--                                            <label class="form-check-label" for="marque_liquideo">-->
+<!--                                                Liquideo-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_mono">-->
+<!--                                            <label class="form-check-label" for="marque_mono">-->
+<!--                                                Mono-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_monster">-->
+<!--                                            <label class="form-check-label" for="marque_monster">-->
+<!--                                                Monster-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_petitnuage">-->
+<!--                                            <label class="form-check-label" for="marque_petitnuage">-->
+<!--                                                Petit Nuage-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_snapdragon">-->
+<!--                                            <label class="form-check-label" for="marque_snapdragon">-->
+<!--                                                Snap Dragon-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_swoke">-->
+<!--                                            <label class="form-check-label" for="marque_swoke">-->
+<!--                                                Swoke-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice">-->
+<!--                                            <label class="form-check-label" for="marque_themedusajuice">-->
+<!--                                                The Medusa Juice-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_tjuice">-->
+<!--                                            <label class="form-check-label" for="marque_tjuice">-->
+<!--                                                T-Juice-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape">-->
+<!--                                            <label class="form-check-label" for="marque_vampirevape">-->
+<!--                                                Vampire Vape-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vapedistillery">-->
+<!--                                            <label class="form-check-label" for="marque_vapedistillery">-->
+<!--                                                Vape Distillery-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">-->
+<!--                                            <input class="form-check-input" type="checkbox" id="marque_vdlv">-->
+<!--                                            <label class="form-check-label" for="marque_vdlv">-->
+<!--                                                VDLV-->
+<!--                                            </label>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+                    </div>
+                </div>
+
+                <br>
                 <div class="row">
                     <div class="col-4">
-                        CARD1
                         <div class="card zoom-effect">
                             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                             <div class="card-body">
@@ -604,7 +1430,6 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        CARD2
                         <div class="card zoom-effect">
                             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                             <div class="card-body">
@@ -615,7 +1440,6 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        CARD3
                         <div class="card zoom-effect">
                             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                             <div class="card-body">
@@ -697,6 +1521,96 @@
                                                 10 mL
                                             </label>
                                         </li>
+                                        <!--sous onglet 10mL taux/sel de nicotine-->
+                                        <div id="filtre10mL" class="btw-sous-onglet" style="display:none;">
+                                            <a href="#filtre10mLTaux" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"> Taux de nicotine</a>
+                                            <ul class="collapse list-unstyled" id="filtre10mLTaux">
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous" checked>
+                                                    <label class="form-check-label" for="taux_nicotine_tous">
+                                                        Tous
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg">
+                                                    <label class="form-check-label" for="taux_nicotine_0mg">
+                                                        0 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_3mg">
+                                                    <label class="form-check-label" for="taux_nicotine_3mg">
+                                                        3 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_6mg">
+                                                    <label class="form-check-label" for="taux_nicotine_6mg">
+                                                        6 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_12mg">
+                                                    <label class="form-check-label" for="taux_nicotine_12mg">
+                                                        12 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_18mg">
+                                                    <label class="form-check-label" for="taux_nicotine_18mg">
+                                                        18 mg
+                                                    </label>
+                                                </li>
+                                            </ul>
+
+                                            <a href="#filtre10mLSel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"> Sel de nicotine</a>
+                                            <ul class="collapse list-unstyled" id="filtre10mLSel">
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_tous" checked>
+                                                    <label class="form-check-label" for="sel_nicotine_tous">
+                                                        Tous
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_sans">
+                                                    <label class="form-check-label" for="sel_nicotine_sans">
+                                                        Sans
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_9mg">
+                                                    <label class="form-check-label" for="sel_nicotine_9mg">
+                                                        9 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_10mg">
+                                                    <label class="form-check-label" for="sel_nicotine_10mg">
+                                                        10 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_18mg">
+                                                    <label class="form-check-label" for="sel_nicotine_18mg">
+                                                        18 mg
+                                                    </label>
+                                                </li>
+                                                <li class="form-check" style="padding-left: 80px">
+                                                    <input class="form-check-input" type="checkbox" id="sel_nicotine_20mg">
+                                                    <label class="form-check-label" for="sel_nicotine_20mg">
+                                                        20 mg
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+
+
+
+
+
                                         <li class="form-check" style="padding-left: 50px">
                                             <input class="form-check-input" type="checkbox" id="contenance_50">
                                             <label class="form-check-label" for="contenance_50">
@@ -757,6 +1671,12 @@
                                             <input class="form-check-input" type="checkbox" id="marque_cesar">
                                             <label class="form-check-label" for="marque_cesar">
                                                 Cesar
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 50px">
+                                            <input class="form-check-input" type="checkbox" id="marque_cigusto">
+                                            <label class="form-check-label" for="marque_cigusto">
+                                                Cigusto
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
@@ -1203,6 +2123,8 @@
     document.querySelector('.magasinCigustoTeal-tel-historique').href = magasinCigustoTeal;
     document.querySelector('.magasinCigustoTeal-tablette-historique').href = magasinCigustoTeal;
     document.querySelector('.magasinCigustoTeal-historique').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-filtre-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tablette-filtre-logo').href = magasinCigustoTeal;
 
     // redirection page nouveautes
     let nouveautesMagasinCigustoTeal;
@@ -1325,6 +2247,373 @@
         });
         link.addEventListener('mouseout', function() {
             this.style.backgroundColor = 'transparent';
+        });
+    });
+
+    // const dismissBtnTel = document.querySelector(".dismiss-filtre-tel");
+    // dismissBtnTel.addEventListener("click", () => {
+    //     filtreDivTel.classList.remove("active");
+    // });
+    // const dismissBtnTablette = document.querySelector(".dismiss-filtre-tablette");
+    // dismissBtnTablette.addEventListener("click", () => {
+    //     filtreDivTablette.classList.remove("active");
+    // });
+    //
+    // // bouton filtre tel
+    // const filtreBtnTel = document.getElementById("filtreBtnTel");
+    // const filtreDivTel = document.querySelector(".filtre-divTel");
+    // filtreBtnTel.addEventListener("click", () => {
+    //     filtreDivTel.classList.toggle("active");
+    // });
+    // // filtre 10mL tel
+    // // Récupérer la case à cocher et l'élément à afficher/masquer
+    // var checkboxTel = document.getElementById("contenance_10_tel");
+    // // Ajouter un écouteur d'événements sur la case à cocher
+    // checkboxTel.addEventListener("click", function() {
+    //     // Si la case est cochée, afficher l'élément, sinon le masquer
+    //     if (checkboxTel.checked) {
+    //         filtre10mLTel.style.display = "block";
+    //     } else {
+    //         filtre10mLTel.style.display = "none";
+    //     }
+    // });
+    // // contraintes checkboxTel taux de nicotine
+    // // tous : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#taux_nicotine_tous_tel').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLTauxTel input:not(#taux_nicotine_tous_tel)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // sans : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#taux_nicotine_0mg_tel').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLTauxTel input:not(#taux_nicotine_0mg_tel)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // 3, 6, 12, 18 : decoche tous et sans
+    // $(document).ready(function() {
+    //     $('#filtre10mLTauxTel input[type="checkbox"]').click(function() {
+    //         if($(this).attr('id') !== 'taux_nicotine_tous_tel' && $(this).attr('id') !== 'taux_nicotine_0mg_tel') {
+    //             $('#taux_nicotine_tous_tel, #taux_nicotine_0mg_tel').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // aucun : coche tous, decoche tous : coche 0 mg
+    // $(document).ready(function() {
+    //     var checkboxesTel = $('#filtre10mLTauxTel input[type="checkbox"]').not('#taux_nicotine_tous_tel');
+    //     var tous = $('#taux_nicotine_tous_tel');
+    //     var checked = checkboxesTel.filter(':checked');
+    //
+    //     if (checked.length === 0) {
+    //         tous.prop('checked', true);
+    //     }
+    //     checkboxesTel.on('change', function() {
+    //         checked = checkboxesTel.filter(':checked');
+    //
+    //         if (checked.length === 0) {
+    //             tous.prop('checked', true);
+    //         } else {
+    //             tous.prop('checked', false);
+    //         }
+    //     });
+    //     tous.on('change', function() {
+    //         if (tous.is(':checked')) {
+    //             checkboxesTel.prop('checked', false);
+    //         } else {
+    //             checkboxesTel.first().prop('checked', true);
+    //         }
+    //     });
+    // });
+    // // contraintes checkboxTel sel de nicotine
+    // // tous : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#sel_nicotine_tous_tel').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLSelTel input:not(#sel_nicotine_tous_tel)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // sans : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#sel_nicotine_sans_tel').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLSelTel input:not(#sel_nicotine_sans_tel)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // 9, 10, 18, 20 : decoche tous et sans
+    // $(document).ready(function() {
+    //     $('#filtre10mLSelTel input[type="checkbox"]').click(function() {
+    //         if($(this).attr('id') !== 'sel_nicotine_tous_tel' && $(this).attr('id') !== 'sel_nicotine_sans_tel') {
+    //             $('#sel_nicotine_tous_tel, #sel_nicotine_sans_tel').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // aucun : coche tous, decoche tous : coche sans
+    // $(document).ready(function() {
+    //     var checkboxesTel = $('#filtre10mLSelTel input[type="checkbox"]').not('#sel_nicotine_tous_tel');
+    //     var tous = $('#sel_nicotine_tous_tel');
+    //     var checked = checkboxesTel.filter(':checked');
+    //
+    //     if (checked.length === 0) {
+    //         tous.prop('checked', true);
+    //     }
+    //     checkboxesTel.on('change', function() {
+    //         checked = checkboxesTel.filter(':checked');
+    //
+    //         if (checked.length === 0) {
+    //             tous.prop('checked', true);
+    //         } else {
+    //             tous.prop('checked', false);
+    //         }
+    //     });
+    //     tous.on('change', function() {
+    //         if (tous.is(':checked')) {
+    //             checkboxesTel.prop('checked', false);
+    //         } else {
+    //             checkboxesTel.first().prop('checked', true);
+    //         }
+    //     });
+    // });
+
+    // // bouton filtre tablette
+    // const filtreBtnTablette = document.getElementById("filtreBtnTablette");
+    // const filtreDivTablette = document.querySelector(".filtre-divTablette");
+    // filtreBtnTablette.addEventListener("click", () => {
+    //     filtreDivTablette.classList.toggle("active");
+    // });
+    // // filtre 10mL tablette
+    // // Récupérer la case à cocher et l'élément à afficher/masquer
+    // var checkboxTablette = document.getElementById("contenance_10_tablette");
+    // // Ajouter un écouteur d'événements sur la case à cocher
+    // checkboxTablette.addEventListener("click", function() {
+    //     // Si la case est cochée, afficher l'élément, sinon le masquer
+    //     if (checkboxTablette.checked) {
+    //         filtre10mLTablette.style.display = "block";
+    //     } else {
+    //         filtre10mLTablette.style.display = "none";
+    //     }
+    // });
+    // // contraintes checkboxTablette taux de nicotine
+    // // tous : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#taux_nicotine_tous_tablette').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLTauxTablette input:not(#taux_nicotine_tous_tablette)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // sans : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#taux_nicotine_0mg_tablette').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLTauxTablette input:not(#taux_nicotine_0mg_tablette)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // 3, 6, 12, 18 : decoche tous et sans
+    // $(document).ready(function() {
+    //     $('#filtre10mLTauxTablette input[type="checkbox"]').click(function() {
+    //         if($(this).attr('id') !== 'taux_nicotine_tous_tablette' && $(this).attr('id') !== 'taux_nicotine_0mg_tablette') {
+    //             $('#taux_nicotine_tous_tablette, #taux_nicotine_0mg_tablette').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // aucun : coche tous, decoche tous : coche 0 mg
+    // $(document).ready(function() {
+    //     var checkboxesTablette = $('#filtre10mLTauxTablette input[type="checkbox"]').not('#taux_nicotine_tous_tablette');
+    //     var tous = $('#taux_nicotine_tous_tablette');
+    //     var checked = checkboxesTablette.filter(':checked');
+    //
+    //     if (checked.length === 0) {
+    //         tous.prop('checked', true);
+    //     }
+    //     checkboxesTablette.on('change', function() {
+    //         checked = checkboxesTablette.filter(':checked');
+    //
+    //         if (checked.length === 0) {
+    //             tous.prop('checked', true);
+    //         } else {
+    //             tous.prop('checked', false);
+    //         }
+    //     });
+    //     tous.on('change', function() {
+    //         if (tous.is(':checked')) {
+    //             checkboxesTablette.prop('checked', false);
+    //         } else {
+    //             checkboxesTablette.first().prop('checked', true);
+    //         }
+    //     });
+    // });
+    // // contraintes checkboxTablette sel de nicotine
+    // // tous : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#sel_nicotine_tous_tablette').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLSelTablette input:not(#sel_nicotine_tous_tablette)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // sans : decoche toutes les autres
+    // $(document).ready(function() {
+    //     $('#sel_nicotine_sans_tablette').click(function() {
+    //         if($(this).is(':checked')) {
+    //             $('#filtre10mLSelTablette input:not(#sel_nicotine_sans_tablette)').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // 9, 10, 18, 20 : decoche tous et sans
+    // $(document).ready(function() {
+    //     $('#filtre10mLSelTablette input[type="checkbox"]').click(function() {
+    //         if($(this).attr('id') !== 'sel_nicotine_tous_tablette' && $(this).attr('id') !== 'sel_nicotine_sans_tablette') {
+    //             $('#sel_nicotine_tous_tablette, #sel_nicotine_sans_tablette').prop('checked', false);
+    //         }
+    //     });
+    // });
+    // // aucun : coche tous, decoche tous : coche sans
+    // $(document).ready(function() {
+    //     var checkboxesTablette = $('#filtre10mLSelTablette input[type="checkbox"]').not('#sel_nicotine_tous_tablette');
+    //     var tous = $('#sel_nicotine_tous_tablette');
+    //     var checked = checkboxesTablette.filter(':checked');
+    //
+    //     if (checked.length === 0) {
+    //         tous.prop('checked', true);
+    //     }
+    //     checkboxesTablette.on('change', function() {
+    //         checked = checkboxesTablette.filter(':checked');
+    //
+    //         if (checked.length === 0) {
+    //             tous.prop('checked', true);
+    //         } else {
+    //             tous.prop('checked', false);
+    //         }
+    //     });
+    //     tous.on('change', function() {
+    //         if (tous.is(':checked')) {
+    //             checkboxesTablette.prop('checked', false);
+    //         } else {
+    //             checkboxesTablette.first().prop('checked', true);
+    //         }
+    //     });
+    // });
+
+    // filtre 10mL
+    // Récupérer la case à cocher et l'élément à afficher/masquer
+    var checkbox = document.getElementById("contenance_10");
+
+    // Ajouter un écouteur d'événements sur la case à cocher
+    checkbox.addEventListener("click", function() {
+        // Si la case est cochée, afficher l'élément, sinon le masquer
+        if (checkbox.checked) {
+            filtre10mL.style.display = "block";
+        } else {
+            filtre10mL.style.display = "none";
+        }
+    });
+    // contraintes checkbox taux de nicotine
+    // tous : decoche toutes les autres
+    $(document).ready(function() {
+        $('#taux_nicotine_tous').click(function() {
+            if($(this).is(':checked')) {
+                $('#filtre10mLTaux input:not(#taux_nicotine_tous)').prop('checked', false);
+            }
+        });
+    });
+    // sans : decoche toutes les autres
+    $(document).ready(function() {
+        $('#taux_nicotine_0mg').click(function() {
+            if($(this).is(':checked')) {
+                $('#filtre10mLTaux input:not(#taux_nicotine_0mg)').prop('checked', false);
+            }
+        });
+    });
+    // 3, 6, 12, 18 : decoche tous et sans
+    $(document).ready(function() {
+        $('#filtre10mLTaux input[type="checkbox"]').click(function() {
+            if($(this).attr('id') !== 'taux_nicotine_tous' && $(this).attr('id') !== 'taux_nicotine_0mg') {
+                $('#taux_nicotine_tous, #taux_nicotine_0mg').prop('checked', false);
+            }
+        });
+    });
+    // aucun : coche tous, decoche tous : coche 0 mg
+    $(document).ready(function() {
+        var checkboxes = $('#filtre10mLTaux input[type="checkbox"]').not('#taux_nicotine_tous');
+        var tous = $('#taux_nicotine_tous');
+        var checked = checkboxes.filter(':checked');
+
+        if (checked.length === 0) {
+            tous.prop('checked', true);
+        }
+        checkboxes.on('change', function() {
+            checked = checkboxes.filter(':checked');
+
+            if (checked.length === 0) {
+                tous.prop('checked', true);
+            } else {
+                tous.prop('checked', false);
+            }
+        });
+        tous.on('change', function() {
+            if (tous.is(':checked')) {
+                checkboxes.prop('checked', false);
+            } else {
+                checkboxes.first().prop('checked', true);
+            }
+        });
+    });
+    // contraintes checkbox sel de nicotine
+    // tous : decoche toutes les autres
+    $(document).ready(function() {
+        $('#sel_nicotine_tous').click(function() {
+            if($(this).is(':checked')) {
+                $('#filtre10mLSel input:not(#sel_nicotine_tous)').prop('checked', false);
+            }
+        });
+    });
+    // sans : decoche toutes les autres
+    $(document).ready(function() {
+        $('#sel_nicotine_sans').click(function() {
+            if($(this).is(':checked')) {
+                $('#filtre10mLSel input:not(#sel_nicotine_sans)').prop('checked', false);
+            }
+        });
+    });
+    // 9, 10, 18, 20 : decoche tous et sans
+    $(document).ready(function() {
+        $('#filtre10mLSel input[type="checkbox"]').click(function() {
+            if($(this).attr('id') !== 'sel_nicotine_tous' && $(this).attr('id') !== 'sel_nicotine_sans') {
+                $('#sel_nicotine_tous, #sel_nicotine_sans').prop('checked', false);
+            }
+        });
+    });
+    // aucun : coche tous, decoche tous : coche sans
+    $(document).ready(function() {
+        var checkboxes = $('#filtre10mLSel input[type="checkbox"]').not('#sel_nicotine_tous');
+        var tous = $('#sel_nicotine_tous');
+        var checked = checkboxes.filter(':checked');
+
+        if (checked.length === 0) {
+            tous.prop('checked', true);
+        }
+        checkboxes.on('change', function() {
+            checked = checkboxes.filter(':checked');
+
+            if (checked.length === 0) {
+                tous.prop('checked', true);
+            } else {
+                tous.prop('checked', false);
+            }
+        });
+        tous.on('change', function() {
+            if (tous.is(':checked')) {
+                checkboxes.prop('checked', false);
+            } else {
+                checkboxes.first().prop('checked', true);
+            }
         });
     });
 
@@ -1642,6 +2931,23 @@
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-navbar').href = marqueCesarEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Cigusto
+    let marqueCigustoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Cigusto';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCigustoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCigustoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-navbar').href = marqueCigustoEliquidesMagasinCigustoTeal;
 
     // redirection page e-liquides coche marque CirKus
     let marqueCirkusEliquidesMagasinCigustoTeal;
@@ -2270,6 +3576,12 @@
     // Cesar
     if (urlParams.has('marque') && urlParams.get('marque') === 'Cesar') {
         document.querySelector('#marque_cesar').checked = true;
+        const dropdown = document.querySelector('#filtreMarquesSection');
+        dropdown.classList.add('show');
+    }
+    // Cigusto
+    if (urlParams.has('marque') && urlParams.get('marque') === 'Cigusto') {
+        document.querySelector('#marque_cigusto').checked = true;
         const dropdown = document.querySelector('#filtreMarquesSection');
         dropdown.classList.add('show');
     }
@@ -3405,8 +4717,23 @@
     /*    padding-left: 30px;*/
     /*    font-size: 14px;*/
     /*}*/
-    .filtre .btw-onglet a {
+    .btw-onglet-tel a {
         padding-left: 0;
+    }
+    .btw-sous-onglet-tel a {
+        padding-left: 70px;
+    }
+    .btw-onglet-tablette a {
+        padding-left: 0;
+    }
+    .btw-sous-onglet-tablette a {
+        padding-left: 33px;
+    }
+    .btw-onglet a {
+        padding-left: 0;
+    }
+    .btw-sous-onglet a {
+        padding-left: 26px;
     }
 
     .articles .card {
@@ -3431,5 +4758,57 @@
     .articles .zoom-effect:hover {
         transform: scale(1.05);
         cursor: pointer;
+    }
+    .btn-filtre {
+        border: 1px solid #253142;
+        color: #253142;
+        transition: background-color 0.1s ease-in-out;
+    }
+    .btn-filtre:hover {
+        background-color: #253142;
+        color: white;
+        cursor: pointer;
+    }
+
+    .filtre-divTel {
+        position: fixed;
+        inset: 0 0 0 0;
+        overflow-y: auto;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 3;
+    }
+    .filtre-divTel.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .filtre-divTablette {
+        position: fixed;
+        inset: 0 0 0 0;
+        overflow-y: auto;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 3;
+    }
+    .filtre-divTablette.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .filtre-divTel ul li.active > a,
+    .filtre-divTel a[aria-expanded="true"] {
+        background: white;
+        color: black;
+    }
+    .filtre-divTablette ul li.active > a,
+    .filtre-divTablette a[aria-expanded="true"] {
+        background: white;
+        color: black;
     }
 </style>

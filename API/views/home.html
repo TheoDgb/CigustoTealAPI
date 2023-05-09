@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/images/favicon_cigusto.png">
     <title>Cigusto - Teal Accueil</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -81,6 +82,7 @@
                                             <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Bakery Shake</a></li>
                                             <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Candy Shake</a></li>
                                             <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCigustoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Cigusto</a></li>
                                             <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">CirKus</a></li>
                                             <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Curieux</a></li>
                                             <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Don Cristo</a></li>
@@ -258,6 +260,7 @@
                                             <li><a class="scroll-link marqueBakeryShakeEliquidesMagasinCigustoTeal-tablette-sidebar " href="" style="padding-left: 45px; font-size: 1.1rem;">Bakery Shake</a></li>
                                             <li><a class="scroll-link marqueCandyShakeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Candy Shake</a></li>
                                             <li><a class="scroll-link marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Cesar</a></li>
+                                            <li><a class="scroll-link marqueCigustoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Cigusto</a></li>
                                             <li><a class="scroll-link marqueCirkusEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">CirKus</a></li>
                                             <li><a class="scroll-link marqueCurieuxEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Curieux</a></li>
                                             <li><a class="scroll-link marqueDonCristoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Don Cristo</a></li>
@@ -441,6 +444,7 @@
                                             <a href="" class="bg-orange-link marqueBakeryShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Bakery Shake</a><br>
                                             <a href="" class="bg-orange-link marqueCandyShakeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Candy Shake</a><br>
                                             <a href="" class="bg-orange-link marqueCesarEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Cesar</a><br>
+                                            <a href="" class="bg-orange-link marqueCigustoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Cigusto</a><br>
                                             <a href="" class="bg-orange-link marqueCirkusEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">CirKus</a><br>
                                             <a href="" class="bg-orange-link marqueCurieuxEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Curieux</a><br>
                                             <a href="" class="bg-orange-link marqueDonCristoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Don Cristo</a><br>
@@ -1317,6 +1321,23 @@
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCesarEliquidesMagasinCigustoTeal;
     document.querySelector('.marqueCesarEliquidesMagasinCigustoTeal-navbar').href = marqueCesarEliquidesMagasinCigustoTeal;
+
+    // redirection page e-liquides coche marque Cigusto
+    let marqueCigustoEliquidesMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Cigusto';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCigustoEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Cigusto';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueCigustoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueCigustoEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueCigustoEliquidesMagasinCigustoTeal-navbar').href = marqueCigustoEliquidesMagasinCigustoTeal;
 
     // redirection page e-liquides coche marque CirKus
     let marqueCirkusEliquidesMagasinCigustoTeal;
