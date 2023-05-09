@@ -1458,7 +1458,7 @@
         <!--ecran pc-->
         <div class="d-flex">
             <div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
-                ECRAN PC
+                <!--ECRAN PC-->
                 <div class="row">
                     <div class="col-3">
                         P1
@@ -1603,14 +1603,6 @@
                                                 </li>
                                             </ul>
                                         </div>
-
-
-
-
-
-
-
-
                                         <li class="form-check" style="padding-left: 50px">
                                             <input class="form-check-input" type="checkbox" id="contenance_50">
                                             <label class="form-check-label" for="contenance_50">
@@ -1870,12 +1862,6 @@
                             </li>
                         </ul>
                     </div>
-
-
-
-
-
-
 
                     <div class="col-9">
                         P2
@@ -3511,16 +3497,16 @@
         // dropdown_tel.classList.add('show');
         // dropdown_tablette.classList.add('show');
         // dropdown.classList.add('show');
-        ['#saveur_classic_tablette', '#saveur_classic_tel', '#saveur_classic'].forEach(selector => {
+        ['#saveur_classic_tel', '#saveur_classic_tablette', '#saveur_classic'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+        ['#filtreSaveursSectionTablette', '#filtreSaveursSectionTel', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
     }
     // mentholé
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'menthole') {
-        ['#saveur_menthole_tablette', '#saveur_menthole_tel', '#saveur_menthole'].forEach(selector => {
+        ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
@@ -3529,7 +3515,7 @@
     }
     // fruité
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruite') {
-        ['#saveur_fruite_tablette', '#saveur_fruite_tel', '#saveur_fruite'].forEach(selector => {
+        ['#saveur_fruite_tel', '#saveur_fruite_tablette', '#saveur_fruite'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
@@ -3538,7 +3524,7 @@
     }
     // fruité frais
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais') {
-        ['#saveur_fruite_frais_tablette', '#saveur_fruite_frais_tel', '#saveur_fruite_frais'].forEach(selector => {
+        ['#saveur_fruite_frais_tel', '#saveur_fruite_frais_tablette', '#saveur_fruite_frais'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
@@ -3547,7 +3533,7 @@
     }
     // gourmand
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand') {
-        ['#saveur_gourmand_tablette', '#saveur_gourmand_tel', '#saveur_gourmand'].forEach(selector => {
+        ['#saveur_gourmand_tel', '#saveur_gourmand_tablette', '#saveur_gourmand'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
@@ -3556,7 +3542,7 @@
     }
     // friandise / boisson
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson') {
-        ['#saveur_friandise_tablette', '#saveur_friandise_tel', '#saveur_friandise'].forEach(selector => {
+        ['#saveur_friandise_tel', '#saveur_friandise_tablette', '#saveur_friandise'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
@@ -3567,7 +3553,7 @@
     // ****************************** E-Liquides contenance activer checkbox / dropdown ******************************
     // 10 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '10mL') {
-        ['#contenance_10_tablette', '#contenance_10_tel', '#contenance_10'].forEach(selector => {
+        ['#contenance_10_tel', '#contenance_10_tablette', '#contenance_10'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
@@ -3576,7 +3562,7 @@
     }
     // 50 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '50mL') {
-        ['#contenance_50_tablette', '#contenance_50_tel', '#contenance_50'].forEach(selector => {
+        ['#contenance_50_tel', '#contenance_50_tablette', '#contenance_50'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
@@ -3585,7 +3571,7 @@
     }
     // 80 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '80mL') {
-        ['#contenance_80_tablette', '#contenance_80_tel', '#contenance_80'].forEach(selector => {
+        ['#contenance_80_tel', '#contenance_80_tablette', '#contenance_80'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
@@ -3594,7 +3580,7 @@
     }
     // 100 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '100mL') {
-        ['#contenance_100_tablette', '#contenance_100_tel', '#contenance_100'].forEach(selector => {
+        ['#contenance_100_tel', '#contenance_100_tablette', '#contenance_100'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
@@ -3603,7 +3589,7 @@
     }
     // 200 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '200mL') {
-        ['#contenance_200_tablette', '#contenance_200_tel', '#contenance_200'].forEach(selector => {
+        ['#contenance_200_tel', '#contenance_200_tablette', '#contenance_200'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
@@ -3614,7 +3600,7 @@
     // ****************************** E-Liquides marques activer checkbox / dropdown ******************************
     // A&L
     if (urlParams.has('marque') && urlParams.get('marque') === 'AandL') {
-        ['#marque_aandl_tablette', '#marque_aandl_tel', '#marque_aandl'].forEach(selector => {
+        ['#marque_aandl_tel', '#marque_aandl_tablette', '#marque_aandl'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3623,7 +3609,7 @@
     }
     // Alfaliquid
     if (urlParams.has('marque') && urlParams.get('marque') === 'Alfaliquid') {
-        ['#marque_alfaliquid_tablette', '#marque_alfaliquid_tel', '#marque_alfaliquid'].forEach(selector => {
+        ['#marque_alfaliquid_tel', '#marque_alfaliquid_tablette', '#marque_alfaliquid'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3632,7 +3618,7 @@
     }
     // Bakery Shake
     if (urlParams.has('marque') && urlParams.get('marque') === 'BakeryShake') {
-        ['#marque_bakeryshake_tablette', '#marque_bakeryshake_tel', '#marque_bakeryshake'].forEach(selector => {
+        ['#marque_bakeryshake_tel', '#marque_bakeryshake_tablette', '#marque_bakeryshake'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3641,7 +3627,7 @@
     }
     // Candy Shake
     if (urlParams.has('marque') && urlParams.get('marque') === 'CandyShake') {
-        ['#marque_candyshake_tablette', '#marque_candyshake_tel', '#marque_candyshake'].forEach(selector => {
+        ['#marque_candyshake_tel', '#marque_candyshake_tablette', '#marque_candyshake'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3650,7 +3636,7 @@
     }
     // Cesar
     if (urlParams.has('marque') && urlParams.get('marque') === 'Cesar') {
-        ['#marque_cesar_tablette', '#marque_cesar_tel', '#marque_cesar'].forEach(selector => {
+        ['#marque_cesar_tel', '#marque_cesar_tablette', '#marque_cesar'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3659,7 +3645,7 @@
     }
     // Cigusto
     if (urlParams.has('marque') && urlParams.get('marque') === 'Cigusto') {
-        ['#marque_cigusto_tablette', '#marque_cigusto_tel', '#marque_cigusto'].forEach(selector => {
+        ['#marque_cigusto_tel', '#marque_cigusto_tablette', '#marque_cigusto'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3668,7 +3654,7 @@
     }
     // CirKus
     if (urlParams.has('marque') && urlParams.get('marque') === 'CirKus') {
-        ['#marque_cirkus_tablette', '#marque_cirkus_tel', '#marque_cirkus'].forEach(selector => {
+        ['#marque_cirkus_tel', '#marque_cirkus_tablette', '#marque_cirkus'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3677,7 +3663,7 @@
     }
     // Curieux
     if (urlParams.has('marque') && urlParams.get('marque') === 'Curieux') {
-        ['#marque_curieux_tablette', '#marque_curieux_tel', '#marque_curieux'].forEach(selector => {
+        ['#marque_curieux_tel', '#marque_curieux_tablette', '#marque_curieux'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3686,7 +3672,7 @@
     }
     // Don Cristo
     if (urlParams.has('marque') && urlParams.get('marque') === 'DonCristo') {
-        ['#marque_doncristo_tablette', '#marque_doncristo_tel', '#marque_doncristo'].forEach(selector => {
+        ['#marque_doncristo_tel', '#marque_doncristo_tablette', '#marque_doncristo'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3695,7 +3681,7 @@
     }
     // Eliquid France
     if (urlParams.has('marque') && urlParams.get('marque') === 'EliquidFrance') {
-        ['#marque_eliquidfrance_tablette', '#marque_eliquidfrance_tel', '#marque_eliquidfrance'].forEach(selector => {
+        ['#marque_eliquidfrance_tel', '#marque_eliquidfrance_tablette', '#marque_eliquidfrance'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3704,7 +3690,7 @@
     }
     // Enfer
     if (urlParams.has('marque') && urlParams.get('marque') === 'Enfer') {
-        ['#marque_enfer_tablette', '#marque_enfer_tel', '#marque_enfer'].forEach(selector => {
+        ['#marque_enfer_tel', '#marque_enfer_tablette', '#marque_enfer'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3713,7 +3699,7 @@
     }
     // E.Tasty
     if (urlParams.has('marque') && urlParams.get('marque') === 'ETasty') {
-        ['#marque_etasty_tablette', '#marque_etasty_tel', '#marque_etasty'].forEach(selector => {
+        ['#marque_etasty_tel', '#marque_etasty_tablette', '#marque_etasty'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3722,7 +3708,7 @@
     }
     // Le French Liquide
     if (urlParams.has('marque') && urlParams.get('marque') === 'LeFrenchLiquide') {
-        ['#marque_lefrenchliquide_tablette', '#marque_lefrenchliquide_tel', '#marque_lefrenchliquide'].forEach(selector => {
+        ['#marque_lefrenchliquide_tel', '#marque_lefrenchliquide_tablette', '#marque_lefrenchliquide'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3731,7 +3717,7 @@
     }
     // Fresh Vape Co
     if (urlParams.has('marque') && urlParams.get('marque') === 'FreshVapeCo') {
-        ['#marque_freshvapeco_tablette', '#marque_freshvapeco_tel', '#marque_freshvapeco'].forEach(selector => {
+        ['#marque_freshvapeco_tel', '#marque_freshvapeco_tablette', '#marque_freshvapeco'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3740,7 +3726,7 @@
     }
     // Fruiteo
     if (urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo') {
-        ['#marque_fruiteo_tablette', '#marque_fruiteo_tel', '#marque_fruiteo'].forEach(selector => {
+        ['#marque_fruiteo_tel', '#marque_fruiteo_tablette', '#marque_fruiteo'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3749,7 +3735,7 @@
     }
     // Fruity Cool
     if (urlParams.has('marque') && urlParams.get('marque') === 'FruityCool') {
-        ['#marque_fruitycool_tablette', '#marque_fruitycool_tel', '#marque_fruitycool'].forEach(selector => {
+        ['#marque_fruitycool_tel', '#marque_fruitycool_tablette', '#marque_fruitycool'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3758,7 +3744,7 @@
     }
     // Fruity Fuel
     if (urlParams.has('marque') && urlParams.get('marque') === 'FruityFuel') {
-        ['#marque_fruityfuel', '#marque_fruityfuel', '#marque_fruityfuel'].forEach(selector => {
+        ['#marque_fruityfuel_tel', '#marque_fruityfuel_tablette', '#marque_fruityfuel'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3767,7 +3753,7 @@
     }
     // Fruizee
     if (urlParams.has('marque') && urlParams.get('marque') === 'Fruizee') {
-        ['#marque_fruizee_tablette', '#marque_fruizee_tel', '#marque_fruizee'].forEach(selector => {
+        ['#marque_fruizee_tel', '#marque_fruizee_tablette', '#marque_fruizee'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3776,7 +3762,7 @@
     }
     // Full Moon
     if (urlParams.has('marque') && urlParams.get('marque') === 'FullMoon') {
-        ['#marque_fullmoon_tablette', '#marque_fullmoon_tel', '#marque_fullmoon'].forEach(selector => {
+        ['#marque_fullmoon_tel', '#marque_fullmoon_tablette', '#marque_fullmoon'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3785,7 +3771,7 @@
     }
     // Furiosa
     if (urlParams.has('marque') && urlParams.get('marque') === 'Furiosa') {
-        ['#marque_furiosa_tablette', '#marque_furiosa_tel', '#marque_furiosa'].forEach(selector => {
+        ['#marque_furiosa_tel', '#marque_furiosa_tablette', '#marque_furiosa'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3794,7 +3780,7 @@
     }
     // Greeneo
     if (urlParams.has('marque') && urlParams.get('marque') === 'Greeneo') {
-        ['#marque_greeneo_tablette', '#marque_greeneo_tel', '#marque_greeneo'].forEach(selector => {
+        ['#marque_greeneo_tel', '#marque_greeneo_tablette', '#marque_greeneo'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3803,7 +3789,7 @@
     }
     // Juicy Shake
     if (urlParams.has('marque') && urlParams.get('marque') === 'JuicyShake') {
-        ['#marque_juicyshake_tablette', '#marque_juicyshake_tel', '#marque_juicyshake'].forEach(selector => {
+        ['#marque_juicyshake_tel', '#marque_juicyshake_tablette', '#marque_juicyshake'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3812,7 +3798,7 @@
     }
     // Kung Fruits
     if (urlParams.has('marque') && urlParams.get('marque') === 'KungFruits') {
-        ['#marque_kungfruits_tablette', '#marque_kungfruits_tel', '#marque_kungfruits'].forEach(selector => {
+        ['#marque_kungfruits_tel', '#marque_kungfruits_tablette', '#marque_kungfruits'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3821,7 +3807,7 @@
     }
     // Le Coq Qui Vape
     if (urlParams.has('marque') && urlParams.get('marque') === 'LeCoqQuiVape') {
-        ['#marque_lecoqquivape_tablette', '#marque_lecoqquivape_tel', '#marque_lecoqquivape'].forEach(selector => {
+        ['#marque_lecoqquivape_tel', '#marque_lecoqquivape_tablette', '#marque_lecoqquivape'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3830,7 +3816,7 @@
     }
     // Le Vapoteur Breton
     if (urlParams.has('marque') && urlParams.get('marque') === 'LeVapoteurBreton') {
-        ['#marque_levapoteurbreton_tablette', '#marque_levapoteurbreton_tel', '#marque_levapoteurbreton'].forEach(selector => {
+        ['#marque_levapoteurbreton_tel', '#marque_levapoteurbreton_tablette', '#marque_levapoteurbreton'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3839,7 +3825,7 @@
     }
     // Les Devils
     if (urlParams.has('marque') && urlParams.get('marque') === 'LesDevils') {
-        ['#marque_lesdevils_tablette', '#marque_lesdevils_tel', '#marque_lesdevils'].forEach(selector => {
+        ['#marque_lesdevils_tel', '#marque_lesdevils_tablette', '#marque_lesdevils'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3848,7 +3834,7 @@
     }
     // Liquideo
     if (urlParams.has('marque') && urlParams.get('marque') === 'Liquideo') {
-        ['#marque_liquideo_tablette', '#marque_liquideo_tel', '#marque_liquideo'].forEach(selector => {
+        ['#marque_liquideo_tel', '#marque_liquideo_tablette', '#marque_liquideo'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3857,7 +3843,7 @@
     }
     // Mono
     if (urlParams.has('marque') && urlParams.get('marque') === 'Mono') {
-        ['#marque_mono_tablette', '#marque_mono_tel', '#marque_mono'].forEach(selector => {
+        ['#marque_mono_tel', '#marque_mono_tablette', '#marque_mono'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3866,7 +3852,7 @@
     }
     // Monster
     if (urlParams.has('marque') && urlParams.get('marque') === 'Monster') {
-        ['#marque_monster_tablette', '#marque_monster_tel', '#marque_monster'].forEach(selector => {
+        ['#marque_monster_tel', '#marque_monster_tablette', '#marque_monster'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3875,7 +3861,7 @@
     }
     // Petit Nuage
     if (urlParams.has('marque') && urlParams.get('marque') === 'PetitNuage') {
-        ['#marque_petitnuage_tablette', '#marque_petitnuage_tel', '#marque_petitnuage'].forEach(selector => {
+        ['#marque_petitnuage_tel', '#marque_petitnuage_tablette', '#marque_petitnuage'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3884,7 +3870,7 @@
     }
     // Snap Dragon
     if (urlParams.has('marque') && urlParams.get('marque') === 'SnapDragon') {
-        ['#marque_snapdragon_tablette', '#marque_snapdragon_tel', '#marque_snapdragon'].forEach(selector => {
+        ['#marque_snapdragon_tel', '#marque_snapdragon_tablette', '#marque_snapdragon'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3893,7 +3879,7 @@
     }
     // Swoke
     if (urlParams.has('marque') && urlParams.get('marque') === 'Swoke') {
-        ['#marque_swoke_tablette', '#marque_swoke_tel', '#marque_swoke'].forEach(selector => {
+        ['#marque_swoke_tel', '#marque_swoke_tablette', '#marque_swoke'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3902,7 +3888,7 @@
     }
     // The Medusa Juice
     if (urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice') {
-        ['#marque_themedusajuice_tablette', '#marque_themedusajuice_tel', '#marque_themedusajuice'].forEach(selector => {
+        ['#marque_themedusajuice_tel', '#marque_themedusajuice_tablette', '#marque_themedusajuice'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3911,7 +3897,7 @@
     }
     // T-Juice
     if (urlParams.has('marque') && urlParams.get('marque') === 'TJuice') {
-        ['#marque_tjuice_tablette', '#marque_tjuice_tel', '#marque_tjuice'].forEach(selector => {
+        ['#marque_tjuice_tel', '#marque_tjuice_tablette', '#marque_tjuice'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3920,7 +3906,7 @@
     }
     // Vampire Vape
     if (urlParams.has('marque') && urlParams.get('marque') === 'VampireVape') {
-        ['#marque_vampirevape_tablette', '#marque_vampirevape_tel', '#marque_vampirevape'].forEach(selector => {
+        ['#marque_vampirevape_tel', '#marque_vampirevape_tablette', '#marque_vampirevape'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3929,7 +3915,7 @@
     }
     // Vape Distillery
     if (urlParams.has('marque') && urlParams.get('marque') === 'VapeDistillery') {
-        ['#marque_vapedistillery_tablette', '#marque_vapedistillery_tel', '#marque_vapedistillery'].forEach(selector => {
+        ['#marque_vapedistillery_tel', '#marque_vapedistillery_tablette', '#marque_vapedistillery'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
@@ -3938,7 +3924,7 @@
     }
     // VDLV
     if (urlParams.has('marque') && urlParams.get('marque') === 'VDLV') {
-        ['#marque_vdlv_tablette', '#marque_vdlv_tel', '#marque_vdlv'].forEach(selector => {
+        ['#marque_vdlv_tel', '#marque_vdlv_tablette', '#marque_vdlv'].forEach(selector => {
             document.querySelector(selector).checked = true;
         });
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {

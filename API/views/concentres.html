@@ -563,27 +563,221 @@
         <div class="flex-fill d-block d-sm-block d-md-block d-lg-none d-xl-none">
             <!--telephone portrait-->
             <div id="verti">
-                ECRAN TELEPHONE
-                <br> btn1FILTRES btn2Filtre2
-                <br> E-Liquides EXGOURMAND
+                <!--ECRAN TELEPHONE-->
+                <button id="filtreBtnTel" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 50px;"><i class="bi bi-ui-checks-grid fs-1 me-2"></i>Filtre</button>
+                <div id="filtreDivTel" class="filtre-divTel">
+                    <div class="container">
+                        <a href="" class="magasinCigustoTeal-tel-filtre-logo d-flex justify-content-center" style="margin-top: 50px;">
+                            <img src="/images/logo_cigusto_dark.png" alt="Logo Cigusto Teal" style="width: auto; height: 95px;"/>
+                        </a>
+                        <div class="dismiss-filtre-tel d-flex justify-content-center align-items-center">
+                            <i class="bi bi-x" style="position: absolute; font-size: 6rem; top: 30px; right: 45px;"></i>
+                        </div>
+                        <br><br><br>
+                        <div style="font-size: 50px;">Filtrer par</div>
+                        <ul class="filtre list-unstyled menu-elements">
+                            <li>
+                                <div class="btw-onglet-tel">
+                                    <a href="#filtreSaveursSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">
+                                        <strong>Saveurs</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreSaveursSectionTel">
+                                        <li>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tel">
+                                                <label class="form-check-label" for="saveur_classic_tel">
+                                                    Classic
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tel">
+                                                <label class="form-check-label" for="saveur_menthole_tel">
+                                                    Mentholé
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tel">
+                                                <label class="form-check-label" for="saveur_fruite_tel">
+                                                    Fruité
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tel">
+                                                <label class="form-check-label" for="saveur_fruite_frais_tel">
+                                                    Fruité Frais
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tel">
+                                                <label class="form-check-label" for="saveur_gourmand_tel">
+                                                    Gourmand
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tel">
+                                                <label class="form-check-label" for="saveur_friandise_boisson_tel">
+                                                    Friandise / Boisson
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btw-onglet-tel">
+                                    <a href="#filtreContenanceSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">
+                                        <strong>Contenance</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreContenanceSectionTel">
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="contenance_10_tel">
+                                            <label class="form-check-label" for="contenance_10_tel">
+                                                10 mL
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="contenance_30_tel">
+                                            <label class="form-check-label" for="contenance_30_tel">
+                                                30 mL
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btw-onglet-tel">
+                                    <a href="#filtreMarquesSectionTel" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 80px;">
+                                        <strong>Marques</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreMarquesSectionTel">
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tel">
+                                            <label class="form-check-label" for="marque_aandl_tel">
+                                                A&L
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_amazone_tel">
+                                            <label class="form-check-label" for="marque_amazone_tel">
+                                                Amazone
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_aromazon_tel">
+                                            <label class="form-check-label" for="marque_aromazon_tel">
+                                                Aromazon
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tel">
+                                            <label class="form-check-label" for="marque_cesar_tel">
+                                                Cesar
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tel">
+                                            <label class="form-check-label" for="marque_curieux_tel">
+                                                Curieux
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_doctordiy_tel">
+                                            <label class="form-check-label" for="marque_doctordiy_tel">
+                                                Doctor Diy
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fighterfuel_tel">
+                                            <label class="form-check-label" for="marque_fighterfuel_tel">
+                                                Fighter Fuel                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tel">
+                                            <label class="form-check-label" for="marque_fruiteo_tel">
+                                                Fruiteo
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tel">
+                                            <label class="form-check-label" for="marque_fruizee_tel">
+                                                Fruizee
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tel">
+                                            <label class="form-check-label" for="marque_fullmoon_tel">
+                                                Full Moon
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tel">
+                                            <label class="form-check-label" for="marque_kungfruits_tel">
+                                                Kung Fruits
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_kyandishop_tel">
+                                            <label class="form-check-label" for="marque_kyandishop_tel">
+                                                Kyandi Shop
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_shootiz_tel">
+                                            <label class="form-check-label" for="marque_shootiz_tel">
+                                                Shootiz
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_supervape_tel">
+                                            <label class="form-check-label" for="marque_supervape_tel">
+                                                SuperVape
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tel">
+                                            <label class="form-check-label" for="marque_themedusajuice_tel">
+                                                The Medusa Juice
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tel">
+                                            <label class="form-check-label" for="marque_tjuice_tel">
+                                                T-Juice
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tel">
+                                            <label class="form-check-label" for="marque_vampirevape_tel">
+                                                Vampire Vape
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 150px; font-size: 50px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_vape47_tel">
+                                            <label class="form-check-label" for="marque_vape47_tel">
+                                                Vape47
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-6">
-                        CARD1
                         <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
                             <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
+                                <h5 class="card-title">Concentré 1</h5>
                                 <p class="card-text">Description de malade.</p>
                             </div>
                             <div class="divider bg-primary my-4"></div>
                         </div>
                     </div>
                     <div class="col-6">
-                        CARD2
                         <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
                             <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
+                                <h5 class="card-title">Concentré 2</h5>
                                 <p class="card-text">Description de malade.</p>
                             </div>
                             <div class="divider bg-primary my-4"></div>
@@ -592,38 +786,231 @@
                 </div>
             </div>
             <div id="hori">
-                ECRAN  TABLETTE
-                <br> btn1FILTRES btn2Filtre2
-                <br> E-Liquides EXGOURMAND
+                <!--ECRAN  TABLETTE-->
+                <button id="filtreBtnTablette" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 32px;"><i class="bi bi-ui-checks-grid fs-4 me-2"></i>Filtre</button>
+                <div id="filtreDivTablette" class="filtre-divTablette">
+                    <div class="container">
+                        <a href="" class="magasinCigustoTeal-tablette-filtre-logo d-flex justify-content-center" style="margin-top: 25px;">
+                            <img src="/images/logo_cigusto_dark.png" alt="Logo Cigusto Teal" style="width: auto; height: 50px;"/>
+                        </a>
+                        <div class="dismiss-filtre-tablette d-flex justify-content-center align-items-center">
+                            <i class="bi bi-x" style="position: absolute; font-size: 4rem; top: 5px; right: 20px;"></i>
+                        </div>
+                        <br>
+                        <div style="font-size: 25px;">Filtrer par</div>
+                        <ul class="filtre list-unstyled menu-elements">
+                            <li>
+                                <div class="btw-onglet-tablette">
+                                    <a href="#filtreSaveursSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">
+                                        <strong>Saveurs</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreSaveursSectionTablette">
+                                        <li>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tablette">
+                                                <label class="form-check-label" for="saveur_classic_tablette">
+                                                    Classic
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tablette">
+                                                <label class="form-check-label" for="saveur_menthole_tablette">
+                                                    Mentholé
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tablette">
+                                                <label class="form-check-label" for="saveur_fruite_tablette">
+                                                    Fruité
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tablette">
+                                                <label class="form-check-label" for="saveur_fruite_frais_tablette">
+                                                    Fruité Frais
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tablette">
+                                                <label class="form-check-label" for="saveur_gourmand_tablette">
+                                                    Gourmand
+                                                </label>
+                                            </div>
+                                            <div class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tablette">
+                                                <label class="form-check-label" for="saveur_friandise_boisson_tablette">
+                                                    Friandise / Boisson
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btw-onglet-tablette">
+                                    <a href="#filtreContenanceSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">
+                                        <strong>Contenance</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreContenanceSectionTablette">
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="contenance_10_tablette">
+                                            <label class="form-check-label" for="contenance_10_tablette">
+                                                10 mL
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="contenance_30_tablette">
+                                            <label class="form-check-label" for="contenance_30_tablette">
+                                                30 mL
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btw-onglet-tablette">
+                                    <a href="#filtreMarquesSectionTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 40px;">
+                                        <strong>Marques</strong>
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="filtreMarquesSectionTablette">
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tablette">
+                                            <label class="form-check-label" for="marque_aandl_tablette">
+                                                A&L
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_amazone_tablette">
+                                            <label class="form-check-label" for="marque_amazone_tablette">
+                                                Amazone
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_aromazon_tablette">
+                                            <label class="form-check-label" for="marque_aromazon_tablette">
+                                                Aromazon
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tablette">
+                                            <label class="form-check-label" for="marque_cesar_tablette">
+                                                Cesar
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tablette">
+                                            <label class="form-check-label" for="marque_curieux_tablette">
+                                                Curieux
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_doctordiy_tablette">
+                                            <label class="form-check-label" for="marque_doctordiy_tablette">
+                                                Doctor Diy
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fighterfuel_tablette">
+                                            <label class="form-check-label" for="marque_fighterfuel_tablette">
+                                                Fighter Fuel                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tablette">
+                                            <label class="form-check-label" for="marque_fruiteo_tablette">
+                                                Fruiteo
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tablette">
+                                            <label class="form-check-label" for="marque_fruizee_tablette">
+                                                Fruizee
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tablette">
+                                            <label class="form-check-label" for="marque_fullmoon_tablette">
+                                                Full Moon
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tablette">
+                                            <label class="form-check-label" for="marque_kungfruits_tablette">
+                                                Kung Fruits
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_kyandishop_tablette">
+                                            <label class="form-check-label" for="marque_kyandishop_tablette">
+                                                Kyandi Shop
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_shootiz_tablette">
+                                            <label class="form-check-label" for="marque_shootiz_tablette">
+                                                Shootiz
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_supervape_tablette">
+                                            <label class="form-check-label" for="marque_supervape_tablette">
+                                                SuperVape
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tablette">
+                                            <label class="form-check-label" for="marque_themedusajuice_tablette">
+                                                The Medusa Juice
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tablette">
+                                            <label class="form-check-label" for="marque_tjuice_tablette">
+                                                T-Juice
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tablette">
+                                            <label class="form-check-label" for="marque_vampirevape_tablette">
+                                                Vampire Vape
+                                            </label>
+                                        </li>
+                                        <li class="form-check" style="padding-left: 75px; font-size: 25px;">
+                                            <input class="form-check-input" type="checkbox" id="marque_vape47_tablette">
+                                            <label class="form-check-label" for="marque_vape47_tablette">
+                                                Vape47
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-4">
-                        CARD1
                         <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
                             <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
+                                <h5 class="card-title">Concentré 1</h5>
                                 <p class="card-text">Description de malade.</p>
                             </div>
                             <div class="divider bg-primary my-4"></div>
                         </div>
                     </div>
                     <div class="col-4">
-                        CARD2
                         <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
                             <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
+                                <h5 class="card-title">Concentré 2</h5>
                                 <p class="card-text">Description de malade.</p>
                             </div>
                             <div class="divider bg-primary my-4"></div>
                         </div>
                     </div>
                     <div class="col-4">
-                        CARD3
                         <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
                             <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
+                                <h5 class="card-title">Concentré 3</h5>
                                 <p class="card-text">Description de malade.</p>
                             </div>
                             <div class="divider bg-primary my-4"></div>
@@ -638,7 +1025,7 @@
         <!--ecran pc-->
         <div class="d-flex">
             <div class="flex-fill d-none d-sm-none d-md-none d-lg-block d-xl-block">
-                ECRAN PC
+                <!--ECRAN PC-->
                 <div class="row">
                     <div class="col-3">
                         P1
@@ -837,7 +1224,7 @@
                                 <div class="card zoom-effect">
                                     <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
+                                        <h5 class="card-title">Concentré 1</h5>
                                         <p class="card-text">Description de malade.</p>
                                     </div>
                                     <div class="divider bg-primary my-4"></div>
@@ -848,7 +1235,7 @@
                                 <div class="card zoom-effect">
                                     <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
+                                        <h5 class="card-title">Concentré 2</h5>
                                         <p class="card-text">Description de malade.</p>
                                     </div>
                                     <div class="divider bg-primary my-4"></div>
@@ -859,7 +1246,7 @@
                                 <div class="card zoom-effect">
                                     <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
+                                        <h5 class="card-title">Concentré 3</h5>
                                         <p class="card-text">Description de malade.</p>
                                     </div>
                                     <div class="divider bg-primary my-4"></div>
@@ -870,7 +1257,7 @@
                                 <div class="card zoom-effect">
                                     <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
+                                        <h5 class="card-title">Concentré 4</h5>
                                         <p class="card-text">Description de malade.</p>
                                     </div>
                                     <div class="divider bg-primary my-4"></div>
@@ -1075,6 +1462,8 @@
     document.querySelector('.magasinCigustoTeal-tel-historique').href = magasinCigustoTeal;
     document.querySelector('.magasinCigustoTeal-tablette-historique').href = magasinCigustoTeal;
     document.querySelector('.magasinCigustoTeal-historique').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tel-filtre-logo').href = magasinCigustoTeal;
+    document.querySelector('.magasinCigustoTeal-tablette-filtre-logo').href = magasinCigustoTeal;
 
     // redirection page nouveautes
     let nouveautesMagasinCigustoTeal;
@@ -1198,6 +1587,27 @@
         link.addEventListener('mouseout', function() {
             this.style.backgroundColor = 'transparent';
         });
+    });
+
+    const dismissBtnTel = document.querySelector(".dismiss-filtre-tel");
+    dismissBtnTel.addEventListener("click", () => {
+        filtreDivTel.classList.remove("active");
+    });
+    const dismissBtnTablette = document.querySelector(".dismiss-filtre-tablette");
+    dismissBtnTablette.addEventListener("click", () => {
+        filtreDivTablette.classList.remove("active");
+    });
+    // bouton filtre tel
+    const filtreBtnTel = document.getElementById("filtreBtnTel");
+    const filtreDivTel = document.querySelector(".filtre-divTel");
+    filtreBtnTel.addEventListener("click", () => {
+        filtreDivTel.classList.toggle("active");
+    });
+    // bouton filtre tablette
+    const filtreBtnTablette = document.getElementById("filtreBtnTablette");
+    const filtreDivTablette = document.querySelector(".filtre-divTablette");
+    filtreBtnTablette.addEventListener("click", () => {
+        filtreDivTablette.classList.toggle("active");
     });
 
     // redirection facebook
@@ -2509,163 +2919,241 @@
 
     // classic
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'classic') {
-        document.querySelector('#saveur_classic').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_classic_tel', '#saveur_classic_tablette', '#saveur_classic'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTablette', '#filtreSaveursSectionTel', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // mentholé
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'menthole') {
-        document.querySelector('#saveur_menthole').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // fruité
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruite') {
-        document.querySelector('#saveur_fruite').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_fruite_tel', '#saveur_fruite_tablette', '#saveur_fruite'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // fruité frais
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais') {
-        document.querySelector('#saveur_fruite_frais').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_fruite_frais_tel', '#saveur_fruite_frais_tablette', '#saveur_fruite_frais'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // gourmand
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand') {
-        document.querySelector('#saveur_gourmand').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_gourmand_tel', '#saveur_gourmand_tablette', '#saveur_gourmand'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // friandise / boisson
     if (urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson') {
-        document.querySelector('#saveur_friandise_boisson').checked = true;
-        const dropdown = document.querySelector('#filtreSaveursSection');
-        dropdown.classList.add('show');
+        ['#saveur_friandise_tel', '#saveur_friandise_tablette', '#saveur_friandise'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
 
     // ****************************** Concentrés contenance activer checkbox / dropdown ******************************
     // 10 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '10mL') {
-        document.querySelector('#contenance_10').checked = true;
-        const dropdown = document.querySelector('#filtreContenanceSection');
-        dropdown.classList.add('show');
+        ['#contenance_10_tel', '#contenance_10_tablette', '#contenance_10'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // 30 mL
     if (urlParams.has('contenance') && urlParams.get('contenance') === '30mL') {
-        document.querySelector('#contenance_30').checked = true;
-        const dropdown = document.querySelector('#filtreContenanceSection');
-        dropdown.classList.add('show');
+        ['#contenance_30_tel', '#contenance_30_tablette', '#contenance_30'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
 
     // ****************************** Concentrés marques activer checkbox / dropdown ******************************
     // A&L
     if (urlParams.has('marque') && urlParams.get('marque') === 'AandL') {
-        document.querySelector('#marque_aandl').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_aandl_tel', '#marque_aandl_tablette', '#marque_aandl'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Amazone
     if (urlParams.has('marque') && urlParams.get('marque') === 'Amazone') {
-        document.querySelector('#marque_amazone').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_amazone_tel', '#marque_amazone_tablette', '#marque_amazone'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Aromazon
     if (urlParams.has('marque') && urlParams.get('marque') === 'Aromazon') {
-        document.querySelector('#marque_aromazon').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_aromazon_tel', '#marque_aromazon_tablette', '#marque_aromazon'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Cesar
     if (urlParams.has('marque') && urlParams.get('marque') === 'Cesar') {
-        document.querySelector('#marque_cesar').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_cesar_tel', '#marque_cesar_tablette', '#marque_cesar'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Curieux
     if (urlParams.has('marque') && urlParams.get('marque') === 'Curieux') {
-        document.querySelector('#marque_curieux').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_curieux_tel', '#marque_curieux_tablette', '#marque_curieux'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Doctor Diy
     if (urlParams.has('marque') && urlParams.get('marque') === 'DoctorDiy') {
-        document.querySelector('#marque_doctordiy').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_doctordiy_tel', '#marque_doctordiy_tablette', '#marque_doctordiy'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Fighter Fuel
     if (urlParams.has('marque') && urlParams.get('marque') === 'FighterFuel') {
-        document.querySelector('#marque_fighterfuel').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_fighterfuel_tel', '#marque_fighterfuel_tablette', '#marque_fighterfuel'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Fruiteo
     if (urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo') {
-        document.querySelector('#marque_fruiteo').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_fruiteo_tel', '#marque_fruiteo_tablette', '#marque_fruiteo'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Fruizee
     if (urlParams.has('marque') && urlParams.get('marque') === 'Fruizee') {
-        document.querySelector('#marque_fruizee').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_fruizee_tel', '#marque_fruizee_tablette', '#marque_fruizee'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Full Moon
     if (urlParams.has('marque') && urlParams.get('marque') === 'FullMoon') {
-        document.querySelector('#marque_fullmoon').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_fullmoon_tel', '#marque_fullmoon_tablette', '#marque_fullmoon'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Kung Fruits
     if (urlParams.has('marque') && urlParams.get('marque') === 'KungFruits') {
-        document.querySelector('#marque_kungfruits').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_kungfruits_tel', '#marque_kungfruits_tablette', '#marque_kungfruits'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Kyandi Shop
     if (urlParams.has('marque') && urlParams.get('marque') === 'KyandiShop') {
-        document.querySelector('#marque_kyandishop').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_kyandishop_tel', '#marque_kyandishop_tablette', '#marque_kyandishop'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Shootiz
     if (urlParams.has('marque') && urlParams.get('marque') === 'Shootiz') {
-        document.querySelector('#marque_shootiz').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_shootiz_tel', '#marque_shootiz_tablette', '#marque_shootiz'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // SuperVape
     if (urlParams.has('marque') && urlParams.get('marque') === 'SuperVape') {
-        document.querySelector('#marque_supervape').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_supervape_tel', '#marque_supervape_tablette', '#marque_supervape'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // The Medusa Juice
     if (urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice') {
-        document.querySelector('#marque_themedusajuice').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_themedusajuice_tel', '#marque_themedusajuice_tablette', '#marque_themedusajuice'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // T-Juice
     if (urlParams.has('marque') && urlParams.get('marque') === 'TJuice') {
-        document.querySelector('#marque_tjuice').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_tjuice_tel', '#marque_tjuice_tablette', '#marque_tjuice'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Vampire Vape
     if (urlParams.has('marque') && urlParams.get('marque') === 'VampireVape') {
-        document.querySelector('#marque_vampirevape').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_vampirevape_tel', '#marque_vampirevape_tablette', '#marque_vampirevape'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
     // Vape47
     if (urlParams.has('marque') && urlParams.get('marque') === 'Vape47') {
-        document.querySelector('#marque_vape47').checked = true;
-        const dropdown = document.querySelector('#filtreMarquesSection');
-        dropdown.classList.add('show');
+        ['#marque_vape47_tel', '#marque_vape47_tablette', '#marque_vape47'].forEach(selector => {
+            document.querySelector(selector).checked = true;
+        });
+        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+            document.querySelector(selector).classList.add('show');
+        });
     }
 </script>
 
@@ -3194,5 +3682,56 @@
     .articles .zoom-effect:hover {
         transform: scale(1.05);
         cursor: pointer;
+    }
+    .btn-filtre {
+        border: 1px solid #253142;
+        color: #253142;
+        transition: background-color 0.1s ease-in-out;
+    }
+    .btn-filtre:hover {
+        background-color: #253142;
+        color: white;
+        cursor: pointer;
+    }
+    .filtre-divTel {
+        position: fixed;
+        inset: 0 0 0 0;
+        overflow-y: auto;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 3;
+    }
+    .filtre-divTel.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .filtre-divTablette {
+        position: fixed;
+        inset: 0 0 0 0;
+        overflow-y: auto;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 3;
+    }
+    .filtre-divTablette.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .filtre-divTel ul li.active > a,
+    .filtre-divTel a[aria-expanded="true"] {
+        background: white;
+        color: black;
+    }
+    .filtre-divTablette ul li.active > a,
+    .filtre-divTablette a[aria-expanded="true"] {
+        background: white;
+        color: black;
     }
 </style>
