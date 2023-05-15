@@ -31,18 +31,21 @@ df = df.rename(columns={
 # supprime les lignes qui ne sont pas des liquides / concentrés
 df = df[df['categorie_id'].isin(["Liquides 10 ml", "Liquides Grand Format", "Concentrés"])]
 
-# supprimer "mg"
-df['dosage_nicotine_mg_id'] = df['dosage_nicotine_mg_id'].str.replace('mg', '')
- # convertir dosage_nicotine_mg_id en entiers
-df['dosage_nicotine_mg_id'] = pd.to_numeric(df['dosage_nicotine_mg_id'], errors='coerce').astype('Int64')
+# modifie les type_saveur_id "Classic gourmand" en "Classic", "Fruité frais" en "Fruité Frais" et "Boisson" en "Friandise / Boisson"
+df['type_saveur_id'] = df['type_saveur_id'].replace({'Classic gourmand': 'Classic', 'Fruité frais': 'Fruité Frais', 'Boisson': 'Friandise / Boisson'})
 
 # supprimer "ml"
 df['contenance_ml_id'] = df['contenance_ml_id'].str.replace('ml', '')
  # convertir contenance_ml_id en entiers
 df['contenance_ml_id'] = pd.to_numeric(df['contenance_ml_id'], errors='coerce').astype('Int64')
 
-# remplace "oui" par True et vide par False
-df['sel_de_nicotine'] = df['sel_de_nicotine'].replace({'oui': True}).fillna(False)
+# supprimer "mg"
+df['dosage_nicotine_mg_id'] = df['dosage_nicotine_mg_id'].str.replace('mg', '')
+ # convertir dosage_nicotine_mg_id en entiers
+df['dosage_nicotine_mg_id'] = pd.to_numeric(df['dosage_nicotine_mg_id'], errors='coerce').astype('Int64')
+
+# remplace "oui" par True, vide par False et Non par false
+df['sel_de_nicotine'] = df['sel_de_nicotine'].replace({'Oui': True, 'oui': True, 'Non': False, 'non': False}).fillna(False)
 
 # déplacement de certains champs de gamme vers marque_id
 mask = df["gamme"] == "Cesar"
