@@ -107,7 +107,7 @@
                                             <li><a class="scroll-link marqueMonoEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Mono</a></li>
                                             <li><a class="scroll-link marqueMonsterEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Monster</a></li>
                                             <li><a class="scroll-link marquePetitNuageEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Petit Nuage</a></li>
-                                            <li><a class="scroll-link marqueSaltEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Salt</a></li>
+                                            <li><a class="scroll-link marqueSaltEvaporEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Salt E-vapor</a></li>
                                             <li><a class="scroll-link marqueSnapDragonEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Snap Dragon</a></li>
                                             <li><a class="scroll-link marqueSwokeEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Swoke</a></li>
                                             <li><a class="scroll-link marqueTheMedusaJuiceEliquidesMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">The Medusa Juice</a></li>
@@ -286,7 +286,7 @@
                                             <li><a class="scroll-link marqueMonoEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Mono</a></li>
                                             <li><a class="scroll-link marqueMonsterEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Monster</a></li>
                                             <li><a class="scroll-link marquePetitNuageEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Petit Nuage</a></li>
-                                            <li><a class="scroll-link marqueSaltEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Salt</a></li>
+                                            <li><a class="scroll-link marqueSaltEvaporEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Salt E-vapor</a></li>
                                             <li><a class="scroll-link marqueSnapDragonEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Snap Dragon</a></li>
                                             <li><a class="scroll-link marqueSwokeEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Swoke</a></li>
                                             <li><a class="scroll-link marqueTheMedusaJuiceEliquidesMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">The Medusa Juice</a></li>
@@ -471,7 +471,7 @@
                                             <a href="" class="bg-orange-link marqueMonoEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Mono</a><br>
                                             <a href="" class="bg-orange-link marqueMonsterEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Monster</a><br>
                                             <a href="" class="bg-orange-link marquePetitNuageEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Petit Nuage</a><br>
-                                            <a href="" class="bg-orange-link marqueSaltEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Salt</a><br>
+                                            <a href="" class="bg-orange-link marqueSaltEvaporEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Salt E-vapor</a><br>
                                             <a href="" class="bg-orange-link marqueSnapDragonEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Snap Dragon</a><br>
                                             <a href="" class="bg-orange-link marqueSwokeEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Swoke</a><br>
                                             <a href="" class="bg-orange-link marqueTheMedusaJuiceEliquidesMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">The Medusa Juice</a><br>
@@ -1750,22 +1750,22 @@
     document.querySelector('.marquePetitNuageEliquidesMagasinCigustoTeal-tablette-sidebar').href = marquePetitNuageEliquidesMagasinCigustoTeal;
     document.querySelector('.marquePetitNuageEliquidesMagasinCigustoTeal-navbar').href = marquePetitNuageEliquidesMagasinCigustoTeal;
 
-    // redirection page e-liquides coche marque Salt
-    let marqueSaltEliquidesMagasinCigustoTeal;
+    // redirection page e-liquides coche marque Salt E-vapor
+    let marqueSaltEvaporEliquidesMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
-        marqueSaltEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=Salt';
+        marqueSaltEvaporEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-liquides?marque=SaltEvapor';
     } else if (magasinId === 'magasin-bessoncourt') {
-        marqueSaltEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=Salt';
+        marqueSaltEvaporEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/e-liquides?marque=SaltEvapor';
     } else if (magasinId === 'magasin-besancon') {
-        marqueSaltEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=Salt';
+        marqueSaltEvaporEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/e-liquides?marque=SaltEvapor';
     } else if (magasinId === 'magasin-colmar') {
-        marqueSaltEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=Salt';
+        marqueSaltEvaporEliquidesMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/e-liquides?marque=SaltEvapor';
     } else {
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
-    document.querySelector('.marqueSaltEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueSaltEliquidesMagasinCigustoTeal;
-    document.querySelector('.marqueSaltEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueSaltEliquidesMagasinCigustoTeal;
-    document.querySelector('.marqueSaltEliquidesMagasinCigustoTeal-navbar').href = marqueSaltEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueSaltEvaporEliquidesMagasinCigustoTeal-tel-sidebar').href = marqueSaltEvaporEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueSaltEvaporEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueSaltEvaporEliquidesMagasinCigustoTeal;
+    document.querySelector('.marqueSaltEvaporEliquidesMagasinCigustoTeal-navbar').href = marqueSaltEvaporEliquidesMagasinCigustoTeal;
 
     // redirection page e-liquides coche marque Snap Dragon
     let marqueSnapDragonEliquidesMagasinCigustoTeal;
