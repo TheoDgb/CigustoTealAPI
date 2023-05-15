@@ -153,8 +153,8 @@
                                             <li><a class="scroll-link marqueFullMoonConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Full Moon</a></li>
                                             <li><a class="scroll-link marqueKungFruitsConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Kung Fruits</a></li>
                                             <li><a class="scroll-link marqueKyandiShopConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Kyandi Shop</a></li>
+                                            <li><a class="scroll-link marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Le French Liquide</a></li>
                                             <li><a class="scroll-link marqueShootizConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Shootiz</a></li>
-                                            <li><a class="scroll-link marqueSuperVapeConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">SuperVape</a></li>
                                             <li><a class="scroll-link marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">The Medusa Juice</a></li>
                                             <li><a class="scroll-link marqueTJuiceConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">T-Juice</a></li>
                                             <li><a class="scroll-link marqueVampireVapeConcentresMagasinCigustoTeal-tel-sidebar" href="" style="padding-left: 90px; font-size: 2rem;">Vampire Vape</a></li>
@@ -331,8 +331,8 @@
                                             <li><a class="scroll-link marqueFullMoonConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Full Moon</a></li>
                                             <li><a class="scroll-link marqueKungFruitsConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Kung Fruits</a></li>
                                             <li><a class="scroll-link marqueKyandiShopConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Kyandi Shop</a></li>
+                                            <li><a class="scroll-link marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Le French Liquide</a></li>
                                             <li><a class="scroll-link marqueShootizConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Shootiz</a></li>
-                                            <li><a class="scroll-link marqueSuperVapeConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">SuperVape</a></li>
                                             <li><a class="scroll-link marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">The Medusa Juice</a></li>
                                             <li><a class="scroll-link marqueTJuiceConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">T-Juice</a></li>
                                             <li><a class="scroll-link marqueVampireVapeConcentresMagasinCigustoTeal-tablette-sidebar" href="" style="padding-left: 45px; font-size: 1.1rem;">Vampire Vape</a></li>
@@ -518,8 +518,8 @@
                                             <a href="" class="bg-orange-link marqueFullMoonConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Full Moon</a><br>
                                             <a href="" class="bg-orange-link marqueKungFruitsConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Kung Fruits</a><br>
                                             <a href="" class="bg-orange-link marqueKyandiShopConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Kyandi Shop</a><br>
+                                            <a href="" class="bg-orange-link marqueLeFrenchLiquideConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Le French Liquide</a><br>
                                             <a href="" class="bg-orange-link marqueShootizConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Shootiz</a><br>
-                                            <a href="" class="bg-orange-link marqueSuperVapeConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">SuperVape</a><br>
                                             <a href="" class="bg-orange-link marqueTheMedusaJuiceConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">The Medusa Juice</a><br>
                                             <a href="" class="bg-orange-link marqueTJuiceConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">T-Juice</a><br>
                                             <a href="" class="bg-orange-link marqueVampireVapeConcentresMagasinCigustoTeal-navbar" style="color: inherit; background-color: transparent;">Vampire Vape</a><br>
@@ -2209,6 +2209,23 @@
     document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
     document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-navbar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
 
+    // redirection page concentrés coche marque Le French Liquide
+    let marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=LeFrenchLiquide';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tel-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-navbar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+
     // redirection page concentrés coche marque Shootiz
     let marqueShootizConcentresMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
@@ -2225,23 +2242,6 @@
     document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tel-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
     document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
     document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-navbar').href = marqueShootizConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque SuperVape
-    let marqueSuperVapeConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueSuperVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=SuperVape';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueSuperVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=SuperVape';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueSuperVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=SuperVape';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueSuperVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=SuperVape';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueSuperVapeConcentresMagasinCigustoTeal-tel-sidebar').href = marqueSuperVapeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueSuperVapeConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueSuperVapeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueSuperVapeConcentresMagasinCigustoTeal-navbar').href = marqueSuperVapeConcentresMagasinCigustoTeal;
 
     // redirection page concentrés coche marque The Medusa Juice
     let marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
