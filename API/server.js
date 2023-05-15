@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const {PythonShell} = require('python-shell');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -85,4 +86,12 @@ app.get('/magasin-besancon/concentres', (req, res) => {
 });
 app.get('/magasin-colmar/concentres', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'concentres.html'))
+});
+
+const options = {
+    scriptPath: './bdd'
+};
+PythonShell.run('script_update_csv.py', options, function (err) {
+    if (err) throw err;
+    // console.log('Script exécuté avec succès !');
 });
