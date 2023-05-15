@@ -15,60 +15,60 @@ df['Qté stock'] = df['Qté stock'].astype(int)
 df = df.rename(columns={
     'libellé fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
-    'catégorie': 'categorie',
+    'catégorie': 'categorie_id',
     'gamme': 'gamme',
-    'Marque': 'marque',
+    'Marque': 'marque_id',
     'description': 'description',
-    'type saveur': 'type_saveur',
-    'dosage Pg/Vg': 'dosage_pg_vg',
-    'dosage nicotine': 'dosage_nicotine_mg',
-    'volume flacon': 'volume_flacon_ml',
+    'type saveur': 'type_saveur_id',
+    'dosage Pg/Vg': 'dosage_pg_vg_id',
+    'dosage nicotine': 'dosage_nicotine_mg_id',
+    'volume flacon': 'contenance_ml_id',
     'sel de nicotine': 'sel_de_nicotine',
-    'Magasin': 'magasin',
+    'Magasin': 'magasin_id',
     'Qté stock': 'qte_stock'
 })
 
 # supprime les lignes qui ne sont pas des liquides / concentrés
-df = df[df['categorie'].isin(["Liquides 10 ml", "Liquides Grand Format", "Concentrés"])]
+df = df[df['categorie_id'].isin(["Liquides 10 ml", "Liquides Grand Format", "Concentrés"])]
 
 # supprimer "mg"
-df['dosage_nicotine_mg'] = df['dosage_nicotine_mg'].str.replace('mg', '')
- # convertir dosage_nicotine_mg en entiers
-df['dosage_nicotine_mg'] = pd.to_numeric(df['dosage_nicotine_mg'], errors='coerce').astype('Int64')
+df['dosage_nicotine_mg_id'] = df['dosage_nicotine_mg_id'].str.replace('mg', '')
+ # convertir dosage_nicotine_mg_id en entiers
+df['dosage_nicotine_mg_id'] = pd.to_numeric(df['dosage_nicotine_mg_id'], errors='coerce').astype('Int64')
 
 # supprimer "ml"
-df['volume_flacon_ml'] = df['volume_flacon_ml'].str.replace('ml', '')
- # convertir volume_flacon_ml en entiers
-df['volume_flacon_ml'] = pd.to_numeric(df['volume_flacon_ml'], errors='coerce').astype('Int64')
+df['contenance_ml_id'] = df['contenance_ml_id'].str.replace('ml', '')
+ # convertir contenance_ml_id en entiers
+df['contenance_ml_id'] = pd.to_numeric(df['contenance_ml_id'], errors='coerce').astype('Int64')
 
 # remplace "oui" par True et vide par False
 df['sel_de_nicotine'] = df['sel_de_nicotine'].replace({'oui': True}).fillna(False)
 
-# déplacement de certains champs de gamme vers marque
+# déplacement de certains champs de gamme vers marque_id
 mask = df["gamme"] == "Cesar"
-df.loc[mask, "marque"] = "Cesar"
+df.loc[mask, "marque_id"] = "Cesar"
 mask = df["gamme"] == "Devil's"
-df.loc[mask, "marque"] = "Devil's"
+df.loc[mask, "marque_id"] = "Devil's"
 mask = df["gamme"] == "Devil sels de nicotine en Devil's" #erreur de saisie ? o.O
-df.loc[mask, "marque"] = "Devil's"
+df.loc[mask, "marque_id"] = "Devil's"
 mask = df["gamme"] == "Salt-E-vapor"
-df.loc[mask, "marque"] = "Salt-E-vapor"
+df.loc[mask, "marque_id"] = "Salt-E-vapor"
 mask = df["gamme"] == "Fruizee"
-df.loc[mask, "marque"] = "Fruizee"
+df.loc[mask, "marque_id"] = "Fruizee"
 mask = df["gamme"] == "Kung Fruits"
-df.loc[mask, "marque"] = "Kung Fruits"
+df.loc[mask, "marque_id"] = "Kung Fruits"
 mask = df["gamme"] == "Le Coq qui vape"
-df.loc[mask, "marque"] = "Le Coq qui vape"
+df.loc[mask, "marque_id"] = "Le Coq qui vape"
 mask = df["gamme"] == "Mono+"
-df.loc[mask, "marque"] = "Mono+"
+df.loc[mask, "marque_id"] = "Mono+"
 mask = df["gamme"] == "Enfer"
-df.loc[mask, "marque"] = "Enfer"
+df.loc[mask, "marque_id"] = "Enfer"
 
 # suppression de la colonne gamme
 df.drop('gamme', axis=1)
 
 # réorganise les colonnes
-df = df.reindex(columns=['magasin', 'libelle_produit', 'libelle_fiche', 'categorie', 'marque', 'type_saveur', 'description', 'dosage_pg_vg', 'dosage_nicotine_mg', 'volume_flacon_ml', 'sel_de_nicotine', 'qte_stock'])
+df = df.reindex(columns=['magasin_id', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock'])
 
 # save
 df.to_csv('./bdd/test.csv', sep=';', index=False)
