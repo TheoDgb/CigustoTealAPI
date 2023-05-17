@@ -43,7 +43,7 @@ CREATE TABLE statut_produits (
     libelle_statut_produit VARCHAR(23) NOT NULL
 );
 CREATE TABLE produits (
-#     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     magasin_id INT,
         FOREIGN KEY (magasin_id) REFERENCES magasins(id),
     libelle_produit VARCHAR(100) NOT NULL,
@@ -60,11 +60,12 @@ CREATE TABLE produits (
     contenance_ml_id INT,
         FOREIGN KEY (contenance_ml_id) REFERENCES contenances_ml(id),
     dosage_nicotine_mg_id INT,
-        FOREIGN KEY (dosage_nicotine_mg_id) REFERENCES dosages_nicotine_mg(id)
-#     sel_de_nicotine BOOLEAN NOT NULL,
-#     qte_stock INT NOT NULL,
+        FOREIGN KEY (dosage_nicotine_mg_id) REFERENCES dosages_nicotine_mg(id),
+    sel_de_nicotine BOOLEAN NOT NULL,
+    qte_stock INT NOT NULL
 #     statut_produit_id INT,
-#         FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id)
+#         FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id),
+#     image VARCHAR(100) NOT NULL
 );
 
 
@@ -167,6 +168,3 @@ INSERT INTO statut_produits (id, libelle_statut_produit)
 VALUES (1, 'actif'),
        (2, 'inactif'),
        (3, 'fin d''approvisionnement');
-
-# INSERT INTO produits (id, magasin_id, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id)
-# VALUES (null, 1, 'E Liquide RED ASTAIRE - T-Juice - 10 ml 0 mg', 'E Liquide RED ASTAIRE 10 ml - Tjuice', 1, 1, 1, 'description', 1, 1, 1, True, 12, 1);

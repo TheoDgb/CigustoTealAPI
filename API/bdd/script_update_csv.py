@@ -215,18 +215,18 @@ df['dosage_nicotine_mg_id'] = pd.to_numeric(df['dosage_nicotine_mg_id'], errors=
 # remplace les NaN de dosage_nicotine_mg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
 df['dosage_nicotine_mg_id'] = df['dosage_nicotine_mg_id'].replace({pd.NA: None})
 df['dosage_nicotine_mg_id'] = df['dosage_nicotine_mg_id'].replace({'': None})
-# remplace les valeurs dans la colonne 'dosage_nicotine_mg_id' en fonction de 'sel_de_nicotine' False
-df['dosage_nicotine_mg_id'] = np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] == 0), 1,
-                                    np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] > 0) & (df['dosage_nicotine_mg_id'] > 6), 2,
-                                                np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 6) & (df['dosage_nicotine_mg_id'] < 12), 3,
-                                                            np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 12) & (df['dosage_nicotine_mg_id'] < 18), 5,
-                                                                        np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 18), 6, df['dosage_nicotine_mg_id'])))))
 # remplace les valeurs dans la colonne 'dosage_nicotine_mg_id' en fonction de 'sel_de_nicotine' True
 df['dosage_nicotine_mg_id'] = np.where((df['sel_de_nicotine'] == True) & (df['dosage_nicotine_mg_id'] == 9), 4,
                                     np.where((df['sel_de_nicotine'] == True) & (df['dosage_nicotine_mg_id'] == 10), 4,
                                                 np.where((df['sel_de_nicotine'] == True) & (df['dosage_nicotine_mg_id'] == 18), 7,
                                                             np.where((df['sel_de_nicotine'] == True) & (df['dosage_nicotine_mg_id'] == 19), 7,
                                                                         np.where((df['sel_de_nicotine'] == True) & (df['dosage_nicotine_mg_id'] == 20), 7, df['dosage_nicotine_mg_id'])))))
+# remplace les valeurs dans la colonne 'dosage_nicotine_mg_id' en fonction de 'sel_de_nicotine' False
+df['dosage_nicotine_mg_id'] = np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] == 0), 1,
+                                    np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] > 0) & (df['dosage_nicotine_mg_id'] < 6), 2,
+                                                np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 6) & (df['dosage_nicotine_mg_id'] < 12), 3,
+                                                            np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 12) & (df['dosage_nicotine_mg_id'] < 18), 5,
+                                                                        np.where((df['sel_de_nicotine'] == False) & (df['dosage_nicotine_mg_id'] >= 18), 6, df['dosage_nicotine_mg_id'])))))
 # si la valeur de 'dosage_nicotine_mg_id' est supérieure à 7, remplace par None
 df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df['dosage_nicotine_mg_id'])
 # si la valeur de 'dosage_nicotine_mg_id' est supérieure à 7, supprimer la ligne
@@ -241,6 +241,10 @@ df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df
 # # remplace les NaN de statut_produit_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
 # df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
 
+# créer une colonne au début id remplie de None
+df.insert(0, 'id', None)
+
+
 
 
 # Connexion à la base de données MySQL
@@ -254,8 +258,8 @@ cursor = connection.cursor()
 
 # Boucle sur chaque ligne du DataFrame et exécute l'insertion
 for _, row in df.iterrows():
-    values = (row['magasin_id'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'])
-    query = "INSERT INTO produits (magasin_id, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    values = (row['id'], row['magasin_id'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'])
+    query = "INSERT INTO produits (id, magasin_id, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     cursor.execute(query, values)
 
 # Valider les modifications dans la base de données
