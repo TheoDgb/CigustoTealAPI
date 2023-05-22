@@ -1850,15 +1850,15 @@
                                     const cardDiv = document.createElement('div');
                                     cardDiv.classList.add('col-3');
                                     cardDiv.innerHTML = `
-                <div class="card" style="height: 400px; margin-bottom: 25px;">
-                    <img class="card-img-top" src="${product.image}" alt="e-liquides card">
-                    <div class="card-body">
-                        <h5 class="card-title">${product.libelle_produit}</h5>
-                        <p class="card-text">${product.description}</p>
-                    </div>
-                    <div class="divider bg-primary my-4"></div>
-                </div>
-            `;
+                    <div class="card" style="height: 400px; margin-bottom: 25px;">
+                        <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+<!--                        <img class="card-img-top" src="${product.image}" alt="e-liquides card">-->
+                        <div class="card-body">
+                            <h5 class="card-title">${product.libelle_fiche}</h5>
+                            <p class="card-text">${product.description}</p>
+                        </div>
+                        <div class="divider bg-primary my-4"></div>
+                    </div>`;
                                     // Ajouter la card à la ligne des produits
                                     productsRow.appendChild(cardDiv);
                                 });
