@@ -70,7 +70,6 @@ CREATE TABLE produits (
 
 
 
-# test
 INSERT INTO magasins (id, libelle_magasin)
 VALUES (1, 'CIGUSTO ANDELNANS'),
        (2, 'CIGUSTO BESANCON ECOLE VALENTIN'),

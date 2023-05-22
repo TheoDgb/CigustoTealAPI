@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const {PythonShell} = require('python-shell');
+const produits = require('./produits');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,6 +10,54 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.static('public'));
+
+app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
+    const magasinId = req.params.magasinId;
+    const limit = 5000; // en attendant pour peut etre chargement infini
+    const offset = 0;
+
+    switch (magasinId) {
+        case '1':
+            produits.getProductsPaginatedAndelnans(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        case '2':
+            produits.getProductsPaginatedBessoncourt(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        case '3':
+            produits.getProductsPaginatedBesancon(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        case '4':
+            produits.getProductsPaginatedColmar(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        default:
+            break;
+    }
+});
+
 
 // selection magasin
 app.listen(port, () => {

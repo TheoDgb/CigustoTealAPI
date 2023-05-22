@@ -238,13 +238,26 @@ df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df
 # })
 # # passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
 # df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')
-# # remplace les NaN de statut_produit_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
+# # remplace les NaN de dosage_pg_vg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
 # df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
+# df['statut_produit_id'] = df['statut_produit_id'].replace({'': None})
 
 # créer une colonne au début id remplie de None
 df.insert(0, 'id', None)
 
 
+
+
+
+
+
+
+
+
+
+
+#COMMENT FAIRE POUR QUE CA N IMPORTE PAS SI Y A DES DOUBLES DANS LA BASE DE DONNEES
+#AVEC LE LIBELLE_PRODUIT ET LE MAGASINID
 
 
 # Connexion à la base de données MySQL

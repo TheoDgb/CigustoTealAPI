@@ -1800,55 +1800,135 @@
                         </ul>
                     </div>
 
+
+
+
+
+
+
+
+
+
                     <div class="col-9">
-                        P2
-                        <div class="row">
-                            <div class="col-3">
-                                col 1
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 2
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 3
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 4
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Liquide 1</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
+                        <div class="row" id="productsRow">
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
                         </div>
                     </div>
+
+                    <script>
+                        const magasinIdReq = window.location.pathname.split('/')[1];
+                        function convertMagasinIdToInt(magasinIdReq) {
+                            let magasinInt;
+                            switch (magasinIdReq) {
+                                case 'magasin-andelnans':
+                                    magasinInt = 1;
+                                    break;
+                                case 'magasin-bessoncourt':
+                                    magasinInt = 2;
+                                    break;
+                                case 'magasin-besancon':
+                                    magasinInt = 3;
+                                    break;
+                                case 'magasin-colmar':
+                                    magasinInt = 4;
+                                    break;
+                                default:
+                                    break;
+                            }
+                            return magasinInt;
+                        }
+                        const magasinInt = convertMagasinIdToInt(magasinIdReq);
+
+                        const productsRow = document.getElementById('productsRow');
+                        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                data.forEach(product => {
+                                    const cardDiv = document.createElement('div');
+                                    cardDiv.classList.add('col-3');
+                                    cardDiv.innerHTML = `
+                <div class="card" style="height: 400px; margin-bottom: 25px;">
+                    <img class="card-img-top" src="${product.image}" alt="e-liquides card">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.libelle_produit}</h5>
+                        <p class="card-text">${product.description}</p>
+                    </div>
+                    <div class="divider bg-primary my-4"></div>
+                </div>
+            `;
+                                    // Ajouter la card à la ligne des produits
+                                    productsRow.appendChild(cardDiv);
+                                });
+                            })
+                            .catch(error => {
+                                console.error('Erreur lors de la récupération des produits:', error);
+                            });
+                    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--                    <div class="col-9">-->
+<!--                        P2-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-3">-->
+<!--                                col 1-->
+<!--                                <div class="card zoom-effect">-->
+<!--                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Liquide 1</h5>-->
+<!--                                        <p class="card-text">Description de malade.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="divider bg-primary my-4"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                col 2-->
+<!--                                <div class="card zoom-effect">-->
+<!--                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Liquide 1</h5>-->
+<!--                                        <p class="card-text">Description de malade.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="divider bg-primary my-4"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                col 3-->
+<!--                                <div class="card zoom-effect">-->
+<!--                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Liquide 1</h5>-->
+<!--                                        <p class="card-text">Description de malade.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="divider bg-primary my-4"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-3">-->
+<!--                                col 4-->
+<!--                                <div class="card zoom-effect">-->
+<!--                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">-->
+<!--                                    <div class="card-body">-->
+<!--                                        <h5 class="card-title">Liquide 1</h5>-->
+<!--                                        <p class="card-text">Description de malade.</p>-->
+<!--                                    </div>-->
+<!--                                    <div class="divider bg-primary my-4"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -4186,6 +4266,8 @@
     document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tel-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
     document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
     document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-navbar').href = marqueVape47ConcentresMagasinCigustoTeal;
+
+
 </script>
 
 <style>
