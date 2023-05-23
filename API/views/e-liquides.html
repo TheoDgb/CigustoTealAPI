@@ -643,12 +643,6 @@
                                             </a>
                                             <ul class="collapse list-unstyled" id="filtre10mLTauxTel">
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous_tel" checked>
-                                                    <label class="form-check-label" for="taux_nicotine_tous_tel">
-                                                        Tous
-                                                    </label>
-                                                </li>
-                                                <li class="form-check" style="padding-left: 220px; font-size: 50px;">
                                                     <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tel">
                                                     <label class="form-check-label" for="taux_nicotine_0mg_tel">
                                                         0 mg
@@ -1059,12 +1053,6 @@
                                         <div id="filtre10mLTablette" class="btw-sous-onglet-tablette" style="display:none;">
                                             <a href="#filtre10mLTauxTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 25px;"> Taux de nicotine</a>
                                             <ul class="collapse list-unstyled" id="filtre10mLTauxTablette">
-                                                <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous_tablette" checked>
-                                                    <label class="form-check-label" for="taux_nicotine_tous_tablette">
-                                                        Tous
-                                                    </label>
-                                                </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
                                                     <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tablette">
                                                     <label class="form-check-label" for="taux_nicotine_0mg_tablette">
@@ -1484,12 +1472,6 @@
                                         <div id="filtre10mL" class="btw-sous-onglet" style="display:none;">
                                             <a href="#filtre10mLTaux" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections"> Taux de nicotine</a>
                                             <ul class="collapse list-unstyled" id="filtre10mLTaux">
-                                                <li class="form-check" style="padding-left: 80px">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_tous" checked>
-                                                    <label class="form-check-label" for="taux_nicotine_tous">
-                                                        Tous
-                                                    </label>
-                                                </li>
                                                 <li class="form-check" style="padding-left: 80px">
                                                     <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_0mg" onchange="handleCheckboxChange()" value="1">
                                                     <label class="form-check-label" for="taux_nicotine_0mg">
@@ -2286,58 +2268,6 @@
             filtre10mLTel.style.display = "none";
         }
     });
-    // contraintes checkboxTel taux de nicotine
-    // tous : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_tous_tel').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTauxTel input:not(#taux_nicotine_tous_tel)').prop('checked', false);
-            }
-        });
-    });
-    // sans : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_0mg_tel').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTauxTel input:not(#taux_nicotine_0mg_tel)').prop('checked', false);
-            }
-        });
-    });
-    // 3, 6, 12, 18 : decoche tous et sans
-    $(document).ready(function() {
-        $('#filtre10mLTauxTel input[type="checkbox"]').click(function() {
-            if($(this).attr('id') !== 'taux_nicotine_tous_tel' && $(this).attr('id') !== 'taux_nicotine_0mg_tel') {
-                $('#taux_nicotine_tous_tel, #taux_nicotine_0mg_tel').prop('checked', false);
-            }
-        });
-    });
-    // aucun : coche tous, decoche tous : coche 0 mg
-    $(document).ready(function() {
-        var checkboxesTel = $('#filtre10mLTauxTel input[type="checkbox"]').not('#taux_nicotine_tous_tel');
-        var tous = $('#taux_nicotine_tous_tel');
-        var checked = checkboxesTel.filter(':checked');
-
-        if (checked.length === 0) {
-            tous.prop('checked', true);
-        }
-        checkboxesTel.on('change', function() {
-            checked = checkboxesTel.filter(':checked');
-
-            if (checked.length === 0) {
-                tous.prop('checked', true);
-            } else {
-                tous.prop('checked', false);
-            }
-        });
-        tous.on('change', function() {
-            if (tous.is(':checked')) {
-                checkboxesTel.prop('checked', false);
-            } else {
-                checkboxesTel.first().prop('checked', true);
-            }
-        });
-    });
-
     // bouton filtre tablette
     const filtreBtnTablette = document.getElementById("filtreBtnTablette");
     const filtreDivTablette = document.querySelector(".filtre-divTablette");
@@ -2355,120 +2285,42 @@
             filtre10mLTablette.style.display = "none";
         }
     });
-    // contraintes checkboxTablette taux de nicotine
-    // tous : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_tous_tablette').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTauxTablette input:not(#taux_nicotine_tous_tablette)').prop('checked', false);
-            }
-        });
-    });
-    // sans : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_0mg_tablette').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTauxTablette input:not(#taux_nicotine_0mg_tablette)').prop('checked', false);
-            }
-        });
-    });
-    // 3, 6, 12, 18 : decoche tous et sans
-    $(document).ready(function() {
-        $('#filtre10mLTauxTablette input[type="checkbox"]').click(function() {
-            if($(this).attr('id') !== 'taux_nicotine_tous_tablette' && $(this).attr('id') !== 'taux_nicotine_0mg_tablette') {
-                $('#taux_nicotine_tous_tablette, #taux_nicotine_0mg_tablette').prop('checked', false);
-            }
-        });
-    });
-    // aucun : coche tous, decoche tous : coche 0 mg
-    $(document).ready(function() {
-        var checkboxesTablette = $('#filtre10mLTauxTablette input[type="checkbox"]').not('#taux_nicotine_tous_tablette');
-        var tous = $('#taux_nicotine_tous_tablette');
-        var checked = checkboxesTablette.filter(':checked');
-
-        if (checked.length === 0) {
-            tous.prop('checked', true);
-        }
-        checkboxesTablette.on('change', function() {
-            checked = checkboxesTablette.filter(':checked');
-
-            if (checked.length === 0) {
-                tous.prop('checked', true);
-            } else {
-                tous.prop('checked', false);
-            }
-        });
-        tous.on('change', function() {
-            if (tous.is(':checked')) {
-                checkboxesTablette.prop('checked', false);
-            } else {
-                checkboxesTablette.first().prop('checked', true);
-            }
-        });
-    });
-
     // filtre 10mL
-    // Récupérer la case à cocher et l'élément à afficher/masquer
+    // récupérer la case à cocher et l'élément à afficher/masquer
     var checkbox = document.getElementById("contenance_10");
     checkbox.addEventListener("click", function() {
-        // Si la case est cochée, afficher l'élément, sinon le masquer
         if (checkbox.checked) {
             filtre10mL.style.display = "block";
         } else {
             filtre10mL.style.display = "none";
+
+            // désélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxes = document.querySelectorAll('#filtre10mLTaux .dosagenicotine-checkbox');
+            tauxNicotineCheckboxes.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
         }
     });
-    // contraintes checkbox taux de nicotine
-    // tous : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_tous').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTaux input:not(#taux_nicotine_tous)').prop('checked', false);
-            }
-        });
-    });
-    // sans : decoche toutes les autres
-    $(document).ready(function() {
-        $('#taux_nicotine_0mg').click(function() {
-            if($(this).is(':checked')) {
-                $('#filtre10mLTaux input:not(#taux_nicotine_0mg)').prop('checked', false);
-            }
-        });
-    });
-    // 3, 6, 12, 18 : decoche tous et sans
-    $(document).ready(function() {
-        $('#filtre10mLTaux input[type="checkbox"]').click(function() {
-            if($(this).attr('id') !== 'taux_nicotine_tous' && $(this).attr('id') !== 'taux_nicotine_0mg') {
-                $('#taux_nicotine_tous, #taux_nicotine_0mg').prop('checked', false);
-            }
-        });
-    });
-    // aucun : coche tous, decoche tous : coche 0 mg
-    $(document).ready(function() {
-        var checkboxes = $('#filtre10mLTaux input[type="checkbox"]').not('#taux_nicotine_tous');
-        var tous = $('#taux_nicotine_tous');
-        var checked = checkboxes.filter(':checked');
 
-        if (checked.length === 0) {
-            tous.prop('checked', true);
-        }
-        checkboxes.on('change', function() {
-            checked = checkboxes.filter(':checked');
 
-            if (checked.length === 0) {
-                tous.prop('checked', true);
-            } else {
-                tous.prop('checked', false);
-            }
-        });
-        tous.on('change', function() {
-            if (tous.is(':checked')) {
-                checkboxes.prop('checked', false);
-            } else {
-                checkboxes.first().prop('checked', true);
-            }
-        });
-    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // redirection facebook
     let facebookUrl;
