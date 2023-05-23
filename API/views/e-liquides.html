@@ -587,37 +587,37 @@
                                     <ul class="collapse list-unstyled" id="filtreSaveursSectionTel">
                                         <li>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_classic_tel" onchange="handleCheckboxChangeTel()" value="1">
                                                 <label class="form-check-label" for="saveur_classic_tel">
                                                     Classic
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_menthole_tel" onchange="handleCheckboxChangeTel()" value="2">
                                                 <label class="form-check-label" for="saveur_menthole_tel">
                                                     Mentholé
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_tel" onchange="handleCheckboxChangeTel()" value="3">
                                                 <label class="form-check-label" for="saveur_fruite_tel">
                                                     Fruité
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_frais_tel" onchange="handleCheckboxChangeTel()" value="4">
                                                 <label class="form-check-label" for="saveur_fruite_frais_tel">
                                                     Fruité Frais
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_gourmand_tel" onchange="handleCheckboxChangeTel()" value="5">
                                                 <label class="form-check-label" for="saveur_gourmand_tel">
                                                     Gourmand
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandise_boisson_tel" onchange="handleCheckboxChangeTel()" value="6">
                                                 <label class="form-check-label" for="saveur_friandise_boisson_tel">
                                                     Friandise / Boisson
                                                 </label>
@@ -632,7 +632,7 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreContenanceSectionTel">
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_10_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_10_tel" onchange="handleCheckboxChangeTel()" value="1">
                                             <label class="form-check-label" for="contenance_10_tel">
                                                 10 mL
                                             </label>
@@ -643,43 +643,43 @@
                                             </a>
                                             <ul class="collapse list-unstyled" id="filtre10mLTauxTel">
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_0mg_tel" onchange="handleCheckboxChangeTel()" value="1">
                                                     <label class="form-check-label" for="taux_nicotine_0mg_tel">
                                                         0 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_3mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_3mg_tel" onchange="handleCheckboxChangeTel()" value="2">
                                                     <label class="form-check-label" for="taux_nicotine_3mg_tel">
                                                         3 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_6mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_6mg_tel" onchange="handleCheckboxChangeTel()" value="3">
                                                     <label class="form-check-label" for="taux_nicotine_6mg_tel">
                                                         6 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="sel_de_nicotine_9_10mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="sel_de_nicotine_9_10mg_tel" onchange="handleCheckboxChangeTel()" value="4">
                                                     <label class="form-check-label" for="sel_de_nicotine_9_10mg_tel">
                                                         En sel 9-10 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_12mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_12mg_tel" onchange="handleCheckboxChangeTel()" value="5">
                                                     <label class="form-check-label" for="taux_nicotine_12mg_tel">
                                                         12 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_18mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_18mg_tel" onchange="handleCheckboxChangeTel()" value="6">
                                                     <label class="form-check-label" for="taux_nicotine_18mg_tel">
                                                         18 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 220px; font-size: 50px;">
-                                                    <input class="form-check-input" type="checkbox" id="sel_de_nicotine_18_20mg_tel">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="sel_de_nicotine_18_20mg_tel" onchange="handleCheckboxChangeTel()" value="7">
                                                     <label class="form-check-label" for="sel_de_nicotine_18_20mg_tel">
                                                         En sel 18-20 mg
                                                     </label>
@@ -687,25 +687,25 @@
                                             </ul>
                                         </div>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_50_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_50_tel" onchange="handleCheckboxChangeTel()" value="3">
                                             <label class="form-check-label" for="contenance_50_tel">
                                                 50 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_80_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_80_tel" onchange="handleCheckboxChangeTel()" value="4">
                                             <label class="form-check-label" for="contenance_80_tel">
                                                 80 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_100_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_100_tel" onchange="handleCheckboxChangeTel()" value="5">
                                             <label class="form-check-label" for="contenance_100_tel">
                                                 100 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_200_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_200_tel" onchange="handleCheckboxChangeTel()" value="6">
                                             <label class="form-check-label" for="contenance_200_tel">
                                                 200 mL
                                             </label>
@@ -719,229 +719,229 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreMarquesSectionTel">
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aandl_tel" onchange="handleCheckboxChangeTel()" value="1">
                                             <label class="form-check-label" for="marque_aandl_tel">
                                                 A&L
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_alfaliquid_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_alfaliquid_tel" onchange="handleCheckboxChangeTel()" value="2">
                                             <label class="form-check-label" for="marque_alfaliquid_tel">
                                                 Alfaliquid
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_bakeryshake_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_bakeryshake_tel" onchange="handleCheckboxChangeTel()" value="3">
                                             <label class="form-check-label" for="marque_bakeryshake_tel">
                                                 Bakery Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_candyshake_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_candyshake_tel" onchange="handleCheckboxChangeTel()" value="4">
                                             <label class="form-check-label" for="marque_candyshake_tel">
                                                 Candy Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cesar_tel" onchange="handleCheckboxChangeTel()" value="5">
                                             <label class="form-check-label" for="marque_cesar_tel">
                                                 Cesar
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cigusto_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cigusto_tel" onchange="handleCheckboxChangeTel()" value="6">
                                             <label class="form-check-label" for="marque_cigusto_tel">
                                                 Cigusto
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cirkus_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cirkus_tel" onchange="handleCheckboxChangeTel()" value="7">
                                             <label class="form-check-label" for="marque_cirkus_tel">
                                                 CirKus
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_curieux_tel" onchange="handleCheckboxChangeTel()" value="8">
                                             <label class="form-check-label" for="marque_curieux_tel">
                                                 Curieux
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_doncristo_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_doncristo_tel" onchange="handleCheckboxChangeTel()" value="9">
                                             <label class="form-check-label" for="marque_doncristo_tel">
                                                 Don Cristo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_eliquidfrance_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_eliquidfrance_tel" onchange="handleCheckboxChangeTel()" value="10">
                                             <label class="form-check-label" for="marque_eliquidfrance_tel">
                                                 Eliquid France
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_enfer_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_enfer_tel" onchange="handleCheckboxChangeTel()" value="11">
                                             <label class="form-check-label" for="marque_enfer_tel">
                                                 Enfer
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_etasty_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_etasty_tel" onchange="handleCheckboxChangeTel()" value="12">
                                             <label class="form-check-label" for="marque_etasty_tel">
                                                 E.Tasty
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_freshvapeco_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_freshvapeco_tel" onchange="handleCheckboxChangeTel()" value="13">
                                             <label class="form-check-label" for="marque_freshvapeco_tel">
                                                 Fresh Vape Co
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruiteo_tel" onchange="handleCheckboxChangeTel()" value="14">
                                             <label class="form-check-label" for="marque_fruiteo_tel">
                                                 Fruiteo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruitycool_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruitycool_tel" onchange="handleCheckboxChangeTel()" value="15">
                                             <label class="form-check-label" for="marque_fruitycool_tel">
                                                 Fruity Cool
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruityfuel_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruityfuel_tel" onchange="handleCheckboxChangeTel()" value="16">
                                             <label class="form-check-label" for="marque_fruityfuel_tel">
                                                 Fruity Fuel
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruizee_tel" onchange="handleCheckboxChangeTel()" value="17">
                                             <label class="form-check-label" for="marque_fruizee_tel">
                                                 Fruizee
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fullmoon_tel" onchange="handleCheckboxChangeTel()" value="18">
                                             <label class="form-check-label" for="marque_fullmoon_tel">
                                                 Full Moon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_furiosa_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_furiosa_tel" onchange="handleCheckboxChangeTel()" value="19">
                                             <label class="form-check-label" for="marque_furiosa_tel">
                                                 Furiosa
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_greeneo_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_greeneo_tel" onchange="handleCheckboxChangeTel()" value="20">
                                             <label class="form-check-label" for="marque_greeneo_tel">
                                                 Greeneo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_juicyshake_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_juicyshake_tel" onchange="handleCheckboxChangeTel()" value="21">
                                             <label class="form-check-label" for="marque_juicyshake_tel">
                                                 Juicy Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kungfruits_tel" onchange="handleCheckboxChangeTel()" value="22">
                                             <label class="form-check-label" for="marque_kungfruits_tel">
                                                 Kung Fruits
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lecoqquivape_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lecoqquivape_tel" onchange="handleCheckboxChangeTel()" value="23">
                                             <label class="form-check-label" for="marque_lecoqquivape_tel">
                                                 Le Coq Qui Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lefrenchliquide_tel" onchange="handleCheckboxChangeTel()" value="24">
                                             <label class="form-check-label" for="marque_lefrenchliquide_tel">
                                                 Le French Liquide
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_levapoteurbreton_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_levapoteurbreton_tel" onchange="handleCheckboxChangeTel()" value="25">
                                             <label class="form-check-label" for="marque_levapoteurbreton_tel">
                                                 Le Vapoteur Breton
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lesdevils_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lesdevils_tel" onchange="handleCheckboxChangeTel()" value="26">
                                             <label class="form-check-label" for="marque_lesdevils_tel">
                                                 Les Devils
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_liquideo_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_liquideo_tel" onchange="handleCheckboxChangeTel()" value="27">
                                             <label class="form-check-label" for="marque_liquideo_tel">
                                                 Liquideo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_mono_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_mono_tel" onchange="handleCheckboxChangeTel()" value="28">
                                             <label class="form-check-label" for="marque_mono_tel">
                                                 Mono
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_monster_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_monster_tel" onchange="handleCheckboxChangeTel()" value="29">
                                             <label class="form-check-label" for="marque_monster_tel">
                                                 Monster
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_petitnuage_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_petitnuage_tel" onchange="handleCheckboxChangeTel()" value="30">
                                             <label class="form-check-label" for="marque_petitnuage_tel">
                                                 Petit Nuage
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_saltevapor_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_saltevapor_tel" onchange="handleCheckboxChangeTel()" value="31">
                                             <label class="form-check-label" for="marque_saltevapor_tel">
                                                 Salt E-vapor
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_snapdragon_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_snapdragon_tel" onchange="handleCheckboxChangeTel()" value="32">
                                             <label class="form-check-label" for="marque_snapdragon_tel">
                                                 Snap Dragon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_swoke_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_swoke_tel" onchange="handleCheckboxChangeTel()" value="33">
                                             <label class="form-check-label" for="marque_swoke_tel">
                                                 Swoke
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_themedusajuice_tel" onchange="handleCheckboxChangeTel()" value="34">
                                             <label class="form-check-label" for="marque_themedusajuice_tel">
                                                 The Medusa Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_tjuice_tel" onchange="handleCheckboxChangeTel()" value="35">
                                             <label class="form-check-label" for="marque_tjuice_tel">
                                                 T-Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vampirevape_tel" onchange="handleCheckboxChangeTel()" value="36">
                                             <label class="form-check-label" for="marque_vampirevape_tel">
                                                 Vampire Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vapedistillery_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vapedistillery_tel" onchange="handleCheckboxChangeTel()" value="37">
                                             <label class="form-check-label" for="marque_vapedistillery_tel">
                                                 Vape Distillery
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vdlv_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vdlv_tel" onchange="handleCheckboxChangeTel()" value="38">
                                             <label class="form-check-label" for="marque_vdlv_tel">
                                                 VDLV
                                             </label>
@@ -952,28 +952,12 @@
                         </ul>
                     </div>
                 </div>
-
                 <br>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                            <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                            <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
+                <!-- affichage des produits -->
+                <div class="col-12">
+                    <div class="row" id="productsRowTel">
+                        <div class="col-6"></div>
+                        <div class="col-6"></div>
                     </div>
                 </div>
             </div>
@@ -999,37 +983,37 @@
                                     <ul class="collapse list-unstyled" id="filtreSaveursSectionTablette">
                                         <li>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_classic_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                                 <label class="form-check-label" for="saveur_classic_tablette">
                                                     Classic
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_menthole_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                                 <label class="form-check-label" for="saveur_menthole_tablette">
                                                     Mentholé
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                                 <label class="form-check-label" for="saveur_fruite_tablette">
                                                     Fruité
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_frais_tablette" onchange="handleCheckboxChangeTablette()" value="4">
                                                 <label class="form-check-label" for="saveur_fruite_frais_tablette">
                                                     Fruité Frais
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_gourmand_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                                 <label class="form-check-label" for="saveur_gourmand_tablette">
                                                     Gourmand
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandise_boisson_tablette" onchange="handleCheckboxChangeTablette()" value="6">
                                                 <label class="form-check-label" for="saveur_friandise_boisson_tablette">
                                                     Friandise / Boisson
                                                 </label>
@@ -1044,7 +1028,7 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreContenanceSectionTablette">
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_10_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_10_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                             <label class="form-check-label" for="contenance_10_tablette">
                                                 10 mL
                                             </label>
@@ -1054,43 +1038,43 @@
                                             <a href="#filtre10mLTauxTablette" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections" style="font-size: 25px;"> Taux de nicotine</a>
                                             <ul class="collapse list-unstyled" id="filtre10mLTauxTablette">
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_0mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_0mg_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                                     <label class="form-check-label" for="taux_nicotine_0mg_tablette">
                                                         0 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_3mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_3mg_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                                     <label class="form-check-label" for="taux_nicotine_3mg_tablette">
                                                         3 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_6mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_6mg_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                                     <label class="form-check-label" for="taux_nicotine_6mg_tablette">
                                                         6 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="sel_de_nicotine_9_10mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="sel_de_nicotine_9_10mg_tablette" onchange="handleCheckboxChangeTablette()" value="4">
                                                     <label class="form-check-label" for="sel_de_nicotine_9_10mg_tablette">
                                                         En sel 9-10 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_12mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_12mg_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                                     <label class="form-check-label" for="taux_nicotine_12mg_tablette">
                                                         12 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="taux_nicotine_18mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="taux_nicotine_18mg_tablette" onchange="handleCheckboxChangeTablette()" value="6">
                                                     <label class="form-check-label" for="taux_nicotine_18mg_tablette">
                                                         18 mg
                                                     </label>
                                                 </li>
                                                 <li class="form-check" style="padding-left: 145px; font-size: 25px;">
-                                                    <input class="form-check-input" type="checkbox" id="sel_de_nicotine_18_20mg_tablette">
+                                                    <input class="form-check-input dosagenicotine-checkbox" type="checkbox" id="sel_de_nicotine_18_20mg_tablette" onchange="handleCheckboxChangeTablette()" value="7">
                                                     <label class="form-check-label" for="sel_de_nicotine_18_20mg_tablette">
                                                         En sel 18-20 mg
                                                     </label>
@@ -1098,25 +1082,25 @@
                                             </ul>
                                         </div>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_50_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_50_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                             <label class="form-check-label" for="contenance_50_tablette">
                                                 50 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_80_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_80_tablette" onchange="handleCheckboxChangeTablette()" value="4">
                                             <label class="form-check-label" for="contenance_80_tablette">
                                                 80 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_100_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_100_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                             <label class="form-check-label" for="contenance_100_tablette">
                                                 100 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_200_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_200_tablette" onchange="handleCheckboxChangeTablette()" value="6">
                                             <label class="form-check-label" for="contenance_200_tablette">
                                                 200 mL
                                             </label>
@@ -1130,229 +1114,229 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreMarquesSectionTablette">
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aandl_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                             <label class="form-check-label" for="marque_aandl_tablette">
                                                 A&L
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_alfaliquid_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_alfaliquid_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                             <label class="form-check-label" for="marque_alfaliquid_tablette">
                                                 Alfaliquid
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_bakeryshake_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_bakeryshake_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                             <label class="form-check-label" for="marque_bakeryshake_tablette">
                                                 Bakery Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_candyshake_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_candyshake_tablette" onchange="handleCheckboxChangeTablette()" value="4">
                                             <label class="form-check-label" for="marque_candyshake_tablette">
                                                 Candy Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cesar_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                             <label class="form-check-label" for="marque_cesar_tablette">
                                                 Cesar
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cigusto_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cigusto_tablette" onchange="handleCheckboxChangeTablette()" value="6">
                                             <label class="form-check-label" for="marque_cigusto_tablette">
                                                 Cigusto
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cirkus_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cirkus_tablette" onchange="handleCheckboxChangeTablette()" value="7">
                                             <label class="form-check-label" for="marque_cirkus_tablette">
                                                 CirKus
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_curieux_tablette" onchange="handleCheckboxChangeTablette()" value="8">
                                             <label class="form-check-label" for="marque_curieux_tablette">
                                                 Curieux
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_doncristo_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_doncristo_tablette" onchange="handleCheckboxChangeTablette()" value="9">
                                             <label class="form-check-label" for="marque_doncristo_tablette">
                                                 Don Cristo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_eliquidfrance_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_eliquidfrance_tablette" onchange="handleCheckboxChangeTablette()" value="10">
                                             <label class="form-check-label" for="marque_eliquidfrance_tablette">
                                                 Eliquid France
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_enfer_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_enfer_tablette" onchange="handleCheckboxChangeTablette()" value="11">
                                             <label class="form-check-label" for="marque_enfer_tablette">
                                                 Enfer
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_etasty_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_etasty_tablette" onchange="handleCheckboxChangeTablette()" value="12">
                                             <label class="form-check-label" for="marque_etasty_tablette">
                                                 E.Tasty
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_freshvapeco_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_freshvapeco_tablette" onchange="handleCheckboxChangeTablette()" value="13">
                                             <label class="form-check-label" for="marque_freshvapeco_tablette">
                                                 Fresh Vape Co
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruiteo_tablette" onchange="handleCheckboxChangeTablette()" value="14">
                                             <label class="form-check-label" for="marque_fruiteo_tablette">
                                                 Fruiteo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruitycool_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruitycool_tablette" onchange="handleCheckboxChangeTablette()" value="15">
                                             <label class="form-check-label" for="marque_fruitycool_tablette">
                                                 Fruity Cool
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruityfuel_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruityfuel_tablette" onchange="handleCheckboxChangeTablette()" value="16">
                                             <label class="form-check-label" for="marque_fruityfuel_tablette">
                                                 Fruity Fuel
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruizee_tablette" onchange="handleCheckboxChangeTablette()" value="17">
                                             <label class="form-check-label" for="marque_fruizee_tablette">
                                                 Fruizee
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fullmoon_tablette" onchange="handleCheckboxChangeTablette()" value="18">
                                             <label class="form-check-label" for="marque_fullmoon_tablette">
                                                 Full Moon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_furiosa_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_furiosa_tablette" onchange="handleCheckboxChangeTablette()" value="19">
                                             <label class="form-check-label" for="marque_furiosa_tablette">
                                                 Furiosa
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_greeneo_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_greeneo_tablette" onchange="handleCheckboxChangeTablette()" value="20">
                                             <label class="form-check-label" for="marque_greeneo_tablette">
                                                 Greeneo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_juicyshake_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_juicyshake_tablette" onchange="handleCheckboxChangeTablette()" value="21">
                                             <label class="form-check-label" for="marque_juicyshake_tablette">
                                                 Juicy Shake
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kungfruits_tablette" onchange="handleCheckboxChangeTablette()" value="22">
                                             <label class="form-check-label" for="marque_kungfruits_tablette">
                                                 Kung Fruits
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lecoqquivape_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lecoqquivape_tablette" onchange="handleCheckboxChangeTablette()" value="23">
                                             <label class="form-check-label" for="marque_lecoqquivape_tablette">
                                                 Le Coq Qui Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lefrenchliquide_tablette" onchange="handleCheckboxChangeTablette()" value="24">
                                             <label class="form-check-label" for="marque_lefrenchliquide_tablette">
                                                 Le French Liquide
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_levapoteurbreton_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_levapoteurbreton_tablette" onchange="handleCheckboxChangeTablette()" value="25">
                                             <label class="form-check-label" for="marque_levapoteurbreton_tablette">
                                                 Le Vapoteur Breton
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lesdevils_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lesdevils_tablette" onchange="handleCheckboxChangeTablette()" value="26">
                                             <label class="form-check-label" for="marque_lesdevils_tablette">
                                                 Les Devils
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_liquideo_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_liquideo_tablette" onchange="handleCheckboxChangeTablette()" value="27">
                                             <label class="form-check-label" for="marque_liquideo_tablette">
                                                 Liquideo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_mono_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_mono_tablette" onchange="handleCheckboxChangeTablette()" value="28">
                                             <label class="form-check-label" for="marque_mono_tablette">
                                                 Mono
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_monster_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_monster_tablette" onchange="handleCheckboxChangeTablette()" value="29">
                                             <label class="form-check-label" for="marque_monster_tablette">
                                                 Monster
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_petitnuage_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_petitnuage_tablette" onchange="handleCheckboxChangeTablette()" value="30">
                                             <label class="form-check-label" for="marque_petitnuage_tablette">
                                                 Petit Nuage
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_saltevapor_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_saltevapor_tablette" onchange="handleCheckboxChangeTablette()" value="31">
                                             <label class="form-check-label" for="marque_saltevapor_tablette">
                                                 Salt E-vapor
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_snapdragon_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_snapdragon_tablette" onchange="handleCheckboxChangeTablette()" value="32">
                                             <label class="form-check-label" for="marque_snapdragon_tablette">
                                                 Snap Dragon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_swoke_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_swoke_tablette" onchange="handleCheckboxChangeTablette()" value="33">
                                             <label class="form-check-label" for="marque_swoke_tablette">
                                                 Swoke
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_themedusajuice_tablette" onchange="handleCheckboxChangeTablette()" value="34">
                                             <label class="form-check-label" for="marque_themedusajuice_tablette">
                                                 The Medusa Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_tjuice_tablette" onchange="handleCheckboxChangeTablette()" value="35">
                                             <label class="form-check-label" for="marque_tjuice_tablette">
                                                 T-Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vampirevape_tablette" onchange="handleCheckboxChangeTablette()" value="36">
                                             <label class="form-check-label" for="marque_vampirevape_tablette">
                                                 Vampire Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vapedistillery_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vapedistillery_tablette" onchange="handleCheckboxChangeTablette()" value="37">
                                             <label class="form-check-label" for="marque_vapedistillery_tablette">
                                                 Vape Distillery
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vdlv_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vdlv_tablette" onchange="handleCheckboxChangeTablette()" value="38">
                                             <label class="form-check-label" for="marque_vdlv_tablette">
                                                 VDLV
                                             </label>
@@ -1365,36 +1349,12 @@
                 </div>
 
                 <br>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                            <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                            <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                            <div class="card-body">
-                                <h5 class="card-title">Liquide 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
+                <!-- affichage des produits -->
+                <div class="col-12">
+                    <div class="row" id="productsRowTablette">
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
                     </div>
                 </div>
             </div>
@@ -1790,105 +1750,6 @@
                             <div class="col-3"></div>
                         </div>
                     </div>
-
-                    <script>
-                        // ENVOIE DE L ID MAGASIN
-                        const magasinIdReq = window.location.pathname.split('/')[1];
-                        function convertMagasinIdToInt(magasinIdReq) {
-                            let magasinInt;
-                            switch (magasinIdReq) {
-                                case 'magasin-andelnans':
-                                    magasinInt = 1;
-                                    break;
-                                case 'magasin-bessoncourt':
-                                    magasinInt = 2;
-                                    break;
-                                case 'magasin-besancon':
-                                    magasinInt = 3;
-                                    break;
-                                case 'magasin-colmar':
-                                    magasinInt = 4;
-                                    break;
-                                default:
-                                    break;
-                            }
-                            return magasinInt;
-                        }
-                        const magasinInt = convertMagasinIdToInt(magasinIdReq);
-
-                        const productsRow = document.getElementById('productsRow');
-                        function handleCheckboxChange() {
-                            const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
-                            const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
-                            const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
-                            const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
-
-                            const selectedSaveurs = Array.from(saveurCheckboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => parseInt(checkbox.value));
-
-                            const selectedContenances = Array.from(contenanceCheckboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => parseInt(checkbox.value));
-
-                            const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => parseInt(checkbox.value));
-
-                            const selectedMarques = Array.from(marqueCheckboxes)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => parseInt(checkbox.value));
-
-                            // afficher les checkbox sélectionnées
-                            // console.log(selectedSaveurs);
-                            // console.log(selectedContenances);
-                            // console.log(selectedDosagesNicotine);
-                            // console.log(selectedMarques);
-
-                            fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
-                                .then(response => response.json())
-                                .then(data => {
-                                    // Filtrer les produits en fonction des checkboxes sélectionnées
-                                    const filteredProducts = data.filter(product => {
-                                        const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
-                                        const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
-                                        const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
-                                        const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
-
-                                        return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
-                                    });
-
-                                    // Mettre à jour l'affichage des produits avec les données filtrées
-                                    updateProductsDisplay(filteredProducts);
-                                })
-                                .catch(error => {
-                                    console.error('Erreur lors de la récupération des produits:', error);
-                                });
-                        }
-
-                        // afficher les données sous forme de cards dans 4 colonnes
-                        function updateProductsDisplay(data) {
-                            // Réinitialiser l'affichage des produits
-                            productsRow.innerHTML = '';
-
-                            data.forEach(product => {
-                                const cardDiv = document.createElement('div');
-                                cardDiv.classList.add('col-3');
-                                cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
-                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                <div class="card-body">
-                    <h5 class="card-title">${product.libelle_fiche}</h5>
-                    <p class="card-text">${product.description}</p>
-                </div>
-                <div class="divider bg-primary my-4"></div>
-            </div>`;
-                                // Ajouter la card à la ligne des produits
-                                productsRow.appendChild(cardDiv);
-                            });
-                        }
-                    </script>
-
                 </div>
             </div>
         </div>
@@ -2160,6 +2021,217 @@
     document.querySelector('.concentresMagasinCigustoTeal-tablette-sidebar').href = concentresMagasinCigustoTeal;
     document.querySelector('.concentresMagasinCigustoTeal-navbar').href = concentresMagasinCigustoTeal;
 
+    // ENVOIE DE L'ID MAGASIN AU BACKEND EN INT
+    function convertMagasinIdToInt(magasinId) {
+        let magasinInt;
+        switch (magasinId) {
+            case 'magasin-andelnans':
+                magasinInt = 1;
+                break;
+            case 'magasin-bessoncourt':
+                magasinInt = 2;
+                break;
+            case 'magasin-besancon':
+                magasinInt = 3;
+                break;
+            case 'magasin-colmar':
+                magasinInt = 4;
+                break;
+            default:
+                break;
+        }
+        return magasinInt;
+    }
+    const magasinInt = convertMagasinIdToInt(magasinId);
+
+    // affichage tel produits avec filtres
+    const productsRowTel = document.getElementById('productsRowTel');
+    function handleCheckboxChangeTel() {
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplayTel(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 3 colonnes
+    function updateProductsDisplayTel(data) {
+        // Réinitialiser l'affichage des produits
+        productsRowTel.innerHTML = '';
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-6');
+            cardDiv.innerHTML = `
+            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
+                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                <div class="card-body">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <p class="card-text">${product.description}</p>
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // Ajouter la card à la ligne des produits
+            productsRowTel.appendChild(cardDiv);
+        });
+    }
+
+    // affichage tablette produits avec filtres
+    const productsRowTablette = document.getElementById('productsRowTablette');
+    function handleCheckboxChangeTablette() {
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplayTablette(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 3 colonnes
+    function updateProductsDisplayTablette(data) {
+        // Réinitialiser l'affichage des produits
+        productsRowTablette.innerHTML = '';
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-4');
+            cardDiv.innerHTML = `
+            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
+                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                <div class="card-body">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <p class="card-text">${product.description}</p>
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // Ajouter la card à la ligne des produits
+            productsRowTablette.appendChild(cardDiv);
+        });
+    }
+    // affichage produits avec filtres
+    const productsRow = document.getElementById('productsRow');
+    function handleCheckboxChange() {
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        // afficher les checkbox sélectionnées
+        // console.log(selectedSaveurs);
+        console.log(selectedContenances);
+        console.log(selectedDosagesNicotine);
+        // console.log(selectedMarques);
+
+        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplay(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 4 colonnes
+    function updateProductsDisplay(data) {
+        // Réinitialiser l'affichage des produits
+        productsRow.innerHTML = '';
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-3');
+            cardDiv.innerHTML = `
+            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
+                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+                <div class="card-body">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <p class="card-text">${product.description}</p>
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // Ajouter la card à la ligne des produits
+            productsRow.appendChild(cardDiv);
+        });
+    }
+
     //dropdown E-Liquides et Concentrés écran tablette/pc
     const link = document.querySelector('.eliquidesMagasinCigustoTeal-navbar');
     const cardOverlay = document.querySelector('.card-overlay');
@@ -2225,6 +2297,8 @@
     // au chargement de la page
     window.addEventListener("load", function() {
         // afficher les produits par défaut sans filtre
+        handleCheckboxChangeTel();
+        handleCheckboxChangeTablette();
         handleCheckboxChange();
 
         var checkbox = document.getElementById("contenance_10");
@@ -2261,11 +2335,18 @@
     // Récupérer la case à cocher et l'élément à afficher/masquer
     var checkboxTel = document.getElementById("contenance_10_tel");
     checkboxTel.addEventListener("click", function() {
-        // Si la case est cochée, afficher l'élément, sinon le masquer
+        var tauxNicotineDropdownTel = document.getElementById("filtre10mLTauxTel");
         if (checkboxTel.checked) {
             filtre10mLTel.style.display = "block";
+            tauxNicotineDropdownTel.classList.add("show");
         } else {
             filtre10mLTel.style.display = "none";
+            tauxNicotineDropdownTel.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxesTel = document.querySelectorAll('#filtre10mLTauxTel .dosagenicotine-checkbox');
+            tauxNicotineCheckboxesTel.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
         }
     });
     // bouton filtre tablette
@@ -2275,52 +2356,42 @@
         filtreDivTablette.classList.toggle("active");
     });
     // filtre 10mL tablette
-    // Récupérer la case à cocher et l'élément à afficher/masquer
+    // récupérer la case à cocher et l'élément à afficher/masquer
     var checkboxTablette = document.getElementById("contenance_10_tablette");
     checkboxTablette.addEventListener("click", function() {
-        // Si la case est cochée, afficher l'élément, sinon le masquer
+        var tauxNicotineDropdownTablette = document.getElementById("filtre10mLTauxTablette");
         if (checkboxTablette.checked) {
             filtre10mLTablette.style.display = "block";
+            tauxNicotineDropdownTablette.classList.add("show");
         } else {
             filtre10mLTablette.style.display = "none";
+            tauxNicotineDropdownTablette.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxesTablette = document.querySelectorAll('#filtre10mLTauxTablette .dosagenicotine-checkbox');
+            tauxNicotineCheckboxesTablette.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
         }
     });
     // filtre 10mL
     // récupérer la case à cocher et l'élément à afficher/masquer
     var checkbox = document.getElementById("contenance_10");
     checkbox.addEventListener("click", function() {
+        var filtre10mL = document.getElementById("filtre10mL");
+        var tauxNicotineDropdown = document.getElementById("filtre10mLTaux");
         if (checkbox.checked) {
             filtre10mL.style.display = "block";
+            tauxNicotineDropdown.classList.add("show");
         } else {
             filtre10mL.style.display = "none";
-
-            // désélectionner toutes les checkboxes "Taux de nicotine"
+            tauxNicotineDropdown.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
             var tauxNicotineCheckboxes = document.querySelectorAll('#filtre10mLTaux .dosagenicotine-checkbox');
             tauxNicotineCheckboxes.forEach(function(checkbox) {
                 checkbox.checked = false;
             });
         }
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // redirection facebook
     let facebookUrl;

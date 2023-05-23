@@ -13,22 +13,22 @@ app.use(express.static('public'));
 
 app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     const magasinId = req.params.magasinId;
-    const limit = 5000; // en attendant pour peut etre chargement infini
+    const limit = 10000; // en attendant pour peut etre chargement infini
     const offset = 0;
 
     switch (magasinId) {
         case '1':
-            produits.getProductsPaginatedAndelnans(limit, offset, (error, results) => {
+            produits.getELiquidesProduitsAndelnans(limit, offset, (error, results) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
-                    console.log(results);
+                    // console.log(results);
                     res.json(results);
                 }
             });
             break;
         case '2':
-            produits.getProductsPaginatedBessoncourt(limit, offset, (error, results) => {
+            produits.getELiquidesProduitsBessoncourt(limit, offset, (error, results) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
@@ -37,7 +37,7 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
             });
             break;
         case '3':
-            produits.getProductsPaginatedBesancon(limit, offset, (error, results) => {
+            produits.getELiquidesProduitsBesancon(limit, offset, (error, results) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
@@ -46,7 +46,7 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
             });
             break;
         case '4':
-            produits.getProductsPaginatedColmar(limit, offset, (error, results) => {
+            produits.getELiquidesProduitsColmar(limit, offset, (error, results) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
@@ -58,7 +58,6 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
             break;
     }
 });
-
 
 // selection magasin
 app.listen(port, () => {
