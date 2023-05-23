@@ -22,6 +22,7 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
+                    console.log(results);
                     res.json(results);
                 }
             });

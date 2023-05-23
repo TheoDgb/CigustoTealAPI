@@ -2,8 +2,12 @@ const connection = require('./bdd/db.js');
 
 function getProductsPaginatedAndelnans(limit, offset, callback) {
     // connection.query(`SELECT * FROM produits WHERE magasin_id = 1 AND categorie_id != 3 LIMIT ${limit} OFFSET ${offset}`, (error, results) => {
-    connection.query(`SELECT magasin_id, MIN(libelle_produit) AS libelle_produit, libelle_fiche, description FROM produits WHERE magasin_id = 1 AND categorie_id != 3 GROUP BY magasin_id, libelle_fiche, description;`, (error, results) => {
-        if (error) {
+    // connection.query(`SELECT magasin_id, MIN(libelle_produit) AS libelle_produit, libelle_fiche, description, marque_id, type_saveur_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine FROM produits WHERE magasin_id = 1 AND categorie_id != 3 GROUP BY magasin_id, libelle_fiche, description, marque_id, type_saveur_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine;`, (error, results) => {
+    connection.query(`SELECT magasin_id, libelle_fiche, MIN(description) AS description, MIN(marque_id) AS marque_id, MIN(type_saveur_id) AS type_saveur_id, MIN(contenance_ml_id) AS contenance_ml_id, MIN(dosage_nicotine_mg_id) AS dosage_nicotine_mg_id, MIN(sel_de_nicotine) AS sel_de_nicotine
+                      FROM produits
+                      WHERE magasin_id = 1 AND categorie_id != 3
+                      GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
+    if (error) {
             return callback(error, null);
         }
         return callback(null, results);
