@@ -2215,18 +2215,58 @@
     function updateProductsDisplay(data) {
         // Réinitialiser l'affichage des produits
         productsRow.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+            <div style="text-align: center; color: gray";>
+                <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                <p>Aucun produit trouvé.</p>
+            </div>
+        `;
+            productsRow.appendChild(emptyImageDiv);
+            return;
+        }
+
         data.forEach(product => {
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-3');
+            let backgroundGradient = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradient = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    break;
+                case 2:
+                    backgroundGradient = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    break;
+                case 3:
+                    backgroundGradient = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    break;
+                case 4:
+                    backgroundGradient = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    break;
+                case 5:
+                    backgroundGradient = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    break;
+                case 6:
+                    backgroundGradient = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    break;
+                default:
+                    backgroundGradient = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+            }
+
             cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
-                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-                <div class="card-body">
-                    <h5 class="card-title">${product.libelle_fiche}</h5>
-                    <p class="card-text">${product.description}</p>
-                </div>
-                <div class="divider bg-primary my-4"></div>
-            </div>`;
+        <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradient}">
+            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+            <div class="card-body">
+                <h5 class="card-title">${product.libelle_fiche}</h5>
+                <p class="card-text">${product.description}</p>
+            </div>
+            <div class="divider bg-primary my-4"></div>
+        </div>`;
             // Ajouter la card à la ligne des produits
             productsRow.appendChild(cardDiv);
         });
@@ -4696,12 +4736,12 @@
     .articles .card {
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        background-image: linear-gradient(to bottom, #ff69b4, #ffffff);
+        //background-image: linear-gradient(to bottom, #5d6d7e, #ffffff);
         transition: background-image 0.5s ease;
         z-index: 1;
     }
     .articles .card:hover {
-        background-image: linear-gradient(to bottom, #ffffff, #ff69b4);
+        background-image: linear-gradient(to bottom, #ffffff, #5d6d7e);
         z-index: 1;
     }
     .articles .card-img-top {
