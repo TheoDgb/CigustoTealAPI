@@ -1368,8 +1368,7 @@
                 <!--ECRAN PC-->
                 <div class="row">
                     <div class="col-3">
-                        P1
-                        <ul class="filtre list-unstyled menu-elements">
+                        <ul class="filtre list-unstyled menu-elements sticky-checkboxes">
                             <li>
                                 <div class="btw-onglet">
                                     <a href="#filtreSaveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
@@ -1701,7 +1700,7 @@
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_swoke"onchange="handleCheckboxChange()" value="33">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_swoke" onchange="handleCheckboxChange()" value="33">
                                             <label class="form-check-label" for="marque_swoke">
                                                 Swoke
                                             </label>
@@ -2045,7 +2044,6 @@
     const magasinInt = convertMagasinIdToInt(magasinId);
 
     // affichage tel produits avec filtres
-    const productsRowTel = document.getElementById('productsRowTel');
     function handleCheckboxChangeTel() {
         const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
         const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
@@ -2086,13 +2084,53 @@
     }
     // afficher les données sous forme de cards dans 3 colonnes
     function updateProductsDisplayTel(data) {
+        const productsRowTel = document.getElementById('productsRowTel');
         // Réinitialiser l'affichage des produits
         productsRowTel.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+                    <div style="text-align: center; color: gray;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <p>Aucun produit trouvé.</p>
+                    </div>
+                `;
+            productsRowTel.appendChild(emptyImageDiv);
+            return;
+        }
+
         data.forEach(product => {
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-6');
+            let backgroundGradientTel = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    break;
+                case 2:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    break;
+                case 3:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    break;
+                case 4:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    break;
+                case 5:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    break;
+                case 6:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    break;
+                default:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+            }
             cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
+            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradientTel};">
                 <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                 <div class="card-body">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
@@ -2106,7 +2144,6 @@
     }
 
     // affichage tablette produits avec filtres
-    const productsRowTablette = document.getElementById('productsRowTablette');
     function handleCheckboxChangeTablette() {
         const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
         const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
@@ -2147,13 +2184,53 @@
     }
     // afficher les données sous forme de cards dans 3 colonnes
     function updateProductsDisplayTablette(data) {
+        const productsRowTablette = document.getElementById('productsRowTablette');
         // Réinitialiser l'affichage des produits
         productsRowTablette.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+                    <div style="text-align: center; color: gray;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <p>Aucun produit trouvé.</p>
+                    </div>
+                `;
+            productsRowTablette.appendChild(emptyImageDiv);
+            return;
+        }
+
         data.forEach(product => {
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-4');
+            let backgroundGradientTablette = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    break;
+                case 2:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    break;
+                case 3:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    break;
+                case 4:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    break;
+                case 5:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    break;
+                case 6:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    break;
+                default:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+            }
             cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px;">
+            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradientTablette};">
                 <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
                 <div class="card-body">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
@@ -2165,9 +2242,14 @@
             productsRowTablette.appendChild(cardDiv);
         });
     }
+
     // affichage produits avec filtres
-    const productsRow = document.getElementById('productsRow');
     function handleCheckboxChange() {
+        // scroll en haut de la page
+        setTimeout(function() {
+            // Défilement automatique jusqu'au sommet de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },100);
         const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
         const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
         const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
@@ -2213,6 +2295,7 @@
     }
     // afficher les données sous forme de cards dans 4 colonnes
     function updateProductsDisplay(data) {
+        const productsRow = document.getElementById('productsRow');
         // Réinitialiser l'affichage des produits
         productsRow.innerHTML = '';
 
@@ -2222,7 +2305,7 @@
             const emptyImageDiv = document.createElement('div');
             emptyImageDiv.classList.add('col-12');
             emptyImageDiv.innerHTML = `
-            <div style="text-align: center; color: gray";>
+            <div style="text-align: center; color: gray;">
                 <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
                 <p>Aucun produit trouvé.</p>
             </div>
@@ -2259,7 +2342,7 @@
             }
 
             cardDiv.innerHTML = `
-        <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradient}">
+        <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradient};">
             <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
             <div class="card-body">
                 <h5 class="card-title">${product.libelle_fiche}</h5>
@@ -4686,6 +4769,12 @@
         }
     }
 
+    .sticky-checkboxes {
+        position: sticky;
+        top: 0;
+        max-height: 950px;
+        overflow-y: auto;
+    }
     ul li a {
         display: block;
         padding: 10px 20px;
