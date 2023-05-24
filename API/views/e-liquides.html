@@ -2072,7 +2072,7 @@
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
                     const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
-                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
                     return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
@@ -2133,7 +2133,7 @@
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
                     const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
-                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
                     return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
@@ -2188,8 +2188,8 @@
 
         // afficher les checkbox sélectionnées
         // console.log(selectedSaveurs);
-        console.log(selectedContenances);
-        console.log(selectedDosagesNicotine);
+        // console.log(selectedContenances);
+        // console.log(selectedDosagesNicotine);
         // console.log(selectedMarques);
 
         fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
@@ -2199,7 +2199,7 @@
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
                     const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
-                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || selectedDosagesNicotine.includes(product.dosage_nicotine_mg_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
                     return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
