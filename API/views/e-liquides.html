@@ -2114,31 +2114,43 @@
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-6');
             let backgroundGradientTel = '';
+            let backgroundHoverGradientTel = '';
             switch (product.type_saveur_id) {
                 case 1:
-                    backgroundGradientTel = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    backgroundGradientTel = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #b9770e)';
+                    // backgroundGradientTel = 'radial-gradient(circle, #b9770e, #ffffff)';
+                    // backgroundHoverGradientTel = 'radial-gradient(circle, #ffffff, #b9770e)';
                     break;
                 case 2:
                     backgroundGradientTel = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
                     break;
                 case 3:
                     backgroundGradientTel = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
                     break;
                 case 4:
                     backgroundGradientTel = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #3498db)';
                     break;
                 case 5:
                     backgroundGradientTel = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
                     break;
                 case 6:
                     backgroundGradientTel = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
                     break;
                 default:
                     backgroundGradientTel = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
             }
             cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradientTel};">
-                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+            <div class="card" style="height: 800px; margin-bottom: 25px; background: ${backgroundGradientTel}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTel}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTel}';">
+                <img class="card-img-top" src="/images/P000103_01.png" alt="e-liquides card">
                 <div class="card-body">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
                     <p class="card-text">${product.description}</p>
@@ -2214,31 +2226,41 @@
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-4');
             let backgroundGradientTablette = '';
+            let backgroundHoverGradientTablette = '';
             switch (product.type_saveur_id) {
                 case 1:
-                    backgroundGradientTablette = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #b9770e)';
                     break;
                 case 2:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
                     break;
                 case 3:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
                     break;
                 case 4:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #3498db)';
                     break;
                 case 5:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
                     break;
                 case 6:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
                     break;
                 default:
                     backgroundGradientTablette = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
             }
             cardDiv.innerHTML = `
-            <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradientTablette};">
-                <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
+            <div class="card" style="height: 450px; margin-bottom: 25px; background: ${backgroundGradientTablette}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTablette}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTablette}';">
+                <img class="card-img-top" src="/images/P000103_01.png" alt="e-liquides card">
                 <div class="card-body">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
                     <p class="card-text">${product.description}</p>
@@ -2325,38 +2347,48 @@
             const cardDiv = document.createElement('div');
             cardDiv.classList.add('col-3');
             let backgroundGradient = '';
+            let backgroundHoverGradient = '';
             switch (product.type_saveur_id) {
                 case 1:
-                    backgroundGradient = 'linear-gradient(to bottom, #d68910, #ffffff)';
+                    backgroundGradient = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #b9770e)';
                     break;
                 case 2:
                     backgroundGradient = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
                     break;
                 case 3:
                     backgroundGradient = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
                     break;
                 case 4:
                     backgroundGradient = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #3498db)';
                     break;
                 case 5:
                     backgroundGradient = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
                     break;
                 case 6:
                     backgroundGradient = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
                     break;
                 default:
                     backgroundGradient = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
             }
 
             cardDiv.innerHTML = `
-        <div class="card zoom-effect" style="height: 400px; margin-bottom: 25px; background-image: ${backgroundGradient};">
-            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="e-liquides card">
-            <div class="card-body">
-                <h5 class="card-title">${product.libelle_fiche}</h5>
-                <p class="card-text">${product.description}</p>
-            </div>
-            <div class="divider bg-primary my-4"></div>
-        </div>`;
+            <div class="card" style="height: 400px; margin-bottom: 25px; background: ${backgroundGradient}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradient}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradient}';">
+                <img class="card-img-top" src="/images/P000103_01.png" alt="e-liquides card">
+                <div class="card-body">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <p class="card-text">${product.description}</p>
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
             // Ajouter la card à la ligne des produits
             productsRow.appendChild(cardDiv);
         });
@@ -4836,13 +4868,6 @@
     .articles .card {
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        //background-image: linear-gradient(to bottom, #5d6d7e, #ffffff);
-        transition: background-image 0.5s ease;
-        z-index: 1;
-    }
-    .articles .card:hover {
-        background-image: linear-gradient(to bottom, #ffffff, #5d6d7e);
-        z-index: 1;
     }
     .articles .card-img-top {
         border-top-left-radius: 15px;
