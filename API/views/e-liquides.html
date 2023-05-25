@@ -949,6 +949,10 @@
                                     </ul>
                                 </div>
                             </li>
+                            <br>
+                            <button class="dismiss-filtre-tel btn btn-filtrevalid d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; margin-bottom: 50px;">
+                                <div style="font-size: 50px;">Valider</div>
+                            </button>
                         </ul>
                     </div>
                 </div>
@@ -1344,6 +1348,9 @@
                                     </ul>
                                 </div>
                             </li>
+                            <button class="dismiss-filtre-tablette btn btn-filtrevalid d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; margin-bottom: 25px;">
+                                <div style="font-size: 25px;">Valider</div>
+                            </button>
                         </ul>
                     </div>
                 </div>
@@ -2408,13 +2415,17 @@
         });
     });
 
-    const dismissBtnTel = document.querySelector(".dismiss-filtre-tel");
-    dismissBtnTel.addEventListener("click", () => {
-        filtreDivTel.classList.remove("active");
+    const dismissBtnsTel = document.querySelectorAll(".dismiss-filtre-tel");
+    dismissBtnsTel.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            filtreDivTel.classList.remove("active");
+        });
     });
-    const dismissBtnTablette = document.querySelector(".dismiss-filtre-tablette");
-    dismissBtnTablette.addEventListener("click", () => {
-        filtreDivTablette.classList.remove("active");
+    const dismissBtnsTablette = document.querySelectorAll(".dismiss-filtre-tablette");
+    dismissBtnsTablette.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            filtreDivTablette.classList.remove("active");
+        });
     });
 
     // au chargement de la page
@@ -4852,6 +4863,16 @@
     }
     .btn-filtre:hover {
         background-color: #253142;
+        color: white;
+        cursor: pointer;
+    }
+    .btn-filtrevalid {
+        border: 1px solid black;
+        color: black;
+        transition: background-color 0.1s ease-in-out;
+    }
+    .btn-filtrevalid:hover {
+        background-color: black;
         color: white;
         cursor: pointer;
     }
