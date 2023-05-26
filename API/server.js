@@ -144,3 +144,7 @@ PythonShell.run('script_update_csv.py', options, function (err) {
     if (err) throw err;
     // console.log('Script exécuté avec succès !');
 });
+
+PythonShell.run('script_update_image.py', options, function (err) {
+    if (err) throw err;
+});

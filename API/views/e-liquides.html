@@ -2101,10 +2101,12 @@
             const emptyImageDiv = document.createElement('div');
             emptyImageDiv.classList.add('col-12');
             emptyImageDiv.innerHTML = `
+                    <br><br><br><br><br>
                     <div style="text-align: center; color: gray;">
-                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 100%; height: auto;">
                         <p>Aucun produit trouvé.</p>
                     </div>
+                    <br><br><br><br><br>
                 `;
             productsRowTel.appendChild(emptyImageDiv);
             return;
@@ -2214,7 +2216,7 @@
             emptyImageDiv.classList.add('col-12');
             emptyImageDiv.innerHTML = `
                     <div style="text-align: center; color: gray;">
-                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 50%; height: auto;">
                         <p>Aucun produit trouvé.</p>
                     </div>
                 `;
