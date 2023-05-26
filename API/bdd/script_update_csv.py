@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/test.csv', sep=';', decimal=',')
+df = pd.read_csv('./bdd/finaltest.csv', sep=';', decimal=',')
 
 # supprime les colonnes inutiles
-df = df.drop(['ID','Sku', 'EAN', 'PV ttc Preco', 'Marge Ht préco', 'tx marge preco', 'PA ht centrale', 'PV TTC magasin', 'Marge ht magasin', 'tx de marge magasin'], axis=1)
+df = df.drop(['ID', 'ID Fiche produit', 'Statut appro centrale', 'EAN', 'PV ttc Preco', 'Marge Ht préco', 'tx marge preco', 'PA ht centrale', 'PV TTC magasin', 'Marge ht magasin', 'tx de marge magasin'], axis=1)
 
 # remplace NaN par 0
 df['Qté stock'] = df['Qté stock'].fillna(0)
@@ -14,6 +14,7 @@ df['Qté stock'] = df['Qté stock'].astype(int)
 
 # renommer les colonnes pour les rendre utilisables dans la bdd
 df = df.rename(columns={
+    'Sku': 'sku',
     'libellé fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
     'catégorie': 'categorie_id',
@@ -84,7 +85,7 @@ df.loc[mask, "marque_id"] = "Enfer"
 df.drop('gamme', axis=1)
 
 # réorganise les colonnes
-df = df.reindex(columns=['magasin_id', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock'])
+df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock'])
 
 
 
@@ -271,8 +272,8 @@ cursor = connection.cursor()
 
 # Boucle sur chaque ligne du DataFrame et exécute l'insertion
 for _, row in df.iterrows():
-    values = (row['id'], row['magasin_id'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'])
-    query = "INSERT INTO produits (id, magasin_id, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'])
+    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     cursor.execute(query, values)
 
 # Valider les modifications dans la base de données
@@ -285,4 +286,4 @@ connection.close()
 
 
 # save
-df.to_csv('./bdd/test2.csv', sep=';', index=False)
+df.to_csv('./bdd/finaltest2.csv', sep=';', index=False)

@@ -8,6 +8,7 @@ function getELiquidesProduitsAndelnans(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -27,6 +28,7 @@ function getELiquidesProduitsBessoncourt(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -46,6 +48,7 @@ function getELiquidesProduitsBesancon(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -65,6 +68,7 @@ function getELiquidesProduitsColmar(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -85,6 +89,7 @@ function getConcentresProduitsAndelnans(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -104,6 +109,7 @@ function getConcentresProduitsBessoncourt(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -123,6 +129,7 @@ function getConcentresProduitsBesancon(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
@@ -142,6 +149,7 @@ function getConcentresProduitsColmar(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
                           MIN(type_saveur_id) AS type_saveur_id,
