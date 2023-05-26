@@ -65,8 +65,7 @@ CREATE TABLE produits (
     sel_de_nicotine BOOLEAN NOT NULL,
     qte_stock INT NOT NULL
 #     statut_produit_id INT,
-#         FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id),
-#     image VARCHAR(100) NOT NULL
+#         FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id)
 );
 
 

@@ -15,6 +15,7 @@ df['Qté stock'] = df['Qté stock'].astype(int)
 # renommer les colonnes pour les rendre utilisables dans la bdd
 df = df.rename(columns={
     'Sku': 'sku',
+    'Statut appro centrale': 'statut_produit_id'
     'libellé fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
     'catégorie': 'categorie_id',
@@ -86,6 +87,7 @@ df.drop('gamme', axis=1)
 
 # réorganise les colonnes
 df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock'])
+# df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id'])
 
 
 
@@ -274,6 +276,8 @@ cursor = connection.cursor()
 for _, row in df.iterrows():
     values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'])
     query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+#     values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'])
+#         query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     cursor.execute(query, values)
 
 # Valider les modifications dans la base de données
