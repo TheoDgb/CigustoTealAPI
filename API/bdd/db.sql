@@ -45,6 +45,7 @@ CREATE TABLE statut_produits (
 CREATE TABLE produits (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     magasin_id INT,
+    sku VARCHAR(8) NOT NULL,
         FOREIGN KEY (magasin_id) REFERENCES magasins(id),
     libelle_produit VARCHAR(100) NOT NULL,
     libelle_fiche VARCHAR(100) NOT NULL,
