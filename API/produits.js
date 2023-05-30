@@ -8,6 +8,7 @@ function getELiquidesProduitsAndelnans(limit, offset, callback) {
     connection.query(`SELECT
                           magasin_id,
                           libelle_fiche,
+                          MIN(libelle_produit) AS libelle_produit,
                           MIN(sku) AS sku,
                           MIN(description) AS description,
                           MIN(marque_id) AS marque_id,
@@ -17,7 +18,7 @@ function getELiquidesProduitsAndelnans(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 1 AND categorie_id != 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
     if (error) {
             return callback(error, null);
@@ -38,7 +39,7 @@ function getELiquidesProduitsBessoncourt(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 2 AND categorie_id != 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -59,7 +60,7 @@ function getELiquidesProduitsBesancon(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 3 AND categorie_id != 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -80,7 +81,7 @@ function getELiquidesProduitsColmar(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 4 AND categorie_id != 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -102,7 +103,7 @@ function getConcentresProduitsAndelnans(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 1 AND categorie_id = 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -123,7 +124,7 @@ function getConcentresProduitsBessoncourt(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 2 AND categorie_id = 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -144,7 +145,7 @@ function getConcentresProduitsBesancon(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 3 AND categorie_id = 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -165,7 +166,7 @@ function getConcentresProduitsColmar(limit, offset, callback) {
                           MIN(sel_de_nicotine) AS sel_de_nicotine,
                           MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
+                      WHERE magasin_id = 4 AND categorie_id = 3 AND statut_produit_id != 2
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
