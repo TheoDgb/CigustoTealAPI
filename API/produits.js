@@ -14,9 +14,10 @@ function getELiquidesProduitsAndelnans(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id != 3
+                      WHERE magasin_id = 1 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
     if (error) {
             return callback(error, null);
@@ -34,9 +35,10 @@ function getELiquidesProduitsBessoncourt(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id != 3
+                      WHERE magasin_id = 2 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -54,9 +56,10 @@ function getELiquidesProduitsBesancon(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id != 3
+                      WHERE magasin_id = 3 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -74,9 +77,10 @@ function getELiquidesProduitsColmar(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id != 3
+                      WHERE magasin_id = 4 AND categorie_id = 1 AND categorie_id = 2 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -95,9 +99,10 @@ function getConcentresProduitsAndelnans(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id = 3
+                      WHERE magasin_id = 1 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -115,9 +120,10 @@ function getConcentresProduitsBessoncourt(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id = 3
+                      WHERE magasin_id = 2 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -135,9 +141,10 @@ function getConcentresProduitsBesancon(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id = 3
+                      WHERE magasin_id = 3 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -155,9 +162,10 @@ function getConcentresProduitsColmar(limit, offset, callback) {
                           MIN(type_saveur_id) AS type_saveur_id,
                           MIN(contenance_ml_id) AS contenance_ml_id,
                           GROUP_CONCAT(DISTINCT dosage_nicotine_mg_id) AS dosage_nicotine_mg_id,
-                          MIN(sel_de_nicotine) AS sel_de_nicotine
+                          MIN(sel_de_nicotine) AS sel_de_nicotine,
+                          MIN(statut_produit_id) AS statut_produit_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id = 3
+                      WHERE magasin_id = 4 AND categorie_id = 3 AND statut_produit_id = 1 AND statut_produit_id = 3
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
