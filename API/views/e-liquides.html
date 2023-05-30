@@ -196,7 +196,7 @@
                     <div class="form-group">
                         <div class="input-group mt-2 mb-2">
                             <span class="input-group-text" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; font-size: 3em;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; font-size: 2rem;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" id="searchInputTel" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; font-size: 2rem;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -375,7 +375,7 @@
                     <div class="form-group">
                         <div class="input-group mb-2">
                             <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" id="searchInputTablette" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -394,7 +394,7 @@
                     <label for="SearchInput"></label>
                     <div class="input-group mb-4">
                         <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="searchInput" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="d-inline-block float-end">
@@ -2051,6 +2051,8 @@
     const magasinInt = convertMagasinIdToInt(magasinId);
 
     // affichage tel produits avec filtres
+    // search bar input
+    document.getElementById('searchInputTel').addEventListener('input', handleCheckboxChangeTel);
     function handleCheckboxChangeTel() {
         const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
         const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
@@ -2073,6 +2075,8 @@
         fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInputTel = document.getElementById('searchInputTel').value.toLowerCase();
                 // Filtrer les produits en fonction des checkboxes sélectionnées
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
@@ -2080,7 +2084,9 @@
                     const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
-                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInputTel);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
                 });
                 // Mettre à jour l'affichage des produits avec les données filtrées
                 updateProductsDisplayTel(filteredProducts);
@@ -2121,8 +2127,6 @@
                 case 1:
                     backgroundGradientTel = 'linear-gradient(to bottom, #b9770e, #ffffff)';
                     backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #b9770e)';
-                    // backgroundGradientTel = 'radial-gradient(circle, #b9770e, #ffffff)';
-                    // backgroundHoverGradientTel = 'radial-gradient(circle, #ffffff, #b9770e)';
                     break;
                 case 2:
                     backgroundGradientTel = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
@@ -2168,6 +2172,8 @@
     }
 
     // affichage tablette produits avec filtres
+    // search bar input
+    document.getElementById('searchInputTablette').addEventListener('input', handleCheckboxChangeTablette);
     function handleCheckboxChangeTablette() {
         const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
         const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
@@ -2190,6 +2196,8 @@
         fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInputTablette = document.getElementById('searchInputTablette').value.toLowerCase();
                 // Filtrer les produits en fonction des checkboxes sélectionnées
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
@@ -2197,7 +2205,9 @@
                     const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
-                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInputTablette);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
                 });
                 // Mettre à jour l'affichage des produits avec les données filtrées
                 updateProductsDisplayTablette(filteredProducts);
@@ -2281,6 +2291,8 @@
     }
 
     // affichage produits avec filtres
+    // search bar input
+    document.getElementById('searchInput').addEventListener('input', handleCheckboxChange);
     function handleCheckboxChange() {
         // scroll en haut de la page
         setTimeout(function() {
@@ -2314,6 +2326,8 @@
         fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInput = document.getElementById('searchInput').value.toLowerCase();
                 // Filtrer les produits en fonction des checkboxes sélectionnées
                 const filteredProducts = data.filter(product => {
                     const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
@@ -2321,7 +2335,9 @@
                     const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
                     const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
 
-                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected;
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInput);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
                 });
                 // Mettre à jour l'affichage des produits avec les données filtrées
                 updateProductsDisplay(filteredProducts);

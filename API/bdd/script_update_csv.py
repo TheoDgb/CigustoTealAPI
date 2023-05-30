@@ -245,13 +245,6 @@ df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce'
 df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
 df['statut_produit_id'] = df['statut_produit_id'].replace({'': None})
 
-
-
-
-
-
-
-
 # créer une colonne au début id remplie de None
 df.insert(0, 'id', None)
 
