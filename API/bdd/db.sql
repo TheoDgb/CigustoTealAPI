@@ -63,9 +63,9 @@ CREATE TABLE produits (
     dosage_nicotine_mg_id INT,
         FOREIGN KEY (dosage_nicotine_mg_id) REFERENCES dosages_nicotine_mg(id),
     sel_de_nicotine BOOLEAN NOT NULL,
-    qte_stock INT NOT NULL
-#     statut_produit_id INT,
-#         FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id)
+    qte_stock INT NOT NULL,
+    statut_produit_id INT,
+        FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id)
 );
 
 

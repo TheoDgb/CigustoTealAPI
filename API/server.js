@@ -22,7 +22,7 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
                 if (error) {
                     res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
                 } else {
-                    // console.log(results);
+                    console.log(results);
                     res.json(results);
                 }
             });
@@ -143,4 +143,8 @@ const options = {
 PythonShell.run('script_update_csv.py', options, function (err) {
     if (err) throw err;
     // console.log('Script exécuté avec succès !');
+});
+
+PythonShell.run('script_update_image.py', options, function (err) {
+    if (err) throw err;
 });

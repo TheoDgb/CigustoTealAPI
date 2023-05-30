@@ -5,7 +5,7 @@ import pymysql
 df = pd.read_csv('./bdd/finaltest.csv', sep=';', decimal=',')
 
 # supprime les colonnes inutiles
-df = df.drop(['ID', 'ID Fiche produit', 'Statut appro centrale', 'EAN', 'PV ttc Preco', 'Marge Ht préco', 'tx marge preco', 'PA ht centrale', 'PV TTC magasin', 'Marge ht magasin', 'tx de marge magasin'], axis=1)
+df = df.drop(['ID', 'ID Fiche produit', 'EAN', 'PV ttc Preco', 'Marge Ht préco', 'tx marge preco', 'PA ht centrale', 'PV TTC magasin', 'Marge ht magasin', 'tx de marge magasin'], axis=1)
 
 # remplace NaN par 0
 df['Qté stock'] = df['Qté stock'].fillna(0)
@@ -15,7 +15,7 @@ df['Qté stock'] = df['Qté stock'].astype(int)
 # renommer les colonnes pour les rendre utilisables dans la bdd
 df = df.rename(columns={
     'Sku': 'sku',
-    'Statut appro centrale': 'statut_produit_id'
+    'Statut appro centrale': 'statut_produit_id',
     'libellé fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
     'catégorie': 'categorie_id',
@@ -86,8 +86,12 @@ df.loc[mask, "marque_id"] = "Enfer"
 df.drop('gamme', axis=1)
 
 # réorganise les colonnes
+<<<<<<< HEAD
 df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock'])
 # df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id'])
+=======
+df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id'])
+>>>>>>> nouvelle-branche
 
 
 
@@ -235,15 +239,23 @@ df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df
 # si la valeur de 'dosage_nicotine_mg_id' est supérieure à 7, supprimer la ligne
 # df = df.drop(df[df['dosage_nicotine_mg_id'] > 7].index)
 
-# df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1,
-#                                                        'inactif': 2,
-#                                                        'fin d\'approvisionnement': 3
-# })
-# # passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
-# df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')
-# # remplace les NaN de dosage_pg_vg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
-# df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
-# df['statut_produit_id'] = df['statut_produit_id'].replace({'': None})
+df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1,
+                                                       'Indisponible': 2,
+                                                       'Fin d\'approvisionnement': 3,
+                                                       '#N/D': None
+})
+# passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
+df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')
+# remplace les NaN de dosage_pg_vg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
+df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
+df['statut_produit_id'] = df['statut_produit_id'].replace({'': None})
+
+
+
+
+
+
+
 
 # créer une colonne au début id remplie de None
 df.insert(0, 'id', None)
@@ -258,9 +270,9 @@ df.insert(0, 'id', None)
 
 
 
-
-#COMMENT FAIRE POUR QUE CA N IMPORTE PAS SI Y A DES DOUBLES DANS LA BASE DE DONNEES
-#AVEC LE LIBELLE_PRODUIT ET LE MAGASINID
+# à faire plus tard
+# FAIRE POUR QUE CA N IMPORTE PAS S IL Y A DES DOUBLES DANS LA BASE DE DONNEES
+# AVEC LE LIBELLE_PRODUIT ET LE MAGASINID
 
 
 # Connexion à la base de données MySQL
@@ -274,10 +286,8 @@ cursor = connection.cursor()
 
 # Boucle sur chaque ligne du DataFrame et exécute l'insertion
 for _, row in df.iterrows():
-    values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'])
-    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-#     values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'])
-#         query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'])
+    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     cursor.execute(query, values)
 
 # Valider les modifications dans la base de données

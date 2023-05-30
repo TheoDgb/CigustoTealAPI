@@ -2101,10 +2101,12 @@
             const emptyImageDiv = document.createElement('div');
             emptyImageDiv.classList.add('col-12');
             emptyImageDiv.innerHTML = `
+                    <br><br><br><br><br>
                     <div style="text-align: center; color: gray;">
-                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 100%; height: auto;">
                         <p>Aucun produit trouvé.</p>
                     </div>
+                    <br><br><br><br><br>
                 `;
             productsRowTel.appendChild(emptyImageDiv);
             return;
@@ -2150,10 +2152,13 @@
             <div class="card" style="height: 800px; margin-bottom: 25px; background: ${backgroundGradientTel}; transition: transform .5s;"
             onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTel}';"
             onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTel}';">
-                <img class="card-img-top" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
-                <div class="card-body">
-                    <h5 class="card-title">${product.libelle_fiche}</h5>
-                    <p class="card-text">${product.description}</p>
+                <img class="card-img-top" style="max-height: 500px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -25px;">
+                    <h5 class="card-title" style="font-size: 35px;">${product.libelle_fiche}</h5>
+                    <hr>
+                    <p class="card-text" style="font-size: 28px;">${product.description}</p>
+                    <hr>
+                    <p class="card-text" style="font-size: 28px;">${product.statut_produit_id === 1 ? 'En stock au magasin' : 'Indisponible'}</p>
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
@@ -2214,7 +2219,7 @@
             emptyImageDiv.classList.add('col-12');
             emptyImageDiv.innerHTML = `
                     <div style="text-align: center; color: gray;">
-                        <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 50%; height: auto;">
                         <p>Aucun produit trouvé.</p>
                     </div>
                 `;
@@ -2260,10 +2265,13 @@
             <div class="card" style="height: 450px; margin-bottom: 25px; background: ${backgroundGradientTablette}; transition: transform .5s;"
             onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTablette}';"
             onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTablette}';">
-                <img class="card-img-top" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
-                <div class="card-body">
+                <img class="card-img-top" style="max-height: 250px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -25px;">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <hr>
                     <p class="card-text">${product.description}</p>
+                    <hr>
+                    <p class="card-text">${product.statut_produit_id === 1 ? 'En stock au magasin' : 'Indisponible'}</p>
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
@@ -2379,13 +2387,16 @@
             }
 
             cardDiv.innerHTML = `
-            <div class="card" style="height: 400px; margin-bottom: 25px; background: ${backgroundGradient}; transition: transform .5s;"
+            <div class="card" style="height: 420px; margin-bottom: 25px; background: ${backgroundGradient}; transition: transform .5s;"
             onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradient}';"
             onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradient}';">
-                <img class="card-img-top" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
-                <div class="card-body">
+                <img class="card-img-top" style="max-height: 200px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -25px;">
                     <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <hr>
                     <p class="card-text">${product.description}</p>
+                    <hr class="my-1">
+                    <p class="card-text">${product.statut_produit_id === 1 ? 'En stock au magasin' : 'Indisponible'}</p>
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
