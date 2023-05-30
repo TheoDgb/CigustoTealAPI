@@ -1,8 +1,6 @@
 const controller = require('../controllers/controller.js');
 
 module.exports = function(app){
-    app.get('/magasin', controller.magasin);
-
     app.get('/magasin-andelnans', controller.magasin_andelnans);
     app.get('/magasin-bessoncourt', controller.magasin_bessoncourt);
     app.get('/magasin-besancon', controller.magasin_besancon);

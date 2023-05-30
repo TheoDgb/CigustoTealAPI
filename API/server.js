@@ -11,6 +11,11 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.static('public'));
 
+app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`)
+});
+
+// requête tous les produits e-liquides
 app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     const magasinId = req.params.magasinId;
     const limit = 10000; // en attendant pour peut etre chargement infini
@@ -59,14 +64,14 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     }
 });
 
-// selection magasin
-app.listen(port, () => {
-    console.log(`App listening at http://localhost:${port}`)
-});
+// requête tous les produits concentrés
 
 // home magasin
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'magasin.html'))
+});
+app.get('/cigusto-teal-qrcode', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'qrcode.html'))
 });
 app.get('/magasin-andelnans', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'home.html'))

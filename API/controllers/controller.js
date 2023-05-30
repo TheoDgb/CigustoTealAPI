@@ -1,7 +1,3 @@
-exports.magasin = function(req, res) {
-    res.render('magasin');
-}
-
 exports.magasin_andelnans = function(req, res) {
     res.render('home');
 }
