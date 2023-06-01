@@ -14,11 +14,21 @@ app.use(express.static('public'));
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
 });
+// requête tous les produits
+app.get('/gestion-produits/all-stores', (req, res) => {
+    produits.getAllProductsStores((error, results) => {
+        if (error) {
+            res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+        } else {
+            res.json(results);
+        }
+    });
+});
 
-// requête tous les produits e-liquides
+// requête tous les produits e-liquides pour une id magasin donnée
 app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     const magasinId = req.params.magasinId;
-    const limit = 10000; // en attendant pour peut etre chargement infini
+    const limit = 10000;
     const offset = 0;
 
     switch (magasinId) {
@@ -69,6 +79,9 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
 // home magasin
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'magasin.html'))
+});
+app.get('/gestion-produits', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'gestion-produits.html'))
 });
 app.get('/cigusto-teal-qrcode', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'qrcode.html'))
