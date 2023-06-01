@@ -647,8 +647,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandise_boisson_tel" onchange="handleCheckboxChangeTel()" value="6">
-                                                <label class="form-check-label" for="saveur_friandise_boisson_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson_tel" onchange="handleCheckboxChangeTel()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson_tel">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -994,6 +994,7 @@
                         <div class="col-6"></div>
                     </div>
                 </div>
+                <a href="#" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 50px;">Haut de page</a>
             </div>
             <div id="hori">
                 <!--ECRAN  TABLETTE-->
@@ -1047,8 +1048,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandise_boisson_tablette" onchange="handleCheckboxChangeTablette()" value="6">
-                                                <label class="form-check-label" for="saveur_friandise_boisson_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson_tablette" onchange="handleCheckboxChangeTablette()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson_tablette">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -1394,6 +1395,7 @@
                         <div class="col-4"></div>
                     </div>
                 </div>
+                <a href="#" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 32px;">Haut de page</a>
             </div>
         </div>
     </div>
@@ -1444,8 +1446,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandise_boisson" onchange="handleCheckboxChange()" value="6">
-                                                <label class="form-check-label" for="saveur_friandise_boisson">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson" onchange="handleCheckboxChange()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -2350,7 +2352,7 @@
                     backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
             }
             cardDiv.innerHTML = `
-            <div class="card" style="height: 450px; margin-bottom: 25px; background: ${backgroundGradientTablette}; transition: transform .5s;"
+            <div class="card" style="height: 480px; margin-bottom: 25px; background: ${backgroundGradientTablette}; transition: transform .5s;"
             onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTablette}';"
             onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTablette}';">
                 <img class="card-img-top" style="max-height: 250px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
@@ -3624,459 +3626,750 @@
     const urlParams = new URLSearchParams(window.location.search);
 
     // classic
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'classic') {
-        // document.querySelector('#saveur_classic_tablette').checked = true;
-        // document.querySelector('#saveur_classic_tel').checked = true;
-        // document.querySelector('#saveur_classic').checked = true;
-        // const dropdown_tel = document.querySelector('#filtreSaveursSectionTel');
-        // const dropdown_tablette = document.querySelector('#filtreSaveursSectionTablette');
-        // const dropdown = document.querySelector('#filtreSaveursSection');
-        // dropdown_tel.classList.add('show');
-        // dropdown_tablette.classList.add('show');
-        // dropdown.classList.add('show');
-        ['#saveur_classic_tel', '#saveur_classic_tablette', '#saveur_classic'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
-        ['#filtreSaveursSectionTablette', '#filtreSaveursSectionTel', '#filtreSaveursSection'].forEach(selector => {
+    const saveur_classicCheckboxes = document.querySelectorAll('#saveur_classic, #saveur_classic_tel, #saveur_classic_tablette');
+    saveur_classicCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'classic';
+        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_classic', '#saveur_classic_tel', '#saveur_classic_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // mentholé
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'menthole') {
-        ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const saveur_mentholeCheckboxes = document.querySelectorAll('#saveur_menthole, #saveur_menthole_tel, #saveur_menthole_tablette');
+    saveur_mentholeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'menthole';
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // fruité
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruite') {
-        ['#saveur_fruite_tel', '#saveur_fruite_tablette', '#saveur_fruite'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const saveur_fruiteCheckboxes = document.querySelectorAll('#saveur_fruite, #saveur_fruite_tel, #saveur_fruite_tablette');
+    saveur_fruiteCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'fruite';
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_fruite', '#saveur_fruite_tel', '#saveur_fruite_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // fruité frais
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais') {
-        ['#saveur_fruite_frais_tel', '#saveur_fruite_frais_tablette', '#saveur_fruite_frais'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const saveur_fruitefraisCheckboxes = document.querySelectorAll('#saveur_fruitefrais, #saveur_fruitefrais_tel, #saveur_fruitefrais_tablette');
+    saveur_fruitefraisCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais';
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_fruitefrais', '#saveur_fruitefrais_tel', '#saveur_fruitefrais_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // gourmand
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand') {
-        ['#saveur_gourmand_tel', '#saveur_gourmand_tablette', '#saveur_gourmand'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const saveur_gourmandCheckboxes = document.querySelectorAll('#saveur_gourmand, #saveur_gourmand_tel, #saveur_gourmand_tablette');
+    saveur_gourmandCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand';
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_gourmand', '#saveur_gourmand_tel', '#saveur_gourmand_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // friandise / boisson
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson') {
-        ['#saveur_friandise_tel', '#saveur_friandise_tablette', '#saveur_friandise'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const saveur_friandiseboissonCheckboxes = document.querySelectorAll('#saveur_friandiseboisson, #saveur_friandiseboisson_tel, #saveur_friandiseboisson_tablette');
+    saveur_friandiseboissonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson';
         ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_friandiseboisson', '#saveur_friandiseboisson_tel', '#saveur_friandiseboisson_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
 
     // ****************************** E-Liquides contenance activer checkbox / dropdown ******************************
     // 10 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '10mL') {
-        ['#contenance_10_tel', '#contenance_10_tablette', '#contenance_10'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const contenance_10Checkboxes = document.querySelectorAll('#contenance_10, #contenance_10_tel, #contenance_10_tablette');
+    contenance_10Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '10mL';
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_10', '#contenance_10_tel', '#contenance_10_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // 50 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '50mL') {
-        ['#contenance_50_tel', '#contenance_50_tablette', '#contenance_50'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const contenance_50Checkboxes = document.querySelectorAll('#contenance_50, #contenance_50_tel, #contenance_50_tablette');
+    contenance_50Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '50mL';
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_50', '#contenance_50_tel', '#contenance_50_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // 80 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '80mL') {
-        ['#contenance_80_tel', '#contenance_80_tablette', '#contenance_80'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const contenance_80Checkboxes = document.querySelectorAll('#contenance_80, #contenance_80_tel, #contenance_80_tablette');
+    contenance_80Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '80mL';
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_80', '#contenance_80_tel', '#contenance_80_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // 100 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '100mL') {
-        ['#contenance_100_tel', '#contenance_100_tablette', '#contenance_100'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const contenance_100Checkboxes = document.querySelectorAll('#contenance_100, #contenance_100_tel, #contenance_100_tablette');
+    contenance_100Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '100mL';
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_100', '#contenance_100_tel', '#contenance_100_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // 200 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '200mL') {
-        ['#contenance_200_tel', '#contenance_200_tablette', '#contenance_200'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const contenance_200Checkboxes = document.querySelectorAll('#contenance_200, #contenance_200_tel, #contenance_200_tablette');
+    contenance_200Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '200mL';
         ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_200', '#contenance_200_tel', '#contenance_200_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
 
     // ****************************** E-Liquides marques activer checkbox / dropdown ******************************
     // A&L
-    if (urlParams.has('marque') && urlParams.get('marque') === 'AandL') {
-        ['#marque_aandl_tel', '#marque_aandl_tablette', '#marque_aandl'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_aandlCheckboxes = document.querySelectorAll('#marque_aandl, #marque_aandl_tel, #marque_aandl_tablette');
+    marque_aandlCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'AandL';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_aandl', '#marque_aandl_tel', '#marque_aandl_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Alfaliquid
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Alfaliquid') {
-        ['#marque_alfaliquid_tel', '#marque_alfaliquid_tablette', '#marque_alfaliquid'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_alfaliquidCheckboxes = document.querySelectorAll('#marque_alfaliquid, #marque_alfaliquid_tel, #marque_alfaliquid_tablette');
+    marque_alfaliquidCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Alfaliquid';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_alfaliquid', '#marque_alfaliquid_tel', '#marque_alfaliquid_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Bakery Shake
-    if (urlParams.has('marque') && urlParams.get('marque') === 'BakeryShake') {
-        ['#marque_bakeryshake_tel', '#marque_bakeryshake_tablette', '#marque_bakeryshake'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_bakeryshakeCheckboxes = document.querySelectorAll('#marque_bakeryshake, #marque_bakeryshake_tel, #marque_bakeryshake_tablette');
+    marque_bakeryshakeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'BakeryShake';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_bakeryshake', '#marque_bakeryshake_tel', '#marque_bakeryshake_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Candy Shake
-    if (urlParams.has('marque') && urlParams.get('marque') === 'CandyShake') {
-        ['#marque_candyshake_tel', '#marque_candyshake_tablette', '#marque_candyshake'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_candyshakeCheckboxes = document.querySelectorAll('#marque_candyshake, #marque_candyshake_tel, #marque_candyshake_tablette');
+    marque_candyshakeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'CandyShake';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_candyshake', '#marque_candyshake_tel', '#marque_candyshake_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Cesar
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Cesar') {
-        ['#marque_cesar_tel', '#marque_cesar_tablette', '#marque_cesar'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_cesarCheckboxes = document.querySelectorAll('#marque_cesar, #marque_cesar_tel, #marque_cesar_tablette');
+    marque_cesarCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Cesar';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_cesar', '#marque_cesar_tel', '#marque_cesar_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Cigusto
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Cigusto') {
-        ['#marque_cigusto_tel', '#marque_cigusto_tablette', '#marque_cigusto'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_cigustoCheckboxes = document.querySelectorAll('#marque_cigusto, #marque_cigusto_tel, #marque_cigusto_tablette');
+    marque_cigustoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Cigusto';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_cigusto', '#marque_cigusto_tel', '#marque_cigusto_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // CirKus
-    if (urlParams.has('marque') && urlParams.get('marque') === 'CirKus') {
-        ['#marque_cirkus_tel', '#marque_cirkus_tablette', '#marque_cirkus'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_cirkusCheckboxes = document.querySelectorAll('#marque_cirkus, #marque_cirkus_tel, #marque_cirkus_tablette');
+    marque_cirkusCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'CirKus';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_cirkus', '#marque_cirkus_tel', '#marque_cirkus_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Curieux
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Curieux') {
-        ['#marque_curieux_tel', '#marque_curieux_tablette', '#marque_curieux'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_curieuxCheckboxes = document.querySelectorAll('#marque_curieux, #marque_curieux_tel, #marque_curieux_tablette');
+    marque_curieuxCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Curieux';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_curieux', '#marque_curieux_tel', '#marque_curieux_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Don Cristo
-    if (urlParams.has('marque') && urlParams.get('marque') === 'DonCristo') {
-        ['#marque_doncristo_tel', '#marque_doncristo_tablette', '#marque_doncristo'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_doncristoCheckboxes = document.querySelectorAll('#marque_doncristo, #marque_doncristo_tel, #marque_doncristo_tablette');
+    marque_doncristoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'DonCristo';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_doncristo', '#marque_doncristo_tel', '#marque_doncristo_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Eliquid France
-    if (urlParams.has('marque') && urlParams.get('marque') === 'EliquidFrance') {
-        ['#marque_eliquidfrance_tel', '#marque_eliquidfrance_tablette', '#marque_eliquidfrance'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_eliquidfranceCheckboxes = document.querySelectorAll('#marque_eliquidfrance, #marque_eliquidfrance_tel, #marque_eliquidfrance_tablette');
+    marque_eliquidfranceCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'EliquidFrance';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_eliquidfrance', '#marque_eliquidfrance_tel', '#marque_eliquidfrance_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Enfer
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Enfer') {
-        ['#marque_enfer_tel', '#marque_enfer_tablette', '#marque_enfer'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_enferCheckboxes = document.querySelectorAll('#marque_enfer, #marque_enfer_tel, #marque_enfer_tablette');
+    marque_enferCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Enfer';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_enfer', '#marque_enfer_tel', '#marque_enfer_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // E.Tasty
-    if (urlParams.has('marque') && urlParams.get('marque') === 'ETasty') {
-        ['#marque_etasty_tel', '#marque_etasty_tablette', '#marque_etasty'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_etastyCheckboxes = document.querySelectorAll('#marque_etasty, #marque_etasty_tel, #marque_etasty_tablette');
+    marque_etastyCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'ETasty';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_etasty', '#marque_etasty_tel', '#marque_etasty_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Fresh Vape Co
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FreshVapeCo') {
-        ['#marque_freshvapeco_tel', '#marque_freshvapeco_tablette', '#marque_freshvapeco'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_freshvapecoCheckboxes = document.querySelectorAll('#marque_freshvapeco, #marque_freshvapeco_tel, #marque_freshvapeco_tablette');
+    marque_freshvapecoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FreshVapeCo';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_freshvapeco', '#marque_freshvapeco_tel', '#marque_freshvapeco_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Fruiteo
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo') {
-        ['#marque_fruiteo_tel', '#marque_fruiteo_tablette', '#marque_fruiteo'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_fruiteoCheckboxes = document.querySelectorAll('#marque_fruiteo, #marque_fruiteo_tel, #marque_fruiteo_tablette');
+    marque_fruiteoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruiteo', '#marque_fruiteo_tel', '#marque_fruiteo_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Fruity Cool
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FruityCool') {
-        ['#marque_fruitycool_tel', '#marque_fruitycool_tablette', '#marque_fruitycool'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_fruitycoolCheckboxes = document.querySelectorAll('#marque_fruitycool, #marque_fruitycool_tel, #marque_fruitycool_tablette');
+    marque_fruitycoolCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FruityCool';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruitycool', '#marque_fruitycool_tel', '#marque_fruitycool_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Fruity Fuel
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FruityFuel') {
-        ['#marque_fruityfuel_tel', '#marque_fruityfuel_tablette', '#marque_fruityfuel'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_fruityfuelCheckboxes = document.querySelectorAll('#marque_fruityfuel, #marque_fruityfuel_tel, #marque_fruityfuel_tablette');
+    marque_fruityfuelCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FruityFuel';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruityfuel', '#marque_fruityfuel_tel', '#marque_fruityfuel_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Fruizee
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Fruizee') {
-        ['#marque_fruizee_tel', '#marque_fruizee_tablette', '#marque_fruizee'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_fruizeeCheckboxes = document.querySelectorAll('#marque_fruizee, #marque_fruizee_tel, #marque_fruizee_tablette');
+    marque_fruizeeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Fruizee';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruizee', '#marque_fruizee_tel', '#marque_fruizee_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Full Moon
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FullMoon') {
-        ['#marque_fullmoon_tel', '#marque_fullmoon_tablette', '#marque_fullmoon'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_fullmoonCheckboxes = document.querySelectorAll('#marque_fullmoon, #marque_fullmoon_tel, #marque_fullmoon_tablette');
+    marque_fullmoonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FullMoon';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fullmoon', '#marque_fullmoon_tel', '#marque_fullmoon_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Furiosa
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Furiosa') {
-        ['#marque_furiosa_tel', '#marque_furiosa_tablette', '#marque_furiosa'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_furiosaCheckboxes = document.querySelectorAll('#marque_furiosa, #marque_furiosa_tel, #marque_furiosa_tablette');
+    marque_furiosaCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Furiosa';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_furiosa', '#marque_furiosa_tel', '#marque_furiosa_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Greeneo
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Greeneo') {
-        ['#marque_greeneo_tel', '#marque_greeneo_tablette', '#marque_greeneo'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_greeneoCheckboxes = document.querySelectorAll('#marque_greeneo, #marque_greeneo_tel, #marque_greeneo_tablette');
+    marque_greeneoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Greeneo';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_greeneo', '#marque_greeneo_tel', '#marque_greeneo_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Juicy Shake
-    if (urlParams.has('marque') && urlParams.get('marque') === 'JuicyShake') {
-        ['#marque_juicyshake_tel', '#marque_juicyshake_tablette', '#marque_juicyshake'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_juicyshakeCheckboxes = document.querySelectorAll('#marque_juicyshake, #marque_juicyshake_tel, #marque_juicyshake_tablette');
+    marque_juicyshakeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'JuicyShake';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_juicyshake', '#marque_juicyshake_tel', '#marque_juicyshake_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Kung Fruits
-    if (urlParams.has('marque') && urlParams.get('marque') === 'KungFruits') {
-        ['#marque_kungfruits_tel', '#marque_kungfruits_tablette', '#marque_kungfruits'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_kungfruitsCheckboxes = document.querySelectorAll('#marque_kungfruits, #marque_kungfruits_tel, #marque_kungfruits_tablette');
+    marque_kungfruitsCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'KungFruits';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_kungfruits', '#marque_kungfruits_tel', '#marque_kungfruits_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Le Coq Qui Vape
-    if (urlParams.has('marque') && urlParams.get('marque') === 'LeCoqQuiVape') {
-        ['#marque_lecoqquivape_tel', '#marque_lecoqquivape_tablette', '#marque_lecoqquivape'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_lecoqquivapeCheckboxes = document.querySelectorAll('#marque_lecoqquivape, #marque_lecoqquivape_tel, #marque_lecoqquivape_tablette');
+    marque_lecoqquivapeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'LeCoqQuiVape';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_lecoqquivape', '#marque_lecoqquivape_tel', '#marque_lecoqquivape_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Le French Liquide
-    if (urlParams.has('marque') && urlParams.get('marque') === 'LeFrenchLiquide') {
-        ['#marque_lefrenchliquide_tel', '#marque_lefrenchliquide_tablette', '#marque_lefrenchliquide'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_lefrenchliquideCheckboxes = document.querySelectorAll('#marque_lefrenchliquide, #marque_lefrenchliquide_tel, #marque_lefrenchliquide_tablette');
+    marque_lefrenchliquideCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'LeFrenchLiquide';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_lefrenchliquide', '#marque_lefrenchliquide_tel', '#marque_lefrenchliquide_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Le Vapoteur Breton
-    if (urlParams.has('marque') && urlParams.get('marque') === 'LeVapoteurBreton') {
-        ['#marque_levapoteurbreton_tel', '#marque_levapoteurbreton_tablette', '#marque_levapoteurbreton'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_levapoteurbretonCheckboxes = document.querySelectorAll('#marque_levapoteurbreton, #marque_levapoteurbreton_tel, #marque_levapoteurbreton_tablette');
+    marque_levapoteurbretonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'LeVapoteurBreton';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_levapoteurbreton', '#marque_levapoteurbreton_tel', '#marque_levapoteurbreton_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Les Devils
-    if (urlParams.has('marque') && urlParams.get('marque') === 'LesDevils') {
-        ['#marque_lesdevils_tel', '#marque_lesdevils_tablette', '#marque_lesdevils'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_lesdevilsCheckboxes = document.querySelectorAll('#marque_lesdevils, #marque_lesdevils_tel, #marque_lesdevils_tablette');
+    marque_lesdevilsCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'LesDevils';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_lesdevils', '#marque_lesdevils_tel', '#marque_lesdevils_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Liquideo
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Liquideo') {
-        ['#marque_liquideo_tel', '#marque_liquideo_tablette', '#marque_liquideo'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_liquideoCheckboxes = document.querySelectorAll('#marque_liquideo, #marque_liquideo_tel, #marque_liquideo_tablette');
+    marque_liquideoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Liquideo';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_liquideo', '#marque_liquideo_tel', '#marque_liquideo_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Mono
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Mono') {
-        ['#marque_mono_tel', '#marque_mono_tablette', '#marque_mono'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_monoCheckboxes = document.querySelectorAll('#marque_mono, #marque_mono_tel, #marque_mono_tablette');
+    marque_monoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Mono';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_mono', '#marque_mono_tel', '#marque_mono_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Monster
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Monster') {
-        ['#marque_monster_tel', '#marque_monster_tablette', '#marque_monster'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_monsterCheckboxes = document.querySelectorAll('#marque_monster, #marque_monster_tel, #marque_monster_tablette');
+    marque_monsterCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Monster';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_monster', '#marque_monster_tel', '#marque_monster_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Petit Nuage
-    if (urlParams.has('marque') && urlParams.get('marque') === 'PetitNuage') {
-        ['#marque_petitnuage_tel', '#marque_petitnuage_tablette', '#marque_petitnuage'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_petitnuageCheckboxes = document.querySelectorAll('#marque_petitnuage, #marque_petitnuage_tel, #marque_petitnuage_tablette');
+    marque_petitnuageCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'PetitNuage';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_petitnuage', '#marque_petitnuage_tel', '#marque_petitnuage_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Salt E-vapor
-    if (urlParams.has('marque') && urlParams.get('marque') === 'SaltEvapor') {
-        ['#marque_saltevapor_tel', '#marque_saltevapor_tablette', '#marque_saltevapor'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_saltevaporCheckboxes = document.querySelectorAll('#marque_saltevapor, #marque_saltevapor_tel, #marque_saltevapor_tablette');
+    marque_saltevaporCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'SaltEvapor';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_saltevapor', '#marque_saltevapor_tel', '#marque_saltevapor_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Snap Dragon
-    if (urlParams.has('marque') && urlParams.get('marque') === 'SnapDragon') {
-        ['#marque_snapdragon_tel', '#marque_snapdragon_tablette', '#marque_snapdragon'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_snapdragonCheckboxes = document.querySelectorAll('#marque_snapdragon, #marque_snapdragon_tel, #marque_snapdragon_tablette');
+    marque_snapdragonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'SnapDragon';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_snapdragon', '#marque_snapdragon_tel', '#marque_snapdragon_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Swoke
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Swoke') {
-        ['#marque_swoke_tel', '#marque_swoke_tablette', '#marque_swoke'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_swokeCheckboxes = document.querySelectorAll('#marque_swoke, #marque_swoke_tel, #marque_swoke_tablette');
+    marque_swokeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Swoke';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_swoke', '#marque_swoke_tel', '#marque_swoke_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // The Medusa Juice
-    if (urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice') {
-        ['#marque_themedusajuice_tel', '#marque_themedusajuice_tablette', '#marque_themedusajuice'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_themedusajuiceCheckboxes = document.querySelectorAll('#marque_themedusajuice, #marque_themedusajuice_tel, #marque_themedusajuice_tablette');
+    marque_themedusajuiceCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_themedusajuice', '#marque_themedusajuice_tel', '#marque_themedusajuice_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // T-Juice
-    if (urlParams.has('marque') && urlParams.get('marque') === 'TJuice') {
-        ['#marque_tjuice_tel', '#marque_tjuice_tablette', '#marque_tjuice'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_tjuiceCheckboxes = document.querySelectorAll('#marque_tjuice, #marque_tjuice_tel, #marque_tjuice_tablette');
+    marque_tjuiceCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'TJuice';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_tjuice', '#marque_tjuice_tel', '#marque_tjuice_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Vampire Vape
-    if (urlParams.has('marque') && urlParams.get('marque') === 'VampireVape') {
-        ['#marque_vampirevape_tel', '#marque_vampirevape_tablette', '#marque_vampirevape'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_vampirevapeCheckboxes = document.querySelectorAll('#marque_vampirevape, #marque_vampirevape_tel, #marque_vampirevape_tablette');
+    marque_vampirevapeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'VampireVape';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_vampirevape', '#marque_vampirevape_tel', '#marque_vampirevape_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // Vape Distillery
-    if (urlParams.has('marque') && urlParams.get('marque') === 'VapeDistillery') {
-        ['#marque_vapedistillery_tel', '#marque_vapedistillery_tablette', '#marque_vapedistillery'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_vapedistilleryCheckboxes = document.querySelectorAll('#marque_vapedistillery, #marque_vapedistillery_tel, #marque_vapedistillery_tablette');
+    marque_vapedistilleryCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'VapeDistillery';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_vapedistillery', '#marque_vapedistillery_tel', '#marque_vapedistillery_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
     // VDLV
-    if (urlParams.has('marque') && urlParams.get('marque') === 'VDLV') {
-        ['#marque_vdlv_tel', '#marque_vdlv_tablette', '#marque_vdlv'].forEach(selector => {
-            document.querySelector(selector).checked = true;
-        });
+    const marque_vdlvCheckboxes = document.querySelectorAll('#marque_vdlv, #marque_vdlv_tel, #marque_vdlv_tablette');
+    marque_vdlvCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'VDLV';
         ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
             document.querySelector(selector).classList.add('show');
         });
-    }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_vdlv', '#marque_vdlv_tel', '#marque_vdlv_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
+        });
+    });
 
     // ****************************** redirection Concentrés selection saveur ******************************
     // redirection page concentrés coche saveur classic
