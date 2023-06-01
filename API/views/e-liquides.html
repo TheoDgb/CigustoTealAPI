@@ -634,8 +634,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_frais_tel" onchange="handleCheckboxChangeTel()" value="4">
-                                                <label class="form-check-label" for="saveur_fruite_frais_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais_tel" onchange="handleCheckboxChangeTel()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais_tel">
                                                     Fruité Frais
                                                 </label>
                                             </div>
@@ -1035,8 +1035,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_frais_tablette" onchange="handleCheckboxChangeTablette()" value="4">
-                                                <label class="form-check-label" for="saveur_fruite_frais_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais_tablette" onchange="handleCheckboxChangeTablette()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais_tablette">
                                                     Fruité Frais
                                                 </label>
                                             </div>
@@ -1433,8 +1433,8 @@
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_frais" onchange="handleCheckboxChange()" value="4">
-                                                <label class="form-check-label" for="saveur_fruite_frais">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais" onchange="handleCheckboxChange()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais">
                                                     Fruité Frais
                                                 </label>
                                             </div>
@@ -3737,8 +3737,8 @@
     // 10 mL
     const contenance_10Checkboxes = document.querySelectorAll('#contenance_10, #contenance_10_tel, #contenance_10_tablette');
     contenance_10Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '10mL';
         if (checkbox.checked) {
-            checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '10mL';
             ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
                 document.querySelector(selector).classList.add('show');
             });
@@ -4876,8 +4876,8 @@
         console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
     }
     document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tel-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTJuiceEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTJuiceEliquidesMagasinCigustoTeal-navbar').href = marqueTJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-navbar').href = marqueTJuiceConcentresMagasinCigustoTeal;
 
     // redirection page concentrés coche marque Vampire Vape
     let marqueVampireVapeConcentresMagasinCigustoTeal;
