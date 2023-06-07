@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/finaltest.csv', sep=';', decimal=',')
+df = pd.read_csv('./bdd/finaltestbefore3.csv', sep=';', decimal=',')
 
 # supprime les colonnes inutiles
-df = df.drop(['ID', 'ID Fiche produit', 'EAN', 'PV ttc Preco', 'Marge Ht préco', 'tx marge preco', 'PA ht centrale', 'PV TTC magasin', 'Marge ht magasin', 'tx de marge magasin'], axis=1)
+df = df.drop(['ID', 'Code EAN', 'type produit', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
 
 # remplace NaN par 0
 df['Qté stock'] = df['Qté stock'].fillna(0)
@@ -15,18 +15,18 @@ df['Qté stock'] = df['Qté stock'].astype(int)
 # renommer les colonnes pour les rendre utilisables dans la bdd
 df = df.rename(columns={
     'Sku': 'sku',
-    'Statut appro centrale': 'statut_produit_id',
-    'libellé fiche': 'libelle_fiche',
+    'libellé Fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
+    'statut produit centrale': 'statut_produit_id',
     'catégorie': 'categorie_id',
-    'gamme': 'gamme',
     'Marque': 'marque_id',
+    'gamme': 'gamme',
     'description': 'description',
-    'type saveur': 'type_saveur_id',
-    'dosage Pg/Vg': 'dosage_pg_vg_id',
+    'dosage Pv/Vg': 'dosage_pg_vg_id',
     'dosage nicotine': 'dosage_nicotine_mg_id',
-    'volume flacon': 'contenance_ml_id',
-    'sel de nicotine': 'sel_de_nicotine',
+    'volume du flacon': 'contenance_ml_id',
+    'type de saveur': 'type_saveur_id',
+    'Sel de nicotine': 'sel_de_nicotine',
     'Magasin': 'magasin_id',
     'Qté stock': 'qte_stock'
 })
@@ -36,6 +36,8 @@ df = df[df['categorie_id'].isin(["Liquides 10 ml", "Liquides Grand Format", "Con
 
 # replace NaN par une chaîne vide pour magasin_id
 df['magasin_id'] = df['magasin_id'].fillna('')
+# 814 fait nimp il est pas considéré comme chaine de carac... ???
+df['marque_id'] = df['marque_id'].replace('814', 'delete814')
 
 # remplace "French Liquide" par "Le French Liquide" pour marque_id
 df['marque_id'] = df['marque_id'].replace({'French Liquide': 'Le French Liquide'})
@@ -288,4 +290,4 @@ connection.close()
 
 
 # save
-df.to_csv('./bdd/finaltest2.csv', sep=';', index=False)
+df.to_csv('./bdd/finaltestafter3.csv', sep=';', index=False) #Concentre CHARLEMAGNE - 814 - 10 ml

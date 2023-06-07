@@ -15,16 +15,16 @@ CREATE TABLE magasins (
     libelle_magasin VARCHAR(75) NOT NULL
 );
 CREATE TABLE categories (
-  id INT PRIMARY KEY NOT NULL,
-  libelle_categorie VARCHAR(21) NOT NULL
+    id INT PRIMARY KEY NOT NULL,
+    libelle_categorie VARCHAR(21) NOT NULL
 );
 CREATE TABLE marques (
-  id INT PRIMARY KEY NOT NULL,
-  libelle_marque VARCHAR(50) NOT NULL
+    id INT PRIMARY KEY NOT NULL,
+    libelle_marque VARCHAR(50) NOT NULL
 );
 CREATE TABLE type_saveurs (
-  id INT PRIMARY KEY NOT NULL,
-  libelle_type_saveur VARCHAR(30) NOT NULL
+    id INT PRIMARY KEY NOT NULL,
+    libelle_type_saveur VARCHAR(30) NOT NULL
 );
 CREATE TABLE dosages_pg_vg (
     id INT PRIMARY KEY NOT NULL,

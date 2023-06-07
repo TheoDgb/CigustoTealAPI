@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/images/favicon_cigusto.png">
-    <title>Cigusto - Teal QR Code</title>
+    <title>Cigusto - Teal Gestion produits</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -106,6 +106,14 @@
                 // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
                 console.log('ID de la contenance sélectionnée :', selectedValue);
                 break;
+            case 'dosage_nicotine_mg_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID du dosage nicotine sélectionné :', selectedValue);
+                break;
+            case 'statut_produit_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID du statut produit sélectionné :', selectedValue);
+                break;
         }
     }
 
@@ -166,7 +174,7 @@
                     product.dosage_nicotine_mg_id,
                     product.sel_de_nicotine,
                     product.qte_stock,
-                    product.statut_produit_id,
+                    product.statut_produit_id
                 ];
 
                 let hasNullValue = false;
@@ -261,6 +269,22 @@
                     { value: 5, label: '100 ml' },
                     { value: 6, label: '200 ml' }
                 ];
+                const dosageNicotineOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: '0 mg' },
+                    { value: 2, label: '3 mg' },
+                    { value: 3, label: '6 mg' },
+                    { value: 4, label: '9-10 mg' },
+                    { value: 5, label: '12 mg' },
+                    { value: 6, label: '18 mg' },
+                    { value: 7, label: '18-20 mg' }
+                ];
+                const statutProduitOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: 'Actif' },
+                    { value: 2, label: 'Inactif' },
+                    { value: 3, label: 'Fin d\'approvisionnement' }
+                ];
 
                 cells.forEach((cellData, index) => {
                     let cell;
@@ -276,6 +300,10 @@
                         cell = dropdownCells(cellData, dosagepgvgOptions, 'dosage_pg_vg_id', handleChange);
                     } else if (index === 9) { // Constenance ml ID
                         cell = dropdownCells(cellData, contenanceOptions, 'contentenance_ml_id', handleChange);
+                    } else if (index === 10) { // Dosage nicotine mg ID
+                        cell = dropdownCells(cellData, dosageNicotineOptions, 'dosage_nicotine_mg_id', handleChange);
+                    } else if (index === 13) { // Statut produit ID
+                        cell = dropdownCells(cellData, statutProduitOptions, 'statut_produit_id', handleChange);
                     } else {
                         cell = document.createElement('td');
                         cell.textContent = cellData;
