@@ -88,9 +88,23 @@
                 break;
             case 'categorie_id':
                 // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de catégorie sélectionné :', selectedValue);
+                console.log('ID de catégorie sélectionnée :', selectedValue);
                 break;
-            default:
+            case 'marque_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID de la marque sélectionnée :', selectedValue);
+                break;
+            case 'type_saveur_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID de la saveur sélectionnée :', selectedValue);
+                break;
+            case 'dosage_pg_vg_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID du dosage PV/VG sélectionné :', selectedValue);
+                break;
+            case 'contentenance_ml_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID de la contenance sélectionnée :', selectedValue);
                 break;
         }
     }
@@ -107,7 +121,6 @@
             const headerRow = document.createElement('tr');
 
             const headers = [
-                'ID',
                 'Magasin ID',
                 'SKU',
                 'Libellé produit',
@@ -116,7 +129,7 @@
                 'Marque ID',
                 'Type saveur ID',
                 'Description',
-                'Dosage PV VG ID',
+                'Dosage PG/VG ID',
                 'Contenance ml ID',
                 'Dosage nicotine mg ID',
                 'Sel de nicotine',
@@ -140,7 +153,6 @@
                 const row = document.createElement('tr');
 
                 const cells = [
-                    product.id,
                     product.magasin_id,
                     product.sku,
                     product.libelle_produit,
@@ -160,33 +172,120 @@
                 let hasNullValue = false;
 
                 const magasinOptions = [
+                    { value: null, label: '' },
                     { value: 1, label: 'Andelnans' },
                     { value: 2, label: 'Besançon' },
                     { value: 3, label: 'Bessoncourt' },
                     { value: 4, label: 'Colmar' }
                 ];
                 const categorieOptions = [
+                    { value: null, label: '' },
                     { value: 1, label: 'Liquides 10 ml' },
                     { value: 2, label: 'Liquides Grand Format' },
                     { value: 3, label: 'Concentrés' }
                 ];
+                const marqueOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: 'A&L' },
+                    { value: 2, label: 'Alfaliquid' },
+                    { value: 3, label: 'Bakery Shake' },
+                    { value: 4, label: 'Candy Shake' },
+                    { value: 5, label: 'Cesar' },
+                    { value: 6, label: 'Cigusto' },
+                    { value: 7, label: 'CirKus' },
+                    { value: 8, label: 'Curieux' },
+                    { value: 9, label: 'Don Cristo' },
+                    { value: 10, label: 'Eliquid France' },
+                    { value: 11, label: 'Enfer' },
+                    { value: 12, label: 'E.Tasty' },
+                    { value: 13, label: 'Fresh Vape Co' },
+                    { value: 14, label: 'Fruiteo' },
+                    { value: 15, label: 'Fruity Cool' },
+                    { value: 16, label: 'Fruity Fuel' },
+                    { value: 17, label: 'Fruizee' },
+                    { value: 18, label: 'Full Moon' },
+                    { value: 19, label: 'Furiosa' },
+                    { value: 20, label: 'Greeneo' },
+                    { value: 21, label: 'Juicy Shake' },
+                    { value: 22, label: 'Kung Fruits' },
+                    { value: 23, label: 'Le Coq Qui Vape' },
+                    { value: 24, label: 'Le French Liquide' },
+                    { value: 25, label: 'Le Vapoteur Breton' },
+                    { value: 26, label: 'Les Devils' },
+                    { value: 27, label: 'Liquideo' },
+                    { value: 28, label: 'Mono' },
+                    { value: 29, label: 'Monster' },
+                    { value: 30, label: 'Petit Nuage' },
+                    { value: 31, label: 'Salt E-vapor' },
+                    { value: 32, label: 'Snap Dragon' },
+                    { value: 33, label: 'Swoke' },
+                    { value: 34, label: 'The Medusa Juice' },
+                    { value: 35, label: 'T-Juice' },
+                    { value: 36, label: 'Vampire Vape' },
+                    { value: 37, label: 'Vape Distillery' },
+                    { value: 38, label: 'VDLV' },
+                    { value: 39, label: 'Amazone' },
+                    { value: 40, label: 'Aromazon' },
+                    { value: 41, label: 'Doctor Diy' },
+                    { value: 42, label: 'Fighter Fuel' },
+                    { value: 43, label: 'Kyandi Shop' },
+                    { value: 44, label: 'Shootiz' },
+                    { value: 45, label: 'Vape47' }
+                ];
+                const saveurOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: 'Classic' },
+                    { value: 2, label: 'Mentholé' },
+                    { value: 3, label: 'Fruité' },
+                    { value: 4, label: 'Fruité Frais' },
+                    { value: 5, label: 'Gourmand' },
+                    { value: 6, label: 'Friandise / Boisson' }
+                ];
+                const dosagepgvgOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: '10/90' },
+                    { value: 2, label: '20/80' },
+                    { value: 3, label: '30/70' },
+                    { value: 4, label: '40/60' },
+                    { value: 5, label: '50/50' },
+                    { value: 6, label: '60/40' },
+                    { value: 7, label: '70/30' },
+                    { value: 8, label: '76/24' }
+                ];
+                const contenanceOptions = [
+                    { value: null, label: '' },
+                    { value: 1, label: '10 ml' },
+                    { value: 2, label: '30 ml' },
+                    { value: 3, label: '50 ml' },
+                    { value: 4, label: '80 ml' },
+                    { value: 5, label: '100 ml' },
+                    { value: 6, label: '200 ml' }
+                ];
 
                 cells.forEach((cellData, index) => {
                     let cell;
-                    if (index === 1) { // Magasin ID column
+                    if (index === 0) { // Magasin ID
                         cell = dropdownCells(cellData, magasinOptions, 'magasin_id', handleChange);
-                    } else if (index === 5) { // Catégorie ID column
+                    } else if (index === 4) { // Catégorie ID
                         cell = dropdownCells(cellData, categorieOptions, 'categorie_id', handleChange);
+                    } else if (index === 5) { // Marque ID
+                        cell = dropdownCells(cellData, marqueOptions, 'marque_id', handleChange);
+                    } else if (index === 6) { // Type Saveur ID
+                        cell = dropdownCells(cellData, saveurOptions, 'type_saveur_id', handleChange);
+                    } else if (index === 8) { // Dosage PG/VG
+                        cell = dropdownCells(cellData, dosagepgvgOptions, 'dosage_pg_vg_id', handleChange);
+                    } else if (index === 9) { // Constenance ml ID
+                        cell = dropdownCells(cellData, contenanceOptions, 'contentenance_ml_id', handleChange);
                     } else {
                         cell = document.createElement('td');
                         cell.textContent = cellData;
                     }
 
-                    if (cellData === null && index !== 1) {
+                    if (cellData === null && index !== 0) {
                         cell.style.backgroundColor = 'red';
                         hasNullValue = true;
                     }
-                    if (cellData === null && index === 1) {
+                    if (cellData === null && index === 0) {
                         cell.style.backgroundColor = 'gray';
                     }
                     row.appendChild(cell);
