@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/images/favicon_cigusto.png">
+    <title>Cigusto - Teal QR Code</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SIDEBAR -->
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+<body>
+<!--ecran pc-->
+    <div style="background-color: white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);">
+        <br><br>
+        <a style="color: inherit;">
+            <button class="btn-gestion" style="width: 15%;" onclick="goBack()">
+                <i class="bi bi-chevron-double-left"></i> Retour
+            </button>
+        </a>
+        <input type="checkbox" id="show-only-null" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="show-only-null">Produits incomplets</label>
+        <br><br><br>
+    </div>
+    <br>
+    <div id="table-container"></div>
+</body>
+</html>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+
+    // Fonction pour filtrer les produits avec des valeurs null
+    function filterProducts() {
+        const rows = document.querySelectorAll('tbody tr');
+        const showOnlyNull = document.getElementById('show-only-null').checked;
+        // affiche les produits avec une valeur null ou masque
+        rows.forEach(row => {
+            const alertCell = row.querySelector('.alert-cell');
+            row.style.display = showOnlyNull && alertCell ? 'table-row' : 'none';
+        });
+        if (!showOnlyNull) {
+            rows.forEach(row => {
+                row.style.display = 'table-row';
+            });
+        }
+    }
+
+    function dropdownCells(selectedValue, options, column, onChange){
+        const cell = document.createElement('td');
+        const select = document.createElement('select');
+
+        options.forEach(optionValue => {
+            const option = document.createElement('option');
+            option.value = optionValue.value;
+            option.textContent = optionValue.label;
+
+            if (optionValue.value === selectedValue) {
+                option.selected = true;
+            }
+
+            select.appendChild(option);
+        });
+
+        select.addEventListener('change', event => {
+            onChange(event, column);
+        });
+        cell.appendChild(select);
+
+        return cell;
+    }
+
+    function handleChange(event, column) {
+        const selectedValue = event.target.value;
+        switch (column) {
+            case 'magasin_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID de magasin sélectionné :', selectedValue);
+                break;
+            case 'categorie_id':
+                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                console.log('ID de catégorie sélectionné :', selectedValue);
+                break;
+            default:
+                break;
+        }
+    }
+
+    fetch(`/gestion-produits/all-stores`)
+        .then(response => response.json())
+        .then(data => {
+            const tableContainer = document.getElementById('table-container');
+
+            const table = document.createElement('table');
+            table.classList.add('table');
+
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+
+            const headers = [
+                'ID',
+                'Magasin ID',
+                'SKU',
+                'Libellé produit',
+                'Libellé fiche',
+                'Catégorie ID',
+                'Marque ID',
+                'Type saveur ID',
+                'Description',
+                'Dosage PV VG ID',
+                'Contenance ml ID',
+                'Dosage nicotine mg ID',
+                'Sel de nicotine',
+                'Quantité en stock',
+                'Statut produit ID',
+                'Alerte infos'
+            ];
+
+            headers.forEach(headerText => {
+                const header = document.createElement('th');
+                header.textContent = headerText;
+                headerRow.appendChild(header);
+            });
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+
+            data.forEach(product => {
+                const row = document.createElement('tr');
+
+                const cells = [
+                    product.id,
+                    product.magasin_id,
+                    product.sku,
+                    product.libelle_produit,
+                    product.libelle_fiche,
+                    product.categorie_id,
+                    product.marque_id,
+                    product.type_saveur_id,
+                    product.description,
+                    product.dosage_pg_vg_id,
+                    product.contenance_ml_id,
+                    product.dosage_nicotine_mg_id,
+                    product.sel_de_nicotine,
+                    product.qte_stock,
+                    product.statut_produit_id,
+                ];
+
+                let hasNullValue = false;
+
+                const magasinOptions = [
+                    { value: 1, label: 'Andelnans' },
+                    { value: 2, label: 'Besançon' },
+                    { value: 3, label: 'Bessoncourt' },
+                    { value: 4, label: 'Colmar' }
+                ];
+                const categorieOptions = [
+                    { value: 1, label: 'Liquides 10 ml' },
+                    { value: 2, label: 'Liquides Grand Format' },
+                    { value: 3, label: 'Concentrés' }
+                ];
+
+                cells.forEach((cellData, index) => {
+                    let cell;
+                    if (index === 1) { // Magasin ID column
+                        cell = dropdownCells(cellData, magasinOptions, 'magasin_id', handleChange);
+                    } else if (index === 5) { // Catégorie ID column
+                        cell = dropdownCells(cellData, categorieOptions, 'categorie_id', handleChange);
+                    } else {
+                        cell = document.createElement('td');
+                        cell.textContent = cellData;
+                    }
+
+                    if (cellData === null && index !== 1) {
+                        cell.style.backgroundColor = 'red';
+                        hasNullValue = true;
+                    }
+                    if (cellData === null && index === 1) {
+                        cell.style.backgroundColor = 'gray';
+                    }
+                    row.appendChild(cell);
+                });
+
+                // vérifier si le produit a des valeurs null
+                if (hasNullValue) {
+                    const alertCell = document.createElement('td');
+                    alertCell.textContent = 'Information(s) manquante(s)';
+                    alertCell.style.color = 'white';
+                    alertCell.style.backgroundColor = 'red';
+                    alertCell.classList.add('alert-cell');
+                    row.appendChild(alertCell);
+                } else {
+                    const emptyCell = document.createElement('td');
+                    row.appendChild(emptyCell);
+                }
+                tbody.appendChild(row);
+            });
+            table.appendChild(tbody);
+            tableContainer.appendChild(table);
+
+            const checkbox = document.getElementById('show-only-null');
+            checkbox.addEventListener('change', filterProducts);
+        })
+        .catch(error => {
+            console.error('Une erreur s\'est produite lors de la récupération des données:', error);
+        });
+</script>
+
+<style>
+    body {
+        background-color: #F2F2F2;
+    }
+    .btn-gestion {
+        background-color: #F9533E;
+        color: black;
+        border-radius: 10px;
+        padding: 10px 20px;
+        border: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: background-color 0.5s;
+    }
+    .btn-gestion:hover {
+        background-color: black;
+        color: white;
+    }
+</style>
