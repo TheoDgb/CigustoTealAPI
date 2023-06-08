@@ -1,16 +1,16 @@
 const connection = require('./bdd/db.js');
 
 function getAllProductsStores(callback){
-    connection.query(`SELECT * FROM produits;`, (error, results) => {
+    connection.query(`SELECT * FROM produits WHERE marque_id = 1;`, (error, results) => {
         if (error) {
             return callback(error, null);
         }
         return callback(null, results);
     });
 }
-function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContentenanceMlId, newDosageNicotineMgId, newStatutProduitId) {
+function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock) {
     return new Promise((resolve, reject) => {
-        connection.query(`UPDATE produits SET magasin_id = ?, categorie_id = ?, marque_id = ?, type_saveur_id = ?, dosage_pg_vg_id = ?, contenance_ml_id = ?, dosage_nicotine_mg_id = ?, statut_produit_id = ? WHERE id = ?;`, [newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContentenanceMlId, newDosageNicotineMgId, newStatutProduitId, id], (error, results) => {
+        connection.query(`UPDATE produits SET magasin_id = ?, categorie_id = ?, marque_id = ?, type_saveur_id = ?, dosage_pg_vg_id = ?, contenance_ml_id = ?, dosage_nicotine_mg_id = ?, statut_produit_id = ?, sku = ?, libelle_produit = ?, libelle_fiche = ?, description = ?, sel_de_nicotine = ?, qte_stock = ? WHERE id = ?;`, [newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock, id], (error, results) => {
             if (error) {
                 return reject(error);
             }
@@ -19,10 +19,6 @@ function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSav
     });
 }
 function getELiquidesProduitsAndelnans(limit, offset, callback) {
-    // connection.query(`SELECT magasin_id, libelle_fiche, MIN(description) AS description, MIN(marque_id) AS marque_id, MIN(type_saveur_id) AS type_saveur_id, MIN(contenance_ml_id) AS contenance_ml_id, MIN(dosage_nicotine_mg_id) AS dosage_nicotine_mg_id, MIN(sel_de_nicotine) AS sel_de_nicotine
-    //                   FROM produits
-    //                   WHERE magasin_id = 1 AND categorie_id != 3
-    //                   GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
     connection.query(`SELECT
                           magasin_id,
                           MIN(sku) AS sku,
@@ -213,7 +209,6 @@ function getConcentresProduitsColmar(limit, offset, callback) {
 module.exports = {
     getAllProductsStores,
     updateProduct,
-
     getELiquidesProduitsAndelnans,
     getELiquidesProduitsBessoncourt,
     getELiquidesProduitsBesancon,

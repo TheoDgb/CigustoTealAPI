@@ -58,24 +58,28 @@
     function dropdownCells(selectedValue, options, column, onChange){
         const cell = document.createElement('td');
         const select = document.createElement('select');
-
         options.forEach(optionValue => {
             const option = document.createElement('option');
             option.value = optionValue.value;
             option.textContent = optionValue.label;
-
             if (optionValue.value === selectedValue) {
                 option.selected = true;
             }
-
             select.appendChild(option);
         });
-
         select.addEventListener('change', event => {
             onChange(event, column);
         });
         cell.appendChild(select);
-
+        return cell;
+    }
+    function editableCells(cellData, columnName, handleChange) {
+        const cell = document.createElement('td');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = cellData;
+        input.addEventListener('input', (event) => handleChange(event, columnName));
+        cell.appendChild(input);
         return cell;
     }
 
@@ -102,7 +106,6 @@
                 'Dosage PG/VG ID',
                 'Contenance ml ID',
                 'Dosage nicotine mg ID',
-                'Sel de nicotine',
                 'Quantité en stock',
                 'Statut produit ID',
                 'Alerte infos',
@@ -142,14 +145,34 @@
                         case 'dosage_pg_vg_id':
                             product.dosage_pg_vg_id = selectedValue;
                             break;
-                        case 'contentenance_ml_id':
-                            product.contentenance_ml_id = selectedValue;
+                        case 'contenance_ml_id':
+                            product.contenance_ml_id = selectedValue;
                             break;
                         case 'dosage_nicotine_mg_id':
                             product.dosage_nicotine_mg_id = selectedValue;
+                            if (selectedValue === (0 || 1 || 2 || 3 || 5 || 6)) {
+                                product.sel_de_nicotine = 0;
+                            } else {
+                                product.sel_de_nicotine = 1;
+                            }
                             break;
                         case 'statut_produit_id':
                             product.statut_produit_id = selectedValue;
+                            break;
+                        case 'sku':
+                            product.sku = selectedValue;
+                            break;
+                        case 'libelle_produit':
+                            product.libelle_produit = selectedValue;
+                            break;
+                        case 'libelle_fiche':
+                            product.libelle_fiche = selectedValue;
+                            break;
+                        case 'description':
+                            product.description = selectedValue;
+                            break;
+                        case 'qte_stock':
+                            product.qte_stock = selectedValue;
                             break;
                     }
                 }
@@ -166,7 +189,6 @@
                     product.dosage_pg_vg_id,
                     product.contenance_ml_id,
                     product.dosage_nicotine_mg_id,
-                    product.sel_de_nicotine,
                     product.qte_stock,
                     product.statut_produit_id
                 ];
@@ -292,11 +314,21 @@
                     } else if (index === 8) { // Dosage PG/VG
                         cell = dropdownCells(cellData, dosagepgvgOptions, 'dosage_pg_vg_id', handleChange);
                     } else if (index === 9) { // Constenance ml ID
-                        cell = dropdownCells(cellData, contenanceOptions, 'contentenance_ml_id', handleChange);
+                        cell = dropdownCells(cellData, contenanceOptions, 'contenance_ml_id', handleChange);
                     } else if (index === 10) { // Dosage nicotine mg ID
                         cell = dropdownCells(cellData, dosageNicotineOptions, 'dosage_nicotine_mg_id', handleChange);
-                    } else if (index === 13) { // Statut produit ID
+                    } else if (index === 12) { // Statut produit ID
                         cell = dropdownCells(cellData, statutProduitOptions, 'statut_produit_id', handleChange);
+                    } else if (index === 1) {
+                        cell = editableCells(cellData, 'sku', handleChange);
+                    } else if (index === 2) {
+                        cell = editableCells(cellData, 'libelle_produit', handleChange);
+                    } else if (index === 3) {
+                        cell = editableCells(cellData, 'libelle_fiche', handleChange);
+                    } else if (index === 7) {
+                        cell = editableCells(cellData, 'description', handleChange);
+                    } else if (index === 11) {
+                        cell = editableCells(cellData, 'qte_stock', handleChange);
                     } else {
                         cell = document.createElement('td');
                         cell.textContent = cellData;
@@ -335,9 +367,23 @@
                     const selectedMarqueId = product.marque_id;
                     const selectedTypeSaveurId = product.type_saveur_id;
                     const selectedDosagePgVgId = product.dosage_pg_vg_id;
-                    const selectedContentenanceMlId = product.contentenance_ml_id;
+                    const selectedContenanceMlId = product.contenance_ml_id;
                     const selectedDosageNicotineMgId = product.dosage_nicotine_mg_id;
                     const selectedStatutProduitId = product.statut_produit_id;
+                    const selectedSKU = product.sku;
+                    const selectedLibelleProduit = product.libelle_produit;
+                    const selectedLibelleFiche = product.libelle_fiche;
+                    const selectedDescription = product.description;
+                    const selectedSel = product.sel_de_nicotine;
+                    const selectedQteStock = product.qte_stock;
+
+                    console.log('selectedSKU', selectedSKU);
+                    console.log('selectedLibelleProduit', selectedLibelleProduit);
+                    console.log('selectedLibelleFiche', selectedLibelleFiche);
+                    console.log('selectedDescription', selectedDescription);
+                    console.log('selectedSel', selectedSel);
+                    console.log('selectedQteStock', selectedQteStock);
+
                     // envoie les ids à update dans la base de données au back-end
                     fetch('/gestion-produits/update', {
                         method: 'POST',
@@ -348,9 +394,15 @@
                             marque_id: selectedMarqueId,
                             type_saveur_id: selectedTypeSaveurId,
                             dosage_pg_vg_id: selectedDosagePgVgId,
-                            contentenance_ml_id: selectedContentenanceMlId,
+                            contenance_ml_id: selectedContenanceMlId,
                             dosage_nicotine_mg_id: selectedDosageNicotineMgId,
-                            statut_produit_id: selectedStatutProduitId
+                            statut_produit_id: selectedStatutProduitId,
+                            sku: selectedSKU,
+                            libelle_produit: selectedLibelleProduit,
+                            libelle_fiche: selectedLibelleFiche,
+                            description: selectedDescription,
+                            sel_de_nicotine: selectedSel,
+                            qte_stock: selectedQteStock
                         }),
                         headers: {
                             'Content-Type': 'application/json'

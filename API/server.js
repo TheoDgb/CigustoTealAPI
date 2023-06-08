@@ -32,9 +32,15 @@ app.post('/gestion-produits/update', (req, res) => {
     const selectedMarqueId = req.body.marque_id;
     const selectedTypeSaveurId = req.body.type_saveur_id;
     const selectedDosagePgVgId = req.body.dosage_pg_vg_id;
-    const selectedContentenanceMlId = req.body.contentenance_ml_id;
+    const selectedContenanceMlId = req.body.contenance_ml_id;
     const selectedDosageNicotineMgId = req.body.dosage_nicotine_mg_id;
     const selectedStatutProduitId = req.body.statut_produit_id;
+    const selectedSKU = req.body.sku;
+    const selectedLibelleProduit = req.body.libelle_produit;
+    const selectedLibelleFiche = req.body.libelle_fiche;
+    const selectedDescription = req.body.description;
+    const selectedSel = req.body.sel_de_nicotine;
+    const selectedQteStock = req.body.qte_stock;
 
     produits.updateProduct(
         selectedId,
@@ -43,9 +49,15 @@ app.post('/gestion-produits/update', (req, res) => {
         selectedMarqueId,
         selectedTypeSaveurId,
         selectedDosagePgVgId,
-        selectedContentenanceMlId,
+        selectedContenanceMlId,
         selectedDosageNicotineMgId,
-        selectedStatutProduitId
+        selectedStatutProduitId,
+        selectedSKU,
+        selectedLibelleProduit,
+        selectedLibelleFiche,
+        selectedDescription,
+        selectedSel,
+        selectedQteStock
     );
 });
 
