@@ -236,11 +236,7 @@ df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df
 # si la valeur de 'dosage_nicotine_mg_id' est supérieure à 7, supprimer la ligne
 # df = df.drop(df[df['dosage_nicotine_mg_id'] > 7].index)
 
-df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1,
-                                                       'Indisponible': 2,
-                                                       'Fin d\'approvisionnement': 3,
-                                                       '#N/D': None
-})
+df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1, 'indisponible': 2})
 # passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
 df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')
 # remplace les NaN de dosage_pg_vg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql

@@ -165,5 +165,4 @@ VALUES (1, 0),
 
 INSERT INTO statut_produits (id, libelle_statut_produit)
 VALUES (1, 'actif'),
-       (2, 'inactif'),
-       (3, 'fin d''approvisionnement');
+       (2, 'inactif');

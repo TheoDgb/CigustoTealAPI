@@ -46,13 +46,7 @@ app.post('/gestion-produits/update', (req, res) => {
         selectedContentenanceMlId,
         selectedDosageNicotineMgId,
         selectedStatutProduitId
-    ).res((error, results) => {
-        if (error) {
-            res.status(500).json({ error: 'Une erreur s\'est produite lors de la mise à jour du produit' });
-        } else {
-            res.json(results);
-        }
-    });
+    );
 });
 
 // requête tous les produits e-liquides pour une id magasin donnée
