@@ -353,6 +353,7 @@
                 const validateButton = document.createElement('button');
                 validateButton.textContent = 'Valider';
                 validateButton.addEventListener('click', () => {
+                    const selectedId = product.id;
                     const selectedMagasinId = product.magasin_id;
                     const selectedCategorieId = product.categorie_id;
                     const selectedMarqueId = product.marque_id;
@@ -366,6 +367,7 @@
                     fetch('/gestion-produits/update', {
                         method: 'POST',
                         body: JSON.stringify({
+                            id: selectedId,
                             magasin_id: selectedMagasinId,
                             categorie_id: selectedCategorieId,
                             marque_id: selectedMarqueId,

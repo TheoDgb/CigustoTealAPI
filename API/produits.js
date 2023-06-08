@@ -1,11 +1,21 @@
 const connection = require('./bdd/db.js');
 
 function getAllProductsStores(callback){
-    connection.query(`SELECT * FROM produits WHERE marque_id = 1;`, (error, results) => {
+    connection.query(`SELECT * FROM produits;`, (error, results) => {
         if (error) {
             return callback(error, null);
         }
         return callback(null, results);
+    });
+}
+function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContentenanceMlId, newDosageNicotineMgId, newStatutProduitId) {
+    return new Promise((resolve, reject) => {
+        connection.query(`UPDATE produits SET magasin_id = ?, categorie_id = ?, marque_id = ?, type_saveur_id = ?, dosage_pg_vg_id = ?, contenance_ml_id = ?, dosage_nicotine_mg_id = ?, statut_produit_id = ? WHERE id = ?;`, [newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContentenanceMlId, newDosageNicotineMgId, newStatutProduitId, id], (error, results) => {
+            if (error) {
+                return reject(error);
+            }
+            return resolve(results);
+        });
     });
 }
 function getELiquidesProduitsAndelnans(limit, offset, callback) {
@@ -202,6 +212,7 @@ function getConcentresProduitsColmar(limit, offset, callback) {
 
 module.exports = {
     getAllProductsStores,
+    updateProduct,
 
     getELiquidesProduitsAndelnans,
     getELiquidesProduitsBessoncourt,

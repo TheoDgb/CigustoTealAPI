@@ -25,6 +25,36 @@ app.get('/gestion-produits/all-stores', (req, res) => {
     });
 });
 
+app.post('/gestion-produits/update', (req, res) => {
+    const selectedId = req.body.id;
+    const selectedMagasinId = req.body.magasin_id;
+    const selectedCategorieId = req.body.categorie_id;
+    const selectedMarqueId = req.body.marque_id;
+    const selectedTypeSaveurId = req.body.type_saveur_id;
+    const selectedDosagePgVgId = req.body.dosage_pg_vg_id;
+    const selectedContentenanceMlId = req.body.contentenance_ml_id;
+    const selectedDosageNicotineMgId = req.body.dosage_nicotine_mg_id;
+    const selectedStatutProduitId = req.body.statut_produit_id;
+
+    produits.updateProduct(
+        selectedId,
+        selectedMagasinId,
+        selectedCategorieId,
+        selectedMarqueId,
+        selectedTypeSaveurId,
+        selectedDosagePgVgId,
+        selectedContentenanceMlId,
+        selectedDosageNicotineMgId,
+        selectedStatutProduitId
+    ).res((error, results) => {
+        if (error) {
+            res.status(500).json({ error: 'Une erreur s\'est produite lors de la mise à jour du produit' });
+        } else {
+            res.json(results);
+        }
+    });
+});
+
 // requête tous les produits e-liquides pour une id magasin donnée
 app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     const magasinId = req.params.magasinId;
