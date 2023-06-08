@@ -150,11 +150,13 @@
                             break;
                         case 'dosage_nicotine_mg_id':
                             product.dosage_nicotine_mg_id = selectedValue;
-                            if (selectedValue === (0 || 1 || 2 || 3 || 5 || 6)) {
-                                product.sel_de_nicotine = 0;
-                            } else {
+                            console.log('dosage nicotine :', selectedValue);
+                            if (selectedValue === '4' || selectedValue === '7') {
                                 product.sel_de_nicotine = 1;
+                            } else {
+                                product.sel_de_nicotine = 0;
                             }
+                            console.log('le fel :', product.sel_de_nicotine);
                             break;
                         case 'statut_produit_id':
                             product.statut_produit_id = selectedValue;
@@ -377,12 +379,9 @@
                     const selectedSel = product.sel_de_nicotine;
                     const selectedQteStock = product.qte_stock;
 
-                    console.log('selectedSKU', selectedSKU);
-                    console.log('selectedLibelleProduit', selectedLibelleProduit);
-                    console.log('selectedLibelleFiche', selectedLibelleFiche);
-                    console.log('selectedDescription', selectedDescription);
+                    console.log('dosage_nicotine', selectedDosageNicotineMgId);
                     console.log('selectedSel', selectedSel);
-                    console.log('selectedQteStock', selectedQteStock);
+                    // console.log('selectedQteStock', selectedQteStock); a passer ne int
 
                     // envoie les ids à update dans la base de données au back-end
                     fetch('/gestion-produits/update', {
