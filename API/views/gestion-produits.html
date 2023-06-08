@@ -79,44 +79,6 @@
         return cell;
     }
 
-    function handleChange(event, column) {
-        const selectedValue = event.target.value;
-        switch (column) {
-            case 'magasin_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de magasin sélectionné :', selectedValue);
-                break;
-            case 'categorie_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de catégorie sélectionnée :', selectedValue);
-                break;
-            case 'marque_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de la marque sélectionnée :', selectedValue);
-                break;
-            case 'type_saveur_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de la saveur sélectionnée :', selectedValue);
-                break;
-            case 'dosage_pg_vg_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID du dosage PV/VG sélectionné :', selectedValue);
-                break;
-            case 'contentenance_ml_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID de la contenance sélectionnée :', selectedValue);
-                break;
-            case 'dosage_nicotine_mg_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID du dosage nicotine sélectionné :', selectedValue);
-                break;
-            case 'statut_produit_id':
-                // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
-                console.log('ID du statut produit sélectionné :', selectedValue);
-                break;
-        }
-    }
-
     fetch(`/gestion-produits/all-stores`)
         .then(response => response.json())
         .then(data => {
@@ -143,7 +105,8 @@
                 'Sel de nicotine',
                 'Quantité en stock',
                 'Statut produit ID',
-                'Alerte infos'
+                'Alerte infos',
+                'Actions'
             ];
 
             headers.forEach(headerText => {
@@ -159,6 +122,52 @@
 
             data.forEach(product => {
                 const row = document.createElement('tr');
+
+                function handleChange(event, column) {
+                    const selectedValue = event.target.value;
+                    switch (column) {
+                        case 'magasin_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID de magasin sélectionné :', selectedValue);
+                            product.magasin_id = selectedValue;
+                            break;
+                        case 'categorie_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID de catégorie sélectionnée :', selectedValue);
+                            product.categorie_id = selectedValue;
+                            break;
+                        case 'marque_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID de la marque sélectionnée :', selectedValue);
+                            product.marque_id = selectedValue;
+                            break;
+                        case 'type_saveur_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID de la saveur sélectionnée :', selectedValue);
+                            product.type_saveur_id = selectedValue;
+                            break;
+                        case 'dosage_pg_vg_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID du dosage PV/VG sélectionné :', selectedValue);
+                            product.dosage_pg_vg_id = selectedValue;
+                            break;
+                        case 'contentenance_ml_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID de la contenance sélectionnée :', selectedValue);
+                            product.contentenance_ml_id = selectedValue;
+                            break;
+                        case 'dosage_nicotine_mg_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID du dosage nicotine sélectionné :', selectedValue);
+                            product.dosage_nicotine_mg_id = selectedValue;
+                            break;
+                        case 'statut_produit_id':
+                            // créer une requete UPDATE => mise a jour produit bdd avec btn valider / activer le btn valider
+                            console.log('ID du statut produit sélectionné :', selectedValue);
+                            product.statut_produit_id = selectedValue;
+                            break;
+                    }
+                }
 
                 const cells = [
                     product.magasin_id,
@@ -331,6 +340,61 @@
                     const emptyCell = document.createElement('td');
                     row.appendChild(emptyCell);
                 }
+
+
+
+
+
+
+
+
+
+                const actionsCell = document.createElement('td');
+                const validateButton = document.createElement('button');
+                validateButton.textContent = 'Valider';
+                validateButton.addEventListener('click', () => {
+                    const selectedMagasinId = product.magasin_id;
+                    const selectedCategorieId = product.categorie_id;
+                    const selectedMarqueId = product.marque_id;
+                    const selectedTypeSaveurId = product.type_saveur_id;
+                    const selectedDosagePgVgId = product.dosage_pg_vg_id;
+                    const selectedContentenanceMlId = product.contentenance_ml_id;
+                    const selectedDosageNicotineMgId = product.dosage_nicotine_mg_id;
+                    const selectedStatutProduitId = product.statut_produit_id;
+
+                    // envoie les ids à update dans la base de données au back-end
+                    fetch('/gestion-produits/update', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            magasin_id: selectedMagasinId,
+                            categorie_id: selectedCategorieId,
+                            marque_id: selectedMarqueId,
+                            type_saveur_id: selectedTypeSaveurId,
+                            dosage_pg_vg_id: selectedDosagePgVgId,
+                            contentenance_ml_id: selectedContentenanceMlId,
+                            dosage_nicotine_mg_id: selectedDosageNicotineMgId,
+                            statut_produit_id: selectedStatutProduitId
+                        }),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            // console.log('Réponse de la requête:', data);
+                        })
+                        .catch(error => {
+                            console.error('Une erreur s\'est produite lors de la requête:', error);
+                        });
+                });
+                actionsCell.appendChild(validateButton);
+                row.appendChild(actionsCell);
+
+
+
+
+
+
                 tbody.appendChild(row);
             });
             table.appendChild(tbody);
