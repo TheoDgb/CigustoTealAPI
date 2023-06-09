@@ -78,6 +78,19 @@
         const input = document.createElement('input');
         input.type = 'text';
         input.value = cellData;
+        if (columnName === 'sku') {
+            input.style.width = '85px';
+        } else if (columnName === 'qte_stock') {
+            input.style.width = '75px';
+            input.addEventListener('input', (event) => {
+                const newValue = event.target.value;
+                if (!Number.isInteger(Number(newValue))) {
+                    event.target.value = cellData;
+                    return;
+                }
+                handleChange(event, columnName);
+            });
+        }
         input.addEventListener('input', (event) => handleChange(event, columnName));
         cell.appendChild(input);
         return cell;
@@ -87,6 +100,8 @@
         .then(response => response.json())
         .then(data => {
             const tableContainer = document.getElementById('table-container');
+            tableContainer.style.transform = 'scale(79%)';
+            tableContainer.style.transformOrigin = '0 0';
 
             const table = document.createElement('table');
             table.classList.add('table');
@@ -95,19 +110,19 @@
             const headerRow = document.createElement('tr');
 
             const headers = [
-                'Magasin ID',
+                'Magasin',
                 'SKU',
                 'Libellé produit',
                 'Libellé fiche',
-                'Catégorie ID',
-                'Marque ID',
-                'Type saveur ID',
+                'Catégorie',
+                'Marque',
+                'Type saveur',
                 'Description',
-                'Dosage PG/VG ID',
-                'Contenance ml ID',
-                'Dosage nicotine mg ID',
+                'Dosage PG/VG',
+                'Contenance ml',
+                'Dosage nicotine mg',
                 'Quantité en stock',
-                'Statut produit ID',
+                'Statut produit',
                 'Alerte infos',
                 'Actions'
             ];
