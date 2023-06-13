@@ -27,6 +27,10 @@
             </button>
         </a>
         <input type="checkbox" id="show-only-null" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="show-only-null">Produits incomplets</label>
+        <input type="radio" id="show-only-e-liquides" name="product-type" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;">
+        <label style="font-size: 1.2em;" for="show-only-e-liquides">Produits E-Liquides</label>
+        <input type="radio" id="show-only-concentres" name="product-type" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;">
+        <label style="font-size: 1.2em;" for="show-only-concentres">Produits Concentrés</label>
         <br><br><br>
     </div>
     <br>
@@ -39,26 +43,18 @@
         window.history.back();
     }
 
-    // Fonction pour filtrer les produits avec des valeurs null
-    function filterAlertProducts() {
-        const rows = document.querySelectorAll('tbody tr');
-        const showOnlyNull = document.getElementById('show-only-null').checked;
-        // affiche les produits avec une valeur null ou masque
-        rows.forEach(row => {
-            const alertCell = row.querySelector('.alert-cell');
-            row.style.display = showOnlyNull && alertCell ? 'table-row' : 'none';
-        });
-        if (!showOnlyNull) {
-            rows.forEach(row => {
-                row.style.display = 'table-row';
-            });
-        }
-    }
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            var radioBtn = document.getElementById('show-only-e-liquides');
+            radioBtn.checked = true;
+            filterELiquidesProducts();
+        }, 1000);
+    });
 
-    // function filterActifProducts() {
+    // filtrer les produits avec une valeur null / masque
+    // function filterAlertProducts() {
     //     const rows = document.querySelectorAll('tbody tr');
     //     const showOnlyNull = document.getElementById('show-only-null').checked;
-    //     // affiche les produits avec une valeur null ou masque
     //     rows.forEach(row => {
     //         const alertCell = row.querySelector('.alert-cell');
     //         row.style.display = showOnlyNull && alertCell ? 'table-row' : 'none';
@@ -69,6 +65,46 @@
     //         });
     //     }
     // }
+    function filterAlertProducts() {
+        const rows = document.querySelectorAll('tbody tr');
+        const showOnlyNull = document.getElementById('show-only-null').checked;
+        const showOnlyELiquides = document.getElementById('show-only-e-liquides').checked;
+        const showOnlyConcentres = document.getElementById('show-only-concentres').checked;
+
+        rows.forEach(row => {
+            const alertCell = row.querySelector('.alert-cell');
+            const categoryCellELiquides = row.querySelector('.category-cell-e-liquides');
+            const categoryCellConcentres = row.querySelector('.category-cell-concentres');
+
+            if (
+                (showOnlyNull && alertCell) ||
+                (showOnlyELiquides && categoryCellELiquides) ||
+                (showOnlyConcentres && categoryCellConcentres)
+            ) {
+                row.style.display = 'table-row';
+            } else {
+                row.style.display = 'none';
+            }
+        }); // problem avec deuxieme radio en meme temps que checkbox
+    }
+    // filtrer les produits qui sont des e-liquides / masque
+    function filterELiquidesProducts() {
+        const rows = document.querySelectorAll('tbody tr');
+        const showOnlyELiquides = document.getElementById('show-only-e-liquides').checked;
+        rows.forEach(row => {
+            const categoryCell = row.querySelector('.category-cell-e-liquides');
+            row.style.display = showOnlyELiquides && categoryCell ? 'table-row' : 'none';
+        });
+    }
+    // filtrer les produits qui sont des concentrés / masque
+    function filterConcentresProducts() {
+        const rows = document.querySelectorAll('tbody tr');
+        const showOnlyConcentres = document.getElementById('show-only-concentres').checked;
+        rows.forEach(row => {
+            const categoryCell = row.querySelector('.category-cell-concentres');
+            row.style.display = showOnlyConcentres && categoryCell ? 'table-row' : 'none';
+        });
+    }
 
     function dropdownCells(selectedValue, options, column, onChange){
         const cell = document.createElement('td');
@@ -338,6 +374,11 @@
                         cell = dropdownCells(cellData, magasinOptions, 'magasin_id', handleChange);
                     } else if (index === 4) { // Catégorie ID
                         cell = dropdownCells(cellData, categorieOptions, 'categorie_id', handleChange);
+                        if (product.categorie_id === 1 || product.categorie_id === 2) {
+                            cell.classList.add('category-cell-e-liquides');
+                        } else {
+                            cell.classList.add('category-cell-concentres');
+                        }
                     } else if (index === 5) { // Marque ID
                         cell = dropdownCells(cellData, marqueOptions, 'marque_id', handleChange);
                     } else if (index === 6) { // Type Saveur ID
@@ -449,6 +490,12 @@
 
             const checkbox = document.getElementById('show-only-null');
             checkbox.addEventListener('change', filterAlertProducts);
+
+            const eliquidesRadioButton = document.getElementById('show-only-e-liquides');
+            eliquidesRadioButton.addEventListener('change', filterELiquidesProducts);
+
+            const concentresRadioButton = document.getElementById('show-only-concentres');
+            concentresRadioButton.addEventListener('change', filterConcentresProducts);
         })
         .catch(error => {
             console.error('Une erreur s\'est produite lors de la récupération des données:', error);

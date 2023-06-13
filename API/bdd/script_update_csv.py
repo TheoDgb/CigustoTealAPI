@@ -265,6 +265,8 @@ df.insert(0, 'id', None)
 # FAIRE POUR QUE CA N IMPORTE PAS S IL Y A DES DOUBLES DANS LA BASE DE DONNEES
 # AVEC LE LIBELLE_PRODUIT ET LE MAGASINID
 
+# if produit déja existant then update uniquement le stock
+
 
 # Connexion à la base de données MySQL
 connection = pymysql.connect(host='localhost',
