@@ -236,6 +236,11 @@ df['dosage_nicotine_mg_id'] = np.where(df['dosage_nicotine_mg_id'] > 7, None, df
 # si la valeur de 'dosage_nicotine_mg_id' est supérieure à 7, supprimer la ligne
 # df = df.drop(df[df['dosage_nicotine_mg_id'] > 7].index)
 
+# si categorie_id est un concentré, remplacer le dosage_pg_vg_id par 9
+df['dosage_pg_vg_id'] = np.where(df['categorie_id'] == 3, 9, df['dosage_pg_vg_id'])
+# si categorie_id est un concentré, rempalcer le dosage_nicotine_mg_id par 1
+df['dosage_nicotine_mg_id'] = np.where(df['categorie_id'] == 3, 1, df['dosage_nicotine_mg_id'])
+
 df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1, 'indisponible': 2})
 # passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
 df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')

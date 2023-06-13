@@ -144,7 +144,8 @@ VALUES (1, '10/90'),
        (5, '50/50'),
        (6, '60/40'),
        (7, '70/30'),
-       (8, '76/24');
+       (8, '76/24'),
+       (9, 'false');
 
 INSERT INTO contenances_ml (id, contenance_ml)
 VALUES (1, 10),
