@@ -1,6 +1,7 @@
 USE testTeal;
 
 DROP TABLE IF EXISTS produits;
+DROP TABLE IF EXISTS statut_reappros;
 DROP TABLE IF EXISTS statut_produits;
 DROP TABLE IF EXISTS dosages_nicotine_mg;
 DROP TABLE IF EXISTS contenances_ml;
@@ -42,6 +43,12 @@ CREATE TABLE statut_produits (
     id INT PRIMARY KEY NOT NULL,
     libelle_statut_produit VARCHAR(23) NOT NULL
 );
+
+CREATE TABLE statut_reappros (
+    id INT PRIMARY KEY NOT NULL,
+    libelle_statut_reappro VARCHAR(23) NOT NULL
+);
+
 CREATE TABLE produits (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     magasin_id INT,
@@ -65,7 +72,9 @@ CREATE TABLE produits (
     sel_de_nicotine BOOLEAN NOT NULL,
     qte_stock INT NOT NULL,
     statut_produit_id INT,
-        FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id)
+        FOREIGN KEY (statut_produit_id) REFERENCES statut_produits(id),
+    statut_reappro_id INT,
+        FOREIGN KEY (statut_reappro_id) REFERENCES statut_reappros(id)
 );
 
 
@@ -165,5 +174,9 @@ VALUES (1, 0),
        (7, 1820);
 
 INSERT INTO statut_produits (id, libelle_statut_produit)
+VALUES (1, 'actif'),
+       (2, 'inactif');
+
+INSERT INTO statut_reappros (id, libelle_statut_reappro)
 VALUES (1, 'actif'),
        (2, 'inactif');

@@ -2,10 +2,10 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/finaltestbefore3.csv', sep=';', decimal=',')
+df = pd.read_csv('./bdd/finaltestbefore.csv', sep=';', decimal=',')
 
 # supprime les colonnes inutiles
-df = df.drop(['ID', 'Code EAN', 'type produit', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
+df = df.drop(['ID', 'Code EAN', 'type produit', 'statut produit centrale', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
 
 # remplace NaN par 0
 df['Qté stock'] = df['Qté stock'].fillna(0)
@@ -17,18 +17,19 @@ df = df.rename(columns={
     'Sku': 'sku',
     'libellé Fiche': 'libelle_fiche',
     'libellé produit': 'libelle_produit',
-    'statut produit centrale': 'statut_produit_id',
     'catégorie': 'categorie_id',
     'Marque': 'marque_id',
     'gamme': 'gamme',
     'description': 'description',
-    'dosage Pv/Vg': 'dosage_pg_vg_id',
-    'dosage nicotine': 'dosage_nicotine_mg_id',
-    'volume du flacon': 'contenance_ml_id',
+    'dosage Pg/vg': 'dosage_pg_vg_id',
+    'Dosage nicotine': 'dosage_nicotine_mg_id',
+    'volume flacon': 'contenance_ml_id',
     'type de saveur': 'type_saveur_id',
-    'Sel de nicotine': 'sel_de_nicotine',
+    'sel de nicotine': 'sel_de_nicotine',
     'Magasin': 'magasin_id',
-    'Qté stock': 'qte_stock'
+    'Qté stock': 'qte_stock',
+    'Statut Produit Mag': 'statut_produit_id',
+    'Statut Réappro Mag': 'statut_reappro_id',
 })
 
 # supprime les lignes qui ne sont pas des liquides / concentrés
@@ -88,7 +89,7 @@ df.loc[mask, "marque_id"] = "Enfer"
 df.drop('gamme', axis=1)
 
 # réorganise les colonnes
-df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id'])
+df = df.reindex(columns=['magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id', 'statut_reappro_id'])
 
 
 
@@ -241,12 +242,19 @@ df['dosage_pg_vg_id'] = np.where(df['categorie_id'] == 3, 9, df['dosage_pg_vg_id
 # si categorie_id est un concentré, rempalcer le dosage_nicotine_mg_id par 1
 df['dosage_nicotine_mg_id'] = np.where(df['categorie_id'] == 3, 1, df['dosage_nicotine_mg_id'])
 
-df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1, 'indisponible': 2})
+df['statut_produit_id'] = df['statut_produit_id'].replace({'actif': 1, 'inactif': 2})
 # passe statut_produit_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
 df['statut_produit_id'] = pd.to_numeric(df['statut_produit_id'], errors='coerce').astype('Int64')
-# remplace les NaN de dosage_pg_vg_id par une valeur numérique NULL pour pouvoir l'insérer dans une base de données mysql
-df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: None})
-df['statut_produit_id'] = df['statut_produit_id'].replace({'': None})
+# remplace les NaN de dosage_pg_vg_id par une valeur numérique 2
+df['statut_produit_id'] = df['statut_produit_id'].replace({pd.NA: 2})
+df['statut_produit_id'] = df['statut_produit_id'].replace({'': 2})
+
+df['statut_reappro_id'] = df['statut_reappro_id'].replace({'actif': 1, 'inactif': 2})
+# passe statut_reappro_id en numeric (toutes les chaînes de caractères sont remplacées par NaN)
+df['statut_reappro_id'] = pd.to_numeric(df['statut_reappro_id'], errors='coerce').astype('Int64')
+# remplace les NaN de statut_reappro_id par une valeur numérique 2
+df['statut_reappro_id'] = df['statut_reappro_id'].replace({pd.NA: 2})
+df['statut_reappro_id'] = df['statut_reappro_id'].replace({'': 2})
 
 # créer une colonne au début id remplie de None
 df.insert(0, 'id', None)
@@ -279,8 +287,8 @@ cursor = connection.cursor()
 
 # Boucle sur chaque ligne du DataFrame et exécute l'insertion
 for _, row in df.iterrows():
-    values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'])
-    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+    values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'], row['statut_reappro_id'])
+    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id, statut_reappro_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
     cursor.execute(query, values)
 
 # Valider les modifications dans la base de données
@@ -293,4 +301,4 @@ connection.close()
 
 
 # save
-df.to_csv('./bdd/finaltestafter3.csv', sep=';', index=False) #Concentre CHARLEMAGNE - 814 - 10 ml
+df.to_csv('./bdd/finaltestafter.csv', sep=';', index=False) #Concentre CHARLEMAGNE - 814 - 10 ml

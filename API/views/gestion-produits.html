@@ -147,9 +147,28 @@
         return cell;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    // let bool = false;
     fetch(`/gestion-produits/all-stores`)
         .then(response => response.json())
         .then(data => {
+            // let filteredData;
+            // if (bool === true){
+            //     filteredData = data.filter(product => product.categorie_id === 1 || product.categorie_id === 2);
+            // } else {
+            //     filteredData = data.filter(product => product.categorie_id === 3);
+            // }
+            let filteredData = data;
             const tableContainer = document.getElementById('table-container');
             tableContainer.style.transform = 'scale(79%)';
             tableContainer.style.transformOrigin = '0 0';
@@ -189,7 +208,7 @@
 
             const tbody = document.createElement('tbody');
 
-            data.forEach(product => {
+            filteredData.forEach(product => {
                 const row = document.createElement('tr');
 
                 function handleChange(event, column) {
@@ -490,10 +509,8 @@
 
             const checkbox = document.getElementById('show-only-null');
             checkbox.addEventListener('change', filterAlertProducts);
-
             const eliquidesRadioButton = document.getElementById('show-only-e-liquides');
             eliquidesRadioButton.addEventListener('change', filterELiquidesProducts);
-
             const concentresRadioButton = document.getElementById('show-only-concentres');
             concentresRadioButton.addEventListener('change', filterConcentresProducts);
         })
