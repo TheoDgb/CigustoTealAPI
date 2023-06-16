@@ -882,6 +882,10 @@
 
     // charger le tableau avec le filtre sélectionné par l'utilisateur
     function loadFilteredTable(filter) {
+        const oldTable = document.querySelector('table');
+        if (oldTable) {
+            oldTable.remove();
+        }
         // Charger les données des produits depuis l'API
         fetch(`/gestion-produits/all-stores`)
             .then(response => response.json())
