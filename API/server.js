@@ -35,6 +35,7 @@ app.post('/gestion-produits/update', (req, res) => {
     const selectedContenanceMlId = req.body.contenance_ml_id;
     const selectedDosageNicotineMgId = req.body.dosage_nicotine_mg_id;
     const selectedStatutProduitId = req.body.statut_produit_id;
+    const selectedStatutReapproId = req.body.statut_reappro_id;
     const selectedSKU = req.body.sku;
     const selectedLibelleProduit = req.body.libelle_produit;
     const selectedLibelleFiche = req.body.libelle_fiche;
@@ -52,6 +53,7 @@ app.post('/gestion-produits/update', (req, res) => {
         selectedContenanceMlId,
         selectedDosageNicotineMgId,
         selectedStatutProduitId,
+        selectedStatutReapproId,
         selectedSKU,
         selectedLibelleProduit,
         selectedLibelleFiche,

@@ -8,9 +8,9 @@ function getAllProductsStores(callback){
         return callback(null, results);
     });
 }
-function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock) {
+function updateProduct(id, newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newStatutReapproId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock) {
     return new Promise((resolve, reject) => {
-        connection.query(`UPDATE produits SET magasin_id = ?, categorie_id = ?, marque_id = ?, type_saveur_id = ?, dosage_pg_vg_id = ?, contenance_ml_id = ?, dosage_nicotine_mg_id = ?, statut_produit_id = ?, sku = ?, libelle_produit = ?, libelle_fiche = ?, description = ?, sel_de_nicotine = ?, qte_stock = ? WHERE id = ?;`, [newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock, id], (error, results) => {
+        connection.query(`UPDATE produits SET magasin_id = ?, categorie_id = ?, marque_id = ?, type_saveur_id = ?, dosage_pg_vg_id = ?, contenance_ml_id = ?, dosage_nicotine_mg_id = ?, statut_produit_id = ?, statut_reappro_id = ?, sku = ?, libelle_produit = ?, libelle_fiche = ?, description = ?, sel_de_nicotine = ?, qte_stock = ? WHERE id = ?;`, [newMagasinId, newCategorieId, newMarqueId, newTypeSaveurId, newDosagePgVgId, newContenanceMlId, newDosageNicotineMgId, newStatutProduitId, newStatutReapproId, newSKU, newLibelleProduit, newLibelleFiche, newDescription, newSel, newQteStock, id], (error, results) => {
             if (error) {
                 return reject(error);
             }

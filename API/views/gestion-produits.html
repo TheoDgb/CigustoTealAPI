@@ -128,6 +128,7 @@
                     'Dosage nicotine mg',
                     'Quantité en stock',
                     'Statut produit',
+                    'Statut réappro',
                     'Alerte infos',
                     'Actions'
                 ];
@@ -179,6 +180,12 @@
                             case 'statut_produit_id':
                                 product.statut_produit_id = selectedValue;
                                 break;
+                            case 'statut_reappro_id':
+                                product.statut_reappro_id = selectedValue;
+                                if (selectedValue === '1') {
+                                    product.statut_produit_id = 1;
+                                }
+                                break;
                             case 'sku':
                                 product.sku = selectedValue;
                                 break;
@@ -210,7 +217,8 @@
                         product.contenance_ml_id,
                         product.dosage_nicotine_mg_id,
                         product.qte_stock,
-                        product.statut_produit_id
+                        product.statut_produit_id,
+                        product.statut_reappro_id
                     ];
 
                     let hasNullValue = false;
@@ -321,6 +329,11 @@
                         { value: 1, label: 'Actif' },
                         { value: 2, label: 'Inactif' }
                     ];
+                    const statutReapproOptions = [
+                        { value: null, label: '' },
+                        { value: 1, label: 'Actif' },
+                        { value: 2, label: 'Inactif' }
+                    ];
 
                     cells.forEach((cellData, index) => {
                         let cell;
@@ -345,6 +358,8 @@
                             cell = dropdownCells(cellData, dosageNicotineOptions, 'dosage_nicotine_mg_id', handleChange);
                         } else if (index === 12) { // Statut produit ID
                             cell = dropdownCells(cellData, statutProduitOptions, 'statut_produit_id', handleChange);
+                        } else if (index === 13) { // Statut réappro ID
+                            cell = dropdownCells(cellData, statutReapproOptions, 'statut_reappro_id', handleChange);
                         } else if (index === 1) {
                             cell = editableCells(cellData, 'sku', handleChange);
                         } else if (index === 2) {
@@ -396,6 +411,7 @@
                         const selectedContenanceMlId = product.contenance_ml_id;
                         const selectedDosageNicotineMgId = product.dosage_nicotine_mg_id;
                         const selectedStatutProduitId = product.statut_produit_id;
+                        const selectedStatutReapproId = product.statut_reappro_id;
                         const selectedSKU = product.sku;
                         const selectedLibelleProduit = product.libelle_produit;
                         const selectedLibelleFiche = product.libelle_fiche;
@@ -416,6 +432,7 @@
                                 contenance_ml_id: selectedContenanceMlId,
                                 dosage_nicotine_mg_id: selectedDosageNicotineMgId,
                                 statut_produit_id: selectedStatutProduitId,
+                                statut_reappro_id: selectedStatutReapproId,
                                 sku: selectedSKU,
                                 libelle_produit: selectedLibelleProduit,
                                 libelle_fiche: selectedLibelleFiche,
@@ -499,6 +516,7 @@
                     'Dosage nicotine mg',
                     'Quantité en stock',
                     'Statut produit',
+                    'Statut réappro',
                     'Alerte infos',
                     'Actions'
                 ];
@@ -550,6 +568,12 @@
                             case 'statut_produit_id':
                                 product.statut_produit_id = selectedValue;
                                 break;
+                            case 'statut_reappro_id':
+                                product.statut_reappro_id = selectedValue;
+                                if (selectedValue === '1') {
+                                    product.statut_produit_id = 1;
+                                }
+                                break;
                             case 'sku':
                                 product.sku = selectedValue;
                                 break;
@@ -581,7 +605,8 @@
                         product.contenance_ml_id,
                         product.dosage_nicotine_mg_id,
                         product.qte_stock,
-                        product.statut_produit_id
+                        product.statut_produit_id,
+                        product.statut_reappro_id
                     ];
 
                     let hasNullValue = false;
@@ -692,6 +717,11 @@
                         { value: 1, label: 'Actif' },
                         { value: 2, label: 'Inactif' }
                     ];
+                    const statutReapproOptions = [
+                        { value: null, label: '' },
+                        { value: 1, label: 'Actif' },
+                        { value: 2, label: 'Inactif' }
+                    ];
 
                     cells.forEach((cellData, index) => {
                         let cell;
@@ -716,6 +746,8 @@
                             cell = dropdownCells(cellData, dosageNicotineOptions, 'dosage_nicotine_mg_id', handleChange);
                         } else if (index === 12) { // Statut produit ID
                             cell = dropdownCells(cellData, statutProduitOptions, 'statut_produit_id', handleChange);
+                        } else if (index === 13) { // Statut réappro ID
+                            cell = dropdownCells(cellData, statutReapproOptions, 'statut_reappro_id', handleChange);
                         } else if (index === 1) {
                             cell = editableCells(cellData, 'sku', handleChange);
                         } else if (index === 2) {
@@ -767,6 +799,7 @@
                         const selectedContenanceMlId = product.contenance_ml_id;
                         const selectedDosageNicotineMgId = product.dosage_nicotine_mg_id;
                         const selectedStatutProduitId = product.statut_produit_id;
+                        const selectedStatutReapproId = product.statut_reappro_id;
                         const selectedSKU = product.sku;
                         const selectedLibelleProduit = product.libelle_produit;
                         const selectedLibelleFiche = product.libelle_fiche;
@@ -787,6 +820,7 @@
                                 contenance_ml_id: selectedContenanceMlId,
                                 dosage_nicotine_mg_id: selectedDosageNicotineMgId,
                                 statut_produit_id: selectedStatutProduitId,
+                                statut_reappro_id: selectedStatutReapproId,
                                 sku: selectedSKU,
                                 libelle_produit: selectedLibelleProduit,
                                 libelle_fiche: selectedLibelleFiche,
