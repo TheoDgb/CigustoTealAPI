@@ -26,8 +26,7 @@
                 <i class="bi bi-chevron-double-left"></i> Retour
             </button>
         </a>
-<!--        <input type="checkbox" id="show-only-null" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="show-only-null">Produits incomplets</label>-->
-
+        <input type="checkbox" id="show-only-null" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="show-only-null">Produits incomplets</label>
         <input type="radio" name="filter" value="e-liquide-actif" id="e-liquide-actif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;" checked><label style="font-size: 1.2em;" for="e-liquide-actif">E-Liquides actifs</label>
         <input type="radio" name="filter" value="e-liquide-inactif" id="e-liquide-inactif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="e-liquide-inactif">E-Liquides inactifs</label>
         <input type="radio" name="filter" value="concentre-actif" id="concentre-actif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="concentre-actif">Concentrés actifs</label>
@@ -43,70 +42,20 @@
     function goBack() {
         window.history.back();
     }
-
-    // window.addEventListener('load', function() {
-    //     setTimeout(function() {
-    //         var radioBtn = document.getElementById('show-only-e-liquides');
-    //         radioBtn.checked = true;
-    //         filterELiquidesProducts();
-    //     }, 1000);
-    // });
-
     // filtrer les produits avec une valeur null / masque
-    // function filterAlertProducts() {
-    //     const rows = document.querySelectorAll('tbody tr');
-    //     const showOnlyNull = document.getElementById('show-only-null').checked;
-    //     rows.forEach(row => {
-    //         const alertCell = row.querySelector('.alert-cell');
-    //         row.style.display = showOnlyNull && alertCell ? 'table-row' : 'none';
-    //     });
-    //     if (!showOnlyNull) {
-    //         rows.forEach(row => {
-    //             row.style.display = 'table-row';
-    //         });
-    //     }
-    // }
     function filterAlertProducts() {
         const rows = document.querySelectorAll('tbody tr');
         const showOnlyNull = document.getElementById('show-only-null').checked;
-        const showOnlyELiquides = document.getElementById('show-only-e-liquides').checked;
-        const showOnlyConcentres = document.getElementById('show-only-concentres').checked;
-
         rows.forEach(row => {
             const alertCell = row.querySelector('.alert-cell');
-            const categoryCellELiquides = row.querySelector('.category-cell-e-liquides');
-            const categoryCellConcentres = row.querySelector('.category-cell-concentres');
-
-            if (
-                (showOnlyNull && alertCell) ||
-                (showOnlyELiquides && categoryCellELiquides) ||
-                (showOnlyConcentres && categoryCellConcentres)
-            ) {
+            row.style.display = showOnlyNull && alertCell ? 'table-row' : 'none';
+        });
+        if (!showOnlyNull) {
+            rows.forEach(row => {
                 row.style.display = 'table-row';
-            } else {
-                row.style.display = 'none';
-            }
-        }); // problem avec deuxieme radio en meme temps que checkbox
+            });
+        }
     }
-    // filtrer les produits qui sont des e-liquides / masque
-    function filterELiquidesProducts() {
-        const rows = document.querySelectorAll('tbody tr');
-        const showOnlyELiquides = document.getElementById('show-only-e-liquides').checked;
-        rows.forEach(row => {
-            const categoryCell = row.querySelector('.category-cell-e-liquides');
-            row.style.display = showOnlyELiquides && categoryCell ? 'table-row' : 'none';
-        });
-    }
-    // filtrer les produits qui sont des concentrés / masque
-    function filterConcentresProducts() {
-        const rows = document.querySelectorAll('tbody tr');
-        const showOnlyConcentres = document.getElementById('show-only-concentres').checked;
-        rows.forEach(row => {
-            const categoryCell = row.querySelector('.category-cell-concentres');
-            row.style.display = showOnlyConcentres && categoryCell ? 'table-row' : 'none';
-        });
-    }
-
     function dropdownCells(selectedValue, options, column, onChange){
         const cell = document.createElement('td');
         const select = document.createElement('select');
@@ -147,377 +96,6 @@
         cell.appendChild(input);
         return cell;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-    // let bool = false;
-    // fetch(`/gestion-produits/all-stores`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         // let filteredData;
-    //         // if (bool === true){
-    //         //     filteredData = data.filter(product => product.categorie_id === 1 || product.categorie_id === 2);
-    //         // } else {
-    //         //     filteredData = data.filter(product => product.categorie_id === 3);
-    //         // }
-    //         let filteredData = data;
-    //         const tableContainer = document.getElementById('table-container');
-    //         tableContainer.style.transform = 'scale(79%)';
-    //         tableContainer.style.transformOrigin = '0 0';
-    //
-    //         const table = document.createElement('table');
-    //         table.classList.add('table');
-    //
-    //         const thead = document.createElement('thead');
-    //         const headerRow = document.createElement('tr');
-    //
-    //         const headers = [
-    //             'Magasin',
-    //             'SKU',
-    //             'Libellé produit',
-    //             'Libellé fiche',
-    //             'Catégorie',
-    //             'Marque',
-    //             'Type saveur',
-    //             'Description',
-    //             'Dosage PG/VG',
-    //             'Contenance ml',
-    //             'Dosage nicotine mg',
-    //             'Quantité en stock',
-    //             'Statut produit',
-    //             'Alerte infos',
-    //             'Actions'
-    //         ];
-    //
-    //         headers.forEach(headerText => {
-    //             const header = document.createElement('th');
-    //             header.textContent = headerText;
-    //             headerRow.appendChild(header);
-    //         });
-    //
-    //         thead.appendChild(headerRow);
-    //         table.appendChild(thead);
-    //
-    //         const tbody = document.createElement('tbody');
-    //
-    //         filteredData.forEach(product => {
-    //             const row = document.createElement('tr');
-    //
-    //             function handleChange(event, column) {
-    //                 const selectedValue = event.target.value;
-    //                 switch (column) {
-    //                     case 'magasin_id':
-    //                         // console.log('ID de magasin sélectionné :', selectedValue);
-    //                         product.magasin_id = selectedValue;
-    //                         break;
-    //                     case 'categorie_id':
-    //                         product.categorie_id = selectedValue;
-    //                         break;
-    //                     case 'marque_id':
-    //                         product.marque_id = selectedValue;
-    //                         break;
-    //                     case 'type_saveur_id':
-    //                         product.type_saveur_id = selectedValue;
-    //                         break;
-    //                     case 'dosage_pg_vg_id':
-    //                         product.dosage_pg_vg_id = selectedValue;
-    //                         break;
-    //                     case 'contenance_ml_id':
-    //                         product.contenance_ml_id = selectedValue;
-    //                         break;
-    //                     case 'dosage_nicotine_mg_id':
-    //                         product.dosage_nicotine_mg_id = selectedValue;
-    //                         if (selectedValue === '4' || selectedValue === '7') {
-    //                             product.sel_de_nicotine = 1;
-    //                         } else {
-    //                             product.sel_de_nicotine = 0;
-    //                         }
-    //                         break;
-    //                     case 'statut_produit_id':
-    //                         product.statut_produit_id = selectedValue;
-    //                         break;
-    //                     case 'sku':
-    //                         product.sku = selectedValue;
-    //                         break;
-    //                     case 'libelle_produit':
-    //                         product.libelle_produit = selectedValue;
-    //                         break;
-    //                     case 'libelle_fiche':
-    //                         product.libelle_fiche = selectedValue;
-    //                         break;
-    //                     case 'description':
-    //                         product.description = selectedValue;
-    //                         break;
-    //                     case 'qte_stock':
-    //                         product.qte_stock = selectedValue;
-    //                         break;
-    //                 }
-    //             }
-    //
-    //             const cells = [
-    //                 product.magasin_id,
-    //                 product.sku,
-    //                 product.libelle_produit,
-    //                 product.libelle_fiche,
-    //                 product.categorie_id,
-    //                 product.marque_id,
-    //                 product.type_saveur_id,
-    //                 product.description,
-    //                 product.dosage_pg_vg_id,
-    //                 product.contenance_ml_id,
-    //                 product.dosage_nicotine_mg_id,
-    //                 product.qte_stock,
-    //                 product.statut_produit_id
-    //             ];
-    //
-    //             let hasNullValue = false;
-    //
-    //             const magasinOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: 'Andelnans' },
-    //                 { value: 2, label: 'Besançon' },
-    //                 { value: 3, label: 'Bessoncourt' },
-    //                 { value: 4, label: 'Colmar' }
-    //             ];
-    //             const categorieOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: 'Liquides 10 ml' },
-    //                 { value: 2, label: 'Liquides Grand Format' },
-    //                 { value: 3, label: 'Concentrés' }
-    //             ];
-    //             const marqueOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: 'A&L' },
-    //                 { value: 2, label: 'Alfaliquid' },
-    //                 { value: 3, label: 'Bakery Shake' },
-    //                 { value: 4, label: 'Candy Shake' },
-    //                 { value: 5, label: 'Cesar' },
-    //                 { value: 6, label: 'Cigusto' },
-    //                 { value: 7, label: 'CirKus' },
-    //                 { value: 8, label: 'Curieux' },
-    //                 { value: 9, label: 'Don Cristo' },
-    //                 { value: 10, label: 'Eliquid France' },
-    //                 { value: 11, label: 'Enfer' },
-    //                 { value: 12, label: 'E.Tasty' },
-    //                 { value: 13, label: 'Fresh Vape Co' },
-    //                 { value: 14, label: 'Fruiteo' },
-    //                 { value: 15, label: 'Fruity Cool' },
-    //                 { value: 16, label: 'Fruity Fuel' },
-    //                 { value: 17, label: 'Fruizee' },
-    //                 { value: 18, label: 'Full Moon' },
-    //                 { value: 19, label: 'Furiosa' },
-    //                 { value: 20, label: 'Greeneo' },
-    //                 { value: 21, label: 'Juicy Shake' },
-    //                 { value: 22, label: 'Kung Fruits' },
-    //                 { value: 23, label: 'Le Coq Qui Vape' },
-    //                 { value: 24, label: 'Le French Liquide' },
-    //                 { value: 25, label: 'Le Vapoteur Breton' },
-    //                 { value: 26, label: 'Les Devils' },
-    //                 { value: 27, label: 'Liquideo' },
-    //                 { value: 28, label: 'Mono' },
-    //                 { value: 29, label: 'Monster' },
-    //                 { value: 30, label: 'Petit Nuage' },
-    //                 { value: 31, label: 'Salt E-vapor' },
-    //                 { value: 32, label: 'Snap Dragon' },
-    //                 { value: 33, label: 'Swoke' },
-    //                 { value: 34, label: 'The Medusa Juice' },
-    //                 { value: 35, label: 'T-Juice' },
-    //                 { value: 36, label: 'Vampire Vape' },
-    //                 { value: 37, label: 'Vape Distillery' },
-    //                 { value: 38, label: 'VDLV' },
-    //                 { value: 39, label: 'Amazone' },
-    //                 { value: 40, label: 'Aromazon' },
-    //                 { value: 41, label: 'Doctor Diy' },
-    //                 { value: 42, label: 'Fighter Fuel' },
-    //                 { value: 43, label: 'Kyandi Shop' },
-    //                 { value: 44, label: 'Shootiz' },
-    //                 { value: 45, label: 'Vape47' }
-    //             ];
-    //             const saveurOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: 'Classic' },
-    //                 { value: 2, label: 'Mentholé' },
-    //                 { value: 3, label: 'Fruité' },
-    //                 { value: 4, label: 'Fruité Frais' },
-    //                 { value: 5, label: 'Gourmand' },
-    //                 { value: 6, label: 'Friandise / Boisson' }
-    //             ];
-    //             const dosagepgvgOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: '10/90' },
-    //                 { value: 2, label: '20/80' },
-    //                 { value: 3, label: '30/70' },
-    //                 { value: 4, label: '40/60' },
-    //                 { value: 5, label: '50/50' },
-    //                 { value: 6, label: '60/40' },
-    //                 { value: 7, label: '70/30' },
-    //                 { value: 8, label: '76/24' },
-    //                 { value: 9, label: 'false' }
-    //             ];
-    //             const contenanceOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: '10 ml' },
-    //                 { value: 2, label: '30 ml' },
-    //                 { value: 3, label: '50 ml' },
-    //                 { value: 4, label: '80 ml' },
-    //                 { value: 5, label: '100 ml' },
-    //                 { value: 6, label: '200 ml' }
-    //             ];
-    //             const dosageNicotineOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: '0 mg' },
-    //                 { value: 2, label: '3 mg' },
-    //                 { value: 3, label: '6 mg' },
-    //                 { value: 4, label: '9-10 mg' },
-    //                 { value: 5, label: '12 mg' },
-    //                 { value: 6, label: '18 mg' },
-    //                 { value: 7, label: '18-20 mg' }
-    //             ];
-    //             const statutProduitOptions = [
-    //                 { value: null, label: '' },
-    //                 { value: 1, label: 'Actif' },
-    //                 { value: 2, label: 'Inactif' }
-    //             ];
-    //
-    //             cells.forEach((cellData, index) => {
-    //                 let cell;
-    //                 if (index === 0) { // Magasin ID
-    //                     cell = dropdownCells(cellData, magasinOptions, 'magasin_id', handleChange);
-    //                 } else if (index === 4) { // Catégorie ID
-    //                     cell = dropdownCells(cellData, categorieOptions, 'categorie_id', handleChange);
-    //                     if (product.categorie_id === 1 || product.categorie_id === 2) {
-    //                         cell.classList.add('category-cell-e-liquides');
-    //                     } else {
-    //                         cell.classList.add('category-cell-concentres');
-    //                     }
-    //                 } else if (index === 5) { // Marque ID
-    //                     cell = dropdownCells(cellData, marqueOptions, 'marque_id', handleChange);
-    //                 } else if (index === 6) { // Type Saveur ID
-    //                     cell = dropdownCells(cellData, saveurOptions, 'type_saveur_id', handleChange);
-    //                 } else if (index === 8) { // Dosage PG/VG
-    //                     cell = dropdownCells(cellData, dosagepgvgOptions, 'dosage_pg_vg_id', handleChange);
-    //                 } else if (index === 9) { // Constenance ml ID
-    //                     cell = dropdownCells(cellData, contenanceOptions, 'contenance_ml_id', handleChange);
-    //                 } else if (index === 10) { // Dosage nicotine mg ID
-    //                     cell = dropdownCells(cellData, dosageNicotineOptions, 'dosage_nicotine_mg_id', handleChange);
-    //                 } else if (index === 12) { // Statut produit ID
-    //                     cell = dropdownCells(cellData, statutProduitOptions, 'statut_produit_id', handleChange);
-    //                 } else if (index === 1) {
-    //                     cell = editableCells(cellData, 'sku', handleChange);
-    //                 } else if (index === 2) {
-    //                     cell = editableCells(cellData, 'libelle_produit', handleChange);
-    //                 } else if (index === 3) {
-    //                     cell = editableCells(cellData, 'libelle_fiche', handleChange);
-    //                 } else if (index === 7) {
-    //                     cell = editableCells(cellData, 'description', handleChange);
-    //                 } else if (index === 11) {
-    //                     cell = editableCells(cellData, 'qte_stock', handleChange);
-    //                 } else {
-    //                     cell = document.createElement('td');
-    //                     cell.textContent = cellData;
-    //                 }
-    //
-    //                 if (cellData === null && index !== 0) {
-    //                     cell.style.backgroundColor = 'red';
-    //                     hasNullValue = true;
-    //                 }
-    //                 if (cellData === null && index === 0) {
-    //                     cell.style.backgroundColor = 'gray';
-    //                 }
-    //                 row.appendChild(cell);
-    //             });
-    //
-    //             // vérifier si le produit a des valeurs null
-    //             if (hasNullValue) {
-    //                 const alertCell = document.createElement('td');
-    //                 alertCell.textContent = 'Information(s) manquante(s)';
-    //                 alertCell.style.color = 'white';
-    //                 alertCell.style.backgroundColor = 'red';
-    //                 alertCell.classList.add('alert-cell');
-    //                 row.appendChild(alertCell);
-    //             } else {
-    //                 const emptyCell = document.createElement('td');
-    //                 row.appendChild(emptyCell);
-    //             }
-    //
-    //             const actionsCell = document.createElement('td');
-    //             const validateButton = document.createElement('button');
-    //             validateButton.textContent = 'Valider';
-    //             validateButton.addEventListener('click', () => {
-    //                 const selectedId = product.id;
-    //                 const selectedMagasinId = product.magasin_id;
-    //                 const selectedCategorieId = product.categorie_id;
-    //                 const selectedMarqueId = product.marque_id;
-    //                 const selectedTypeSaveurId = product.type_saveur_id;
-    //                 const selectedDosagePgVgId = product.dosage_pg_vg_id;
-    //                 const selectedContenanceMlId = product.contenance_ml_id;
-    //                 const selectedDosageNicotineMgId = product.dosage_nicotine_mg_id;
-    //                 const selectedStatutProduitId = product.statut_produit_id;
-    //                 const selectedSKU = product.sku;
-    //                 const selectedLibelleProduit = product.libelle_produit;
-    //                 const selectedLibelleFiche = product.libelle_fiche;
-    //                 const selectedDescription = product.description;
-    //                 const selectedSel = product.sel_de_nicotine;
-    //                 const selectedQteStock = product.qte_stock;
-    //
-    //                 // console.log('selectedQteStock', selectedQteStock); a passer en int
-    //
-    //                 // envoie les ids à update dans la base de données au back-end
-    //                 fetch('/gestion-produits/update', {
-    //                     method: 'POST',
-    //                     body: JSON.stringify({
-    //                         id: selectedId,
-    //                         magasin_id: selectedMagasinId,
-    //                         categorie_id: selectedCategorieId,
-    //                         marque_id: selectedMarqueId,
-    //                         type_saveur_id: selectedTypeSaveurId,
-    //                         dosage_pg_vg_id: selectedDosagePgVgId,
-    //                         contenance_ml_id: selectedContenanceMlId,
-    //                         dosage_nicotine_mg_id: selectedDosageNicotineMgId,
-    //                         statut_produit_id: selectedStatutProduitId,
-    //                         sku: selectedSKU,
-    //                         libelle_produit: selectedLibelleProduit,
-    //                         libelle_fiche: selectedLibelleFiche,
-    //                         description: selectedDescription,
-    //                         sel_de_nicotine: selectedSel,
-    //                         qte_stock: selectedQteStock
-    //                     }),
-    //                     headers: {
-    //                         'Content-Type': 'application/json'
-    //                     }
-    //                 })
-    //                     .then(response => response.json())
-    //                     .catch(error => {
-    //                         console.error('Une erreur s\'est produite lors de la requête:', error);
-    //                     });
-    //             });
-    //             actionsCell.appendChild(validateButton);
-    //             row.appendChild(actionsCell);
-    //
-    //             tbody.appendChild(row);
-    //         });
-    //         table.appendChild(tbody);
-    //         tableContainer.appendChild(table);
-    //
-    //         const checkbox = document.getElementById('show-only-null');
-    //         checkbox.addEventListener('change', filterAlertProducts);
-    //         const eliquidesRadioButton = document.getElementById('show-only-e-liquides');
-    //         eliquidesRadioButton.addEventListener('change', filterELiquidesProducts);
-    //         const concentresRadioButton = document.getElementById('show-only-concentres');
-    //         concentresRadioButton.addEventListener('change', filterConcentresProducts);
-    //     })
-    //     .catch(error => {
-    //         console.error('Une erreur s\'est produite lors de la récupération des données:', error);
-    //     });
 
     function loadTable() {
         fetch(`/gestion-produits/all-stores`)
@@ -825,8 +403,6 @@
                         const selectedSel = product.sel_de_nicotine;
                         const selectedQteStock = product.qte_stock;
 
-                        // console.log('selectedQteStock', selectedQteStock); a passer en int
-
                         // envoie les ids à update dans la base de données au back-end
                         fetch('/gestion-produits/update', {
                             method: 'POST',
@@ -866,10 +442,6 @@
 
                 const checkbox = document.getElementById('show-only-null');
                 checkbox.addEventListener('change', filterAlertProducts);
-                const eliquidesRadioButton = document.getElementById('show-only-e-liquides');
-                eliquidesRadioButton.addEventListener('change', filterELiquidesProducts);
-                const concentresRadioButton = document.getElementById('show-only-concentres');
-                concentresRadioButton.addEventListener('change', filterConcentresProducts);
             })
             .catch(error => {
                 console.error('Une erreur s\'est produite lors de la récupération des données:', error);
@@ -1202,8 +774,6 @@
                         const selectedSel = product.sel_de_nicotine;
                         const selectedQteStock = product.qte_stock;
 
-                        // console.log('selectedQteStock', selectedQteStock); a passer en int
-
                         // envoie les ids à update dans la base de données au back-end
                         fetch('/gestion-produits/update', {
                             method: 'POST',
@@ -1242,11 +812,9 @@
                 tableContainer.appendChild(table);
 
                 const checkbox = document.getElementById('show-only-null');
-                checkbox.addEventListener('change', filterAlertProducts);
-                const eliquidesRadioButton = document.getElementById('show-only-e-liquides');
-                eliquidesRadioButton.addEventListener('change', filterELiquidesProducts);
-                const concentresRadioButton = document.getElementById('show-only-concentres');
-                concentresRadioButton.addEventListener('change', filterConcentresProducts);
+                if (checkbox.checked) {
+                    filterAlertProducts();
+                }
             })
             .catch(error => {
                 console.error('Une erreur s\'est produite lors de la récupération des données:', error);
@@ -1256,7 +824,7 @@
         loadTable();
     });
 
-    // Événement de changement du filtre sélectionné par l'utilisateur
+    // événement de changement de radio button
     const filterRadios = document.getElementsByName('filter');
     filterRadios.forEach(radio => {
         radio.addEventListener('change', event => {
