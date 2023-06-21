@@ -36,7 +36,7 @@ function getELiquidesProduitsAndelnans(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id != 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 1 AND categorie_id != 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
     if (error) {
             return callback(error, null);
@@ -60,7 +60,7 @@ function getELiquidesProduitsBessoncourt(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id != 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 2 AND categorie_id != 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -84,7 +84,7 @@ function getELiquidesProduitsBesancon(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id != 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 3 AND categorie_id != 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -108,7 +108,7 @@ function getELiquidesProduitsColmar(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id != 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 4 AND categorie_id != 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -133,7 +133,7 @@ function getConcentresProduitsAndelnans(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 1 AND categorie_id = 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 1 AND categorie_id = 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -157,7 +157,7 @@ function getConcentresProduitsBessoncourt(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 2 AND categorie_id = 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 2 AND categorie_id = 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -181,7 +181,7 @@ function getConcentresProduitsBesancon(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 3 AND categorie_id = 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 3 AND categorie_id = 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);
@@ -205,7 +205,7 @@ function getConcentresProduitsColmar(limit, offset, callback) {
                           MIN(statut_produit_id) AS statut_produit_id,
                           MIN(statut_reappro_id) AS statut_reappro_id
                       FROM produits
-                      WHERE magasin_id = 4 AND categorie_id = 3 AND statut_produit_id != 2
+                      WHERE magasin_id = 4 AND categorie_id = 3 AND statut_produit_id != 2 AND (qte_stock > 0 OR (qte_stock = 0 AND statut_reappro_id = 1))
                       GROUP BY magasin_id, libelle_fiche;`, (error, results) => {
         if (error) {
             return callback(error, null);

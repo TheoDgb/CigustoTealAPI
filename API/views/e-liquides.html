@@ -2237,7 +2237,7 @@
                     </div>
                     <hr>
                     <p class="card-text" style="font-size: 30px;">${product.description}</p>
-                    ${product.statut_reappro_id === 2 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 70px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 70px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
@@ -2400,7 +2400,7 @@
                     </div>
                     <hr>
                     <p class="card-text">${product.description}</p>
-                    ${product.statut_reappro_id === 2 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 45px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 45px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
@@ -2570,7 +2570,7 @@
                     </div>
                     <hr>
                     <p class="card-text">${product.description}</p>
-                    ${product.statut_reappro_id === 2 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 35px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 35px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
                 </div>
                 <div class="divider bg-primary my-4"></div>
             </div>`;
