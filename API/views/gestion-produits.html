@@ -27,10 +27,10 @@
             </button>
         </a>
         <input type="checkbox" id="show-only-null" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="show-only-null">Produits incomplets</label>
-        <input type="radio" name="filter" value="e-liquide-actif" id="e-liquide-actif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;" checked><label style="font-size: 1.2em;" for="e-liquide-actif">E-Liquides actifs</label>
+        <input type="radio" name="filter" value="e-liquide-actif" id="e-liquide-actif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="e-liquide-actif">E-Liquides actifs</label>
         <input type="radio" name="filter" value="e-liquide-inactif" id="e-liquide-inactif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="e-liquide-inactif">E-Liquides inactifs</label>
         <input type="radio" name="filter" value="concentre-actif" id="concentre-actif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="concentre-actif">Concentrés actifs</label>
-        <input type="radio" name="filter" value="concentre-inactif" id="concentre-inactif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;"><label style="font-size: 1.2em;" for="concentre-inactif">Concentrés inactifs</label>
+        <input type="radio" name="filter" value="concentre-inactif" id="concentre-inactif" style="transform: scale(1.5); margin-right: 10px; margin-left: 30px;" checked><label style="font-size: 1.2em;" for="concentre-inactif">Concentrés inactifs</label>
         <br><br><br>
     </div>
     <br>
@@ -102,7 +102,8 @@
             .then(response => response.json())
             .then(data => {
                 // filtre par défaut
-                const filteredData = data.filter(product => product.statut_produit_id === 1 && (product.categorie_id === 1 || product.categorie_id === 2));
+                // const filteredData = data.filter(product => product.statut_produit_id === 1 && (product.categorie_id === 1 || product.categorie_id === 2));
+                const filteredData = data.filter(product => product.statut_produit_id === 2 && product.categorie_id === 3);
 
                 const tableContainer = document.getElementById('table-container');
                 tableContainer.style.transform = 'scale(77.9%)';
