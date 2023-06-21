@@ -1,7 +1,7 @@
 const connection = require('./bdd/db.js');
 
 function getAllProductsStores(callback){
-    connection.query(`SELECT * FROM produits WHERE marque_id = 1;`, (error, results) => {
+    connection.query(`SELECT * FROM produits;`, (error, results) => {
         if (error) {
             return callback(error, null);
         }
