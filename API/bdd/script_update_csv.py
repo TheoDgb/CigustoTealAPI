@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/finaltestbefore.csv', sep=';', decimal=',')
+df = pd.read_csv('./bdd/metabaseFile.csv', sep=';', decimal=',')
 
 # supprime les colonnes inutiles
 df = df.drop(['ID', 'Code EAN', 'type produit', 'statut produit centrale', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
@@ -298,7 +298,5 @@ connection.commit()
 cursor.close()
 connection.close()
 
-
-
 # save
-df.to_csv('./bdd/finaltestafter.csv', sep=';', index=False) #Concentre CHARLEMAGNE - 814 - 10 ml
+df.to_csv('./bdd/metabaseFileAfterScript.csv', sep=';', index=False)
