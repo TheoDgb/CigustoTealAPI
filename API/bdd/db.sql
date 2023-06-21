@@ -194,3 +194,6 @@ VALUES (1, 'actif'),
 # FIELDS TERMINATED BY ';' OPTIONALLY ENCLOSED BY '' ESCAPED BY ''
 # LINES TERMINATED BY '\n'
 # FROM testTeal.produits;
+
+# réimporter les données
+# python3 script_reintegration_csv_save.py
