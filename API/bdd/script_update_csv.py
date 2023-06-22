@@ -4,33 +4,16 @@ import pymysql
 
 df = pd.read_csv('./bdd/metabaseFile.csv', sep=';', decimal=',')
 
+# renommer les colonnes
+new_column_names = ['ID', 'sku', 'Code EAN', 'libelle_fiche', 'libelle_produit', 'type produit', 'statut produit centrale', 'categorie_id', 'marque_id', 'gamme', 'description', 'dosage_pg_vg_id', 'dosage_nicotine_mg_id', 'contenance_ml_id', 'sel_de_nicotine', 'type_saveur_id', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'magasin_id', 'qte_stock', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2', 'statut_produit_id', 'statut_reappro_id']
+df.columns = new_column_names
+
 # supprime les colonnes inutiles
 df = df.drop(['ID', 'Code EAN', 'type produit', 'statut produit centrale', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
-
 # remplace NaN par 0
-df['Qté stock'] = df['Qté stock'].fillna(0)
+df['qte_stock'] = df['qte_stock'].fillna(0)
 # convertit la colonne Qté stock en entier
-df['Qté stock'] = df['Qté stock'].astype(int)
-
-# renommer les colonnes pour les rendre utilisables dans la bdd
-df = df.rename(columns={
-    'Sku': 'sku',
-    'libellé Fiche': 'libelle_fiche',
-    'libellé produit': 'libelle_produit',
-    'catégorie': 'categorie_id',
-    'Marque': 'marque_id',
-    'gamme': 'gamme',
-    'description': 'description',
-    'dosage Pg/vg': 'dosage_pg_vg_id',
-    'Dosage nicotine': 'dosage_nicotine_mg_id',
-    'volume flacon': 'contenance_ml_id',
-    'type de saveur': 'type_saveur_id',
-    'sel de nicotine': 'sel_de_nicotine',
-    'Magasin': 'magasin_id',
-    'Qté stock': 'qte_stock',
-    'Statut Produit Mag': 'statut_produit_id',
-    'Statut Réappro Mag': 'statut_reappro_id',
-})
+df['qte_stock'] = df['qte_stock'].astype(int)
 
 # supprime les lignes qui ne sont pas des liquides / concentrés
 df = df[df['categorie_id'].isin(["Liquides 10 ml", "Liquides Grand Format", "Concentrés"])]
