@@ -26,14 +26,14 @@ axios({
         response.data.pipe(writer);
 
         writer.on('finish', () => {
-            console.log('Le fichier CSV a été téléchargé avec succès.');
+            console.log('Le fichier CSV Metabase a été téléchargé avec succès.');
             // exécuter le script update csv/insertion dans bdd
             const options = {
                 scriptPath: './bdd'
             };
             PythonShell.run('script_update_csv.py', options, function (err) {
                 if (err) throw err;
-                console.log('Le script Python a été exécuté avec succès !');
+                console.log('Le script Python a été exécuté avec succès.');
             });
         });
 
