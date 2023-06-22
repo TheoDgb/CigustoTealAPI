@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/metabaseFile.csv', sep=';', decimal=',')
+df = pd.read_csv('./bdd/metabaseFile.csv', sep=',', decimal=',')
 
 # renommer les colonnes
 new_column_names = ['ID', 'sku', 'Code EAN', 'libelle_fiche', 'libelle_produit', 'type produit', 'statut produit centrale', 'categorie_id', 'marque_id', 'gamme', 'description', 'dosage_pg_vg_id', 'dosage_nicotine_mg_id', 'contenance_ml_id', 'sel_de_nicotine', 'type_saveur_id', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'magasin_id', 'qte_stock', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2', 'statut_produit_id', 'statut_reappro_id']

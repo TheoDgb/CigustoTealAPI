@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const {PythonShell} = require('python-shell');
 const produits = require('./produits');
+const axios = require('axios');
+const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,6 +12,38 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.static('public'));
+
+// télécharger le fichier CSV Metabase
+const csvUrl = 'https://bi.collab.cigusto.com/public/question/3de025a7-0ba2-41cb-8035-c08d4a1bf40d.csv';
+const csvFilePath = path.join(__dirname, './bdd/metabaseFile.csv');
+axios({
+    method: 'GET',
+    url: csvUrl,
+    responseType: 'stream',
+})
+    .then(response => {
+        const writer = fs.createWriteStream(csvFilePath);
+        response.data.pipe(writer);
+
+        writer.on('finish', () => {
+            console.log('Le fichier CSV a été téléchargé avec succès.');
+            // exécuter le script update csv/insertion dans bdd
+            const options = {
+                scriptPath: './bdd'
+            };
+            PythonShell.run('script_update_csv.py', options, function (err) {
+                if (err) throw err;
+                console.log('Le script Python a été exécuté avec succès !');
+            });
+        });
+
+        writer.on('error', error => {
+            console.error('Une erreur s\'est produite lors du téléchargement du fichier CSV :', error);
+        });
+    })
+    .catch(error => {
+        console.error('Une erreur s\'est produite lors du téléchargement du fichier CSV :', error);
+    });
 
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`)
@@ -191,16 +225,4 @@ app.get('/magasin-besancon/concentres', (req, res) => {
 });
 app.get('/magasin-colmar/concentres', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'concentres.html'))
-});
-
-const options = {
-    scriptPath: './bdd'
-};
-PythonShell.run('script_update_csv.py', options, function (err) {
-    if (err) throw err;
-    // console.log('Script exécuté avec succès !');
-});
-
-PythonShell.run('script_update_image.py', options, function (err) {
-    if (err) throw err;
 });
