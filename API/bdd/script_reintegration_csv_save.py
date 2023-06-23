@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./saveBDD.csv', sep=';', decimal=',')
+df = pd.read_csv('./saveBDD.csv', sep=';', decimal=',', quotechar='"')
 
 # supprime id qui va etre auto incrementé
 df = df.drop(['id'], axis=1)

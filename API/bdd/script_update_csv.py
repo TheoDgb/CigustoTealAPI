@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pymysql
 
-df = pd.read_csv('./bdd/metabaseFile.csv', sep=',', decimal=',')
+df = pd.read_csv('./bdd/metabaseFile.csv', sep=',', decimal=',', quotechar='"')
 
 # renommer les colonnes
 new_column_names = ['ID', 'sku', 'Code EAN', 'libelle_fiche', 'libelle_produit', 'type produit', 'statut produit centrale', 'categorie_id', 'marque_id', 'gamme', 'description', 'dosage_pg_vg_id', 'dosage_nicotine_mg_id', 'contenance_ml_id', 'sel_de_nicotine', 'type_saveur_id', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'magasin_id', 'qte_stock', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2', 'statut_produit_id', 'statut_reappro_id']
@@ -10,6 +10,10 @@ df.columns = new_column_names
 
 # supprime les colonnes inutiles
 df = df.drop(['ID', 'Code EAN', 'type produit', 'statut produit centrale', 'unité vente', 'PA HT centrale (€)', 'PV ttc Conseillé (€)', 'Marge Ht (€)', 'tx marge', 'Pv Ttc Magasin (€)', 'Ventes Mois M', 'Ventes M 1', 'Ventes M 2'], axis=1)
+
+# supprimer les produits doublons
+df.drop_duplicates(inplace=True)
+
 # remplace NaN par 0
 df['qte_stock'] = df['qte_stock'].fillna(0)
 # convertit la colonne Qté stock en entier
@@ -244,42 +248,45 @@ df.insert(0, 'id', None)
 
 
 
+# si la combinaison sku et magasin_id existe déjà dans la base de données alors update uniquement qte_stock, statut_produit_id et statut_reappro_id
+# sinon si sku n'existe pas dans la base de données alors insert
 
-
-
-
-
-
-
-
-# à faire plus tard
-# FAIRE POUR QUE CA N IMPORTE PAS S IL Y A DES DOUBLES DANS LA BASE DE DONNEES
-# AVEC LE LIBELLE_PRODUIT ET LE MAGASINID
-
-# if produit déja existant then update uniquement le stock
-
-
-# Connexion à la base de données MySQL
+# connexion à la base de données MySQL
 connection = pymysql.connect(host='localhost',
                              user='theo',
                              password='3630',
                              db='testTeal')
 
-# Créer un curseur pour exécuter des requêtes
+# créer un curseur pour exécuter des requêtes
 cursor = connection.cursor()
 
-# Boucle sur chaque ligne du DataFrame et exécute l'insertion
+# boucle sur chaque ligne du DataFrame et exécute l'insertion ou la mise à jour
 for _, row in df.iterrows():
     values = (row['id'], row['magasin_id'], row['sku'], row['libelle_produit'], row['libelle_fiche'], row['categorie_id'], row['marque_id'], row['type_saveur_id'], row['description'], row['dosage_pg_vg_id'], row['contenance_ml_id'], row['dosage_nicotine_mg_id'], row['sel_de_nicotine'], row['qte_stock'], row['statut_produit_id'], row['statut_reappro_id'])
-    query = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id, statut_reappro_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-    cursor.execute(query, values)
 
-# Valider les modifications dans la base de données
+    # Vérifier si la combinaison sku et magasin_id existe déjà dans la base de données
+    query_select = "SELECT COUNT(*) FROM produits WHERE sku = %s AND (magasin_id = %s OR (magasin_id IS NULL AND %s IS NULL));"
+    cursor.execute(query_select, (row['sku'], row['magasin_id'], row['magasin_id']))
+    result = cursor.fetchone()
+    count = result[0]
+
+    if count > 0:
+        # La combinaison existe, effectuer une mise à jour
+        query_update = "UPDATE produits SET qte_stock = %s, statut_produit_id = %s, statut_reappro_id = %s WHERE sku = %s AND magasin_id = %s;"
+        cursor.execute(query_update, (row['qte_stock'], row['statut_produit_id'], row['statut_reappro_id'], row['sku'], row['magasin_id']))
+    else:
+        # La combinaison n'existe pas, effectuer une insertion
+        query_insert = "INSERT INTO produits (id, magasin_id, sku, libelle_produit, libelle_fiche, categorie_id, marque_id, type_saveur_id, description, dosage_pg_vg_id, contenance_ml_id, dosage_nicotine_mg_id, sel_de_nicotine, qte_stock, statut_produit_id, statut_reappro_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+        cursor.execute(query_insert, values)
+
+# valider les modifications dans la base de données
 connection.commit()
 
-# Fermer la connexion et le curseur
+# fermer la connexion et le curseur
 cursor.close()
 connection.close()
+
+
 
 # save
 df.to_csv('./bdd/metabaseFileAfterScript.csv', sep=';', index=False)

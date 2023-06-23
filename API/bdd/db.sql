@@ -195,5 +195,7 @@ VALUES (1, 'actif'),
 # LINES TERMINATED BY '\n'
 # FROM testTeal.produits;
 
+# déplacer le fichier dans ./bdd
+
 # réimporter les données
 # python3 script_reintegration_csv_save.py
