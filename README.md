@@ -13,7 +13,8 @@ http://localhost:3000/
 
 ## EXPORTER / IMPORTER LES DONNÉES UNE FOIS LES MODIFICATIONS APPORTÉES SUR /gestion-produits
 
-### chemin d'exportation : SHOW VARIABLES LIKE "secure_file_priv"
+### chemin d'exportation :
+    SHOW VARIABLES LIKE "secure_file_priv"
 
 ### 1 : Exporter les données de la table produits dans un fichier csv depuis mysql
     SELECT 'id', 'magasin_id', 'sku', 'libelle_produit', 'libelle_fiche', 'categorie_id', 'marque_id', 'type_saveur_id', 'description', 'dosage_pg_vg_id', 'contenance_ml_id', 'dosage_nicotine_mg_id', 'sel_de_nicotine', 'qte_stock', 'statut_produit_id', 'statut_reappro_id'
