@@ -11,7 +11,7 @@ http://localhost:3000/
 <br> http://localhost:3000/magasin-andelnans/e-liquides
 <br> http://localhost:3000/gestion-produits
 
-## METTRE À JOUR LA BDD UNE FOIS LES MODIFICATIONS REALISÉES SUR /gestion-produits
+## EXPORTER / IMPORTER LES DONNÉES UNE FOIS LES MODIFICATIONS APPORTÉES SUR /gestion-produits
 
 ### chemin d'exportation : SHOW VARIABLES LIKE "secure_file_priv"
 
