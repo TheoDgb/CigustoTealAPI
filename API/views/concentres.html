@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/images/favicon_cigusto.png">
-    <title>Cigusto - Teal Concentrés</title>
+    <title>Cigusto - Teal E-Liquides</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- SIDEBAR -->
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -182,11 +181,21 @@
                         <img src="/images/logo_cigusto.png" alt="Logo Cigusto Teal" style="width: auto; height: 95px;"/>
                     </a>
                     <div class="ms-auto">
-                        <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 10px;">
+                        <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 30px;">
                             <i class="bi bi-person-fill" style="display: inline-block; vertical-align: middle; font-size: 3rem;"></i>
                             <span style="display: block; font-size: 1.6rem; margin-top: -14px; margin-bottom: 7px;">Compte</span>
                         </a>
-                        <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
+                        <a href="http://localhost:3000/cigusto-teal-qrcode" style="display: inline-block; text-align: center; color: inherit;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="55" fill="currentColor" class="bi bi-qr-code fs-5" viewBox="0 -4 22 22" style="display: inline-block; vertical-align: middle;">
+                                <path d="M2 2h2v2H2V2Z"/>
+                                <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
+                                <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
+                                <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
+                                <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
+                            </svg>
+                            <span style="margin-left:-20px; display: block; font-size: 1.6rem;">QR Code</span>
+                        </a>
+                        <a href="#footer" style="display: inline-block; text-align: center; color: inherit; margin-left: 10px;">
                             <i class="bi bi-telephone-fill" style="display: inline-block; vertical-align: middle; font-size: 3rem;"></i>
                             <span style="display: block; font-size: 1.6rem; margin-top: -14px; margin-bottom: 7px;">Contact</span>
                         </a>
@@ -196,7 +205,7 @@
                     <div class="form-group">
                         <div class="input-group mt-2 mb-2">
                             <span class="input-group-text" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; font-size: 3em;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; font-size: 2rem;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" id="searchInputTel" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; font-size: 2rem;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -365,6 +374,16 @@
                             <i class="bi bi-person-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
                             <span style="display: block; font-size: 0.8rem;">Compte</span>
                         </a>
+                        <a href="http://localhost:3000/cigusto-teal-qrcode" style="display: inline-block; text-align: center; color: inherit;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="30" fill="currentColor" class="bi bi-qr-code fs-5" viewBox="0 -4 24 24" style="display: inline-block; vertical-align: middle;">
+                                <path d="M2 2h2v2H2V2Z"/>
+                                <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
+                                <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
+                                <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
+                                <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
+                            </svg>
+                            <span style="margin-left:-10px; display: block; font-size: 0.8rem;">QR Code</span>
+                        </a>
                         <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
                             <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
                             <span style="display: block; font-size: 0.8rem;">Contact</span>
@@ -375,7 +394,7 @@
                     <div class="form-group">
                         <div class="input-group mb-2">
                             <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                            <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" id="searchInputTablette" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                     </div>
                 </div>
@@ -394,13 +413,23 @@
                     <label for="SearchInput"></label>
                     <div class="input-group mb-4">
                         <span class="input-group-text" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;" id="basic-addon1"><i class="bi bi-search"></i></span>
-                        <input type="text" class="form-control" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="searchInput" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;" placeholder="Recherchez une marque, un goût..." aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="d-inline-block float-end">
                     <a href="#" style="display: inline-block; text-align: center; color: inherit; margin-right: 10px;">
                         <i class="bi bi-person-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
                         <span style="display: block; font-size: 0.8rem;">Compte</span>
+                    </a>
+                    <a href="http://localhost:3000/cigusto-teal-qrcode" style="display: inline-block; text-align: center; color: inherit;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="30" fill="currentColor" class="bi bi-qr-code fs-5" viewBox="0 -4 24 24" style="display: inline-block; vertical-align: middle;">
+                            <path d="M2 2h2v2H2V2Z"/>
+                            <path d="M6 0v6H0V0h6ZM5 1H1v4h4V1ZM4 12H2v2h2v-2Z"/>
+                            <path d="M6 10v6H0v-6h6Zm-5 1v4h4v-4H1Zm11-9h2v2h-2V2Z"/>
+                            <path d="M10 0v6h6V0h-6Zm5 1v4h-4V1h4ZM8 1V0h1v2H8v2H7V1h1Zm0 5V4h1v2H8ZM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8H6Zm0 0v1H2V8H1v1H0V7h3v1h3Zm10 1h-1V7h1v2Zm-1 0h-1v2h2v-1h-1V9Zm-4 0h2v1h-1v1h-1V9Zm2 3v-1h-1v1h-1v1H9v1h3v-2h1Zm0 0h3v1h-2v1h-1v-2Zm-4-1v1h1v-2H7v1h2Z"/>
+                            <path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"/>
+                        </svg>
+                        <span style="margin-left:-10px; display: block; font-size: 0.8rem;">QR Code</span>
                     </a>
                     <a href="#footer" style="display: inline-block; text-align: center; color: inherit;">
                         <i class="bi bi-telephone-fill fs-5" style="display: inline-block; vertical-align: middle;"></i>
@@ -587,38 +616,38 @@
                                     <ul class="collapse list-unstyled" id="filtreSaveursSectionTel">
                                         <li>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_classic_tel" onchange="handleCheckboxChangeTel()" value="1">
                                                 <label class="form-check-label" for="saveur_classic_tel">
                                                     Classic
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_menthole_tel" onchange="handleCheckboxChangeTel()" value="2">
                                                 <label class="form-check-label" for="saveur_menthole_tel">
                                                     Mentholé
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_tel" onchange="handleCheckboxChangeTel()" value="3">
                                                 <label class="form-check-label" for="saveur_fruite_tel">
                                                     Fruité
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tel">
-                                                <label class="form-check-label" for="saveur_fruite_frais_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais_tel" onchange="handleCheckboxChangeTel()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais_tel">
                                                     Fruité Frais
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_gourmand_tel" onchange="handleCheckboxChangeTel()" value="5">
                                                 <label class="form-check-label" for="saveur_gourmand_tel">
                                                     Gourmand
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tel">
-                                                <label class="form-check-label" for="saveur_friandise_boisson_tel">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson_tel" onchange="handleCheckboxChangeTel()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson_tel">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -632,13 +661,13 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreContenanceSectionTel">
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_10_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_10_tel" onchange="handleCheckboxChangeTel()" value="1">
                                             <label class="form-check-label" for="contenance_10_tel">
                                                 10 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_30_tel">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_30_tel" onchange="handleCheckboxChangeTel()" value="2">
                                             <label class="form-check-label" for="contenance_30_tel">
                                                 30 mL
                                             </label>
@@ -652,108 +681,108 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreMarquesSectionTel">
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aandl_tel" onchange="handleCheckboxChangeTel()" value="1">
                                             <label class="form-check-label" for="marque_aandl_tel">
                                                 A&L
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_amazone_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_amazone_tel" onchange="handleCheckboxChangeTel()" value="2">
                                             <label class="form-check-label" for="marque_amazone_tel">
                                                 Amazone
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aromazon_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aromazon_tel" onchange="handleCheckboxChangeTel()" value="3">
                                             <label class="form-check-label" for="marque_aromazon_tel">
                                                 Aromazon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cesar_tel" onchange="handleCheckboxChangeTel()" value="4">
                                             <label class="form-check-label" for="marque_cesar_tel">
                                                 Cesar
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_curieux_tel" onchange="handleCheckboxChangeTel()" value="5">
                                             <label class="form-check-label" for="marque_curieux_tel">
                                                 Curieux
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_doctordiy_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_doctordiy_tel" onchange="handleCheckboxChangeTel()" value="6">
                                             <label class="form-check-label" for="marque_doctordiy_tel">
                                                 Doctor Diy
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fighterfuel_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fighterfuel_tel" onchange="handleCheckboxChangeTel()" value="7">
                                             <label class="form-check-label" for="marque_fighterfuel_tel">
                                                 Fighter Fuel                                            </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruiteo_tel" onchange="handleCheckboxChangeTel()" value="8">
                                             <label class="form-check-label" for="marque_fruiteo_tel">
                                                 Fruiteo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruizee_tel" onchange="handleCheckboxChangeTel()" value="9">
                                             <label class="form-check-label" for="marque_fruizee_tel">
                                                 Fruizee
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fullmoon_tel" onchange="handleCheckboxChangeTel()" value="10">
                                             <label class="form-check-label" for="marque_fullmoon_tel">
                                                 Full Moon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kungfruits_tel" onchange="handleCheckboxChangeTel()" value="11">
                                             <label class="form-check-label" for="marque_kungfruits_tel">
                                                 Kung Fruits
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kyandishop_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kyandishop_tel" onchange="handleCheckboxChangeTel()" value="12">
                                             <label class="form-check-label" for="marque_kyandishop_tel">
                                                 Kyandi Shop
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lefrenchliquide_tel" onchange="handleCheckboxChangeTel()" value="13">
                                             <label class="form-check-label" for="marque_lefrenchliquide_tel">
                                                 Le French Liquide
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_shootiz_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_shootiz_tel" onchange="handleCheckboxChangeTel()" value="14">
                                             <label class="form-check-label" for="marque_shootiz_tel">
                                                 Shootiz
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_themedusajuice_tel" onchange="handleCheckboxChangeTel()" value="15">
                                             <label class="form-check-label" for="marque_themedusajuice_tel">
                                                 The Medusa Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_tjuice_tel" onchange="handleCheckboxChangeTel()" value="16">
                                             <label class="form-check-label" for="marque_tjuice_tel">
                                                 T-Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vampirevape_tel" onchange="handleCheckboxChangeTel()" value="17">
                                             <label class="form-check-label" for="marque_vampirevape_tel">
                                                 Vampire Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 150px; font-size: 50px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vape47_tel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vape47_tel" onchange="handleCheckboxChangeTel()" value="18">
                                             <label class="form-check-label" for="marque_vape47_tel">
                                                 Vape47
                                             </label>
@@ -761,32 +790,22 @@
                                     </ul>
                                 </div>
                             </li>
+                            <br>
+                            <button class="dismiss-filtre-tel btn btn-filtrevalid d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; margin-bottom: 50px;">
+                                <div style="font-size: 50px;">Valider</div>
+                            </button>
                         </ul>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
-                            <div class="card-body">
-                                <h5 class="card-title">Concentré 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
-                            <div class="card-body">
-                                <h5 class="card-title">Concentré 2</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
+                <!-- affichage des produits -->
+                <div class="col-12">
+                    <div class="row" id="productsRowTel">
+                        <div class="col-6"></div>
+                        <div class="col-6"></div>
                     </div>
                 </div>
+                <a href="#" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 50px;">Haut de page</a>
             </div>
             <div id="hori">
                 <!--ECRAN  TABLETTE-->
@@ -810,38 +829,38 @@
                                     <ul class="collapse list-unstyled" id="filtreSaveursSectionTablette">
                                         <li>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_classic_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_classic_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                                 <label class="form-check-label" for="saveur_classic_tablette">
                                                     Classic
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_menthole_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_menthole_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                                 <label class="form-check-label" for="saveur_menthole_tablette">
                                                     Mentholé
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                                 <label class="form-check-label" for="saveur_fruite_tablette">
                                                     Fruité
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais_tablette">
-                                                <label class="form-check-label" for="saveur_fruite_frais_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais_tablette" onchange="handleCheckboxChangeTablette()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais_tablette">
                                                     Fruité Frais
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_gourmand_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                                 <label class="form-check-label" for="saveur_gourmand_tablette">
                                                     Gourmand
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson_tablette">
-                                                <label class="form-check-label" for="saveur_friandise_boisson_tablette">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson_tablette" onchange="handleCheckboxChangeTablette()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson_tablette">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -855,13 +874,13 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreContenanceSectionTablette">
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_10_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_10_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                             <label class="form-check-label" for="contenance_10_tablette">
                                                 10 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="contenance_30_tablette">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_30_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                             <label class="form-check-label" for="contenance_30_tablette">
                                                 30 mL
                                             </label>
@@ -875,108 +894,108 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreMarquesSectionTablette">
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aandl_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aandl_tablette" onchange="handleCheckboxChangeTablette()" value="1">
                                             <label class="form-check-label" for="marque_aandl_tablette">
                                                 A&L
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_amazone_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_amazone_tablette" onchange="handleCheckboxChangeTablette()" value="2">
                                             <label class="form-check-label" for="marque_amazone_tablette">
                                                 Amazone
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_aromazon_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aromazon_tablette" onchange="handleCheckboxChangeTablette()" value="3">
                                             <label class="form-check-label" for="marque_aromazon_tablette">
                                                 Aromazon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_cesar_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cesar_tablette" onchange="handleCheckboxChangeTablette()" value="4">
                                             <label class="form-check-label" for="marque_cesar_tablette">
                                                 Cesar
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_curieux_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_curieux_tablette" onchange="handleCheckboxChangeTablette()" value="5">
                                             <label class="form-check-label" for="marque_curieux_tablette">
                                                 Curieux
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_doctordiy_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_doctordiy_tablette" onchange="handleCheckboxChangeTablette()" value="6">
                                             <label class="form-check-label" for="marque_doctordiy_tablette">
                                                 Doctor Diy
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fighterfuel_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fighterfuel_tablette" onchange="handleCheckboxChangeTablette()" value="7">
                                             <label class="form-check-label" for="marque_fighterfuel_tablette">
                                                 Fighter Fuel                                            </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruiteo_tablette" onchange="handleCheckboxChangeTablette()" value="8">
                                             <label class="form-check-label" for="marque_fruiteo_tablette">
                                                 Fruiteo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruizee_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruizee_tablette" onchange="handleCheckboxChangeTablette()" value="9">
                                             <label class="form-check-label" for="marque_fruizee_tablette">
                                                 Fruizee
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fullmoon_tablette" onchange="handleCheckboxChangeTablette()" value="10">
                                             <label class="form-check-label" for="marque_fullmoon_tablette">
                                                 Full Moon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kungfruits_tablette" onchange="handleCheckboxChangeTablette()" value="11">
                                             <label class="form-check-label" for="marque_kungfruits_tablette">
                                                 Kung Fruits
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_kyandishop_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kyandishop_tablette" onchange="handleCheckboxChangeTablette()" value="12">
                                             <label class="form-check-label" for="marque_kyandishop_tablette">
                                                 Kyandi Shop
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lefrenchliquide_tablette" onchange="handleCheckboxChangeTablette()" value="13">
                                             <label class="form-check-label" for="marque_lefrenchliquide_tablette">
                                                 Le French Liquide
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_shootiz_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_shootiz_tablette" onchange="handleCheckboxChangeTablette()" value="14">
                                             <label class="form-check-label" for="marque_shootiz_tablette">
                                                 Shootiz
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_themedusajuice_tablette" onchange="handleCheckboxChangeTablette()" value="15">
                                             <label class="form-check-label" for="marque_themedusajuice_tablette">
                                                 The Medusa Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_tjuice_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_tjuice_tablette" onchange="handleCheckboxChangeTablette()" value="16">
                                             <label class="form-check-label" for="marque_tjuice_tablette">
                                                 T-Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vampirevape_tablette" onchange="handleCheckboxChangeTablette()" value="17">
                                             <label class="form-check-label" for="marque_vampirevape_tablette">
                                                 Vampire Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 75px; font-size: 25px;">
-                                            <input class="form-check-input" type="checkbox" id="marque_vape47_tablette">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vape47_tablette" onchange="handleCheckboxChangeTablette()" value="18">
                                             <label class="form-check-label" for="marque_vape47_tablette">
                                                 Vape47
                                             </label>
@@ -984,42 +1003,22 @@
                                     </ul>
                                 </div>
                             </li>
+                            <button class="dismiss-filtre-tablette btn btn-filtrevalid d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; margin-bottom: 25px;">
+                                <div style="font-size: 25px;">Valider</div>
+                            </button>
                         </ul>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
-                            <div class="card-body">
-                                <h5 class="card-title">Concentré 1</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
-                            <div class="card-body">
-                                <h5 class="card-title">Concentré 2</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card zoom-effect">
-                            <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentrés card">
-                            <div class="card-body">
-                                <h5 class="card-title">Concentré 3</h5>
-                                <p class="card-text">Description de malade.</p>
-                            </div>
-                            <div class="divider bg-primary my-4"></div>
-                        </div>
+                <!-- affichage des produits -->
+                <div class="col-12">
+                    <div class="row" id="productsRowTablette">
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
                     </div>
                 </div>
+                <a href="#" class="btn btn-filtre d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; font-size: 32px;">Haut de page</a>
             </div>
         </div>
     </div>
@@ -1031,8 +1030,7 @@
                 <!--ECRAN PC-->
                 <div class="row">
                     <div class="col-3">
-                        P1
-                        <ul class="filtre list-unstyled menu-elements">
+                        <ul class="filtre list-unstyled menu-elements sticky-checkboxes">
                             <li>
                                 <div class="btw-onglet">
                                     <a href="#filtreSaveursSection" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
@@ -1041,38 +1039,38 @@
                                     <ul class="collapse list-unstyled" id="filtreSaveursSection">
                                         <li>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_classic">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_classic" onchange="handleCheckboxChange()" value="1">
                                                 <label class="form-check-label" for="saveur_classic">
                                                     Classic
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_menthole">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_menthole" onchange="handleCheckboxChange()" value="2">
                                                 <label class="form-check-label" for="saveur_menthole">
                                                     Mentholé
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruite" onchange="handleCheckboxChange()" value="3">
                                                 <label class="form-check-label" for="saveur_fruite">
                                                     Fruité
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_fruite_frais">
-                                                <label class="form-check-label" for="saveur_fruite_frais">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_fruitefrais" onchange="handleCheckboxChange()" value="4">
+                                                <label class="form-check-label" for="saveur_fruitefrais">
                                                     Fruité Frais
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_gourmand">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_gourmand" onchange="handleCheckboxChange()" value="5">
                                                 <label class="form-check-label" for="saveur_gourmand">
                                                     Gourmand
                                                 </label>
                                             </div>
                                             <div class="form-check" style="padding-left: 50px">
-                                                <input class="form-check-input" type="checkbox" id="saveur_friandise_boisson">
-                                                <label class="form-check-label" for="saveur_friandise_boisson">
+                                                <input class="form-check-input saveur-checkbox" type="checkbox" id="saveur_friandiseboisson" onchange="handleCheckboxChange()" value="6">
+                                                <label class="form-check-label" for="saveur_friandiseboisson">
                                                     Friandise / Boisson
                                                 </label>
                                             </div>
@@ -1086,13 +1084,13 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreContenanceSection">
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="contenance_10">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_10" onchange="handleCheckboxChange()" value="1">
                                             <label class="form-check-label" for="contenance_10">
                                                 10 mL
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="contenance_30">
+                                            <input class="form-check-input contenance-checkbox" type="checkbox" id="contenance_30" onchange="handleCheckboxChange()" value="2">
                                             <label class="form-check-label" for="contenance_30">
                                                 30 mL
                                             </label>
@@ -1106,109 +1104,109 @@
                                     </a>
                                     <ul class="collapse list-unstyled" id="filtreMarquesSection">
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_aandl">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aandl" onchange="handleCheckboxChange()" value="1">
                                             <label class="form-check-label" for="marque_aandl">
                                                 A&L
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_amazone">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_amazone" onchange="handleCheckboxChange()" value="2">
                                             <label class="form-check-label" for="marque_amazone">
                                                 Amazone
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_aromazon">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_aromazon" onchange="handleCheckboxChange()" value="3">
                                             <label class="form-check-label" for="marque_aromazon">
                                                 Aromazon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_cesar">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_cesar" onchange="handleCheckboxChange()" value="4">
                                             <label class="form-check-label" for="marque_cesar">
                                                 Cesar
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_curieux">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_curieux" onchange="handleCheckboxChange()" value="5">
                                             <label class="form-check-label" for="marque_curieux">
                                                 Curieux
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_doctordiy">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_doctordiy" onchange="handleCheckboxChange()" value="6">
                                             <label class="form-check-label" for="marque_doctordiy">
                                                 Doctor Diy
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_fighterfuel">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fighterfuel" onchange="handleCheckboxChange()" value="7">
                                             <label class="form-check-label" for="marque_fighterfuel">
                                                 Fighter Fuel
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruiteo">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruiteo" onchange="handleCheckboxChange()" value="8">
                                             <label class="form-check-label" for="marque_fruiteo">
                                                 Fruiteo
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_fruizee">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fruizee" onchange="handleCheckboxChange()" value="9">
                                             <label class="form-check-label" for="marque_fruizee">
                                                 Fruizee
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_fullmoon">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_fullmoon" onchange="handleCheckboxChange()" value="10">
                                             <label class="form-check-label" for="marque_fullmoon">
                                                 Full Moon
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_kungfruits">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kungfruits" onchange="handleCheckboxChange()" value="11">
                                             <label class="form-check-label" for="marque_kungfruits">
                                                 Kung Fruits
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_kyandishop">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_kyandishop" onchange="handleCheckboxChange()" value="12">
                                             <label class="form-check-label" for="marque_kyandishop">
                                                 Kyandi Shop
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_lefrenchliquide">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_lefrenchliquide" onchange="handleCheckboxChange()" value="13">
                                             <label class="form-check-label" for="marque_lefrenchliquide">
                                                 Le French Liquide
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_shootiz">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_shootiz" onchange="handleCheckboxChange()" value="14">
                                             <label class="form-check-label" for="marque_shootiz">
                                                 Shootiz
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_themedusajuice">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_themedusajuice" onchange="handleCheckboxChange()" value="15">
                                             <label class="form-check-label" for="marque_themedusajuice">
                                                 The Medusa Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_tjuice">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_tjuice" onchange="handleCheckboxChange()" value="16">
                                             <label class="form-check-label" for="marque_tjuice">
                                                 T-Juice
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_vampirevape">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vampirevape" onchange="handleCheckboxChange()" value="17">
                                             <label class="form-check-label" for="marque_vampirevape">
                                                 Vampire Vape
                                             </label>
                                         </li>
                                         <li class="form-check" style="padding-left: 50px">
-                                            <input class="form-check-input" type="checkbox" id="marque_vape47">
+                                            <input class="form-check-input marque-checkbox" type="checkbox" id="marque_vape47" onchange="handleCheckboxChange()" value="18">
                                             <label class="form-check-label" for="marque_vape47">
                                                 Vape47
                                             </label>
@@ -1218,54 +1216,13 @@
                             </li>
                         </ul>
                     </div>
-
+                    <!-- affichage des produits -->
                     <div class="col-9">
-                        P2
-                        <div class="row">
-                            <div class="col-3">
-                                col 1
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Concentré 1</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 2
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Concentré 2</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 3
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Concentré 3</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                col 4
-                                <div class="card zoom-effect">
-                                    <img class="card-img-top" src="/images/image_magasin_andelnans.jpg" alt="concentres card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Concentré 4</h5>
-                                        <p class="card-text">Description de malade.</p>
-                                    </div>
-                                    <div class="divider bg-primary my-4"></div>
-                                </div>
-                            </div>
+                        <div class="row" id="productsRow">
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
+                            <div class="col-3"></div>
                         </div>
                     </div>
                 </div>
@@ -1539,6 +1496,527 @@
     document.querySelector('.concentresMagasinCigustoTeal-tablette-historique').href = concentresMagasinCigustoTeal;
     document.querySelector('.concentresMagasinCigustoTeal-historique').href = concentresMagasinCigustoTeal;
 
+    // ENVOIE DE L'ID MAGASIN AU BACKEND EN INT
+    function convertMagasinIdToInt(magasinId) {
+        let magasinInt;
+        switch (magasinId) {
+            case 'magasin-andelnans':
+                magasinInt = 1;
+                break;
+            case 'magasin-bessoncourt':
+                magasinInt = 2;
+                break;
+            case 'magasin-besancon':
+                magasinInt = 3;
+                break;
+            case 'magasin-colmar':
+                magasinInt = 4;
+                break;
+            default:
+                break;
+        }
+        return magasinInt;
+    }
+    const magasinInt = convertMagasinIdToInt(magasinId);
+
+    // affichage tel produits avec filtres
+    // search bar input
+    document.getElementById('searchInputTel').addEventListener('input', handleCheckboxChangeTel);
+    function handleCheckboxChangeTel() {
+        // scroll en haut de la page
+        setTimeout(function() {
+            // Défilement automatique jusqu'au sommet de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },100);
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        fetch(`/concentres/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInputTel = document.getElementById('searchInputTel').value.toLowerCase();
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInputTel);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplayTel(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 3 colonnes
+    function updateProductsDisplayTel(data) {
+        const productsRowTel = document.getElementById('productsRowTel');
+        // Réinitialiser l'affichage des produits
+        productsRowTel.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+                    <br><br><br><br><br>
+                    <div style="text-align: center; color: gray;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 100%; height: auto;">
+                        <p>Aucun produit trouvé.</p>
+                    </div>
+                    <br><br><br><br><br>
+                `;
+            productsRowTel.appendChild(emptyImageDiv);
+            return;
+        }
+
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-6');
+            let backgroundGradientTel = '';
+            let backgroundHoverGradientTel = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #b9770e)';
+                    break;
+                case 2:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
+                    break;
+                case 3:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
+                    break;
+                case 4:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #3498db)';
+                    break;
+                case 5:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
+                    break;
+                case 6:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
+                    break;
+                default:
+                    backgroundGradientTel = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradientTel = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
+            }
+            cardDiv.innerHTML = `
+            <div class="card" style="height: 800px; margin-bottom: 25px; background: ${backgroundGradientTel}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTel}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTel}';">
+                <img class="card-img-top" style="max-height: 400px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -30px;">
+                    <h5 class="card-title" style="font-size: 38px;">${product.libelle_fiche}</h5>
+                    <hr>
+                    <div style="display: flex; align-items: center;">
+                        <span class="text" style="flex-grow: 1; font-size: 22px; text-align: center;">PG/VG<br>${product.dosage_pg_vg_id !== null ?
+                product.dosage_pg_vg_id === 1 ? '10/90' :
+                    product.dosage_pg_vg_id === 2 ? '20/80' :
+                        product.dosage_pg_vg_id === 3 ? '30/70' :
+                            product.dosage_pg_vg_id === 4 ? '40/60' :
+                                product.dosage_pg_vg_id === 5 ? '50/50' :
+                                    product.dosage_pg_vg_id === 6 ? '60/40' :
+                                        product.dosage_pg_vg_id === 7 ? '70/30' :
+                                            product.dosage_pg_vg_id === 8 ? '76/24' :
+                                                'N/A' : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -40px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 60px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 22px; text-align: center;">Taux nicotine<br>${product.dosage_nicotine_mg_id ? `${product.dosage_nicotine_mg_id.split(',')
+                .map(value => {
+                    switch (value) {
+                        case '1':
+                            return '0';
+                        case '2':
+                            return '3';
+                        case '3':
+                            return '6';
+                        case '4':
+                            return '9-10';
+                        case '5':
+                            return '12';
+                        case '6':
+                            return '18';
+                        case '7':
+                            return '18-20';
+                        default:
+                            return value;
+                    }
+                })
+                .join(', ')} mg` : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -40px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 60px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 22px; text-align: center;">En sel<br>${product.sel_de_nicotine ? '<i class="bi bi-check-circle"></i>' : '<i class="bi bi-x-circle"></i>'}</span>
+                    </div>
+                    <hr>
+                    <p class="card-text" style="font-size: 30px;">${product.description}</p>
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 70px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // Ajouter la card à la ligne des produits
+            productsRowTel.appendChild(cardDiv);
+        });
+    }
+
+    // affichage tablette produits avec filtres
+    // search bar input
+    document.getElementById('searchInputTablette').addEventListener('input', handleCheckboxChangeTablette);
+    function handleCheckboxChangeTablette() {
+        // scroll en haut de la page
+        setTimeout(function() {
+            // Défilement automatique jusqu'au sommet de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },100);
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        fetch(`/concentres/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInputTablette = document.getElementById('searchInputTablette').value.toLowerCase();
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInputTablette);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplayTablette(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 3 colonnes
+    function updateProductsDisplayTablette(data) {
+        const productsRowTablette = document.getElementById('productsRowTablette');
+        // Réinitialiser l'affichage des produits
+        productsRowTablette.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+                    <div style="text-align: center; color: gray;">
+                        <img src="/images/emptybox.png" alt="Empty Box Image" style="width: 50%; height: auto;">
+                        <p>Aucun produit trouvé.</p>
+                    </div>
+                `;
+            productsRowTablette.appendChild(emptyImageDiv);
+            return;
+        }
+
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-4');
+            let backgroundGradientTablette = '';
+            let backgroundHoverGradientTablette = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #b9770e)';
+                    break;
+                case 2:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
+                    break;
+                case 3:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
+                    break;
+                case 4:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #3498db)';
+                    break;
+                case 5:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
+                    break;
+                case 6:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
+                    break;
+                default:
+                    backgroundGradientTablette = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradientTablette = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
+            }
+            cardDiv.innerHTML = `
+            <div class="card" style="height: 480px; margin-bottom: 25px; background: ${backgroundGradientTablette}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradientTablette}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradientTablette}';">
+                <img class="card-img-top" style="max-height: 250px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -25px;">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <hr>
+                    <div style="display: flex; align-items: center;">
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">PG/VG<br>${product.dosage_pg_vg_id !== null ?
+                product.dosage_pg_vg_id === 1 ? '10/90' :
+                    product.dosage_pg_vg_id === 2 ? '20/80' :
+                        product.dosage_pg_vg_id === 3 ? '30/70' :
+                            product.dosage_pg_vg_id === 4 ? '40/60' :
+                                product.dosage_pg_vg_id === 5 ? '50/50' :
+                                    product.dosage_pg_vg_id === 6 ? '60/40' :
+                                        product.dosage_pg_vg_id === 7 ? '70/30' :
+                                            product.dosage_pg_vg_id === 8 ? '76/24' :
+                                                'N/A' : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -30px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 30px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">Taux nicotine<br>${product.dosage_nicotine_mg_id ? `${product.dosage_nicotine_mg_id.split(',')
+                .map(value => {
+                    switch (value) {
+                        case '1':
+                            return '0';
+                        case '2':
+                            return '3';
+                        case '3':
+                            return '6';
+                        case '4':
+                            return '9-10';
+                        case '5':
+                            return '12';
+                        case '6':
+                            return '18';
+                        case '7':
+                            return '18-20';
+                        default:
+                            return value;
+                    }
+                })
+                .join(', ')} mg` : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -30px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 30px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">En sel<br>${product.sel_de_nicotine ? '<i class="bi bi-check-circle"></i>' : '<i class="bi bi-x-circle"></i>'}</span>
+                    </div>
+                    <hr>
+                    <p class="card-text">${product.description}</p>
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 45px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // Ajouter la card à la ligne des produits
+            productsRowTablette.appendChild(cardDiv);
+        });
+    }
+
+    // affichage produits avec filtres
+    // search bar input
+    document.getElementById('searchInput').addEventListener('input', handleCheckboxChange);
+    function handleCheckboxChange() {
+        // scroll en haut de la page
+        setTimeout(function() {
+            // Défilement automatique jusqu'au sommet de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },100);
+        const saveurCheckboxes = document.querySelectorAll('.saveur-checkbox');
+        const contenanceCheckboxes = document.querySelectorAll('.contenance-checkbox');
+        const dosageNicotineCheckboxes = document.querySelectorAll('.dosagenicotine-checkbox');
+        const marqueCheckboxes = document.querySelectorAll('.marque-checkbox');
+
+        const selectedSaveurs = Array.from(saveurCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedContenances = Array.from(contenanceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedDosagesNicotine = Array.from(dosageNicotineCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+        const selectedMarques = Array.from(marqueCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => parseInt(checkbox.value));
+
+        // afficher les checkbox sélectionnées
+        // console.log(selectedSaveurs);
+        // console.log(selectedContenances);
+        // console.log(selectedDosagesNicotine);
+        // console.log(selectedMarques);
+
+        fetch(`/concentres/all/${magasinInt}`)
+            .then(response => response.json())
+            .then(data => {
+                // Obtenir la valeur saisie dans la barre de recherche
+                const searchInput = document.getElementById('searchInput').value.toLowerCase();
+                // Filtrer les produits en fonction des checkboxes sélectionnées
+                const filteredProducts = data.filter(product => {
+                    const isSaveurSelected = selectedSaveurs.length === 0 || selectedSaveurs.includes(product.type_saveur_id);
+                    const isContenanceSelected = selectedContenances.length === 0 || selectedContenances.includes(product.contenance_ml_id);
+                    const isDosageNicotineSelected = selectedDosagesNicotine.length === 0 || (product.dosage_nicotine_mg_id && product.dosage_nicotine_mg_id.split(',').some(dosage => selectedDosagesNicotine.includes(parseInt(dosage))));
+                    const isMarqueSelected = selectedMarques.length === 0 || selectedMarques.includes(product.marque_id);
+
+                    const isSearchMatch = product.libelle_fiche.toLowerCase().includes(searchInput);
+
+                    return isSaveurSelected && isContenanceSelected && isDosageNicotineSelected && isMarqueSelected && isSearchMatch;
+                });
+                // Mettre à jour l'affichage des produits avec les données filtrées
+                updateProductsDisplay(filteredProducts);
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des produits:', error);
+            });
+    }
+    // afficher les données sous forme de cards dans 4 colonnes
+    function updateProductsDisplay(data) {
+        const productsRow = document.getElementById('productsRow');
+        // Réinitialiser l'affichage des produits
+        productsRow.innerHTML = '';
+
+        // vérifier si les données filtrées sont vides
+        if (data.length === 0) {
+            // Afficher une image par défaut lorsque les résultats sont vides
+            const emptyImageDiv = document.createElement('div');
+            emptyImageDiv.classList.add('col-12');
+            emptyImageDiv.innerHTML = `
+            <div style="text-align: center; color: gray;">
+                <img src="/images/emptybox.png" alt="Empty Box Image" style="max-width: 100%; height: auto;">
+                <p>Aucun produit trouvé.</p>
+            </div>
+        `;
+            productsRow.appendChild(emptyImageDiv);
+            return;
+        }
+
+        data.forEach(product => {
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('col-3');
+            let backgroundGradient = '';
+            let backgroundHoverGradient = '';
+            switch (product.type_saveur_id) {
+                case 1:
+                    backgroundGradient = 'linear-gradient(to bottom, #b9770e, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #b9770e)';
+                    break;
+                case 2:
+                    backgroundGradient = 'linear-gradient(to bottom, #2ecc71, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #2ecc71)';
+                    break;
+                case 3:
+                    backgroundGradient = 'linear-gradient(to bottom, #e74c3c, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #e74c3c)';
+                    break;
+                case 4:
+                    backgroundGradient = 'linear-gradient(to bottom, #3498db, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #3498db)';
+                    break;
+                case 5:
+                    backgroundGradient = 'linear-gradient(to bottom, #f1c40f, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #f1c40f)';
+                    break;
+                case 6:
+                    backgroundGradient = 'linear-gradient(to bottom, #ffa8d3, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #ffa8d3)';
+                    break;
+                default:
+                    backgroundGradient = 'linear-gradient(to bottom, #5d6d7e, #ffffff)';
+                    backgroundHoverGradient = 'linear-gradient(to bottom, #ffffff, #5d6d7e)';
+            }
+
+            cardDiv.innerHTML = `
+            <div class="card" style="height: 450px; margin-bottom: 25px; background: ${backgroundGradient}; transition: transform .5s;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.cursor='pointer'; this.style.background='${backgroundHoverGradient}';"
+            onmouseout="this.style.transform=''; this.style.cursor=''; this.style.background='${backgroundGradient}';">
+                <img class="card-img-top" style="max-height: 200px; object-fit: contain;" src="/images/products_images/${product.sku}.png" alt="e-liquides card image">
+                <div class="card-body" style="margin-top: -25px;">
+                    <h5 class="card-title">${product.libelle_fiche}</h5>
+                    <hr>
+                    <div style="display: flex; align-items: center;">
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">PG/VG<br>${product.dosage_pg_vg_id !== null ?
+                product.dosage_pg_vg_id === 1 ? '10/90' :
+                    product.dosage_pg_vg_id === 2 ? '20/80' :
+                        product.dosage_pg_vg_id === 3 ? '30/70' :
+                            product.dosage_pg_vg_id === 4 ? '40/60' :
+                                product.dosage_pg_vg_id === 5 ? '50/50' :
+                                    product.dosage_pg_vg_id === 6 ? '60/40' :
+                                        product.dosage_pg_vg_id === 7 ? '70/30' :
+                                            product.dosage_pg_vg_id === 8 ? '76/24' :
+                                                'N/A' : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -10px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 30px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">Taux nicotine<br>${product.dosage_nicotine_mg_id ? `${product.dosage_nicotine_mg_id.split(',')
+                .map(value => {
+                    switch (value) {
+                        case '1':
+                            return '0';
+                        case '2':
+                            return '3';
+                        case '3':
+                            return '6';
+                        case '4':
+                            return '9-10';
+                        case '5':
+                            return '12';
+                        case '6':
+                            return '18';
+                        case '7':
+                            return '18-20';
+                        default:
+                            return value;
+                    }
+                })
+                .join(', ')} mg` : 'N/A'}
+                        </span>
+                        <div style="flex-grow: 1; margin-right: -10px; border-left: 1px solid rgba(0, 0, 0, 0.25); height: 30px;"></div>
+                        <span class="text" style="flex-grow: 1; font-size: 12px; text-align: center;">En sel<br>${product.sel_de_nicotine ? '<i class="bi bi-check-circle"></i>' : '<i class="bi bi-x-circle"></i>'}</span>
+                    </div>
+                    <hr>
+                    <p class="card-text">${product.description}</p>
+                    ${product.qte_stock === 0 ? '<div class="card-img-overlay d-flex justify-content-center" style="z-index: 2;"><h1 class="card-title text-white text-center" style="font-size: 35px; text-shadow: 2px 2px 4px #1D2633;">Indisponible: victime de son succès</h1></div>' : ''}
+                </div>
+                <div class="divider bg-primary my-4"></div>
+            </div>`;
+            // ajouter la card à la ligne des produits
+            productsRow.appendChild(cardDiv);
+        });
+    }
+
     //dropdown E-Liquides et Concentrés écran tablette/pc
     const link = document.querySelector('.eliquidesMagasinCigustoTeal-navbar');
     const cardOverlay = document.querySelector('.card-overlay');
@@ -1592,25 +2070,116 @@
         });
     });
 
-    const dismissBtnTel = document.querySelector(".dismiss-filtre-tel");
-    dismissBtnTel.addEventListener("click", () => {
-        filtreDivTel.classList.remove("active");
+    const dismissBtnsTel = document.querySelectorAll(".dismiss-filtre-tel");
+    dismissBtnsTel.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            filtreDivTel.classList.remove("active");
+        });
     });
-    const dismissBtnTablette = document.querySelector(".dismiss-filtre-tablette");
-    dismissBtnTablette.addEventListener("click", () => {
-        filtreDivTablette.classList.remove("active");
+    const dismissBtnsTablette = document.querySelectorAll(".dismiss-filtre-tablette");
+    dismissBtnsTablette.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            filtreDivTablette.classList.remove("active");
+        });
     });
+
+    // au chargement de la page
+    window.addEventListener("load", function() {
+        // afficher les produits par défaut sans filtre
+        handleCheckboxChangeTel();
+        handleCheckboxChangeTablette();
+        handleCheckboxChange();
+
+        var checkbox = document.getElementById("contenance_10");
+        // état initial des filtres 10mL tel
+        var filtre10mLTel = document.getElementById("filtre10mLTel");
+        if (checkbox.checked) {
+            filtre10mLTel.style.display = "block";
+        } else {
+            filtre10mLTel.style.display = "none";
+        }
+        // état initial des filtres 10mL tablette
+        var filtre10mLTablette = document.getElementById("filtre10mLTablette");
+        if (checkbox.checked) {
+            filtre10mLTablette.style.display = "block";
+        } else {
+            filtre10mLTablette.style.display = "none";
+        }
+        // état initial des filtres 10mL
+        var filtre10mL = document.getElementById("filtre10mL");
+        if (checkbox.checked) {
+            filtre10mL.style.display = "block";
+        } else {
+            filtre10mL.style.display = "none";
+        }
+    });
+
     // bouton filtre tel
     const filtreBtnTel = document.getElementById("filtreBtnTel");
     const filtreDivTel = document.querySelector(".filtre-divTel");
     filtreBtnTel.addEventListener("click", () => {
         filtreDivTel.classList.toggle("active");
     });
+    // filtre 10mL tel
+    // Récupérer la case à cocher et l'élément à afficher/masquer
+    var checkboxTel = document.getElementById("contenance_10_tel");
+    checkboxTel.addEventListener("click", function() {
+        var tauxNicotineDropdownTel = document.getElementById("filtre10mLTauxTel");
+        if (checkboxTel.checked) {
+            filtre10mLTel.style.display = "block";
+            tauxNicotineDropdownTel.classList.add("show");
+        } else {
+            filtre10mLTel.style.display = "none";
+            tauxNicotineDropdownTel.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxesTel = document.querySelectorAll('#filtre10mLTauxTel .dosagenicotine-checkbox');
+            tauxNicotineCheckboxesTel.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
+        }
+    });
     // bouton filtre tablette
     const filtreBtnTablette = document.getElementById("filtreBtnTablette");
     const filtreDivTablette = document.querySelector(".filtre-divTablette");
     filtreBtnTablette.addEventListener("click", () => {
         filtreDivTablette.classList.toggle("active");
+    });
+    // filtre 10mL tablette
+    // récupérer la case à cocher et l'élément à afficher/masquer
+    var checkboxTablette = document.getElementById("contenance_10_tablette");
+    checkboxTablette.addEventListener("click", function() {
+        var tauxNicotineDropdownTablette = document.getElementById("filtre10mLTauxTablette");
+        if (checkboxTablette.checked) {
+            filtre10mLTablette.style.display = "block";
+            tauxNicotineDropdownTablette.classList.add("show");
+        } else {
+            filtre10mLTablette.style.display = "none";
+            tauxNicotineDropdownTablette.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxesTablette = document.querySelectorAll('#filtre10mLTauxTablette .dosagenicotine-checkbox');
+            tauxNicotineCheckboxesTablette.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
+        }
+    });
+    // filtre 10mL
+    // récupérer la case à cocher et l'élément à afficher/masquer
+    var checkbox = document.getElementById("contenance_10");
+    checkbox.addEventListener("click", function() {
+        var filtre10mL = document.getElementById("filtre10mL");
+        var tauxNicotineDropdown = document.getElementById("filtre10mLTaux");
+        if (checkbox.checked) {
+            filtre10mL.style.display = "block";
+            tauxNicotineDropdown.classList.add("show");
+        } else {
+            filtre10mL.style.display = "none";
+            tauxNicotineDropdown.classList.remove("show");
+            // dé-sélectionner toutes les checkboxes "Taux de nicotine"
+            var tauxNicotineCheckboxes = document.querySelectorAll('#filtre10mLTaux .dosagenicotine-checkbox');
+            tauxNicotineCheckboxes.forEach(function(checkbox) {
+                checkbox.checked = false;
+            });
+        }
     });
 
     // redirection facebook
@@ -2648,7 +3217,7 @@
     // redirection page concentrés coche marque Amazone
     let marqueAmazoneConcentresMagasinCigustoTeal;
     if (magasinId === 'magasin-andelnans') {
-        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-concentres?marque=Amazone';
+        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Amazone';
     } else if (magasinId === 'magasin-bessoncourt') {
         marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Amazone';
     } else if (magasinId === 'magasin-besancon') {
@@ -2938,243 +3507,457 @@
     const urlParams = new URLSearchParams(window.location.search);
 
     // classic
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'classic') {
-        ['#saveur_classic_tel', '#saveur_classic_tablette', '#saveur_classic'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_classicCheckboxes = document.querySelectorAll('#saveur_classic, #saveur_classic_tel, #saveur_classic_tablette');
+    saveur_classicCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'classic';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_classic', '#saveur_classic_tel', '#saveur_classic_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTablette', '#filtreSaveursSectionTel', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // mentholé
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'menthole') {
-        ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_mentholeCheckboxes = document.querySelectorAll('#saveur_menthole, #saveur_menthole_tel, #saveur_menthole_tablette');
+    saveur_mentholeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'menthole';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_menthole', '#saveur_menthole_tel', '#saveur_menthole_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // fruité
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruite') {
-        ['#saveur_fruite_tel', '#saveur_fruite_tablette', '#saveur_fruite'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_fruiteCheckboxes = document.querySelectorAll('#saveur_fruite, #saveur_fruite_tel, #saveur_fruite_tablette');
+    saveur_fruiteCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'fruite';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_fruite', '#saveur_fruite_tel', '#saveur_fruite_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // fruité frais
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais') {
-        ['#saveur_fruite_frais_tel', '#saveur_fruite_frais_tablette', '#saveur_fruite_frais'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_fruitefraisCheckboxes = document.querySelectorAll('#saveur_fruitefrais, #saveur_fruitefrais_tel, #saveur_fruitefrais_tablette');
+    saveur_fruitefraisCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'fruitefrais';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_fruitefrais', '#saveur_fruitefrais_tel', '#saveur_fruitefrais_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // gourmand
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand') {
-        ['#saveur_gourmand_tel', '#saveur_gourmand_tablette', '#saveur_gourmand'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_gourmandCheckboxes = document.querySelectorAll('#saveur_gourmand, #saveur_gourmand_tel, #saveur_gourmand_tablette');
+    saveur_gourmandCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'gourmand';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_gourmand', '#saveur_gourmand_tel', '#saveur_gourmand_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // friandise / boisson
-    if (urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson') {
-        ['#saveur_friandise_tel', '#saveur_friandise_tablette', '#saveur_friandise'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const saveur_friandiseboissonCheckboxes = document.querySelectorAll('#saveur_friandiseboisson, #saveur_friandiseboisson_tel, #saveur_friandiseboisson_tablette');
+    saveur_friandiseboissonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('saveur') && urlParams.get('saveur') === 'friandiseboisson';
+        if (checkbox.checked) {
+            ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                // La case a été décochée manuellement
+                ['#saveur_friandiseboisson', '#saveur_friandiseboisson_tel', '#saveur_friandiseboisson_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreSaveursSectionTel', '#filtreSaveursSectionTablette', '#filtreSaveursSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
 
     // ****************************** Concentrés contenance activer checkbox / dropdown ******************************
     // 10 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '10mL') {
-        ['#contenance_10_tel', '#contenance_10_tablette', '#contenance_10'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const contenance_10Checkboxes = document.querySelectorAll('#contenance_10, #contenance_10_tel, #contenance_10_tablette');
+    contenance_10Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '10mL';
+        if (checkbox.checked) {
+            ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_10', '#contenance_10_tel', '#contenance_10_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // 30 mL
-    if (urlParams.has('contenance') && urlParams.get('contenance') === '30mL') {
-        ['#contenance_30_tel', '#contenance_30_tablette', '#contenance_30'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const contenance_30Checkboxes = document.querySelectorAll('#contenance_30, #contenance_30_tel, #contenance_30_tablette');
+    contenance_30Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('contenance') && urlParams.get('contenance') === '30mL';
+        if (checkbox.checked) {
+            ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#contenance_30', '#contenance_30_tel', '#contenance_30_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreContenanceSectionTel', '#filtreContenanceSectionTablette', '#filtreContenanceSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
 
     // ****************************** Concentrés marques activer checkbox / dropdown ******************************
     // A&L
-    if (urlParams.has('marque') && urlParams.get('marque') === 'AandL') {
-        ['#marque_aandl_tel', '#marque_aandl_tablette', '#marque_aandl'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_aandlCheckboxes = document.querySelectorAll('#marque_aandl, #marque_aandl_tel, #marque_aandl_tablette');
+    marque_aandlCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'AandL';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_aandl', '#marque_aandl_tel', '#marque_aandl_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Amazone
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Amazone') {
-        ['#marque_amazone_tel', '#marque_amazone_tablette', '#marque_amazone'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_amazoneCheckboxes = document.querySelectorAll('#marque_amazone, #marque_amazone_tel, #marque_amazone_tablette');
+    marque_amazoneCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Amazone';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_amazone', '#marque_amazone_tel', '#marque_amazone_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Aromazon
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Aromazon') {
-        ['#marque_aromazon_tel', '#marque_aromazon_tablette', '#marque_aromazon'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_aromazonCheckboxes = document.querySelectorAll('#marque_aromazon, #marque_aromazon_tel, #marque_aromazon_tablette');
+    marque_aromazonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Aromazon';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_aromazon', '#marque_aromazon_tel', '#marque_aromazon_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Cesar
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Cesar') {
-        ['#marque_cesar_tel', '#marque_cesar_tablette', '#marque_cesar'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_cesarCheckboxes = document.querySelectorAll('#marque_cesar, #marque_cesar_tel, #marque_cesar_tablette');
+    marque_cesarCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Cesar';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_cesar', '#marque_cesar_tel', '#marque_cesar_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Curieux
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Curieux') {
-        ['#marque_curieux_tel', '#marque_curieux_tablette', '#marque_curieux'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_curieuxCheckboxes = document.querySelectorAll('#marque_curieux, #marque_curieux_tel, #marque_curieux_tablette');
+    marque_curieuxCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Curieux';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_curieux', '#marque_curieux_tel', '#marque_curieux_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Doctor Diy
-    if (urlParams.has('marque') && urlParams.get('marque') === 'DoctorDiy') {
-        ['#marque_doctordiy_tel', '#marque_doctordiy_tablette', '#marque_doctordiy'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_doctordiyCheckboxes = document.querySelectorAll('#marque_doctordiy, #marque_doctordiy_tel, #marque_doctordiy_tablette');
+    marque_doctordiyCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'DoctorDiy';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_doctordiy', '#marque_doctordiy_tel', '#marque_doctordiy_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Fighter Fuel
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FighterFuel') {
-        ['#marque_fighterfuel_tel', '#marque_fighterfuel_tablette', '#marque_fighterfuel'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_fighterfuelCheckboxes = document.querySelectorAll('#marque_fighterfuel, #marque_fighterfuel_tel, #marque_fighterfuel_tablette');
+    marque_fighterfuelCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FighterFuel';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fighterfuel', '#marque_fighterfuel_tel', '#marque_fighterfuel_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Fruiteo
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo') {
-        ['#marque_fruiteo_tel', '#marque_fruiteo_tablette', '#marque_fruiteo'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_fruiteoCheckboxes = document.querySelectorAll('#marque_fruiteo, #marque_fruiteo_tel, #marque_fruiteo_tablette');
+    marque_fruiteoCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Fruiteo';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruiteo', '#marque_fruiteo_tel', '#marque_fruiteo_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Fruizee
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Fruizee') {
-        ['#marque_fruizee_tel', '#marque_fruizee_tablette', '#marque_fruizee'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_fruizeeCheckboxes = document.querySelectorAll('#marque_fruizee, #marque_fruizee_tel, #marque_fruizee_tablette');
+    marque_fruizeeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Fruizee';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fruizee', '#marque_fruizee_tel', '#marque_fruizee_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Full Moon
-    if (urlParams.has('marque') && urlParams.get('marque') === 'FullMoon') {
-        ['#marque_fullmoon_tel', '#marque_fullmoon_tablette', '#marque_fullmoon'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_fullmoonCheckboxes = document.querySelectorAll('#marque_fullmoon, #marque_fullmoon_tel, #marque_fullmoon_tablette');
+    marque_fullmoonCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'FullMoon';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_fullmoon', '#marque_fullmoon_tel', '#marque_fullmoon_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Kung Fruits
-    if (urlParams.has('marque') && urlParams.get('marque') === 'KungFruits') {
-        ['#marque_kungfruits_tel', '#marque_kungfruits_tablette', '#marque_kungfruits'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_kungfruitsCheckboxes = document.querySelectorAll('#marque_kungfruits, #marque_kungfruits_tel, #marque_kungfruits_tablette');
+    marque_kungfruitsCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'KungFruits';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_kungfruits', '#marque_kungfruits_tel', '#marque_kungfruits_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Kyandi Shop
-    if (urlParams.has('marque') && urlParams.get('marque') === 'KyandiShop') {
-        ['#marque_kyandishop_tel', '#marque_kyandishop_tablette', '#marque_kyandishop'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_kyandishopCheckboxes = document.querySelectorAll('#marque_kyandishop, #marque_kyandishop_tel, #marque_kyandishop_tablette');
+    marque_kyandishopCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'KyandiShop';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_kyandishop', '#marque_kyandishop_tel', '#marque_kyandishop_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Le French Liquide
-    if (urlParams.has('marque') && urlParams.get('marque') === 'LeFrenchLiquide') {
-        ['#marque_lefrenchliquide_tel', '#marque_lefrenchliquide_tablette', '#marque_lefrenchliquide'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_lefrenchliquideCheckboxes = document.querySelectorAll('#marque_lefrenchliquide, #marque_lefrenchliquide_tel, #marque_lefrenchliquide_tablette');
+    marque_lefrenchliquideCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'LeFrenchLiquide';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_lefrenchliquide', '#marque_lefrenchliquide_tel', '#marque_lefrenchliquide_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Shootiz
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Shootiz') {
-        ['#marque_shootiz_tel', '#marque_shootiz_tablette', '#marque_shootiz'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_shootizCheckboxes = document.querySelectorAll('#marque_shootiz, #marque_shootiz_tel, #marque_shootiz_tablette');
+    marque_shootizCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Shootiz';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_shootiz', '#marque_shootiz_tel', '#marque_shootiz_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // The Medusa Juice
-    if (urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice') {
-        ['#marque_themedusajuice_tel', '#marque_themedusajuice_tablette', '#marque_themedusajuice'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_themedusajuiceCheckboxes = document.querySelectorAll('#marque_themedusajuice, #marque_themedusajuice_tel, #marque_themedusajuice_tablette');
+    marque_themedusajuiceCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'TheMedusaJuice';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_themedusajuice', '#marque_themedusajuice_tel', '#marque_themedusajuice_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // T-Juice
-    if (urlParams.has('marque') && urlParams.get('marque') === 'TJuice') {
-        ['#marque_tjuice_tel', '#marque_tjuice_tablette', '#marque_tjuice'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_tjuiceCheckboxes = document.querySelectorAll('#marque_tjuice, #marque_tjuice_tel, #marque_tjuice_tablette');
+    marque_tjuiceCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'TJuice';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_tjuice', '#marque_tjuice_tel', '#marque_tjuice_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Vampire Vape
-    if (urlParams.has('marque') && urlParams.get('marque') === 'VampireVape') {
-        ['#marque_vampirevape_tel', '#marque_vampirevape_tablette', '#marque_vampirevape'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_vampirevapeCheckboxes = document.querySelectorAll('#marque_vampirevape, #marque_vampirevape_tel, #marque_vampirevape_tablette');
+    marque_vampirevapeCheckboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'VampireVape';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_vampirevape', '#marque_vampirevape_tel', '#marque_vampirevape_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
     // Vape47
-    if (urlParams.has('marque') && urlParams.get('marque') === 'Vape47') {
-        ['#marque_vape47_tel', '#marque_vape47_tablette', '#marque_vape47'].forEach(selector => {
-            document.querySelector(selector).checked = true;
+    const marque_vape47Checkboxes = document.querySelectorAll('#marque_vape47, #marque_vape47_tel, #marque_vape47_tablette');
+    marque_vape47Checkboxes.forEach(checkbox => {
+        checkbox.checked = urlParams.has('marque') && urlParams.get('marque') === 'Vape47';
+        if (checkbox.checked) {
+            ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
+                document.querySelector(selector).classList.add('show');
+            });
+        }
+        checkbox.addEventListener('click', function() {
+            if (!checkbox.checked) {
+                ['#marque_vape47', '#marque_vape47_tel', '#marque_vape47_tablette'].forEach(selector => {
+                    document.querySelector(selector).checked = false;
+                });
+            }
         });
-        ['#filtreMarquesSectionTel', '#filtreMarquesSectionTablette', '#filtreMarquesSection'].forEach(selector => {
-            document.querySelector(selector).classList.add('show');
-        });
-    }
+    });
 </script>
 
 <style>
@@ -3648,6 +4431,12 @@
         }
     }
 
+    .sticky-checkboxes {
+        position: sticky;
+        top: 0;
+        max-height: 950px;
+        overflow-y: auto;
+    }
     ul li a {
         display: block;
         padding: 10px 20px;
@@ -3691,29 +4480,18 @@
     .filtre .btw-onglet a {
         padding-left: 0;
     }
+    .btw-sous-onglet a {
+        padding-left: 26px;
+    }
 
     .articles .card {
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        background-image: linear-gradient(to bottom, #ff69b4, #ffffff);
-        transition: background-image 0.5s ease;
-        z-index: 1;
-    }
-    .articles .card:hover {
-        background-image: linear-gradient(to bottom, #ffffff, #ff69b4);
-        z-index: 1;
     }
     .articles .card-img-top {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         z-index: 1;
-    }
-    .articles .zoom-effect {
-        transition: transform .5s;
-    }
-    .articles .zoom-effect:hover {
-        transform: scale(1.05);
-        cursor: pointer;
     }
     .btn-filtre {
         border: 1px solid #253142;
@@ -3725,6 +4503,17 @@
         color: white;
         cursor: pointer;
     }
+    .btn-filtrevalid {
+        border: 1px solid black;
+        color: black;
+        transition: background-color 0.1s ease-in-out;
+    }
+    .btn-filtrevalid:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+
     .filtre-divTel {
         position: fixed;
         inset: 0 0 0 0;

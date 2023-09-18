@@ -58,8 +58,6 @@ df['statut_reappro_id'] = pd.to_numeric(df['statut_reappro_id'], errors='coerce'
 # créer une colonne id au début remplie de None
 df.insert(0, 'id', None)
 
-# RESET LES TABLES
-
 # Connexion à la base de données MySQL
 connection = pymysql.connect(host='localhost',
                              user='theo',

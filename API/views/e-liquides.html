@@ -1384,7 +1384,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <br>
                 <!-- affichage des produits -->
                 <div class="col-12">
@@ -2108,7 +2107,7 @@
             .filter(checkbox => checkbox.checked)
             .map(checkbox => parseInt(checkbox.value));
 
-        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+        fetch(`/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
                 // Obtenir la valeur saisie dans la barre de recherche
@@ -2273,7 +2272,7 @@
             .filter(checkbox => checkbox.checked)
             .map(checkbox => parseInt(checkbox.value));
 
-        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+        fetch(`/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
                 // Obtenir la valeur saisie dans la barre de recherche
@@ -2442,7 +2441,7 @@
         // console.log(selectedDosagesNicotine);
         // console.log(selectedMarques);
 
-        fetch(`/magasin-andelnans/e-liquides/all/${magasinInt}`)
+        fetch(`/e-liquides/all/${magasinInt}`)
             .then(response => response.json())
             .then(data => {
                 // Obtenir la valeur saisie dans la barre de recherche
@@ -3620,6 +3619,451 @@
     document.querySelector('.marqueVDLVEliquidesMagasinCigustoTeal-tablette-sidebar').href = marqueVDLVEliquidesMagasinCigustoTeal;
     document.querySelector('.marqueVDLVEliquidesMagasinCigustoTeal-navbar').href = marqueVDLVEliquidesMagasinCigustoTeal;
 
+    // ****************************** redirection Concentrés selection saveur ******************************
+    // redirection page concentrés coche saveur classic
+    let saveurClassicConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=classic';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=classic';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=classic';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=classic';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-tel-sidebar').href = saveurClassicConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurClassicConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-navbar').href = saveurClassicConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche saveur mentholé
+    let saveurMentholeConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=menthole';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=menthole';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=menthole';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=menthole';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-tel-sidebar').href = saveurMentholeConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurMentholeConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-navbar').href = saveurMentholeConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche saveur fruité
+    let saveurFruiteConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=fruite';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=fruite';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=fruite';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=fruite';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFruiteConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-navbar').href = saveurFruiteConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche saveur fruité frais
+    let saveurFruiteFraisConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=fruitefrais';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=fruitefrais';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-navbar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche saveur gourmand
+    let saveurGourmandConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=gourmand';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=gourmand';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=gourmand';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=gourmand';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-tel-sidebar').href = saveurGourmandConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurGourmandConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-navbar').href = saveurGourmandConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche saveur friandise / boisson
+    let saveurFriandiseBoissonConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-besancon') {
+        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=friandiseboisson';
+    } else if (magasinId === 'magasin-colmar') {
+        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=friandiseboisson';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
+    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-navbar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
+
+    // ****************************** redirection selection contenance ******************************
+    // redirection page concentrés coche contenance 10 mL
+    let contenance10mlConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?contenance=10mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?contenance=10mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?contenance=10mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?contenance=10mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-tel-sidebar').href = contenance10mlConcentresMagasinCigustoTeal;
+    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-tablette-sidebar').href = contenance10mlConcentresMagasinCigustoTeal;
+    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-navbar').href = contenance10mlConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche contenance 30 mL
+    let contenance30mlConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?contenance=30mL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?contenance=30mL';
+    } else if (magasinId === 'magasin-besancon') {
+        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?contenance=30mL';
+    } else if (magasinId === 'magasin-colmar') {
+        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?contenance=30mL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-tel-sidebar').href = contenance30mlConcentresMagasinCigustoTeal;
+    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-tablette-sidebar').href = contenance30mlConcentresMagasinCigustoTeal;
+    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-navbar').href = contenance30mlConcentresMagasinCigustoTeal;
+
+    // ****************************** redirection selection marque ******************************
+    // redirection page concentrés coche marque A&L
+    let marqueAandLConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=AandL';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=AandL';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=AandL';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=AandL';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAandLConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAandLConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-navbar').href = marqueAandLConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Amazone
+    let marqueAmazoneConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-concentres?marque=Amazone';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Amazone';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Amazone';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Amazone';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAmazoneConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAmazoneConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-navbar').href = marqueAmazoneConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Aromazon
+    let marqueAromazonConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Aromazon';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Aromazon';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Aromazon';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Aromazon';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAromazonConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAromazonConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-navbar').href = marqueAromazonConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Cesar
+    let marqueCesarConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Cesar';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Cesar';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Cesar';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Cesar';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-tel-sidebar').href = marqueCesarConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueCesarConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-navbar').href = marqueCesarConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Curieux
+    let marqueCurieuxConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Curieux';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Curieux';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Curieux';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Curieux';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-tel-sidebar').href = marqueCurieuxConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueCurieuxConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-navbar').href = marqueCurieuxConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Doctor Diy
+    let marqueDoctorDiyConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=DoctorDiy';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=DoctorDiy';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=DoctorDiy';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=DoctorDiy';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-tel-sidebar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-navbar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Fighter Fuel
+    let marqueFighterFuelConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=FighterFuel';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=FighterFuel';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=FighterFuel';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=FighterFuel';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-navbar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Fruiteo
+    let marqueFruiteoConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Fruiteo';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Fruiteo';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Fruiteo';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Fruiteo';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFruiteoConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFruiteoConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-navbar').href = marqueFruiteoConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Fruizee
+    let marqueFruizeeConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Fruizee';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Fruizee';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Fruizee';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Fruizee';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFruizeeConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFruizeeConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-navbar').href = marqueFruizeeConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Full Moon
+    let marqueFullMoonConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=FullMoon';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=FullMoon';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=FullMoon';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=FullMoon';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFullMoonConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFullMoonConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-navbar').href = marqueFullMoonConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Kung Fruits
+    let marqueKungFruitsConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=KungFruits';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=KungFruits';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=KungFruits';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=KungFruits';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-tel-sidebar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-navbar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Kyandi Shop
+    let marqueKyandiShopConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=KyandiShop';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=KyandiShop';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=KyandiShop';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=KyandiShop';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-tel-sidebar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-navbar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Le French Liquide
+    let marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=SupeLeFrenchLiquiderVape';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=LeFrenchLiquide';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=LeFrenchLiquide';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tel-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-navbar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Shootiz
+    let marqueShootizConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Shootiz';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Shootiz';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Shootiz';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Shootiz';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tel-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-navbar').href = marqueShootizConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque The Medusa Juice
+    let marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=TheMedusaJuice';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=TheMedusaJuice';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=TheMedusaJuice';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=TheMedusaJuice';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tel-sidebar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-navbar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque T-Juice
+    let marqueTJuiceConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=TJuice';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=TJuice';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=TJuice';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=TJuice';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tel-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-navbar').href = marqueTJuiceConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Vampire Vape
+    let marqueVampireVapeConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=VampireVape';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=VampireVape';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=VampireVape';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=VampireVape';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-tel-sidebar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-navbar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
+
+    // redirection page concentrés coche marque Vape47
+    let marqueVape47ConcentresMagasinCigustoTeal;
+    if (magasinId === 'magasin-andelnans') {
+        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Vape47';
+    } else if (magasinId === 'magasin-bessoncourt') {
+        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Vape47';
+    } else if (magasinId === 'magasin-besancon') {
+        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Vape47';
+    } else if (magasinId === 'magasin-colmar') {
+        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Vape47';
+    } else {
+        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
+    }
+    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tel-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
+    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-navbar').href = marqueVape47ConcentresMagasinCigustoTeal;
+
     // ****************************** E-Liquides saveurs activer checkbox / dropdown ******************************
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -4466,453 +4910,6 @@
             }
         });
     });
-
-    // ****************************** redirection Concentrés selection saveur ******************************
-    // redirection page concentrés coche saveur classic
-    let saveurClassicConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=classic';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=classic';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=classic';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurClassicConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=classic';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-tel-sidebar').href = saveurClassicConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurClassicConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurClassicConcentresMagasinCigustoTeal-navbar').href = saveurClassicConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche saveur mentholé
-    let saveurMentholeConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=menthole';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=menthole';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=menthole';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurMentholeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=menthole';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-tel-sidebar').href = saveurMentholeConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurMentholeConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurMentholeConcentresMagasinCigustoTeal-navbar').href = saveurMentholeConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche saveur fruité
-    let saveurFruiteConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=fruite';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=fruite';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=fruite';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurFruiteConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=fruite';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFruiteConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFruiteConcentresMagasinCigustoTeal-navbar').href = saveurFruiteConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche saveur fruité frais
-    let saveurFruiteFraisConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=fruitefrais';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=fruitefrais';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=fruitefrais';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurFruiteFraisConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=fruitefrais';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFruiteFraisConcentresMagasinCigustoTeal-navbar').href = saveurFruiteFraisConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche saveur gourmand
-    let saveurGourmandConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=gourmand';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=gourmand';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=gourmand';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurGourmandConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=gourmand';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-tel-sidebar').href = saveurGourmandConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurGourmandConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurGourmandConcentresMagasinCigustoTeal-navbar').href = saveurGourmandConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche saveur friandise / boisson
-    let saveurFriandiseBoissonConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?saveur=friandiseboisson';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?saveur=friandiseboisson';
-    } else if (magasinId === 'magasin-besancon') {
-        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?saveur=friandiseboisson';
-    } else if (magasinId === 'magasin-colmar') {
-        saveurFriandiseBoissonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?saveur=friandiseboisson';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-tel-sidebar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-tablette-sidebar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
-    document.querySelector('.saveurFriandiseBoissonConcentresMagasinCigustoTeal-navbar').href = saveurFriandiseBoissonConcentresMagasinCigustoTeal;
-
-    // ****************************** redirection selection contenance ******************************
-    // redirection page concentrés coche contenance 10 mL
-    let contenance10mlConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?contenance=10mL';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?contenance=10mL';
-    } else if (magasinId === 'magasin-besancon') {
-        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?contenance=10mL';
-    } else if (magasinId === 'magasin-colmar') {
-        contenance10mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?contenance=10mL';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-tel-sidebar').href = contenance10mlConcentresMagasinCigustoTeal;
-    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-tablette-sidebar').href = contenance10mlConcentresMagasinCigustoTeal;
-    document.querySelector('.contenance10mlConcentresMagasinCigustoTeal-navbar').href = contenance10mlConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche contenance 30 mL
-    let contenance30mlConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?contenance=30mL';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?contenance=30mL';
-    } else if (magasinId === 'magasin-besancon') {
-        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?contenance=30mL';
-    } else if (magasinId === 'magasin-colmar') {
-        contenance30mlConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?contenance=30mL';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-tel-sidebar').href = contenance30mlConcentresMagasinCigustoTeal;
-    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-tablette-sidebar').href = contenance30mlConcentresMagasinCigustoTeal;
-    document.querySelector('.contenance30mlConcentresMagasinCigustoTeal-navbar').href = contenance30mlConcentresMagasinCigustoTeal;
-
-    // ****************************** redirection selection marque ******************************
-    // redirection page concentrés coche marque A&L
-    let marqueAandLConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=AandL';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=AandL';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=AandL';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueAandLConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=AandL';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAandLConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAandLConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAandLConcentresMagasinCigustoTeal-navbar').href = marqueAandLConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Amazone
-    let marqueAmazoneConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/e-concentres?marque=Amazone';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Amazone';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Amazone';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueAmazoneConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Amazone';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAmazoneConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAmazoneConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAmazoneConcentresMagasinCigustoTeal-navbar').href = marqueAmazoneConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Aromazon
-    let marqueAromazonConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Aromazon';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Aromazon';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Aromazon';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueAromazonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Aromazon';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-tel-sidebar').href = marqueAromazonConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueAromazonConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueAromazonConcentresMagasinCigustoTeal-navbar').href = marqueAromazonConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Cesar
-    let marqueCesarConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Cesar';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Cesar';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Cesar';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueCesarConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Cesar';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-tel-sidebar').href = marqueCesarConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueCesarConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueCesarConcentresMagasinCigustoTeal-navbar').href = marqueCesarConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Curieux
-    let marqueCurieuxConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Curieux';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Curieux';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Curieux';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueCurieuxConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Curieux';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-tel-sidebar').href = marqueCurieuxConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueCurieuxConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueCurieuxConcentresMagasinCigustoTeal-navbar').href = marqueCurieuxConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Doctor Diy
-    let marqueDoctorDiyConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=DoctorDiy';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=DoctorDiy';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=DoctorDiy';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueDoctorDiyConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=DoctorDiy';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-tel-sidebar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueDoctorDiyConcentresMagasinCigustoTeal-navbar').href = marqueDoctorDiyConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Fighter Fuel
-    let marqueFighterFuelConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=FighterFuel';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=FighterFuel';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=FighterFuel';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueFighterFuelConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=FighterFuel';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFighterFuelConcentresMagasinCigustoTeal-navbar').href = marqueFighterFuelConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Fruiteo
-    let marqueFruiteoConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Fruiteo';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Fruiteo';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Fruiteo';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueFruiteoConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Fruiteo';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFruiteoConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFruiteoConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFruiteoConcentresMagasinCigustoTeal-navbar').href = marqueFruiteoConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Fruizee
-    let marqueFruizeeConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Fruizee';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Fruizee';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Fruizee';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueFruizeeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Fruizee';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFruizeeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFruizeeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFruizeeConcentresMagasinCigustoTeal-navbar').href = marqueFruizeeConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Full Moon
-    let marqueFullMoonConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=FullMoon';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=FullMoon';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=FullMoon';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueFullMoonConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=FullMoon';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-tel-sidebar').href = marqueFullMoonConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueFullMoonConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueFullMoonConcentresMagasinCigustoTeal-navbar').href = marqueFullMoonConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Kung Fruits
-    let marqueKungFruitsConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=KungFruits';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=KungFruits';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=KungFruits';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueKungFruitsConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=KungFruits';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-tel-sidebar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueKungFruitsConcentresMagasinCigustoTeal-navbar').href = marqueKungFruitsConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Kyandi Shop
-    let marqueKyandiShopConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=KyandiShop';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=KyandiShop';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=KyandiShop';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueKyandiShopConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=KyandiShop';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-tel-sidebar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueKyandiShopConcentresMagasinCigustoTeal-navbar').href = marqueKyandiShopConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Le French Liquide
-    let marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=LeFrenchLiquide';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=SupeLeFrenchLiquiderVape';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=LeFrenchLiquide';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueLeFrenchLiquideConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=LeFrenchLiquide';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tel-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueLeFrenchLiquideConcentresMagasinCigustoTeal-navbar').href = marqueLeFrenchLiquideConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Shootiz
-    let marqueShootizConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Shootiz';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Shootiz';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Shootiz';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueShootizConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Shootiz';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tel-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueShootizConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueShootizConcentresMagasinCigustoTeal-navbar').href = marqueShootizConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque The Medusa Juice
-    let marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=TheMedusaJuice';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=TheMedusaJuice';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=TheMedusaJuice';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueTheMedusaJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=TheMedusaJuice';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tel-sidebar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTheMedusaJuiceConcentresMagasinCigustoTeal-navbar').href = marqueTheMedusaJuiceConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque T-Juice
-    let marqueTJuiceConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=TJuice';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=TJuice';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=TJuice';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueTJuiceConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=TJuice';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tel-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueTJuiceConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueTJuiceConcentresMagasinCigustoTeal-navbar').href = marqueTJuiceConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Vampire Vape
-    let marqueVampireVapeConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=VampireVape';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=VampireVape';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=VampireVape';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueVampireVapeConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=VampireVape';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-tel-sidebar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueVampireVapeConcentresMagasinCigustoTeal-navbar').href = marqueVampireVapeConcentresMagasinCigustoTeal;
-
-    // redirection page concentrés coche marque Vape47
-    let marqueVape47ConcentresMagasinCigustoTeal;
-    if (magasinId === 'magasin-andelnans') {
-        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-andelnans/concentres?marque=Vape47';
-    } else if (magasinId === 'magasin-bessoncourt') {
-        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-bessoncourt/concentres?marque=Vape47';
-    } else if (magasinId === 'magasin-besancon') {
-        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-besancon/concentres?marque=Vape47';
-    } else if (magasinId === 'magasin-colmar') {
-        marqueVape47ConcentresMagasinCigustoTeal = 'http://localhost:3000/magasin-colmar/concentres?marque=Vape47';
-    } else {
-        console.error(`L'ID du magasin "${magasinId}" n'est pas valide`);
-    }
-    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tel-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-tablette-sidebar').href = marqueVape47ConcentresMagasinCigustoTeal;
-    document.querySelector('.marqueVape47ConcentresMagasinCigustoTeal-navbar').href = marqueVape47ConcentresMagasinCigustoTeal;
-
-
 </script>
 
 <style>

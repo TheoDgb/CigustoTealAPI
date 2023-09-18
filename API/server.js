@@ -98,7 +98,7 @@ app.post('/gestion-produits/update', (req, res) => {
 });
 
 // requête tous les produits e-liquides pour une id magasin donnée
-app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
+app.get('/e-liquides/all/:magasinId', (req, res) => {
     const magasinId = req.params.magasinId;
     const limit = 10000;
     const offset = 0;
@@ -146,7 +146,54 @@ app.get('/magasin-andelnans/e-liquides/all/:magasinId', (req, res) => {
     }
 });
 
-// requête tous les produits concentrés
+// requête tous les produits concentrés pour une id magasin donnée
+app.get('/concentres/all/:magasinId', (req, res) => {
+    const magasinId = req.params.magasinId;
+    const limit = 10000;
+    const offset = 0;
+
+    switch (magasinId) {
+        case '1':
+            produits.getConcentresProduitsAndelnans(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    // console.log(results);
+                    res.json(results);
+                }
+            });
+            break;
+        case '2':
+            produits.getConcentresProduitsBessoncourt(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        case '3':
+            produits.getConcentresProduitsBesancon(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        case '4':
+            produits.getConcentresProduitsColmar(limit, offset, (error, results) => {
+                if (error) {
+                    res.status(500).json({ error: 'Une erreur s\'est produite lors de la récupération des produits' });
+                } else {
+                    res.json(results);
+                }
+            });
+            break;
+        default:
+            break;
+    }
+});
 
 // home magasin
 app.get('/', (req, res) => {

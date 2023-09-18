@@ -244,10 +244,9 @@ module.exports = {
     getELiquidesProduitsAndelnans,
     getELiquidesProduitsBessoncourt,
     getELiquidesProduitsBesancon,
-    getELiquidesProduitsColmar
-    // ,
-    // getConcentresProduitsAndelnans,
-    // getConcentresProduitsBessoncourt,
-    // getConcentresProduitsBesancon,
-    // getConcentresProduitsColmar
+    getELiquidesProduitsColmar,
+    getConcentresProduitsAndelnans,
+    getConcentresProduitsBessoncourt,
+    getConcentresProduitsBesancon,
+    getConcentresProduitsColmar
 };
